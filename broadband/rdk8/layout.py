@@ -1,3 +1,20 @@
+# If not stated otherwise in this file or this component's LICENSE file the
+# following copyright and licenses apply:
+#
+# Copyright 2023 RDK Management
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 """Shared page shell for the CoreRDK-Broadband-Specification site: a fixed
 left sidebar nav + content area, used by every page (both the ones generated
 from spec-content.json and the static stub pages).
@@ -23,7 +40,8 @@ NAV_LINKS = [
     ("link", "about", "About Core RDK Broadband", "index.html", False),
 
     ("group", "nbi-group", "RDK8 North Bound APIs", [
-        ("link", "nbi", "RDK8 List of North Bound APIs", "north-bound-apis.html", False),
+        ("link", "nbi", "RDK8 List of North Bound High Level APIs", "north-bound-apis.html", False),
+        ("link", "nbi-lowlevel", "RDK8 List of North Bound Low Level APIs", "north-bound-lowlevel-apis.html", False),
     ]),
     ("group", "sbi-group", "RDK8 South Bound APIs", [
         ("link", "sbi", "RDK8 List of South Bound APIs", "south-bound-apis.html", False),
@@ -48,7 +66,7 @@ SHARED_CSS = """
   body { margin: 0; font-family: "Inter", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); background: var(--page-bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
   code, .mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
   a { color: var(--middleware); }
-  h1, h2, h3, h4 { font-family: "Space Grotesk", "Inter", sans-serif; font-weight: 700; letter-spacing: -0.015em; margin: 0; color: var(--ink); }
+  h1, h2, h3, h4 { font-family: "Space Grotesk", "Inter", sans-serif; font-weight: 800; letter-spacing: -0.02em; margin: 0; color: var(--ink); }
   p { margin: 0 0 12px; color: var(--muted); }
 
   /* ---- top accent bar, echoes the RDK mark's four bars ---- */
@@ -145,7 +163,7 @@ SHARED_CSS = """
   @media (max-width: 1000px) { .hero-visual { display: none; } }
 
   .eyebrow { display: inline-block; font-family: "JetBrains Mono", monospace; font-size: 0.72rem; letter-spacing: 0.09em; text-transform: uppercase; color: #7ec4f2; border: 1px solid rgba(126,196,242,0.35); background: rgba(126,196,242,0.06); border-radius: 999px; padding: 5px 13px; margin-bottom: 20px; }
-  .hero h1 { font-size: 2.5rem; line-height: 1.12; color: #fff; max-width: 760px; }
+  .hero h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); line-height: 1.06; font-weight: 800; letter-spacing: -0.03em; color: #fff; max-width: 820px; }
   .hero .lede { color: #a9b8d6; font-size: 1.08rem; max-width: 640px; margin-top: 16px; }
   .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
   .badge { display: inline-block; margin: 0 10px 10px 0; font-size: 0.8rem; font-weight: 600; padding: 7px 14px; border-radius: 999px; background: rgba(255,255,255,0.07); color: #dbe4f3; border: 1px solid rgba(255,255,255,0.12); }
@@ -178,7 +196,7 @@ SHARED_CSS = """
   @media (max-width: 760px) { section { padding: 40px 20px; } }
   .section-head { margin-bottom: 34px; }
   .section-head .eyebrow-lt { font-family: "JetBrains Mono", monospace; font-size: 0.74rem; letter-spacing: 0.09em; text-transform: uppercase; color: var(--middleware); font-weight: 600; margin-bottom: 9px; display: block; }
-  .section-head h2 { font-size: 1.85rem; }
+  .section-head h2 { font-size: 2rem; font-weight: 800; letter-spacing: -0.025em; }
   .section-head p { margin-top: 11px; font-size: 1.02rem; max-width: 680px; }
   .callout { max-width: 820px; background: linear-gradient(135deg, #eef2ff 0%, #f3f0ff 100%); border: 1px solid #d3dbfb; border-left: 4px solid var(--middleware); border-radius: 10px; padding: 22px 26px; margin: 18px 0; }
   .callout strong { color: var(--ink); display: block; margin-bottom: 5px; font-size: 0.95rem; font-family: "Space Grotesk", sans-serif; }
@@ -893,7 +911,7 @@ def render_page(active_id: str, head_extra: str, body_html: str, script: str = "
 <meta http-equiv="Expires" content="0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>{SHARED_CSS}</style>
 {head_extra}
 </head>
