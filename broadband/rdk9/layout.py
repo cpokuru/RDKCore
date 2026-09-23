@@ -48,7 +48,7 @@ SHARED_CSS = """
   body { margin: 0; font-family: "Inter", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); background: var(--page-bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
   code, .mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
   a { color: var(--middleware); }
-  h1, h2, h3, h4 { font-family: "Space Grotesk", "Inter", sans-serif; font-weight: 800; letter-spacing: -0.02em; margin: 0; color: var(--ink); }
+  h1, h2, h3, h4 { font-family: "Space Grotesk", "Inter", sans-serif; font-weight: 700; letter-spacing: -0.015em; margin: 0; color: var(--ink); }
   p { margin: 0 0 12px; color: var(--muted); }
 
   /* ---- top accent bar, echoes the RDK mark's four bars ---- */
@@ -145,7 +145,7 @@ SHARED_CSS = """
   @media (max-width: 1000px) { .hero-visual { display: none; } }
 
   .eyebrow { display: inline-block; font-family: "JetBrains Mono", monospace; font-size: 0.72rem; letter-spacing: 0.09em; text-transform: uppercase; color: #7ec4f2; border: 1px solid rgba(126,196,242,0.35); background: rgba(126,196,242,0.06); border-radius: 999px; padding: 5px 13px; margin-bottom: 20px; }
-  .hero h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); line-height: 1.06; font-weight: 800; letter-spacing: -0.03em; color: #fff; max-width: 820px; }
+  .hero h1 { font-size: 2.5rem; line-height: 1.12; color: #fff; max-width: 760px; }
   .hero .lede { color: #a9b8d6; font-size: 1.08rem; max-width: 640px; margin-top: 16px; }
   .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
   .badge { display: inline-block; margin: 0 10px 10px 0; font-size: 0.8rem; font-weight: 600; padding: 7px 14px; border-radius: 999px; background: rgba(255,255,255,0.07); color: #dbe4f3; border: 1px solid rgba(255,255,255,0.12); }
@@ -178,7 +178,7 @@ SHARED_CSS = """
   @media (max-width: 760px) { section { padding: 40px 20px; } }
   .section-head { margin-bottom: 34px; }
   .section-head .eyebrow-lt { font-family: "JetBrains Mono", monospace; font-size: 0.74rem; letter-spacing: 0.09em; text-transform: uppercase; color: var(--middleware); font-weight: 600; margin-bottom: 9px; display: block; }
-  .section-head h2 { font-size: 2rem; font-weight: 800; letter-spacing: -0.025em; }
+  .section-head h2 { font-size: 1.85rem; }
   .section-head p { margin-top: 11px; font-size: 1.02rem; max-width: 680px; }
   .callout { max-width: 820px; background: linear-gradient(135deg, #eef2ff 0%, #f3f0ff 100%); border: 1px solid #d3dbfb; border-left: 4px solid var(--middleware); border-radius: 10px; padding: 22px 26px; margin: 18px 0; }
   .callout strong { color: var(--ink); display: block; margin-bottom: 5px; font-size: 0.95rem; font-family: "Space Grotesk", sans-serif; }
@@ -499,7 +499,7 @@ def render_hero(eyebrow: str, title: str, lede: str, badges_html: str = "", comp
     change applies everywhere consistently.
     title/lede are escaped here — pass plain text, not pre-escaped HTML."""
     pad = "48px 40px 40px" if compact else "64px 40px 48px"
-    title_style = ' style="font-size:2rem;"' if compact else ""
+    title_style = ""  # font-size controlled by CSS .hero h1 for all pages
     badges = f'<div class="badge-row">{badges_html}</div>' if badges_html else ""
     image_path = HERO_IMAGES.get(visual_key)
     visual = f'<div class="hero-visual"><img src="{esc(image_path)}" alt=""></div>' if image_path else ""
@@ -893,7 +893,7 @@ def render_page(active_id: str, head_extra: str, body_html: str, script: str = "
 <meta http-equiv="Expires" content="0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>{SHARED_CSS}</style>
 {head_extra}
 </head>
