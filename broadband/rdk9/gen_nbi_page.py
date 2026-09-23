@@ -398,7 +398,7 @@ EXTRA_CSS = """
 
 def build_page() -> str:
     body = f'''
-{render_hero("North Bound High Level APIs", "RDK9 List of North Bound High Level APIs",
+{render_hero("North Bound High Level APIs", "List of North Bound High Level APIs",
     "The operator- and cloud-facing data model each component exposes upward. Click a component below to load its DML definition.",
     compact=True, visual_key="nbi")}
 
