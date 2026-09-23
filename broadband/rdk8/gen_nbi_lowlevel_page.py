@@ -121,7 +121,7 @@ _ICON_EXTLINK = """<svg width="14" height="14" viewBox="0 0 24 24" fill="none" s
 
 def build_page() -> str:
     body = f"""
-{render_hero("North Bound APIs", "List of North Bound Low Level APIs",
+{render_hero("North Bound APIs", "North Bound Low Level APIs",
     "Low-level inter-process communication (IPC) interfaces used between "
     "RDK-B components, apps, and the system layer.",
     compact=True, visual_key="nbi")}
