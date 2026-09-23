@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="structrbus_callback_table__t" kind="struct" language="C++" prot="public">
+    <compoundname>rbusCallbackTable_t</compoundname>
+    <includes refid="rbus_8h" local="no">rbus.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structrbus_callback_table__t_1ab3cf894da334aeaa472ad5ad67e35262" prot="public" static="no" mutable="no">
+        <type><ref refid="group___providers_1ga8183a9f8eb04494909d260d9c563538b" kindref="member">rbusGetHandler_t</ref></type>
+        <definition>rbusGetHandler_t rbusCallbackTable_t::getHandler</definition>
+        <argsstring></argsstring>
+        <name>getHandler</name>
+        <qualifiedname>rbusCallbackTable_t::getHandler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get parameters handler for the named paramter </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="600" column="30" bodyfile="include/rbus.h" bodystart="600" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrbus_callback_table__t_1ae9a40014621cb192f765eeb4888b4efa" prot="public" static="no" mutable="no">
+        <type><ref refid="group___providers_1gad83da8f5d21226d482ca822d57401d77" kindref="member">rbusSetHandler_t</ref></type>
+        <definition>rbusSetHandler_t rbusCallbackTable_t::setHandler</definition>
+        <argsstring></argsstring>
+        <name>setHandler</name>
+        <qualifiedname>rbusCallbackTable_t::setHandler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set parameters handler for the named parameter </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="603" column="30" bodyfile="include/rbus.h" bodystart="603" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrbus_callback_table__t_1a5de4202e9023e60ce48c3df8c62f2706" prot="public" static="no" mutable="no">
+        <type><ref refid="group___providers_1gaf8bd07fc7f695a02b93a9aab467e032b" kindref="member">rbusTableAddRowHandler_t</ref></type>
+        <definition>rbusTableAddRowHandler_t rbusCallbackTable_t::tableAddRowHandler</definition>
+        <argsstring></argsstring>
+        <name>tableAddRowHandler</name>
+        <qualifiedname>rbusCallbackTable_t::tableAddRowHandler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add row handler to a table </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="606" column="30" bodyfile="include/rbus.h" bodystart="606" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrbus_callback_table__t_1a571e575a123e2e314d5b6ae9f6e7ec52" prot="public" static="no" mutable="no">
+        <type><ref refid="group___providers_1ga2acce3313e6c4131647874c51411c668" kindref="member">rbusTableRemoveRowHandler_t</ref></type>
+        <definition>rbusTableRemoveRowHandler_t rbusCallbackTable_t::tableRemoveRowHandler</definition>
+        <argsstring></argsstring>
+        <name>tableRemoveRowHandler</name>
+        <qualifiedname>rbusCallbackTable_t::tableRemoveRowHandler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove a row from a table </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="608" column="33" bodyfile="include/rbus.h" bodystart="608" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrbus_callback_table__t_1a79eef1b3ea001e79dea4f191aaf345f2" prot="public" static="no" mutable="no">
+        <type><ref refid="group___providers_1ga845118048502243dac351969766ce2e9" kindref="member">rbusEventSubHandler_t</ref></type>
+        <definition>rbusEventSubHandler_t rbusCallbackTable_t::eventSubHandler</definition>
+        <argsstring></argsstring>
+        <name>eventSubHandler</name>
+        <qualifiedname>rbusCallbackTable_t::eventSubHandler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Event subscribe and unsubscribe handler for the event name </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="610" column="30" bodyfile="include/rbus.h" bodystart="610" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrbus_callback_table__t_1a1de47810e60feda77ffa7a0d945c919f" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* rbusCallbackTable_t::methodHandler</definition>
+        <argsstring></argsstring>
+        <name>methodHandler</name>
+        <qualifiedname>rbusCallbackTable_t::methodHandler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method handler. For table type elements (RBUS_ELEMENT_TYPE_TABLE) method handler is used to synchronize table rows of dynamic tables </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="614" column="29" bodyfile="include/rbus.h" bodystart="614" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Backward compatibility version of <ref refid="structrbus_element_callback_table__t" kindref="compound">rbusElementCallbackTable_t</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/rbus.h" line="598" column="1" bodyfile="include/rbus.h" bodystart="599" bodyend="617"/>
+    <listofallmembers>
+      <member refid="structrbus_callback_table__t_1a79eef1b3ea001e79dea4f191aaf345f2" prot="public" virt="non-virtual"><scope>rbusCallbackTable_t</scope><name>eventSubHandler</name></member>
+      <member refid="structrbus_callback_table__t_1ab3cf894da334aeaa472ad5ad67e35262" prot="public" virt="non-virtual"><scope>rbusCallbackTable_t</scope><name>getHandler</name></member>
+      <member refid="structrbus_callback_table__t_1a1de47810e60feda77ffa7a0d945c919f" prot="public" virt="non-virtual"><scope>rbusCallbackTable_t</scope><name>methodHandler</name></member>
+      <member refid="structrbus_callback_table__t_1ae9a40014621cb192f765eeb4888b4efa" prot="public" virt="non-virtual"><scope>rbusCallbackTable_t</scope><name>setHandler</name></member>
+      <member refid="structrbus_callback_table__t_1a5de4202e9023e60ce48c3df8c62f2706" prot="public" virt="non-virtual"><scope>rbusCallbackTable_t</scope><name>tableAddRowHandler</name></member>
+      <member refid="structrbus_callback_table__t_1a571e575a123e2e314d5b6ae9f6e7ec52" prot="public" virt="non-virtual"><scope>rbusCallbackTable_t</scope><name>tableRemoveRowHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

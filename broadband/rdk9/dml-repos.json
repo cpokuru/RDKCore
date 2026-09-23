@@ -1,0 +1,188 @@
+{
+  "_comment": "Maps a component's display name (exactly as it appears in components/ethwan-router-components.json) to where its interface data lives. All files now consolidated in cpokuru/rdk9-corerdkbroadband-tools under hlapis/<repo>/<file> on main branch.",
+  "WAN Manager": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/RdkWanManager/wanmanager_interface.json",
+    "branch": "main"
+  },
+  "Ethernet Agent (used for WAN)": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/ethernet-agent/ethagent_interface.json",
+    "branch": "main"
+  },
+  "Ethernet Agent (used for LAN)": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/ethernet-agent/ethagent_interface.json",
+    "branch": "main"
+  },
+  "Test & Diagnostics": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/test-and-diagnostic/tad_interface.json",
+    "branch": "main"
+  },
+  "P&M": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/provisioning-and-management/pandm_interface.json",
+    "branch": "main"
+  },
+  "lan-manager-lite": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/lan-manager-lite/lmlite_interface.json",
+    "branch": "main"
+  },
+  "OneWiFi": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/OneWifi/onewifi_wifi_only.json",
+    "branch": "main"
+  },
+  "WebConfig": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/webcfg/webcfg_interface.json",
+    "branch": "main"
+  },
+  "dhcp-manager (recipe for DHCP client and Server)": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/dhcp-manager/dhcpmgr_interface.json",
+    "branch": "main"
+  },
+  "dhcp-manager (recipe for DHCP client only)": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/dhcp-manager/dhcpmgr_interface.json",
+    "branch": "main"
+  },
+  "Web PA\n\nincluding:\n- parodus\n- parodus2ccsp\n- start-parodus\n- wdmp-c": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/parodus2ccsp/parodus2ccsp_interface.json",
+    "branch": "main"
+  },
+  "tr069-protocol-agent": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/tr069-protocol-agent/tr69pa_interface.json",
+    "branch": "main"
+  },
+  "T2 Telemetry": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/telemetry/t2_interface.json",
+    "branch": "main"
+  },
+  "DSM": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/DSM/dsm_interface.json",
+    "branch": "main"
+  },
+  "inter-device-manager": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/inter-device-manager/idm_interface.json",
+    "branch": "main"
+  },
+  "telco-voice-manager": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/telco-voice-manager/telco_interface.json",
+    "branch": "main"
+  },
+  "ccsp-xdns": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/xdns/xdns_interface.json",
+    "branch": "main"
+  },
+  "advanced-security": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/advanced-security/advsec_interface.json",
+    "branch": "main"
+  },
+  "component-registry": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/component-registry/cr_interface.json",
+    "branch": "main"
+  },
+  "secure-upnp": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/secure-upnp/secureupnp_interface.json",
+    "branch": "main"
+  },
+  "harvester": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/harvester/harvester_interface.json",
+    "branch": "main"
+  },
+  "platform-manager": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/platform-manager/platmgr_interface.json",
+    "branch": "main"
+  },
+  "led-manager": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/led-manager/led_interface.json",
+    "branch": "main"
+  },
+  "notify-component": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/notify-component/notify_interface.json",
+    "branch": "main"
+  },
+  "Cellular Modem Mgr": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/cellular-modem-manager/cell_interface.json",
+    "branch": "main"
+  },
+  "cellular-manager": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/cellular-manager/cellcom_interface.json",
+    "branch": "main"
+  },
+  "Mesh Agent\n(Integrates with OpenSync v2.4)": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/mesh-agent/mesh_interface.json",
+    "branch": "main"
+  },
+  "Mesh Agent (Integrates with OpenSync v2.4)": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/mesh-agent/mesh_interface.json",
+    "branch": "main"
+  },
+  "moca-agent": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/moca-agent/moca_interface.json",
+    "branch": "main"
+  },
+  "MTA Agent": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/media-terminal-adapter-agent/mta_interface.json",
+    "branch": "main"
+  },
+  "cable-modem-agent": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/cable-modem-agent/cmagent_interface.json",
+    "branch": "main"
+  },
+  "xDSL Manager": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/xdsl-manager/xdsl_interface.json",
+    "branch": "main"
+  },
+  "gpon-manager": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/gpon-manager/gpon_interface.json",
+    "branch": "main"
+  },
+  "epon-manager": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/epon-manager/epon_interface.json",
+    "branch": "main"
+  },
+  "EPON Agent": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/chandraepon/eponagent_interface.json",
+    "branch": "main"
+  },
+  "PPP Manager": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/ppp-manager/ppp_interface.json",
+    "branch": "main"
+  },
+  "hotspot": {
+    "repo": "rdk9-corerdkbroadband-tools",
+    "file": "hlapis/hotspot/hotspot_interface.json",
+    "branch": "main"
+  }
+}

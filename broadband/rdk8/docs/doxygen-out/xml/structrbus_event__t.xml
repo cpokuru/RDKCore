@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="structrbus_event__t" kind="struct" language="C++" prot="public">
+    <compoundname>rbusEvent_t</compoundname>
+    <includes refid="rbus_8h" local="no">rbus.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structrbus_event__t_1a96e8854d0d994eec447da0f169fa0d93" prot="public" static="no" mutable="no">
+        <type>char const  *</type>
+        <definition>char const* rbusEvent_t::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>rbusEvent_t::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fully qualified event name </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="229" column="20" bodyfile="include/rbus.h" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrbus_event__t_1a4da17905709c1ab4857446297438c13c" prot="public" static="no" mutable="no">
+        <type><ref refid="group___events_1ga8572487d31c269212da91488e8eb33b9" kindref="member">rbusEventType_t</ref></type>
+        <definition>rbusEventType_t rbusEvent_t::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>rbusEvent_t::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The type of event </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="230" column="21" bodyfile="include/rbus.h" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrbus_event__t_1a1c836179f4b913b4b990e5238e8ae8ee" prot="public" static="no" mutable="no">
+        <type><ref refid="group__rbus_object_1ga21587678b0f1f9fb559a9bc9bae8a59c" kindref="member">rbusObject_t</ref></type>
+        <definition>rbusObject_t rbusEvent_t::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <qualifiedname>rbusEvent_t::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The data for the event </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="231" column="21" bodyfile="include/rbus.h" bodystart="231" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The set of data associated with a published event. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/rbus.h" line="227" column="1" bodyfile="include/rbus.h" bodystart="228" bodyend="232"/>
+    <listofallmembers>
+      <member refid="structrbus_event__t_1a1c836179f4b913b4b990e5238e8ae8ee" prot="public" virt="non-virtual"><scope>rbusEvent_t</scope><name>data</name></member>
+      <member refid="structrbus_event__t_1a96e8854d0d994eec447da0f169fa0d93" prot="public" virt="non-virtual"><scope>rbusEvent_t</scope><name>name</name></member>
+      <member refid="structrbus_event__t_1a4da17905709c1ab4857446297438c13c" prot="public" virt="non-virtual"><scope>rbusEvent_t</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

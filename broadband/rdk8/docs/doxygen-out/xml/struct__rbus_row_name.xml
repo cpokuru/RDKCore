@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="struct__rbus_row_name" kind="struct" language="C++" prot="public">
+    <compoundname>_rbusRowName</compoundname>
+    <includes refid="rbus_8h" local="no">rbus.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__rbus_row_name_1a3a062ed07dcd2eb5fad7ae751a9c8260" prot="public" static="no" mutable="no">
+        <type>char const  *</type>
+        <definition>char const* _rbusRowName::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>_rbusRowName::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="320" column="16" bodyfile="include/rbus.h" bodystart="320" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__rbus_row_name_1afd65925daaf22dd812eef145e998b97f" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t _rbusRowName::instNum</definition>
+        <argsstring></argsstring>
+        <name>instNum</name>
+        <qualifiedname>_rbusRowName::instNum</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fully qualified row name </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="321" column="14" bodyfile="include/rbus.h" bodystart="321" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__rbus_row_name_1ac2eb23bed9f231684460f6298d0b342e" prot="public" static="no" mutable="no">
+        <type>char const  *</type>
+        <definition>char const* _rbusRowName::alias</definition>
+        <argsstring></argsstring>
+        <name>alias</name>
+        <qualifiedname>_rbusRowName::alias</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Instance number of the row </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="322" column="16" bodyfile="include/rbus.h" bodystart="322" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__rbus_row_name_1aaf367486965f5131db3b637c25873382" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct__rbus_row_name" kindref="compound">_rbusRowName</ref> *</type>
+        <definition>struct _rbusRowName* _rbusRowName::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <qualifiedname>_rbusRowName::next</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Alias of the row. NULL if no alias exists </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="323" column="24" bodyfile="include/rbus.h" bodystart="323" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="group___tables_1ga7961456a63f83cb0b82cb712ef21fde4" kindref="member">rbusRowName_t</ref> </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>_rbusRowName</label>
+        <link refid="struct__rbus_row_name"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/rbus.h" line="318" column="1" bodyfile="include/rbus.h" bodystart="319" bodyend="324"/>
+    <listofallmembers>
+      <member refid="struct__rbus_row_name_1ac2eb23bed9f231684460f6298d0b342e" prot="public" virt="non-virtual"><scope>_rbusRowName</scope><name>alias</name></member>
+      <member refid="struct__rbus_row_name_1afd65925daaf22dd812eef145e998b97f" prot="public" virt="non-virtual"><scope>_rbusRowName</scope><name>instNum</name></member>
+      <member refid="struct__rbus_row_name_1a3a062ed07dcd2eb5fad7ae751a9c8260" prot="public" virt="non-virtual"><scope>_rbusRowName</scope><name>name</name></member>
+      <member refid="struct__rbus_row_name_1aaf367486965f5131db3b637c25873382" prot="public" virt="non-virtual"><scope>_rbusRowName</scope><name>next</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

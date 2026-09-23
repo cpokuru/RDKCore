@@ -1,0 +1,102 @@
+\doxysection{Methods }
+\hypertarget{group___methods}{}\label{group___methods}\index{Methods@{Methods}}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void(\texorpdfstring{$\ast$}{*}) \doxymbox{\hyperlink{group___methods_ga43bf44c6acbf3bf8a90be2e2621d1612}{rbus\+Method\+Async\+Resp\+Handler\+\_\+t}}(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}method\+Name, \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} error, \doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} params)
+\begin{DoxyCompactList}\small\item\em A component will receive this API callback when the result of and asynchronous method invoked with rbus\+Method\+\_\+\+Invoke\+Async is ready.~\newline
+Used by: Any component that calls rbus\+Method\+\_\+\+Invoke\+Async. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___methods_gae99cd8c0cc243dbca8f74e6d29134917}{rbus\+Method\+\_\+\+Invoke}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}method\+Name, \doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} in\+Params, \doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}out\+Params)
+\begin{DoxyCompactList}\small\item\em Invoke a remote method. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___methods_ga2895ce55085f01a5eff36e04dc118f0d}{rbus\+Method\+\_\+\+Send\+Async\+Response}} (\doxymbox{\hyperlink{group___common_gaece2a4d09e44f67df52ebf1efe63e793}{rbus\+Method\+Async\+Handle\+\_\+t}} async\+Handle, \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} error, \doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} out\+Params)
+\begin{DoxyCompactList}\small\item\em Send the response to an invoked method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\label{group___methods_doc-typedef-members}
+\Hypertarget{group___methods_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{group___methods_ga43bf44c6acbf3bf8a90be2e2621d1612}\index{Methods@{Methods}!rbusMethodAsyncRespHandler\_t@{rbusMethodAsyncRespHandler\_t}}
+\index{rbusMethodAsyncRespHandler\_t@{rbusMethodAsyncRespHandler\_t}!Methods@{Methods}}
+\doxysubsubsection{\texorpdfstring{rbusMethodAsyncRespHandler\_t}{rbusMethodAsyncRespHandler\_t}}
+{\footnotesize\ttfamily \label{group___methods_ga43bf44c6acbf3bf8a90be2e2621d1612} 
+typedef void(\texorpdfstring{$\ast$}{*}) rbus\+Method\+Async\+Resp\+Handler\+\_\+t(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const  \texorpdfstring{$\ast$}{*}method\+Name, \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} error, \doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} params)}
+
+
+
+A component will receive this API callback when the result of and asynchronous method invoked with rbus\+Method\+\_\+\+Invoke\+Async is ready.~\newline
+Used by: Any component that calls rbus\+Method\+\_\+\+Invoke\+Async. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rbus\+Handle} & Bus Handle \\
+\hline
+{\em method\+Name} & The method name \\
+\hline
+{\em error} & Any error that occured \\
+\hline
+{\em params} & The returned params of the method \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\label{group___methods_doc-func-members}
+\Hypertarget{group___methods_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{group___methods_gae99cd8c0cc243dbca8f74e6d29134917}\index{Methods@{Methods}!rbusMethod\_Invoke@{rbusMethod\_Invoke}}
+\index{rbusMethod\_Invoke@{rbusMethod\_Invoke}!Methods@{Methods}}
+\doxysubsubsection{\texorpdfstring{rbusMethod\_Invoke()}{rbusMethod\_Invoke()}}
+{\footnotesize\ttfamily \label{group___methods_gae99cd8c0cc243dbca8f74e6d29134917} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Method\+\_\+\+Invoke (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{method\+Name}{, }\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{in\+Params}{, }\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{out\+Params}{}\end{DoxyParamCaption})}
+
+
+
+Invoke a remote method. 
+
+Invokes a remote method and blocks waiting for the result. 
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em method\+Name} & Method name \\
+\hline
+{\em in\+Params} & Input params \\
+\hline
+{\em out\+Params} & Return params and error response values outparams is generated and contains the return value of error \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t} On success, it contains method specific data on the out\+Params. On failure, it contains method specific error code and error description on the out\+Params. "{}error\+\_\+code"{} \& "{}error\+\_\+string"{} provider is responsible in sending the errorcode and error string. other error like no method/\+handling issues, internal err will be taken care by rbus. consumer side errors returning (RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE and RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+INPUT) will not contain outparams for input validation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+SUCCESS, RBUS\+\_\+\+ERROR\+\_\+\+BUS\+\_\+\+ERROR, RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+INPUT, RBUS\+\_\+\+ERROR\+\_\+\+TIMEOUT, RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+METHOD, RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE 
+\end{DoxyReturn}
+\Hypertarget{group___methods_ga2895ce55085f01a5eff36e04dc118f0d}\index{Methods@{Methods}!rbusMethod\_SendAsyncResponse@{rbusMethod\_SendAsyncResponse}}
+\index{rbusMethod\_SendAsyncResponse@{rbusMethod\_SendAsyncResponse}!Methods@{Methods}}
+\doxysubsubsection{\texorpdfstring{rbusMethod\_SendAsyncResponse()}{rbusMethod\_SendAsyncResponse()}}
+{\footnotesize\ttfamily \label{group___methods_ga2895ce55085f01a5eff36e04dc118f0d} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Method\+\_\+\+Send\+Async\+Response (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaece2a4d09e44f67df52ebf1efe63e793}{rbus\+Method\+Async\+Handle\+\_\+t}}}]{async\+Handle}{, }\item[{\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}}}]{error}{, }\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{out\+Params}{}\end{DoxyParamCaption})}
+
+
+
+Send the response to an invoked method. 
+
+Providers can use this method to send the result of an invoke method asynchronously. ~\newline
+ The async\+Handle is provided when the provider\textquotesingle{}s Method\+Handler is called. ~\newline
+ The out\+Params param should be initialized and released by the provider. out\+Params can be NULL. The error params should be set to RBUS\+\_\+\+ERROR\+\_\+\+SUCCESS if the method was successful, or to an approprioate error if the method fails. ~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em async\+Handle} & Async handle \\
+\hline
+{\em error} & Any error that occured \\
+\hline
+{\em out\+Params} & The returned params of the method \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. 
+\end{DoxyReturn}

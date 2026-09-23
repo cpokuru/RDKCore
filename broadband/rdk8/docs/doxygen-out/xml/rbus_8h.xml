@@ -1,0 +1,1015 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="rbus_8h" kind="file" language="C++">
+    <compoundname>rbus.h</compoundname>
+    <includes local="no">stddef.h</includes>
+    <includes refid="rbus__value_8h" local="yes">rbus_value.h</includes>
+    <includes refid="rbus__property_8h" local="yes">rbus_property.h</includes>
+    <includes refid="rbus__object_8h" local="yes">rbus_object.h</includes>
+    <includes refid="rbus__filter_8h" local="yes">rbus_filter.h</includes>
+    <includedby refid="rbus__buffer_8h" local="yes">include/rbus_buffer.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/rbus.h</label>
+        <link refid="rbus_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>rbus_filter.h</label>
+        <link refid="rbus__filter_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>rbus_object.h</label>
+        <link refid="rbus__object_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>rbus_property.h</label>
+        <link refid="rbus__property_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>rbus_value.h</label>
+        <link refid="rbus__value_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>stddef.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="6">
+        <label>stdio.h</label>
+      </node>
+      <node id="7">
+        <label>sys/time.h</label>
+      </node>
+      <node id="8">
+        <label>time.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/rbus.h</label>
+        <link refid="rbus_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/rbus_buffer.h</label>
+        <link refid="rbus__buffer_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct__rbus_set_options" prot="public">_rbusSetOptions</innerclass>
+    <innerclass refid="struct__rbus_get_handler_options" prot="public">_rbusGetHandlerOptions</innerclass>
+    <innerclass refid="struct__rbus_set_handler_options" prot="public">_rbusSetHandlerOptions</innerclass>
+    <innerclass refid="structrbus_event__t" prot="public">rbusEvent_t</innerclass>
+    <innerclass refid="structrbus_event_raw_data__t" prot="public">rbusEventRawData_t</innerclass>
+    <innerclass refid="struct__rbus_event_subscription" prot="public">_rbusEventSubscription</innerclass>
+    <innerclass refid="struct__rbus_row_name" prot="public">_rbusRowName</innerclass>
+    <innerclass refid="structrbus_element_callback_table__t" prot="public">rbusElementCallbackTable_t</innerclass>
+    <innerclass refid="structrbus_callback_table__t" prot="public">rbusCallbackTable_t</innerclass>
+    <innerclass refid="structrbus_data_element__t" prot="public">rbusDataElement_t</innerclass>
+    <innerclass refid="struct__rbus_element_info" prot="public">_rbusElementInfo</innerclass>
+    <innerclass refid="struct__rbus_timeout_values" prot="public">_rbusTimeoutValues</innerclass>
+    <sectiondef kind="define">
+      <member refid="group___common_1ga45e7c239d118b46856da709edceb1bf4" kind="define"><name>RBUS_MAX_NAME_LENGTH</name></member>
+      <member refid="group___common_1ga9c8ef2bafb8c56aa59b15fb0fe0d146b" kind="define"><name>RBUS_MAX_NAME_DEPTH</name></member>
+    </sectiondef>
+    <sectiondef kind="enum">
+      <member refid="group___common_1ga5db8b0d14b831805c31bbf454b7a935a" kind="enum"><name>_rbusError</name></member>
+      <member refid="group___events_1ga0aa4feac1e56279c9d61e90771534785" kind="enum"><name>rbusEventSubAction_t</name></member>
+      <member refid="group___events_1ga8572487d31c269212da91488e8eb33b9" kind="enum"><name>rbusEventType_t</name></member>
+      <member refid="group___providers_1ga4b24d155a070a1d73e0a1f3b00195ace" kind="enum"><name>rbusElementType_t</name></member>
+      <member refid="group___common_1ga71193d2a24675a52cc00ca92cef9fdbb" kind="enum"><name>rbusStatus_t</name></member>
+      <member refid="group___common_1ga575fb21e48c1ee799d86568ddff009af" kind="enum"><name>rbusLogLevel_t</name></member>
+      <member refid="group___consumer_1gac11e3760580881d7c086f4a00c9451de" kind="enum"><name>rbusAccess_t</name></member>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <member refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kind="typedef"><name>rbusHandle_t</name></member>
+      <member refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kind="typedef"><name>rbusError_t</name></member>
+      <member refid="group___common_1ga205190215fd7d6a1c899e5c5431e4a27" kind="typedef"><name>rbusSetOptions_t</name></member>
+      <member refid="group___common_1gaad81a4f3aebbc2a324db415c24e552f3" kind="typedef"><name>rbusGetHandlerOptions_t</name></member>
+      <member refid="group___common_1ga1e3e6594721f0ad4d25bcb07e80f98ea" kind="typedef"><name>rbusSetHandlerOptions_t</name></member>
+      <member refid="group___common_1gaece2a4d09e44f67df52ebf1efe63e793" kind="typedef"><name>rbusMethodAsyncHandle_t</name></member>
+      <member refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kind="typedef"><name>rbusEventSubscription_t</name></member>
+      <member refid="group___events_1ga8c91c27fc5c9f944d4e82f6f97c7c6e6" kind="typedef"><name>rbusSubscribeAsyncRespHandler_t</name></member>
+      <member refid="group___events_1gaf0a4f17d9440f3216fc6f06eda8b81bf" kind="typedef"><name>rbusEventHandler_t</name></member>
+      <member refid="group___events_1ga1e28c9d30371c7fda325fe856281a712" kind="typedef"><name>rbusEventHandlerRawData_t</name></member>
+      <member refid="group___tables_1ga7961456a63f83cb0b82cb712ef21fde4" kind="typedef"><name>rbusRowName_t</name></member>
+      <member refid="group___methods_1ga43bf44c6acbf3bf8a90be2e2621d1612" kind="typedef"><name>rbusMethodAsyncRespHandler_t</name></member>
+      <member refid="group___providers_1ga8183a9f8eb04494909d260d9c563538b" kind="typedef"><name>rbusGetHandler_t</name></member>
+      <member refid="group___providers_1gad83da8f5d21226d482ca822d57401d77" kind="typedef"><name>rbusSetHandler_t</name></member>
+      <member refid="group___providers_1gaf8bd07fc7f695a02b93a9aab467e032b" kind="typedef"><name>rbusTableAddRowHandler_t</name></member>
+      <member refid="group___providers_1ga2acce3313e6c4131647874c51411c668" kind="typedef"><name>rbusTableRemoveRowHandler_t</name></member>
+      <member refid="group___providers_1gace673660999b800a3f21a239b5a40f8d" kind="typedef"><name>rbusMethodHandler_t</name></member>
+      <member refid="group___providers_1ga845118048502243dac351969766ce2e9" kind="typedef"><name>rbusEventSubHandler_t</name></member>
+      <member refid="group___providers_1ga509ea174d80c816237fcdf4cb3f321ce" kind="typedef"><name>rbusTableSyncHandler_t</name></member>
+      <member refid="group___providers_1ga33cd345f4902d497719af3cf9b292c5a" kind="typedef"><name>rbusElementCallbackTable_t</name></member>
+      <member refid="group___providers_1ga5ef9cc1af2178775686741d6bda9bc4b" kind="typedef"><name>rbusCallbackTable_t</name></member>
+      <member refid="group___common_1ga464c8091f6ed7aff0cfcc104e2087d9b" kind="typedef"><name>rbusLogLevel</name></member>
+      <member refid="group___common_1ga2da9e884770cf882767389178e705252" kind="typedef"><name>rbusLogHandler</name></member>
+      <member refid="group___consumer_1ga24c9c4e69cdd245d80fd806d4527ee4a" kind="typedef"><name>rbusElementInfo_t</name></member>
+      <member refid="group___consumers_1ga8dd3d14ae30f63ccad0a6a377d13361a" kind="typedef"><name>rbusTimeoutValues_t</name></member>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group___common_1ga8af15938b1656c306a21688b315a8d0a" kind="function"><name>rbusError_ToString</name></member>
+      <member refid="group___initialization_1ga680ec951905b5371ec0f275add675508" kind="function"><name>rbus_checkStatus</name></member>
+      <member refid="group___initialization_1gacf19c7e46ff9c2353892f5918310b264" kind="function"><name>rbus_open</name></member>
+      <member refid="group___initialization_1ga9ccb6de1c606f5ac59dbc3a5a2ad0dd0" kind="function"><name>rbus_close</name></member>
+      <memberdef kind="function" id="rbus_8h_1a9a7725e1cdf4aff20989f5cce9d73073" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbusHandle_SetTraceContextFromString</definition>
+        <argsstring>(rbusHandle_t rbus, char const *traceParent, char const *traceState)</argsstring>
+        <name>rbusHandle_SetTraceContextFromString</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>rbus</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>traceParent</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>traceState</declname>
+        </param>
+        <briefdescription>
+<para>Allows a caller to propogate an OpenTelemetry context from client to server. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rbus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The currently opened rbus handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>traceParent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The traceparent part of the TraceContext in HTTP header format </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>traceState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tracestate part of the TraceContext in HTTP header format </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>Neither the tracePraent or traceState need to include the name of the HTTP header only the value. For example. An example HTTP traceparent may look like traceparent: 00-0af7651916cd43dd8448eb211c80319c-b7ad6b7169203331-01 The caller should only supply the actual value. There is no need to include the &quot;traceparent:&quot; prefix. If the &quot;traceparent:&quot; prefix is also included, it will be removed. </para>
+</simplesect>
+<simplesect kind="return"><para></para>
+</simplesect>
+<simplesect kind="see"><para><ulink url="https://www.w3.org/TR/trace-context/">https://www.w3.org/TR/trace-context/</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="779" column="13" declfile="include/rbus.h" declline="779" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus_8h_1a500824d01d135b79dc9d15dbc2bf8cba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbusHandle_ClearTraceContext</definition>
+        <argsstring>(rbusHandle_t rbus)</argsstring>
+        <name>rbusHandle_ClearTraceContext</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>rbus</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="784" column="13" declfile="include/rbus.h" declline="784" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus_8h_1a2546efb4d32e1b102d2d597a49a69b6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbusHandle_GetTraceContextAsString</definition>
+        <argsstring>(rbusHandle_t rbus, char *traceParent, int traceParentLength, char *traceState, int traceStateLength)</argsstring>
+        <name>rbusHandle_GetTraceContextAsString</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>rbus</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>traceParent</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>traceParentLength</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>traceState</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>traceStateLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rbus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The currently opened rbus handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>traceParent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>traceParentLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>traceState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>traceStateLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+<simplesect kind="see"><para><ulink url="https://www.w3.org/TR/trace-context/">https://www.w3.org/TR/trace-context/</ulink> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="797" column="13" declfile="include/rbus.h" declline="797" declcolumn="13"/>
+      </memberdef>
+      <member refid="group___discovery_1gaf954e8a2c6b8c83af41a4f4aef5a9c3b" kind="function"><name>rbus_discoverComponentName</name></member>
+      <member refid="group___discovery_1gab25f5c66820a76026a0806515aeb2792" kind="function"><name>rbus_discoverComponentDataElements</name></member>
+      <member refid="group___providers_1ga58d4e15c31e566321fcbf96e4b4deace" kind="function"><name>rbus_regDataElements</name></member>
+      <member refid="group___providers_1ga91dfd7fea098f4e6b500344133ade0a2" kind="function"><name>rbus_unregDataElements</name></member>
+      <member refid="group___consumers_1ga4784460070e869774b9ed69d1b309571" kind="function"><name>rbus_get</name></member>
+      <member refid="group___consumers_1gad83602486f8d318f53f41546647076c6" kind="function"><name>rbus_getExt</name></member>
+      <member refid="group___consumers_1ga0a36da6ad09e2d90da6484acf6304b4d" kind="function"><name>rbus_getBoolean</name></member>
+      <member refid="group___consumers_1gadd90b4781c53e8e70cf2700493471649" kind="function"><name>rbus_getInt</name></member>
+      <member refid="group___consumers_1ga57e80644c25398c293de5e38a32792aa" kind="function"><name>rbus_getUint</name></member>
+      <member refid="group___consumers_1ga098336853b08dbb112d5a73db42ace4e" kind="function"><name>rbus_getStr</name></member>
+      <member refid="group___consumers_1ga69f715cea76a0ea395c416a0a0bbe19b" kind="function"><name>rbus_set</name></member>
+      <member refid="group___consumers_1ga586fb2942d0b05d0f24dfd473472cdd2" kind="function"><name>rbus_setCommit</name></member>
+      <member refid="group___consumers_1gaa96eac6a85b77e37b6e8c1d6df6db5c6" kind="function"><name>rbus_setMulti</name></member>
+      <member refid="group___consumers_1gaec64999a2acfd1579f143beb0bfe262e" kind="function"><name>rbus_setMultiExt</name></member>
+      <member refid="group___consumers_1ga7444bf14c9a527140224de4c8bb0c51e" kind="function"><name>rbus_setBoolean</name></member>
+      <member refid="group___consumers_1gaa8cec0ffe802cd2522f069682759d3c6" kind="function"><name>rbus_setInt</name></member>
+      <member refid="group___consumers_1gad05911a08098d00b5c4910766e6c235f" kind="function"><name>rbus_setUInt</name></member>
+      <member refid="group___consumers_1ga12f13fac8dc16728cbd064ae65b5887d" kind="function"><name>rbus_setStr</name></member>
+      <member refid="group___consumers_1ga9ec84149b182b69ca3b61a415ded52d9" kind="function"><name>rbusTable_addRow</name></member>
+      <member refid="group___consumers_1gac435ca7a91197e0e144034c044528b2e" kind="function"><name>rbusTable_removeRow</name></member>
+      <member refid="group___consumers_1ga5cff99f0d675b5636d8ac7882308b7c1" kind="function"><name>rbusTable_getRowNames</name></member>
+      <member refid="group___consumers_1gab04298bf2b87426984e580e8ff8191f0" kind="function"><name>rbusTable_freeRowNames</name></member>
+      <member refid="group___consumers_1ga959a5929fc0cbfad9d0faa2fa251e1c2" kind="function"><name>rbusElementInfo_get</name></member>
+      <member refid="group___consumers_1gae93dc65f7795e56be214b930bfa72f12" kind="function"><name>rbusElementInfo_free</name></member>
+      <member refid="group___providers_1ga299310a0ae625b51b688f5062f486f9e" kind="function"><name>rbusTable_registerRow</name></member>
+      <member refid="group___providers_1ga0df49f35236940e6c567fe692aa45379" kind="function"><name>rbusTable_unregisterRow</name></member>
+      <member refid="group___events_1ga6a5e6fdca2de593b7526ec819040fbe0" kind="function"><name>rbusEvent_IsSubscriptionExist</name></member>
+      <member refid="group___events_1gab5889c0424ae3e4efb9208de22b92835" kind="function"><name>rbusEvent_Subscribe</name></member>
+      <member refid="group___events_1ga2ef91bf25813c3d3e482bffbef2866ed" kind="function"><name>rbusEvent_SubscribeRawData</name></member>
+      <member refid="group___events_1gab3cf21821b5289220c08d8fd62189edb" kind="function"><name>rbusEvent_SubscribeAsync</name></member>
+      <member refid="group___events_1gaf218030e960675a9652366fe22d5b1df" kind="function"><name>rbusEvent_Unsubscribe</name></member>
+      <member refid="group___events_1ga0dfc895c048da0f94ebfcd9eba84eae7" kind="function"><name>rbusEvent_UnsubscribeRawData</name></member>
+      <member refid="group___events_1ga247738028c08f160b79e2d4239537ebe" kind="function"><name>rbusEvent_SubscribeEx</name></member>
+      <member refid="group___events_1gaec8a3850598cdf124442651908dd6d18" kind="function"><name>rbusEvent_SubscribeExRawData</name></member>
+      <member refid="group___events_1ga5660e5ab4c6b04015c63fe9baf71ac24" kind="function"><name>rbusEvent_SubscribeExAsync</name></member>
+      <member refid="group___events_1gab7ef1ebf1eb77546d8ebe10d743e8d09" kind="function"><name>rbusEvent_UnsubscribeEx</name></member>
+      <member refid="group___events_1gaf3337c7615b9f96501d743de350f7bb1" kind="function"><name>rbusEvent_UnsubscribeExRawData</name></member>
+      <member refid="group___events_1gac29791ff3418ef6cd6e24aff209a6f8a" kind="function"><name>rbusEvent_Publish</name></member>
+      <member refid="group___providers_1gaf5fb7bd4640ccc9aa7c93c07ee0d4b67" kind="function"><name>rbusEvent_PublishRawData</name></member>
+      <member refid="group___methods_1gae99cd8c0cc243dbca8f74e6d29134917" kind="function"><name>rbusMethod_Invoke</name></member>
+      <member refid="group___consumers_1ga9b13bb2bd22f73c972efb5a0dd1d659c" kind="function"><name>rbusMethod_InvokeAsync</name></member>
+      <member refid="group___methods_1ga2895ce55085f01a5eff36e04dc118f0d" kind="function"><name>rbusMethod_SendAsyncResponse</name></member>
+      <member refid="group___events_1ga06d8f8b2d571102c2c025b28ffbd3dd6" kind="function"><name>rbus_createSession</name></member>
+      <member refid="group___consumers_1ga1532bd543ad9e86683b6df7f000733a4" kind="function"><name>rbus_getCurrentSession</name></member>
+      <member refid="group___consumers_1ga67a89787b1fb79de3b7605499d2bccb1" kind="function"><name>rbus_closeSession</name></member>
+      <member refid="group___consumers_1ga027c931bcb02271719f0773fef67058f" kind="function"><name>rbus_registerLogHandler</name></member>
+      <member refid="group___consumers_1gaab4241ff7e106815e7cfaffb7c08af63" kind="function"><name>rbus_setLogLevel</name></member>
+      <member refid="group___consumers_1ga413ba5cd92734c0454d72a2477b99182" kind="function"><name>rbus_openDirect</name></member>
+      <member refid="group___consumers_1ga3a57cd3f015fe0d652bb46d88f195317" kind="function"><name>rbus_closeDirect</name></member>
+      <member refid="group___consumers_1ga49889d2770a3a0604da821b3442b4d17" kind="function"><name>rbus_registerDynamicTableSyncHandler</name></member>
+      <member refid="group___consumers_1gadd9ef292a4a12a4a21ad84e3cd88ecf0" kind="function"><name>rbusHandle_ConfigTimeoutValues</name></member>
+      <member refid="group___consumers_1ga898ceb12f6376025672c33b8ba82b34a" kind="function"><name>rbusHandle_ConfigSetTimeout</name></member>
+      <member refid="group___consumers_1gae2a58da3b8f2d33b761788abbe628cd9" kind="function"><name>rbusHandle_ConfigGetTimeout</name></member>
+      <member refid="group___consumers_1ga9fa2f1b83c5c5e2022eaa6e19e48d244" kind="function"><name>rbusHandle_ConfigGetMultiTimeout</name></member>
+      <member refid="group___consumers_1ga2026b681044493b88954ca0ff386fb77" kind="function"><name>rbusHandle_ConfigSetMultiTimeout</name></member>
+      <member refid="group___consumers_1ga00d9098a0baa68fb39bff300678911dd" kind="function"><name>rbusHandle_ConfigSubscribeTimeout</name></member>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="rbus_8h" kindref="compound">rbus.h</ref> top level include file. This is the only file a provider or client needs to include in their project. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>If<sp/>not<sp/>stated<sp/>otherwise<sp/>in<sp/>this<sp/>file<sp/>or<sp/>this<sp/>component&apos;s<sp/>Licenses.txt<sp/>file</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>copyright<sp/>and<sp/>licenses<sp/>apply:</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2016<sp/>RDK<sp/>Management</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>RBUS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RBUS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rbus__value_8h" kindref="compound">rbus_value.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rbus__property_8h" kindref="compound">rbus_property.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rbus__object_8h" kindref="compound">rbus_object.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rbus__filter_8h" kindref="compound">rbus_filter.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_rbusHandle;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_rbusHandle*<sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="group___common_1ga45e7c239d118b46856da709edceb1bf4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RBUS_MAX_NAME_LENGTH<sp/>256</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="group___common_1ga9c8ef2bafb8c56aa59b15fb0fe0d146b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RBUS_MAX_NAME_DEPTH<sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="group___common_1ga5db8b0d14b831805c31bbf454b7a935a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group___common_1ga5db8b0d14b831805c31bbf454b7a935a" kindref="member">_rbusError</ref></highlight></codeline>
+<codeline lineno="103"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Generic<sp/>error<sp/>codes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aaba78b39ff2a89c19cc9ecd770b0cff4f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aaba78b39ff2a89c19cc9ecd770b0cff4f" kindref="member">RBUS_ERROR_SUCCESS</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa9ebae7acef31009e2da835821d25a3ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa9ebae7acef31009e2da835821d25a3ec" kindref="member">RBUS_ERROR_BUS_ERROR</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa9a1547d7a456c5a71f40dca3dc933ecd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa9a1547d7a456c5a71f40dca3dc933ecd" kindref="member">RBUS_ERROR_INVALID_INPUT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="108" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aaaabc3cdfb97e47fcbde52848dc5f021f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aaaabc3cdfb97e47fcbde52848dc5f021f" kindref="member">RBUS_ERROR_NOT_INITIALIZED</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aad8875a435b4194eff4cd3bafa8c3862c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aad8875a435b4194eff4cd3bafa8c3862c" kindref="member">RBUS_ERROR_OUT_OF_RESOURCES</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa73fa6a352bc465672bb6dfd2b0271ead" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa73fa6a352bc465672bb6dfd2b0271ead" kindref="member">RBUS_ERROR_DESTINATION_NOT_FOUND</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="111" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aacc9db1e50b8109fa8c91744d52000638" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aacc9db1e50b8109fa8c91744d52000638" kindref="member">RBUS_ERROR_DESTINATION_NOT_REACHABLE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="112" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa0df954487735ea77e61d8f6c23fd3e92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa0df954487735ea77e61d8f6c23fd3e92" kindref="member">RBUS_ERROR_DESTINATION_RESPONSE_FAILURE</ref>,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="113" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa8b7c928dc06009a14410628532d596df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa8b7c928dc06009a14410628532d596df" kindref="member">RBUS_ERROR_INVALID_RESPONSE_FROM_DESTINATION</ref>,</highlight></codeline>
+<codeline lineno="114" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aad7664e052e24bb56a42686f0468d99ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aad7664e052e24bb56a42686f0468d99ce" kindref="member">RBUS_ERROR_INVALID_OPERATION</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="115" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aaca5c22a12e1749596eb2fdf6cb7a26fa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aaca5c22a12e1749596eb2fdf6cb7a26fa" kindref="member">RBUS_ERROR_INVALID_EVENT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa23c754e53e8196dce65d95ee826a2c98" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa23c754e53e8196dce65d95ee826a2c98" kindref="member">RBUS_ERROR_INVALID_HANDLE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="117" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa32c60b973204fe6388d6cab12aae4e94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa32c60b973204fe6388d6cab12aae4e94" kindref="member">RBUS_ERROR_SESSION_ALREADY_EXIST</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="118" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa2ebcac8cb80181718ea1c13e745a37a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa2ebcac8cb80181718ea1c13e745a37a0" kindref="member">RBUS_ERROR_COMPONENT_NAME_DUPLICATE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="119" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa8b8b10b50cf0208abbbf9193524f6724" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa8b8b10b50cf0208abbbf9193524f6724" kindref="member">RBUS_ERROR_ELEMENT_NAME_DUPLICATE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="120" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa384ed573fc57710f2706ac0d7ca64097" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa384ed573fc57710f2706ac0d7ca64097" kindref="member">RBUS_ERROR_ELEMENT_NAME_MISSING</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="121" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa9c7233f8915859c4548e5c50e1024463" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa9c7233f8915859c4548e5c50e1024463" kindref="member">RBUS_ERROR_COMPONENT_DOES_NOT_EXIST</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="122" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa76eff23270a64075adf86e2cc63849fa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa76eff23270a64075adf86e2cc63849fa" kindref="member">RBUS_ERROR_ELEMENT_DOES_NOT_EXIST</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="123" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aab95268db5752e57383de180c77d78fc9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aab95268db5752e57383de180c77d78fc9" kindref="member">RBUS_ERROR_ACCESS_NOT_ALLOWED</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="124" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aad4464c897ddb28dcd2aff03f9039291a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aad4464c897ddb28dcd2aff03f9039291a" kindref="member">RBUS_ERROR_INVALID_CONTEXT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="125" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aab4d44c7302674778282781128274393b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aab4d44c7302674778282781128274393b" kindref="member">RBUS_ERROR_TIMEOUT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="126" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa9db57791261df9863366b7b495bcd751" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa9db57791261df9863366b7b495bcd751" kindref="member">RBUS_ERROR_ASYNC_RESPONSE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="127" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aab35998b6f42b6d7bb83150c8e3e56baa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aab35998b6f42b6d7bb83150c8e3e56baa" kindref="member">RBUS_ERROR_INVALID_METHOD</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="128" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa3f44e9516a76968b9abce5b503cc6431" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa3f44e9516a76968b9abce5b503cc6431" kindref="member">RBUS_ERROR_NOSUBSCRIBERS</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="129" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aaab28f322a7dc1597c0e12d97267f8752" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aaab28f322a7dc1597c0e12d97267f8752" kindref="member">RBUS_ERROR_SUBSCRIPTION_ALREADY_EXIST</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="130" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa80b7261d6fb49a21a9544e2141c86734" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa80b7261d6fb49a21a9544e2141c86734" kindref="member">RBUS_ERROR_INVALID_NAMESPACE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="131" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aaf0e652a9d9b9c55ee8a2c3dc984501a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aaf0e652a9d9b9c55ee8a2c3dc984501a7" kindref="member">RBUS_ERROR_DIRECT_CON_NOT_EXIST</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="132" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aac4125cfdc40b04fdee894b6be3993379" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aac4125cfdc40b04fdee894b6be3993379" kindref="member">RBUS_ERROR_NOT_WRITABLE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="133" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa4ee4d733b46a54909111ad96f299b4b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa4ee4d733b46a54909111ad96f299b4b0" kindref="member">RBUS_ERROR_NOT_READABLE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="134" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa8c5f052671250be982fd245e4c69509c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa8c5f052671250be982fd245e4c69509c" kindref="member">RBUS_ERROR_INVALID_PARAMETER_TYPE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="135" refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa8d8839f0a6640ddd0c926247b249e9a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa8d8839f0a6640ddd0c926247b249e9a6" kindref="member">RBUS_ERROR_INVALID_PARAMETER_VALUE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="136" refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" refkind="member"><highlight class="normal">}<sp/><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="group___common_1ga8af15938b1656c306a21688b315a8d0a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*<sp/><ref refid="group___common_1ga8af15938b1656c306a21688b315a8d0a" kindref="member">rbusError_ToString</ref>(<ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/>e);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="struct__rbus_set_options" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__rbus_set_options" kindref="compound">_rbusSetOptions</ref></highlight></codeline>
+<codeline lineno="147"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="148" refid="struct__rbus_set_options_1a22a2a78889208a55322dbda9db0271da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct__rbus_set_options_1a22a2a78889208a55322dbda9db0271da" kindref="member">commit</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="154" refid="struct__rbus_set_options_1ae3e988869e6d6d6181fe7895b897ecd0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct__rbus_set_options_1ae3e988869e6d6d6181fe7895b897ecd0" kindref="member">sessionId</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="160" refid="group___common_1ga205190215fd7d6a1c899e5c5431e4a27" refkind="member"><highlight class="normal">}<sp/><ref refid="structrbus_set_options__t" kindref="compound">rbusSetOptions_t</ref>;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166" refid="struct__rbus_get_handler_options" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__rbus_get_handler_options" kindref="compound">_rbusGetHandlerOptions</ref></highlight></codeline>
+<codeline lineno="167"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="168" refid="struct__rbus_get_handler_options_1a3599824e9fcb3c4b1882006b793e4f18" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="struct__rbus_get_handler_options_1a3599824e9fcb3c4b1882006b793e4f18" kindref="member">context</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="169" refid="struct__rbus_get_handler_options_1a7e2bf780d734159ab0cb8d9280f3678d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><ref refid="struct__rbus_get_handler_options_1a7e2bf780d734159ab0cb8d9280f3678d" kindref="member">requestingComponent</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="170" refid="group___common_1gaad81a4f3aebbc2a324db415c24e552f3" refkind="member"><highlight class="normal">}<sp/><ref refid="structrbus_get_handler_options__t" kindref="compound">rbusGetHandlerOptions_t</ref>;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176" refid="struct__rbus_set_handler_options" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__rbus_set_handler_options" kindref="compound">_rbusSetHandlerOptions</ref></highlight></codeline>
+<codeline lineno="177"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="178" refid="struct__rbus_set_handler_options_1abd5a690fec5b07e1a2d1b3f2cad63d0f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct__rbus_set_handler_options_1abd5a690fec5b07e1a2d1b3f2cad63d0f" kindref="member">commit</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="184" refid="struct__rbus_set_handler_options_1a955e177bee4e43325c08719be2de9fd6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct__rbus_set_handler_options_1a955e177bee4e43325c08719be2de9fd6" kindref="member">sessionId</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="190" refid="struct__rbus_set_handler_options_1a225d451d7d2e3adfe049ddae4d7f428b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><ref refid="struct__rbus_set_handler_options_1a225d451d7d2e3adfe049ddae4d7f428b" kindref="member">requestingComponent</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="191" refid="group___common_1ga1e3e6594721f0ad4d25bcb07e80f98ea" refkind="member"><highlight class="normal">}<sp/><ref refid="structrbus_set_handler_options__t" kindref="compound">rbusSetHandlerOptions_t</ref>;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_rbusMethodAsyncHandle;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196" refid="group___common_1gaece2a4d09e44f67df52ebf1efe63e793" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_rbusMethodAsyncHandle*<sp/><ref refid="group___common_1gaece2a4d09e44f67df52ebf1efe63e793" kindref="member">rbusMethodAsyncHandle_t</ref>;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="group___events_1ga0aa4feac1e56279c9d61e90771534785" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="204" refid="group___events_1gga0aa4feac1e56279c9d61e90771534785a106483a07da50a7f580933ea53ea0290" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___events_1gga0aa4feac1e56279c9d61e90771534785a106483a07da50a7f580933ea53ea0290" kindref="member">RBUS_EVENT_ACTION_SUBSCRIBE</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="205" refid="group___events_1gga0aa4feac1e56279c9d61e90771534785ac825c61e11602ba29c81aebff8bdedde" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___events_1gga0aa4feac1e56279c9d61e90771534785ac825c61e11602ba29c81aebff8bdedde" kindref="member">RBUS_EVENT_ACTION_UNSUBSCRIBE</ref></highlight></codeline>
+<codeline lineno="206"><highlight class="normal">}<sp/><ref refid="group___events_1ga0aa4feac1e56279c9d61e90771534785" kindref="member">rbusEventSubAction_t</ref>;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212" refid="group___events_1ga8572487d31c269212da91488e8eb33b9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="214" refid="group___events_1gga8572487d31c269212da91488e8eb33b9af4fcd18da8c8186f6a731f551557f1d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___events_1gga8572487d31c269212da91488e8eb33b9af4fcd18da8c8186f6a731f551557f1d0" kindref="member">RBUS_EVENT_OBJECT_CREATED</ref>,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="215" refid="group___events_1gga8572487d31c269212da91488e8eb33b9ade6bf62371a6ee6c9d5b3eb7d12f9419" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___events_1gga8572487d31c269212da91488e8eb33b9ade6bf62371a6ee6c9d5b3eb7d12f9419" kindref="member">RBUS_EVENT_OBJECT_DELETED</ref>,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="216" refid="group___events_1gga8572487d31c269212da91488e8eb33b9a433ddaf617d8570b2afd8a46dcabeefe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___events_1gga8572487d31c269212da91488e8eb33b9a433ddaf617d8570b2afd8a46dcabeefe" kindref="member">RBUS_EVENT_VALUE_CHANGED</ref>,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="217" refid="group___events_1gga8572487d31c269212da91488e8eb33b9a8864f6f4a367453b8fc5b6c71fae4399" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___events_1gga8572487d31c269212da91488e8eb33b9a8864f6f4a367453b8fc5b6c71fae4399" kindref="member">RBUS_EVENT_GENERAL</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="218" refid="group___events_1gga8572487d31c269212da91488e8eb33b9a7924fd04efc3a9946b6c3d0fa3423f71" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___events_1gga8572487d31c269212da91488e8eb33b9a7924fd04efc3a9946b6c3d0fa3423f71" kindref="member">RBUS_EVENT_INITIAL_VALUE</ref>,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="219" refid="group___events_1gga8572487d31c269212da91488e8eb33b9a7c87c82dd764272760bd73c350400931" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___events_1gga8572487d31c269212da91488e8eb33b9a7c87c82dd764272760bd73c350400931" kindref="member">RBUS_EVENT_INTERVAL</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="220" refid="group___events_1gga8572487d31c269212da91488e8eb33b9a4a8f3752c84a8d02195732f1a9c8b322" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___events_1gga8572487d31c269212da91488e8eb33b9a4a8f3752c84a8d02195732f1a9c8b322" kindref="member">RBUS_EVENT_DURATION_COMPLETE</ref><sp/></highlight></codeline>
+<codeline lineno="221"><highlight class="normal">}<sp/><ref refid="group___events_1ga8572487d31c269212da91488e8eb33b9" kindref="member">rbusEventType_t</ref>;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227" refid="structrbus_event__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="229" refid="structrbus_event__t_1a96e8854d0d994eec447da0f169fa0d93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><ref refid="structrbus_event__t_1a96e8854d0d994eec447da0f169fa0d93" kindref="member">name</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="230" refid="structrbus_event__t_1a4da17905709c1ab4857446297438c13c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___events_1ga8572487d31c269212da91488e8eb33b9" kindref="member">rbusEventType_t</ref><sp/><ref refid="structrbus_event__t_1a4da17905709c1ab4857446297438c13c" kindref="member">type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="231" refid="structrbus_event__t_1a1c836179f4b913b4b990e5238e8ae8ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__rbus_object_1ga21587678b0f1f9fb559a9bc9bae8a59c" kindref="member">rbusObject_t</ref><sp/><sp/><sp/><sp/><ref refid="structrbus_event__t_1a1c836179f4b913b4b990e5238e8ae8ee" kindref="member">data</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="232"><highlight class="normal">}<sp/><ref refid="structrbus_event__t" kindref="compound">rbusEvent_t</ref>;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234" refid="structrbus_event_raw_data__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="236" refid="structrbus_event_raw_data__t_1ab581f690c19e1c768614ada28348bfe0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><ref refid="structrbus_event_raw_data__t_1ab581f690c19e1c768614ada28348bfe0" kindref="member">name</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="237" refid="structrbus_event_raw_data__t_1aad6f57115800906459b9b52ae1c9f459" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><ref refid="structrbus_event_raw_data__t_1aad6f57115800906459b9b52ae1c9f459" kindref="member">rawData</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="238" refid="structrbus_event_raw_data__t_1a84c34efd426161120462ebb7597641d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structrbus_event_raw_data__t_1a84c34efd426161120462ebb7597641d5" kindref="member">rawDataLen</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="239"><highlight class="normal">}<sp/><ref refid="structrbus_event_raw_data__t" kindref="compound">rbusEventRawData_t</ref>;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241" refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__rbus_event_subscription" kindref="compound">_rbusEventSubscription</ref><sp/><ref refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kindref="member">rbusEventSubscription_t</ref>;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257" refid="group___events_1ga8c91c27fc5c9f944d4e82f6f97c7c6e6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="group___events_1ga8c91c27fc5c9f944d4e82f6f97c7c6e6" kindref="member">rbusSubscribeAsyncRespHandler_t</ref>)(</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/><ref refid="struct__rbus_event_subscription_1a63e09bbea5d562727645c5a287b19077" kindref="member">handle</ref>,<sp/></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kindref="member">rbusEventSubscription_t</ref>*<sp/>subscription,</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/>error);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275" refid="group___events_1gaf0a4f17d9440f3216fc6f06eda8b81bf" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="group___events_1gaf0a4f17d9440f3216fc6f06eda8b81bf" kindref="member">rbusEventHandler_t</ref>)(</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__rbus_event_subscription_1a63e09bbea5d562727645c5a287b19077" kindref="member">handle</ref>,</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structrbus_event__t" kindref="compound">rbusEvent_t</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eventData,</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kindref="member">rbusEventSubscription_t</ref>*<sp/><sp/><sp/><sp/>subscription</highlight></codeline>
+<codeline lineno="279"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281" refid="group___events_1ga1e28c9d30371c7fda325fe856281a712" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="group___events_1ga1e28c9d30371c7fda325fe856281a712" kindref="member">rbusEventHandlerRawData_t</ref>)(</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__rbus_event_subscription_1a63e09bbea5d562727645c5a287b19077" kindref="member">handle</ref>,</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structrbus_event_raw_data__t" kindref="compound">rbusEventRawData_t</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/>eventData,</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kindref="member">rbusEventSubscription_t</ref>*<sp/><sp/><sp/><sp/>subscription</highlight></codeline>
+<codeline lineno="285"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288" refid="struct__rbus_event_subscription" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__rbus_event_subscription" kindref="compound">_rbusEventSubscription</ref></highlight></codeline>
+<codeline lineno="289"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="290" refid="struct__rbus_event_subscription_1aa5f81da5ad5176915ed1d1b40b7ffe5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__rbus_event_subscription_1aa5f81da5ad5176915ed1d1b40b7ffe5d" kindref="member">eventName</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="291" refid="struct__rbus_event_subscription_1ad975aaaadb953b18585f96660374f3b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__rbus_filter_1ga03ad5f80346294826fffde5c271dd22e" kindref="member">rbusFilter_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__rbus_event_subscription_1ad975aaaadb953b18585f96660374f3b6" kindref="member">filter</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="294" refid="struct__rbus_event_subscription_1ab984e9c7c70a32dbb064f29e6c140cd9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__rbus_event_subscription_1ab984e9c7c70a32dbb064f29e6c140cd9" kindref="member">interval</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="298" refid="struct__rbus_event_subscription_1af0542981da073930ab7d5441ccfa3585" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__rbus_event_subscription_1af0542981da073930ab7d5441ccfa3585" kindref="member">duration</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="304" refid="struct__rbus_event_subscription_1ac7ef6bb6c1a7053cd2915d1e42c673a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__rbus_event_subscription_1ac7ef6bb6c1a7053cd2915d1e42c673a6" kindref="member">handler</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="305" refid="struct__rbus_event_subscription_1ab8739843ed4fbac99eee7419bd29df64" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__rbus_event_subscription_1ab8739843ed4fbac99eee7419bd29df64" kindref="member">userData</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="306" refid="struct__rbus_event_subscription_1a63e09bbea5d562727645c5a287b19077" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__rbus_event_subscription_1a63e09bbea5d562727645c5a287b19077" kindref="member">handle</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="307" refid="struct__rbus_event_subscription_1a7945cd09582ac9f11d23fbfc50ad70d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___events_1ga8c91c27fc5c9f944d4e82f6f97c7c6e6" kindref="member">rbusSubscribeAsyncRespHandler_t</ref><sp/><ref refid="struct__rbus_event_subscription_1a7945cd09582ac9f11d23fbfc50ad70d0" kindref="member">asyncHandler</ref>;</highlight></codeline>
+<codeline lineno="308" refid="struct__rbus_event_subscription_1a4896288c353bbfb5b61289d27a1ab8c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__rbus_event_subscription_1a4896288c353bbfb5b61289d27a1ab8c4" kindref="member">publishOnSubscribe</ref>;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal">}<sp/><ref refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kindref="member">rbusEventSubscription_t</ref>;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318" refid="struct__rbus_row_name" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__rbus_row_name" kindref="compound">_rbusRowName</ref></highlight></codeline>
+<codeline lineno="319"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="320" refid="struct__rbus_row_name_1a3a062ed07dcd2eb5fad7ae751a9c8260" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><ref refid="struct__rbus_row_name_1a3a062ed07dcd2eb5fad7ae751a9c8260" kindref="member">name</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="321" refid="struct__rbus_row_name_1afd65925daaf22dd812eef145e998b97f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct__rbus_row_name_1afd65925daaf22dd812eef145e998b97f" kindref="member">instNum</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="322" refid="struct__rbus_row_name_1ac2eb23bed9f231684460f6298d0b342e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><ref refid="struct__rbus_row_name_1ac2eb23bed9f231684460f6298d0b342e" kindref="member">alias</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="323" refid="struct__rbus_row_name_1aaf367486965f5131db3b637c25873382" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__rbus_row_name" kindref="compound">_rbusRowName</ref>*<sp/><ref refid="struct__rbus_row_name_1aaf367486965f5131db3b637c25873382" kindref="member">next</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="324" refid="group___tables_1ga7961456a63f83cb0b82cb712ef21fde4" refkind="member"><highlight class="normal">}<sp/><ref refid="group___tables_1ga7961456a63f83cb0b82cb712ef21fde4" kindref="member">rbusRowName_t</ref>;</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342" refid="group___methods_1ga43bf44c6acbf3bf8a90be2e2621d1612" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="group___methods_1ga43bf44c6acbf3bf8a90be2e2621d1612" kindref="member">rbusMethodAsyncRespHandler_t</ref>)(</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,<sp/></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>methodName,<sp/></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/>error,</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__rbus_object_1ga21587678b0f1f9fb559a9bc9bae8a59c" kindref="member">rbusObject_t</ref><sp/>params</highlight></codeline>
+<codeline lineno="347"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354" refid="group___providers_1ga4b24d155a070a1d73e0a1f3b00195ace" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="355"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="356" refid="group___providers_1gga4b24d155a070a1d73e0a1f3b00195aceaecda73fecc321492fcc9ddf33d0baa2e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___providers_1gga4b24d155a070a1d73e0a1f3b00195aceaecda73fecc321492fcc9ddf33d0baa2e" kindref="member">RBUS_ELEMENT_TYPE_PROPERTY</ref><sp/>=<sp/>1,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="361" refid="group___providers_1gga4b24d155a070a1d73e0a1f3b00195acea3a47f7e829cba15e8f5fe82f33ed377b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___providers_1gga4b24d155a070a1d73e0a1f3b00195acea3a47f7e829cba15e8f5fe82f33ed377b" kindref="member">RBUS_ELEMENT_TYPE_TABLE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="364" refid="group___providers_1gga4b24d155a070a1d73e0a1f3b00195acea24c7c9ca3dde7b4a661a8ea565d15e91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___providers_1gga4b24d155a070a1d73e0a1f3b00195acea24c7c9ca3dde7b4a661a8ea565d15e91" kindref="member">RBUS_ELEMENT_TYPE_EVENT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="367" refid="group___providers_1gga4b24d155a070a1d73e0a1f3b00195acea9171cee62cfa142748b9b10a3dcb7e69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___providers_1gga4b24d155a070a1d73e0a1f3b00195acea9171cee62cfa142748b9b10a3dcb7e69" kindref="member">RBUS_ELEMENT_TYPE_METHOD</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="369"><highlight class="normal">}<sp/><ref refid="group___providers_1ga4b24d155a070a1d73e0a1f3b00195ace" kindref="member">rbusElementType_t</ref>;</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight></codeline>
+<codeline lineno="388" refid="group___providers_1ga8183a9f8eb04494909d260d9c563538b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/>(*<ref refid="group___providers_1ga8183a9f8eb04494909d260d9c563538b" kindref="member">rbusGetHandler_t</ref>)(</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,<sp/></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref><sp/>property,</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structrbus_get_handler_options__t" kindref="compound">rbusGetHandlerOptions_t</ref>*<sp/>options</highlight></codeline>
+<codeline lineno="392"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"></highlight></codeline>
+<codeline lineno="412" refid="group___providers_1gad83da8f5d21226d482ca822d57401d77" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/>(*<ref refid="group___providers_1gad83da8f5d21226d482ca822d57401d77" kindref="member">rbusSetHandler_t</ref>)(</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,<sp/></highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref><sp/>property,<sp/></highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structrbus_set_handler_options__t" kindref="compound">rbusSetHandlerOptions_t</ref>*<sp/>options</highlight></codeline>
+<codeline lineno="416"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"></highlight></codeline>
+<codeline lineno="437" refid="group___providers_1gaf8bd07fc7f695a02b93a9aab467e032b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/>(*<ref refid="group___providers_1gaf8bd07fc7f695a02b93a9aab467e032b" kindref="member">rbusTableAddRowHandler_t</ref>)(</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>tableName,</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>aliasName,</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t*<sp/><ref refid="struct__rbus_row_name_1afd65925daaf22dd812eef145e998b97f" kindref="member">instNum</ref>);</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"></highlight></codeline>
+<codeline lineno="456" refid="group___providers_1ga2acce3313e6c4131647874c51411c668" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/>(*<ref refid="group___providers_1ga2acce3313e6c4131647874c51411c668" kindref="member">rbusTableRemoveRowHandler_t</ref>)(</highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>rowName);</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"></highlight></codeline>
+<codeline lineno="482" refid="group___providers_1gace673660999b800a3f21a239b5a40f8d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/>(*<ref refid="group___providers_1gace673660999b800a3f21a239b5a40f8d" kindref="member">rbusMethodHandler_t</ref>)(</highlight></codeline>
+<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,<sp/></highlight></codeline>
+<codeline lineno="484"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>methodName,<sp/></highlight></codeline>
+<codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__rbus_object_1ga21587678b0f1f9fb559a9bc9bae8a59c" kindref="member">rbusObject_t</ref><sp/>inParams,</highlight></codeline>
+<codeline lineno="486"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__rbus_object_1ga21587678b0f1f9fb559a9bc9bae8a59c" kindref="member">rbusObject_t</ref><sp/>outParams,</highlight></codeline>
+<codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaece2a4d09e44f67df52ebf1efe63e793" kindref="member">rbusMethodAsyncHandle_t</ref><sp/>asyncHandle);</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"></highlight></codeline>
+<codeline lineno="529" refid="group___providers_1ga845118048502243dac351969766ce2e9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/>(*<sp/><ref refid="group___providers_1ga845118048502243dac351969766ce2e9" kindref="member">rbusEventSubHandler_t</ref>)(</highlight></codeline>
+<codeline lineno="530"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="531"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___events_1ga0aa4feac1e56279c9d61e90771534785" kindref="member">rbusEventSubAction_t</ref><sp/>action,</highlight></codeline>
+<codeline lineno="532"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>eventName,</highlight></codeline>
+<codeline lineno="533"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__rbus_filter_1ga03ad5f80346294826fffde5c271dd22e" kindref="member">rbusFilter_t</ref><sp/>filter,</highlight></codeline>
+<codeline lineno="534"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>interval,</highlight></codeline>
+<codeline lineno="535"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>autoPublish</highlight></codeline>
+<codeline lineno="536"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="537"><highlight class="normal"></highlight></codeline>
+<codeline lineno="550" refid="group___providers_1ga509ea174d80c816237fcdf4cb3f321ce" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/>(*<ref refid="group___providers_1ga509ea174d80c816237fcdf4cb3f321ce" kindref="member">rbusTableSyncHandler_t</ref>)(</highlight></codeline>
+<codeline lineno="551"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="552"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>tableName</highlight></codeline>
+<codeline lineno="553"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="554"><highlight class="normal"></highlight></codeline>
+<codeline lineno="574" refid="structrbus_element_callback_table__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structrbus_element_callback_table__t" kindref="compound">rbusElementCallbackTable_t</ref></highlight></codeline>
+<codeline lineno="575"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="576" refid="structrbus_element_callback_table__t_1a6d018a2e250df956765c699ec17808b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___providers_1ga8183a9f8eb04494909d260d9c563538b" kindref="member">rbusGetHandler_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structrbus_element_callback_table__t_1a6d018a2e250df956765c699ec17808b3" kindref="member">getHandler</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="579" refid="structrbus_element_callback_table__t_1a8aaaffa54dbc327d9c34d4e8aa2795e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___providers_1gad83da8f5d21226d482ca822d57401d77" kindref="member">rbusSetHandler_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structrbus_element_callback_table__t_1a8aaaffa54dbc327d9c34d4e8aa2795e1" kindref="member">setHandler</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="582" refid="structrbus_element_callback_table__t_1a73898c477bc0c400a293e9e0fb27b048" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___providers_1gaf8bd07fc7f695a02b93a9aab467e032b" kindref="member">rbusTableAddRowHandler_t</ref><sp/><ref refid="structrbus_element_callback_table__t_1a73898c477bc0c400a293e9e0fb27b048" kindref="member">tableAddRowHandler</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="584" refid="structrbus_element_callback_table__t_1abfd7052973bfdccd3c097ea333c016f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___providers_1ga2acce3313e6c4131647874c51411c668" kindref="member">rbusTableRemoveRowHandler_t</ref><sp/><ref refid="structrbus_element_callback_table__t_1abfd7052973bfdccd3c097ea333c016f6" kindref="member">tableRemoveRowHandler</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="586" refid="structrbus_element_callback_table__t_1ae51023cd4ad9d8914e97af080c9b9f9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___providers_1ga845118048502243dac351969766ce2e9" kindref="member">rbusEventSubHandler_t</ref><sp/><sp/><sp/><sp/><ref refid="structrbus_element_callback_table__t_1ae51023cd4ad9d8914e97af080c9b9f9c" kindref="member">eventSubHandler</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="590" refid="structrbus_element_callback_table__t_1aa40df3586833f88c3add37fc89756e0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___providers_1gace673660999b800a3f21a239b5a40f8d" kindref="member">rbusMethodHandler_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structrbus_element_callback_table__t_1aa40df3586833f88c3add37fc89756e0c" kindref="member">methodHandler</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="591" refid="structrbus_element_callback_table__t_1aff02b938ff3fe3c3394a31c331f54b0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___providers_1ga509ea174d80c816237fcdf4cb3f321ce" kindref="member">rbusTableSyncHandler_t</ref><sp/><sp/><sp/><ref refid="structrbus_element_callback_table__t_1aff02b938ff3fe3c3394a31c331f54b0c" kindref="member">tableSyncHandler</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="592" refid="group___providers_1ga33cd345f4902d497719af3cf9b292c5a" refkind="member"><highlight class="normal">}<sp/><ref refid="structrbus_element_callback_table__t" kindref="compound">rbusElementCallbackTable_t</ref>;</highlight></codeline>
+<codeline lineno="593"><highlight class="normal"></highlight></codeline>
+<codeline lineno="598" refid="structrbus_callback_table__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structrbus_callback_table__t" kindref="compound">rbusCallbackTable_t</ref></highlight></codeline>
+<codeline lineno="599"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="600" refid="structrbus_callback_table__t_1ab3cf894da334aeaa472ad5ad67e35262" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___providers_1ga8183a9f8eb04494909d260d9c563538b" kindref="member">rbusGetHandler_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structrbus_callback_table__t_1ab3cf894da334aeaa472ad5ad67e35262" kindref="member">getHandler</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="603" refid="structrbus_callback_table__t_1ae9a40014621cb192f765eeb4888b4efa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___providers_1gad83da8f5d21226d482ca822d57401d77" kindref="member">rbusSetHandler_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structrbus_callback_table__t_1ae9a40014621cb192f765eeb4888b4efa" kindref="member">setHandler</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="606" refid="structrbus_callback_table__t_1a5de4202e9023e60ce48c3df8c62f2706" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___providers_1gaf8bd07fc7f695a02b93a9aab467e032b" kindref="member">rbusTableAddRowHandler_t</ref><sp/><ref refid="structrbus_callback_table__t_1a5de4202e9023e60ce48c3df8c62f2706" kindref="member">tableAddRowHandler</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="608" refid="structrbus_callback_table__t_1a571e575a123e2e314d5b6ae9f6e7ec52" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___providers_1ga2acce3313e6c4131647874c51411c668" kindref="member">rbusTableRemoveRowHandler_t</ref><sp/><ref refid="structrbus_callback_table__t_1a571e575a123e2e314d5b6ae9f6e7ec52" kindref="member">tableRemoveRowHandler</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="610" refid="structrbus_callback_table__t_1a79eef1b3ea001e79dea4f191aaf345f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___providers_1ga845118048502243dac351969766ce2e9" kindref="member">rbusEventSubHandler_t</ref><sp/><sp/><sp/><sp/><ref refid="structrbus_callback_table__t_1a79eef1b3ea001e79dea4f191aaf345f2" kindref="member">eventSubHandler</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="614" refid="structrbus_callback_table__t_1a1de47810e60feda77ffa7a0d945c919f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structrbus_callback_table__t_1a1de47810e60feda77ffa7a0d945c919f" kindref="member">methodHandler</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="617" refid="group___providers_1ga5ef9cc1af2178775686741d6bda9bc4b" refkind="member"><highlight class="normal">}<sp/><ref refid="structrbus_callback_table__t" kindref="compound">rbusCallbackTable_t</ref>;</highlight></codeline>
+<codeline lineno="618"><highlight class="normal"></highlight></codeline>
+<codeline lineno="621" refid="structrbus_data_element__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="622"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="623" refid="structrbus_data_element__t_1ad5396131cb6120760b63fa888d1478eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structrbus_data_element__t_1ad5396131cb6120760b63fa888d1478eb" kindref="member">name</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="624" refid="structrbus_data_element__t_1a3d5387db4049b27e4003fbf3881477a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___providers_1ga4b24d155a070a1d73e0a1f3b00195ace" kindref="member">rbusElementType_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structrbus_data_element__t_1a3d5387db4049b27e4003fbf3881477a8" kindref="member">type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="625" refid="structrbus_data_element__t_1ad0f4959205636345fdd1f1eb0163a51c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structrbus_callback_table__t" kindref="compound">rbusCallbackTable_t</ref><sp/><sp/><sp/><sp/><sp/><ref refid="structrbus_data_element__t_1ad0f4959205636345fdd1f1eb0163a51c" kindref="member">cbTable</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="627"><highlight class="normal">}<ref refid="structrbus_data_element__t" kindref="compound">rbusDataElement_t</ref>;</highlight></codeline>
+<codeline lineno="628"><highlight class="normal"></highlight></codeline>
+<codeline lineno="630"><highlight class="normal"></highlight></codeline>
+<codeline lineno="635" refid="group___common_1ga71193d2a24675a52cc00ca92cef9fdbb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="636"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="637" refid="group___common_1gga71193d2a24675a52cc00ca92cef9fdbbae87f091d3824f9d3d054a1fbe2d6a300" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga71193d2a24675a52cc00ca92cef9fdbbae87f091d3824f9d3d054a1fbe2d6a300" kindref="member">RBUS_ENABLED</ref><sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="638" refid="group___common_1gga71193d2a24675a52cc00ca92cef9fdbbad2cade803b5c812d555768e018934655" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga71193d2a24675a52cc00ca92cef9fdbbad2cade803b5c812d555768e018934655" kindref="member">RBUS_ENABLE_PENDING</ref>,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="639" refid="group___common_1gga71193d2a24675a52cc00ca92cef9fdbba80cb72be317f8f3f9c885a5770f90b89" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga71193d2a24675a52cc00ca92cef9fdbba80cb72be317f8f3f9c885a5770f90b89" kindref="member">RBUS_DISABLE_PENDING</ref>,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="640" refid="group___common_1gga71193d2a24675a52cc00ca92cef9fdbbac85ff6b879da585a336e423d702614cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gga71193d2a24675a52cc00ca92cef9fdbbac85ff6b879da585a336e423d702614cd" kindref="member">RBUS_DISABLED</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="641"><highlight class="normal">}<sp/><ref refid="group___common_1ga71193d2a24675a52cc00ca92cef9fdbb" kindref="member">rbusStatus_t</ref>;</highlight></codeline>
+<codeline lineno="642"><highlight class="normal"></highlight></codeline>
+<codeline lineno="643" refid="group___common_1ga575fb21e48c1ee799d86568ddff009af" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="644"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="645" refid="group___common_1gga575fb21e48c1ee799d86568ddff009afab4b1b0143cfd6f6b298faff4f8af9153" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="group___common_1gga575fb21e48c1ee799d86568ddff009afab4b1b0143cfd6f6b298faff4f8af9153" kindref="member">RBUS_LOG_DEBUG</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="646" refid="group___common_1gga575fb21e48c1ee799d86568ddff009afafac938bb2282863c3e8940ef210f775c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="group___common_1gga575fb21e48c1ee799d86568ddff009afafac938bb2282863c3e8940ef210f775c" kindref="member">RBUS_LOG_INFO</ref><sp/><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="647" refid="group___common_1gga575fb21e48c1ee799d86568ddff009afab520257584a977a99040496f38250791" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="group___common_1gga575fb21e48c1ee799d86568ddff009afab520257584a977a99040496f38250791" kindref="member">RBUS_LOG_WARN</ref><sp/><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="648" refid="group___common_1gga575fb21e48c1ee799d86568ddff009afadeb4c90ed0ac3f8028972ee34d121916" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="group___common_1gga575fb21e48c1ee799d86568ddff009afadeb4c90ed0ac3f8028972ee34d121916" kindref="member">RBUS_LOG_ERROR</ref><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="649" refid="group___common_1gga575fb21e48c1ee799d86568ddff009afa75d9aa0c2847a3b3aecc3216a777fea4" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="group___common_1gga575fb21e48c1ee799d86568ddff009afa75d9aa0c2847a3b3aecc3216a777fea4" kindref="member">RBUS_LOG_FATAL</ref><sp/>=<sp/>4</highlight></codeline>
+<codeline lineno="650"><highlight class="normal">}<sp/><ref refid="group___common_1ga575fb21e48c1ee799d86568ddff009af" kindref="member">rbusLogLevel_t</ref>;</highlight></codeline>
+<codeline lineno="651"><highlight class="normal"></highlight></codeline>
+<codeline lineno="652" refid="group___common_1ga464c8091f6ed7aff0cfcc104e2087d9b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="group___common_1ga575fb21e48c1ee799d86568ddff009af" kindref="member">rbusLogLevel_t</ref><sp/><ref refid="group___common_1ga464c8091f6ed7aff0cfcc104e2087d9b" kindref="member">rbusLogLevel</ref>;</highlight></codeline>
+<codeline lineno="653"><highlight class="normal"></highlight></codeline>
+<codeline lineno="671" refid="group___common_1ga2da9e884770cf882767389178e705252" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="group___common_1ga2da9e884770cf882767389178e705252" kindref="member">rbusLogHandler</ref>)(</highlight></codeline>
+<codeline lineno="672"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1ga575fb21e48c1ee799d86568ddff009af" kindref="member">rbusLogLevel_t</ref><sp/>level,</highlight></codeline>
+<codeline lineno="673"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file,</highlight></codeline>
+<codeline lineno="674"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>line,</highlight></codeline>
+<codeline lineno="675"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>threadId,</highlight></codeline>
+<codeline lineno="676"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>message);</highlight></codeline>
+<codeline lineno="677"><highlight class="normal"></highlight></codeline>
+<codeline lineno="679"><highlight class="normal"></highlight></codeline>
+<codeline lineno="683"><highlight class="normal"></highlight></codeline>
+<codeline lineno="684" refid="group___consumer_1gac11e3760580881d7c086f4a00c9451de" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="685"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="686" refid="group___consumer_1ggac11e3760580881d7c086f4a00c9451deafb76479ff2213b61df5de554709eb40f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___consumer_1ggac11e3760580881d7c086f4a00c9451deafb76479ff2213b61df5de554709eb40f" kindref="member">RBUS_ACCESS_GET</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="687" refid="group___consumer_1ggac11e3760580881d7c086f4a00c9451dea2a84ab590a6ab4342ccd5a39f5cb71ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___consumer_1ggac11e3760580881d7c086f4a00c9451dea2a84ab590a6ab4342ccd5a39f5cb71ff" kindref="member">RBUS_ACCESS_SET</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="688" refid="group___consumer_1ggac11e3760580881d7c086f4a00c9451dea890dc874ff3845cee39c592c26944023" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___consumer_1ggac11e3760580881d7c086f4a00c9451dea890dc874ff3845cee39c592c26944023" kindref="member">RBUS_ACCESS_ADDROW</ref><sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="689" refid="group___consumer_1ggac11e3760580881d7c086f4a00c9451deac21ef5955d65dd7117a8d73ad51110a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___consumer_1ggac11e3760580881d7c086f4a00c9451deac21ef5955d65dd7117a8d73ad51110a9" kindref="member">RBUS_ACCESS_REMOVEROW</ref><sp/>=<sp/>8,</highlight></codeline>
+<codeline lineno="690" refid="group___consumer_1ggac11e3760580881d7c086f4a00c9451dea2b79f0545f396edde232a4bd95bdba50" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___consumer_1ggac11e3760580881d7c086f4a00c9451dea2b79f0545f396edde232a4bd95bdba50" kindref="member">RBUS_ACCESS_SUBSCRIBE</ref><sp/>=<sp/>16,</highlight></codeline>
+<codeline lineno="691" refid="group___consumer_1ggac11e3760580881d7c086f4a00c9451dea6e43b3421459813fe2351616a0d59778" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___consumer_1ggac11e3760580881d7c086f4a00c9451dea6e43b3421459813fe2351616a0d59778" kindref="member">RBUS_ACCESS_INVOKE</ref><sp/>=<sp/>32</highlight></codeline>
+<codeline lineno="692"><highlight class="normal">}<sp/><ref refid="group___consumer_1gac11e3760580881d7c086f4a00c9451de" kindref="member">rbusAccess_t</ref>;</highlight></codeline>
+<codeline lineno="693"><highlight class="normal"></highlight></codeline>
+<codeline lineno="694" refid="struct__rbus_element_info" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__rbus_element_info" kindref="compound">_rbusElementInfo</ref></highlight></codeline>
+<codeline lineno="695"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="696" refid="struct__rbus_element_info_1adb165e09b70a26f1f92b829c82ed53f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><ref refid="struct__rbus_element_info_1adb165e09b70a26f1f92b829c82ed53f9" kindref="member">name</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="697" refid="struct__rbus_element_info_1a4c5123a378421255264c6d60c3fe39dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><ref refid="struct__rbus_element_info_1a4c5123a378421255264c6d60c3fe39dc" kindref="member">component</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="698" refid="struct__rbus_element_info_1a397fc5aceb58692517284414fd4c85b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___providers_1ga4b24d155a070a1d73e0a1f3b00195ace" kindref="member">rbusElementType_t</ref><sp/><ref refid="struct__rbus_element_info_1a397fc5aceb58692517284414fd4c85b9" kindref="member">type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="699" refid="struct__rbus_element_info_1a88147c98190b6fbd3a1ef8ef7c72ab5a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct__rbus_element_info_1a88147c98190b6fbd3a1ef8ef7c72ab5a" kindref="member">access</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="700" refid="struct__rbus_element_info_1ae31564a78bf297a37797b20d3608950e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__rbus_element_info" kindref="compound">_rbusElementInfo</ref>*<sp/><ref refid="struct__rbus_element_info_1ae31564a78bf297a37797b20d3608950e" kindref="member">next</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="701" refid="group___consumer_1ga24c9c4e69cdd245d80fd806d4527ee4a" refkind="member"><highlight class="normal">}<sp/><ref refid="group___consumer_1ga24c9c4e69cdd245d80fd806d4527ee4a" kindref="member">rbusElementInfo_t</ref>;</highlight></codeline>
+<codeline lineno="702"><highlight class="normal"></highlight></codeline>
+<codeline lineno="705"><highlight class="normal"></highlight></codeline>
+<codeline lineno="709"><highlight class="normal"></highlight></codeline>
+<codeline lineno="718" refid="group___initialization_1ga680ec951905b5371ec0f275add675508" refkind="member"><highlight class="normal"><ref refid="group___common_1ga71193d2a24675a52cc00ca92cef9fdbb" kindref="member">rbusStatus_t</ref><sp/><ref refid="group___initialization_1ga680ec951905b5371ec0f275add675508" kindref="member">rbus_checkStatus</ref>(</highlight></codeline>
+<codeline lineno="719"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="720"><highlight class="normal"></highlight></codeline>
+<codeline lineno="743" refid="group___initialization_1gacf19c7e46ff9c2353892f5918310b264" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___initialization_1gacf19c7e46ff9c2353892f5918310b264" kindref="member">rbus_open</ref>(</highlight></codeline>
+<codeline lineno="744"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref>*<sp/>handle,<sp/></highlight></codeline>
+<codeline lineno="745"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>componentName);</highlight></codeline>
+<codeline lineno="746"><highlight class="normal"></highlight></codeline>
+<codeline lineno="759" refid="group___initialization_1ga9ccb6de1c606f5ac59dbc3a5a2ad0dd0" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___initialization_1ga9ccb6de1c606f5ac59dbc3a5a2ad0dd0" kindref="member">rbus_close</ref>(</highlight></codeline>
+<codeline lineno="760"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle);</highlight></codeline>
+<codeline lineno="762"><highlight class="normal"></highlight></codeline>
+<codeline lineno="779" refid="rbus_8h_1a9a7725e1cdf4aff20989f5cce9d73073" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="rbus_8h_1a9a7725e1cdf4aff20989f5cce9d73073" kindref="member">rbusHandle_SetTraceContextFromString</ref>(</highlight></codeline>
+<codeline lineno="780"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/><sp/>rbus,</highlight></codeline>
+<codeline lineno="781"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><sp/><sp/>traceParent,</highlight></codeline>
+<codeline lineno="782"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><sp/><sp/>traceState);</highlight></codeline>
+<codeline lineno="783"><highlight class="normal"></highlight></codeline>
+<codeline lineno="784" refid="rbus_8h_1a500824d01d135b79dc9d15dbc2bf8cba" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="rbus_8h_1a500824d01d135b79dc9d15dbc2bf8cba" kindref="member">rbusHandle_ClearTraceContext</ref>(</highlight></codeline>
+<codeline lineno="785"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/><sp/>rbus);</highlight></codeline>
+<codeline lineno="786"><highlight class="normal"></highlight></codeline>
+<codeline lineno="797" refid="rbus_8h_1a2546efb4d32e1b102d2d597a49a69b6d" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="rbus_8h_1a2546efb4d32e1b102d2d597a49a69b6d" kindref="member">rbusHandle_GetTraceContextAsString</ref>(</highlight></codeline>
+<codeline lineno="798"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/><sp/>rbus,</highlight></codeline>
+<codeline lineno="799"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>traceParent,</highlight></codeline>
+<codeline lineno="800"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>traceParentLength,</highlight></codeline>
+<codeline lineno="801"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>traceState,</highlight></codeline>
+<codeline lineno="802"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>traceStateLength);</highlight></codeline>
+<codeline lineno="803"><highlight class="normal"></highlight></codeline>
+<codeline lineno="827" refid="group___discovery_1gaf954e8a2c6b8c83af41a4f4aef5a9c3b" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___discovery_1gaf954e8a2c6b8c83af41a4f4aef5a9c3b" kindref="member">rbus_discoverComponentName</ref>(</highlight></codeline>
+<codeline lineno="828"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="829"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numElements,</highlight></codeline>
+<codeline lineno="830"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">**<sp/>elementNames,</highlight></codeline>
+<codeline lineno="831"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*numComponents,</highlight></codeline>
+<codeline lineno="832"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>***componentName);</highlight></codeline>
+<codeline lineno="833"><highlight class="normal"></highlight></codeline>
+<codeline lineno="856" refid="group___discovery_1gab25f5c66820a76026a0806515aeb2792" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___discovery_1gab25f5c66820a76026a0806515aeb2792" kindref="member">rbus_discoverComponentDataElements</ref>(</highlight></codeline>
+<codeline lineno="857"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="858"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><ref refid="struct__rbus_element_info_1adb165e09b70a26f1f92b829c82ed53f9" kindref="member">name</ref>,</highlight></codeline>
+<codeline lineno="859"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>nextLevel,</highlight></codeline>
+<codeline lineno="860"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*numElements,</highlight></codeline>
+<codeline lineno="861"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">***<sp/>elementNames);</highlight></codeline>
+<codeline lineno="862"><highlight class="normal"></highlight></codeline>
+<codeline lineno="864"><highlight class="normal"></highlight></codeline>
+<codeline lineno="868"><highlight class="normal"></highlight></codeline>
+<codeline lineno="886" refid="group___providers_1ga58d4e15c31e566321fcbf96e4b4deace" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___providers_1ga58d4e15c31e566321fcbf96e4b4deace" kindref="member">rbus_regDataElements</ref>(</highlight></codeline>
+<codeline lineno="887"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="888"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numDataElements,</highlight></codeline>
+<codeline lineno="889"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structrbus_data_element__t" kindref="compound">rbusDataElement_t</ref><sp/>*elements);</highlight></codeline>
+<codeline lineno="890"><highlight class="normal"></highlight></codeline>
+<codeline lineno="907" refid="group___providers_1ga91dfd7fea098f4e6b500344133ade0a2" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___providers_1ga91dfd7fea098f4e6b500344133ade0a2" kindref="member">rbus_unregDataElements</ref><sp/>(</highlight></codeline>
+<codeline lineno="908"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="909"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numDataElements,</highlight></codeline>
+<codeline lineno="910"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structrbus_data_element__t" kindref="compound">rbusDataElement_t</ref><sp/>*elements);</highlight></codeline>
+<codeline lineno="911"><highlight class="normal"></highlight></codeline>
+<codeline lineno="913"><highlight class="normal"></highlight></codeline>
+<codeline lineno="917"><highlight class="normal"></highlight></codeline>
+<codeline lineno="934" refid="group___consumers_1ga4784460070e869774b9ed69d1b309571" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1ga4784460070e869774b9ed69d1b309571" kindref="member">rbus_get</ref>(</highlight></codeline>
+<codeline lineno="935"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,<sp/></highlight></codeline>
+<codeline lineno="936"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><ref refid="struct__rbus_element_info_1adb165e09b70a26f1f92b829c82ed53f9" kindref="member">name</ref>,</highlight></codeline>
+<codeline lineno="937"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__rbus_value_1ga3433391cb2f7a4e2a85608ac9476fff6" kindref="member">rbusValue_t</ref>*<sp/>value);</highlight></codeline>
+<codeline lineno="938"><highlight class="normal"></highlight></codeline>
+<codeline lineno="990" refid="group___consumers_1gad83602486f8d318f53f41546647076c6" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1gad83602486f8d318f53f41546647076c6" kindref="member">rbus_getExt</ref>(</highlight></codeline>
+<codeline lineno="991"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="992"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>paramCount,</highlight></codeline>
+<codeline lineno="993"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">**<sp/>paramNames,</highlight></codeline>
+<codeline lineno="994"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*numProps,</highlight></codeline>
+<codeline lineno="995"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref>*<sp/>properties);</highlight></codeline>
+<codeline lineno="996"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1010" refid="group___consumers_1ga0a36da6ad09e2d90da6484acf6304b4d" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1ga0a36da6ad09e2d90da6484acf6304b4d" kindref="member">rbus_getBoolean</ref>(</highlight></codeline>
+<codeline lineno="1011"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="1012"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>paramName,</highlight></codeline>
+<codeline lineno="1013"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>paramVal);</highlight></codeline>
+<codeline lineno="1014"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1028" refid="group___consumers_1gadd90b4781c53e8e70cf2700493471649" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1gadd90b4781c53e8e70cf2700493471649" kindref="member">rbus_getInt</ref>(</highlight></codeline>
+<codeline lineno="1029"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="1030"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>paramName,</highlight></codeline>
+<codeline lineno="1031"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>paramVal);</highlight></codeline>
+<codeline lineno="1032"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1047" refid="group___consumers_1ga57e80644c25398c293de5e38a32792aa" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1ga57e80644c25398c293de5e38a32792aa" kindref="member">rbus_getUint</ref>(</highlight></codeline>
+<codeline lineno="1048"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="1049"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>paramName,</highlight></codeline>
+<codeline lineno="1050"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>paramVal);</highlight></codeline>
+<codeline lineno="1051"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1066" refid="group___consumers_1ga098336853b08dbb112d5a73db42ace4e" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1ga098336853b08dbb112d5a73db42ace4e" kindref="member">rbus_getStr</ref><sp/>(</highlight></codeline>
+<codeline lineno="1067"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="1068"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>paramName,</highlight></codeline>
+<codeline lineno="1069"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>paramVal);</highlight></codeline>
+<codeline lineno="1070"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1090" refid="group___consumers_1ga69f715cea76a0ea395c416a0a0bbe19b" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1ga69f715cea76a0ea395c416a0a0bbe19b" kindref="member">rbus_set</ref>(</highlight></codeline>
+<codeline lineno="1091"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="1092"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><ref refid="struct__rbus_element_info_1adb165e09b70a26f1f92b829c82ed53f9" kindref="member">name</ref>,</highlight></codeline>
+<codeline lineno="1093"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__rbus_value_1ga3433391cb2f7a4e2a85608ac9476fff6" kindref="member">rbusValue_t</ref><sp/>value,</highlight></codeline>
+<codeline lineno="1094"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structrbus_set_options__t" kindref="compound">rbusSetOptions_t</ref>*<sp/>opts);</highlight></codeline>
+<codeline lineno="1095"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1096" refid="group___consumers_1ga586fb2942d0b05d0f24dfd473472cdd2" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1ga586fb2942d0b05d0f24dfd473472cdd2" kindref="member">rbus_setCommit</ref>(</highlight></codeline>
+<codeline lineno="1097"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="1098"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><ref refid="struct__rbus_element_info_1adb165e09b70a26f1f92b829c82ed53f9" kindref="member">name</ref>,</highlight></codeline>
+<codeline lineno="1099"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structrbus_set_options__t" kindref="compound">rbusSetOptions_t</ref>*<sp/>opts);</highlight></codeline>
+<codeline lineno="1100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1123" refid="group___consumers_1gaa96eac6a85b77e37b6e8c1d6df6db5c6" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1gaa96eac6a85b77e37b6e8c1d6df6db5c6" kindref="member">rbus_setMulti</ref>(</highlight></codeline>
+<codeline lineno="1124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="1125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numProps,</highlight></codeline>
+<codeline lineno="1126"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref><sp/>properties,</highlight></codeline>
+<codeline lineno="1127"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structrbus_set_options__t" kindref="compound">rbusSetOptions_t</ref>*<sp/>opts);</highlight></codeline>
+<codeline lineno="1128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1160" refid="group___consumers_1gaec64999a2acfd1579f143beb0bfe262e" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1gaec64999a2acfd1579f143beb0bfe262e" kindref="member">rbus_setMultiExt</ref>(</highlight></codeline>
+<codeline lineno="1161"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="1162"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>numProps,</highlight></codeline>
+<codeline lineno="1163"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref><sp/>properties,</highlight></codeline>
+<codeline lineno="1164"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structrbus_set_options__t" kindref="compound">rbusSetOptions_t</ref>*<sp/>opts,</highlight></codeline>
+<codeline lineno="1165"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>timeout,</highlight></codeline>
+<codeline lineno="1166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>failedParameterName);</highlight></codeline>
+<codeline lineno="1167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1182" refid="group___consumers_1ga7444bf14c9a527140224de4c8bb0c51e" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1ga7444bf14c9a527140224de4c8bb0c51e" kindref="member">rbus_setBoolean</ref>(</highlight></codeline>
+<codeline lineno="1183"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="1184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>paramName,</highlight></codeline>
+<codeline lineno="1185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>paramVal);</highlight></codeline>
+<codeline lineno="1186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1201" refid="group___consumers_1gaa8cec0ffe802cd2522f069682759d3c6" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1gaa8cec0ffe802cd2522f069682759d3c6" kindref="member">rbus_setInt</ref>(</highlight></codeline>
+<codeline lineno="1202"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,<sp/></highlight></codeline>
+<codeline lineno="1203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>paramName,<sp/></highlight></codeline>
+<codeline lineno="1204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>paramVal);</highlight></codeline>
+<codeline lineno="1205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1221" refid="group___consumers_1gad05911a08098d00b5c4910766e6c235f" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1gad05911a08098d00b5c4910766e6c235f" kindref="member">rbus_setUInt</ref>(</highlight></codeline>
+<codeline lineno="1222"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="1223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>paramName,</highlight></codeline>
+<codeline lineno="1224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>paramVal);</highlight></codeline>
+<codeline lineno="1225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1240" refid="group___consumers_1ga12f13fac8dc16728cbd064ae65b5887d" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1ga12f13fac8dc16728cbd064ae65b5887d" kindref="member">rbus_setStr</ref>(</highlight></codeline>
+<codeline lineno="1241"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="1242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>paramName,</highlight></codeline>
+<codeline lineno="1243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>paramVal);</highlight></codeline>
+<codeline lineno="1244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1268" refid="group___consumers_1ga9ec84149b182b69ca3b61a415ded52d9" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1ga9ec84149b182b69ca3b61a415ded52d9" kindref="member">rbusTable_addRow</ref>(</highlight></codeline>
+<codeline lineno="1269"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="1270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>tableName,</highlight></codeline>
+<codeline lineno="1271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>aliasName,</highlight></codeline>
+<codeline lineno="1272"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t*<sp/>instNum);</highlight></codeline>
+<codeline lineno="1273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1289" refid="group___consumers_1gac435ca7a91197e0e144034c044528b2e" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1gac435ca7a91197e0e144034c044528b2e" kindref="member">rbusTable_removeRow</ref>(</highlight></codeline>
+<codeline lineno="1290"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="1291"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>rowName);<sp/></highlight></codeline>
+<codeline lineno="1292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1308" refid="group___consumers_1ga5cff99f0d675b5636d8ac7882308b7c1" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1ga5cff99f0d675b5636d8ac7882308b7c1" kindref="member">rbusTable_getRowNames</ref>(</highlight></codeline>
+<codeline lineno="1309"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="1310"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>tableName,</highlight></codeline>
+<codeline lineno="1311"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___tables_1ga7961456a63f83cb0b82cb712ef21fde4" kindref="member">rbusRowName_t</ref>**<sp/>rowNames);</highlight></codeline>
+<codeline lineno="1312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1326" refid="group___consumers_1gab04298bf2b87426984e580e8ff8191f0" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1gab04298bf2b87426984e580e8ff8191f0" kindref="member">rbusTable_freeRowNames</ref>(</highlight></codeline>
+<codeline lineno="1327"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,<sp/></highlight></codeline>
+<codeline lineno="1328"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___tables_1ga7961456a63f83cb0b82cb712ef21fde4" kindref="member">rbusRowName_t</ref>*<sp/>rows);</highlight></codeline>
+<codeline lineno="1329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1350" refid="group___consumers_1ga959a5929fc0cbfad9d0faa2fa251e1c2" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1ga959a5929fc0cbfad9d0faa2fa251e1c2" kindref="member">rbusElementInfo_get</ref>(</highlight></codeline>
+<codeline lineno="1351"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="1352"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>elemName,</highlight></codeline>
+<codeline lineno="1353"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>depth,</highlight></codeline>
+<codeline lineno="1354"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___consumer_1ga24c9c4e69cdd245d80fd806d4527ee4a" kindref="member">rbusElementInfo_t</ref>**<sp/>elemInfo);</highlight></codeline>
+<codeline lineno="1355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1368" refid="group___consumers_1gae93dc65f7795e56be214b930bfa72f12" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1gae93dc65f7795e56be214b930bfa72f12" kindref="member">rbusElementInfo_free</ref>(</highlight></codeline>
+<codeline lineno="1369"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,<sp/></highlight></codeline>
+<codeline lineno="1370"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___consumer_1ga24c9c4e69cdd245d80fd806d4527ee4a" kindref="member">rbusElementInfo_t</ref>*<sp/>elemInfo);</highlight></codeline>
+<codeline lineno="1371"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1373"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1377"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1398" refid="group___providers_1ga299310a0ae625b51b688f5062f486f9e" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___providers_1ga299310a0ae625b51b688f5062f486f9e" kindref="member">rbusTable_registerRow</ref>(</highlight></codeline>
+<codeline lineno="1399"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="1400"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>tableName,</highlight></codeline>
+<codeline lineno="1401"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>instNum,</highlight></codeline>
+<codeline lineno="1402"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>aliasName);</highlight></codeline>
+<codeline lineno="1403"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1420"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1421" refid="group___providers_1ga0df49f35236940e6c567fe692aa45379" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___providers_1ga0df49f35236940e6c567fe692aa45379" kindref="member">rbusTable_unregisterRow</ref>(</highlight></codeline>
+<codeline lineno="1422"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="1423"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>rowName);</highlight></codeline>
+<codeline lineno="1424"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1426"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1430"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1445" refid="group___events_1ga6a5e6fdca2de593b7526ec819040fbe0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><ref refid="group___events_1ga6a5e6fdca2de593b7526ec819040fbe0" kindref="member">rbusEvent_IsSubscriptionExist</ref>(</highlight></codeline>
+<codeline lineno="1446"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle,</highlight></codeline>
+<codeline lineno="1447"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eventName,</highlight></codeline>
+<codeline lineno="1448"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kindref="member">rbusEventSubscription_t</ref>*<sp/><sp/><sp/><sp/>subscription);</highlight></codeline>
+<codeline lineno="1449"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1480" refid="group___events_1gab5889c0424ae3e4efb9208de22b92835" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><sp/><ref refid="group___events_1gab5889c0424ae3e4efb9208de22b92835" kindref="member">rbusEvent_Subscribe</ref>(</highlight></codeline>
+<codeline lineno="1481"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle,</highlight></codeline>
+<codeline lineno="1482"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eventName,</highlight></codeline>
+<codeline lineno="1483"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___events_1gaf0a4f17d9440f3216fc6f06eda8b81bf" kindref="member">rbusEventHandler_t</ref><sp/><sp/>handler,</highlight></codeline>
+<codeline lineno="1484"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>userData,</highlight></codeline>
+<codeline lineno="1485"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timeout);</highlight></codeline>
+<codeline lineno="1486"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1510" refid="group___events_1ga2ef91bf25813c3d3e482bffbef2866ed" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><sp/><ref refid="group___events_1ga2ef91bf25813c3d3e482bffbef2866ed" kindref="member">rbusEvent_SubscribeRawData</ref>(</highlight></codeline>
+<codeline lineno="1511"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle,</highlight></codeline>
+<codeline lineno="1512"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eventName,</highlight></codeline>
+<codeline lineno="1513"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___events_1gaf0a4f17d9440f3216fc6f06eda8b81bf" kindref="member">rbusEventHandler_t</ref><sp/><sp/>handler,</highlight></codeline>
+<codeline lineno="1514"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>userData,</highlight></codeline>
+<codeline lineno="1515"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timeout);</highlight></codeline>
+<codeline lineno="1516"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1551" refid="group___events_1gab3cf21821b5289220c08d8fd62189edb" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><sp/><ref refid="group___events_1gab3cf21821b5289220c08d8fd62189edb" kindref="member">rbusEvent_SubscribeAsync</ref>(</highlight></codeline>
+<codeline lineno="1552"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle,</highlight></codeline>
+<codeline lineno="1553"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eventName,</highlight></codeline>
+<codeline lineno="1554"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___events_1gaf0a4f17d9440f3216fc6f06eda8b81bf" kindref="member">rbusEventHandler_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handler,</highlight></codeline>
+<codeline lineno="1555"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___events_1ga8c91c27fc5c9f944d4e82f6f97c7c6e6" kindref="member">rbusSubscribeAsyncRespHandler_t</ref><sp/>subscribeHandler,</highlight></codeline>
+<codeline lineno="1556"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>userData,</highlight></codeline>
+<codeline lineno="1557"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timeout);</highlight></codeline>
+<codeline lineno="1558"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1573" refid="group___events_1gaf218030e960675a9652366fe22d5b1df" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___events_1gaf218030e960675a9652366fe22d5b1df" kindref="member">rbusEvent_Unsubscribe</ref>(</highlight></codeline>
+<codeline lineno="1574"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle,</highlight></codeline>
+<codeline lineno="1575"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eventName);</highlight></codeline>
+<codeline lineno="1576"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1592"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1593" refid="group___events_1ga0dfc895c048da0f94ebfcd9eba84eae7" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___events_1ga0dfc895c048da0f94ebfcd9eba84eae7" kindref="member">rbusEvent_UnsubscribeRawData</ref>(</highlight></codeline>
+<codeline lineno="1594"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle,</highlight></codeline>
+<codeline lineno="1595"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eventName);</highlight></codeline>
+<codeline lineno="1596"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1620" refid="group___events_1ga247738028c08f160b79e2d4239537ebe" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___events_1ga247738028c08f160b79e2d4239537ebe" kindref="member">rbusEvent_SubscribeEx</ref>(</highlight></codeline>
+<codeline lineno="1621"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle,</highlight></codeline>
+<codeline lineno="1622"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kindref="member">rbusEventSubscription_t</ref>*<sp/><sp/>subscription,</highlight></codeline>
+<codeline lineno="1623"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numSubscriptions,</highlight></codeline>
+<codeline lineno="1624"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timeout);</highlight></codeline>
+<codeline lineno="1625"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1650" refid="group___events_1gaec8a3850598cdf124442651908dd6d18" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___events_1gaec8a3850598cdf124442651908dd6d18" kindref="member">rbusEvent_SubscribeExRawData</ref>(</highlight></codeline>
+<codeline lineno="1651"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle,</highlight></codeline>
+<codeline lineno="1652"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kindref="member">rbusEventSubscription_t</ref>*<sp/><sp/>subscription,</highlight></codeline>
+<codeline lineno="1653"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numSubscriptions,</highlight></codeline>
+<codeline lineno="1654"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timeout);</highlight></codeline>
+<codeline lineno="1655"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1684" refid="group___events_1ga5660e5ab4c6b04015c63fe9baf71ac24" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___events_1ga5660e5ab4c6b04015c63fe9baf71ac24" kindref="member">rbusEvent_SubscribeExAsync</ref>(</highlight></codeline>
+<codeline lineno="1685"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle,</highlight></codeline>
+<codeline lineno="1686"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kindref="member">rbusEventSubscription_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>subscription,</highlight></codeline>
+<codeline lineno="1687"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numSubscriptions,</highlight></codeline>
+<codeline lineno="1688"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___events_1ga8c91c27fc5c9f944d4e82f6f97c7c6e6" kindref="member">rbusSubscribeAsyncRespHandler_t</ref><sp/>subscribeHandler,</highlight></codeline>
+<codeline lineno="1689"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timeout);</highlight></codeline>
+<codeline lineno="1690"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1709" refid="group___events_1gab7ef1ebf1eb77546d8ebe10d743e8d09" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___events_1gab7ef1ebf1eb77546d8ebe10d743e8d09" kindref="member">rbusEvent_UnsubscribeEx</ref>(</highlight></codeline>
+<codeline lineno="1710"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="1711"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kindref="member">rbusEventSubscription_t</ref>*<sp/>subscriptions,</highlight></codeline>
+<codeline lineno="1712"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numSubscriptions);</highlight></codeline>
+<codeline lineno="1713"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1733" refid="group___events_1gaf3337c7615b9f96501d743de350f7bb1" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___events_1gaf3337c7615b9f96501d743de350f7bb1" kindref="member">rbusEvent_UnsubscribeExRawData</ref>(</highlight></codeline>
+<codeline lineno="1734"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle,</highlight></codeline>
+<codeline lineno="1735"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kindref="member">rbusEventSubscription_t</ref>*<sp/><sp/><sp/><sp/>subscription,</highlight></codeline>
+<codeline lineno="1736"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numSubscriptions);</highlight></codeline>
+<codeline lineno="1737"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1739"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1743"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1759" refid="group___events_1gac29791ff3418ef6cd6e24aff209a6f8a" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><sp/><ref refid="group___events_1gac29791ff3418ef6cd6e24aff209a6f8a" kindref="member">rbusEvent_Publish</ref>(</highlight></codeline>
+<codeline lineno="1760"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="1761"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structrbus_event__t" kindref="compound">rbusEvent_t</ref>*<sp/>eventData);</highlight></codeline>
+<codeline lineno="1762"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1779" refid="group___providers_1gaf5fb7bd4640ccc9aa7c93c07ee0d4b67" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><sp/><ref refid="group___providers_1gaf5fb7bd4640ccc9aa7c93c07ee0d4b67" kindref="member">rbusEvent_PublishRawData</ref>(</highlight></codeline>
+<codeline lineno="1780"><highlight class="normal"><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>handle,</highlight></codeline>
+<codeline lineno="1781"><highlight class="normal"><sp/><sp/><ref refid="structrbus_event_raw_data__t" kindref="compound">rbusEventRawData_t</ref>*<sp/><sp/><sp/><sp/>eventData);</highlight></codeline>
+<codeline lineno="1782"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1784"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1788"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1813" refid="group___methods_1gae99cd8c0cc243dbca8f74e6d29134917" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___methods_1gae99cd8c0cc243dbca8f74e6d29134917" kindref="member">rbusMethod_Invoke</ref>(</highlight></codeline>
+<codeline lineno="1814"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,<sp/></highlight></codeline>
+<codeline lineno="1815"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>methodName,<sp/></highlight></codeline>
+<codeline lineno="1816"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__rbus_object_1ga21587678b0f1f9fb559a9bc9bae8a59c" kindref="member">rbusObject_t</ref><sp/>inParams,<sp/></highlight></codeline>
+<codeline lineno="1817"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__rbus_object_1ga21587678b0f1f9fb559a9bc9bae8a59c" kindref="member">rbusObject_t</ref>*<sp/>outParams);</highlight></codeline>
+<codeline lineno="1818"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1840" refid="group___consumers_1ga9b13bb2bd22f73c972efb5a0dd1d659c" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1ga9b13bb2bd22f73c972efb5a0dd1d659c" kindref="member">rbusMethod_InvokeAsync</ref>(</highlight></codeline>
+<codeline lineno="1841"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,<sp/></highlight></codeline>
+<codeline lineno="1842"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>methodName,<sp/></highlight></codeline>
+<codeline lineno="1843"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__rbus_object_1ga21587678b0f1f9fb559a9bc9bae8a59c" kindref="member">rbusObject_t</ref><sp/>inParams,<sp/></highlight></codeline>
+<codeline lineno="1844"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___methods_1ga43bf44c6acbf3bf8a90be2e2621d1612" kindref="member">rbusMethodAsyncRespHandler_t</ref><sp/>callback,<sp/></highlight></codeline>
+<codeline lineno="1845"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>timeout);</highlight></codeline>
+<codeline lineno="1846"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1848"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1852"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1870" refid="group___methods_1ga2895ce55085f01a5eff36e04dc118f0d" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___methods_1ga2895ce55085f01a5eff36e04dc118f0d" kindref="member">rbusMethod_SendAsyncResponse</ref>(</highlight></codeline>
+<codeline lineno="1871"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaece2a4d09e44f67df52ebf1efe63e793" kindref="member">rbusMethodAsyncHandle_t</ref><sp/>asyncHandle,</highlight></codeline>
+<codeline lineno="1872"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/>error,</highlight></codeline>
+<codeline lineno="1873"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__rbus_object_1ga21587678b0f1f9fb559a9bc9bae8a59c" kindref="member">rbusObject_t</ref><sp/>outParams);</highlight></codeline>
+<codeline lineno="1874"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1876"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1880"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1895" refid="group___events_1ga06d8f8b2d571102c2c025b28ffbd3dd6" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___events_1ga06d8f8b2d571102c2c025b28ffbd3dd6" kindref="member">rbus_createSession</ref>(</highlight></codeline>
+<codeline lineno="1896"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="1897"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>*pSessionId);</highlight></codeline>
+<codeline lineno="1898"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1912" refid="group___consumers_1ga1532bd543ad9e86683b6df7f000733a4" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1ga1532bd543ad9e86683b6df7f000733a4" kindref="member">rbus_getCurrentSession</ref>(</highlight></codeline>
+<codeline lineno="1913"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="1914"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>*pSessionId);</highlight></codeline>
+<codeline lineno="1915"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1929" refid="group___consumers_1ga67a89787b1fb79de3b7605499d2bccb1" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1ga67a89787b1fb79de3b7605499d2bccb1" kindref="member">rbus_closeSession</ref>(</highlight></codeline>
+<codeline lineno="1930"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="1931"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>sessionId);</highlight></codeline>
+<codeline lineno="1932"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1943" refid="group___consumers_1ga027c931bcb02271719f0773fef67058f" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1ga027c931bcb02271719f0773fef67058f" kindref="member">rbus_registerLogHandler</ref>(</highlight></codeline>
+<codeline lineno="1944"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1ga2da9e884770cf882767389178e705252" kindref="member">rbusLogHandler</ref><sp/>logHandler);</highlight></codeline>
+<codeline lineno="1945"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1956"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1957" refid="group___consumers_1gaab4241ff7e106815e7cfaffb7c08af63" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1gaab4241ff7e106815e7cfaffb7c08af63" kindref="member">rbus_setLogLevel</ref>(<ref refid="group___common_1ga575fb21e48c1ee799d86568ddff009af" kindref="member">rbusLogLevel_t</ref><sp/>level);</highlight></codeline>
+<codeline lineno="1958"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1979" refid="group___consumers_1ga413ba5cd92734c0454d72a2477b99182" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1ga413ba5cd92734c0454d72a2477b99182" kindref="member">rbus_openDirect</ref>(<ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,<sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref>*<sp/>myDirectHandle,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>parameterName);</highlight></codeline>
+<codeline lineno="1980"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1991" refid="group___consumers_1ga3a57cd3f015fe0d652bb46d88f195317" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1ga3a57cd3f015fe0d652bb46d88f195317" kindref="member">rbus_closeDirect</ref>(<ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle);</highlight></codeline>
+<codeline lineno="1992"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2007" refid="group___consumers_1ga49889d2770a3a0604da821b3442b4d17" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1ga49889d2770a3a0604da821b3442b4d17" kindref="member">rbus_registerDynamicTableSyncHandler</ref>(</highlight></codeline>
+<codeline lineno="2008"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,</highlight></codeline>
+<codeline lineno="2009"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>tableName,</highlight></codeline>
+<codeline lineno="2010"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___providers_1ga509ea174d80c816237fcdf4cb3f321ce" kindref="member">rbusTableSyncHandler_t</ref><sp/>syncHandler);</highlight></codeline>
+<codeline lineno="2011"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2012" refid="struct__rbus_timeout_values" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__rbus_timeout_values" kindref="compound">_rbusTimeoutValues</ref></highlight></codeline>
+<codeline lineno="2013"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="2014" refid="struct__rbus_timeout_values_1a7acde79caec6ad1d4341f4b19aada8c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct__rbus_timeout_values_1a7acde79caec6ad1d4341f4b19aada8c7" kindref="member">setTimeout</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>default<sp/>timeout<sp/>in<sp/>miliseconds<sp/>for<sp/>SET<sp/>API*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2015" refid="struct__rbus_timeout_values_1acbece545cbbf7e5ae500cb68a158ad6e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct__rbus_timeout_values_1acbece545cbbf7e5ae500cb68a158ad6e" kindref="member">getTimeout</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>default<sp/>timeout<sp/>in<sp/>miliseconds<sp/>for<sp/>GET<sp/>API*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2016" refid="struct__rbus_timeout_values_1a452a491b52de7027c5661689889c2b9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct__rbus_timeout_values_1a452a491b52de7027c5661689889c2b9a" kindref="member">setMultiTimeout</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>default<sp/>timeout<sp/>in<sp/>miliseconds<sp/>for<sp/>SET<sp/>Multi<sp/>API*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2017" refid="struct__rbus_timeout_values_1a1e639c1cabebb900da4651ad41e9df2e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct__rbus_timeout_values_1a1e639c1cabebb900da4651ad41e9df2e" kindref="member">getMultiTimeout</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>default<sp/>timeout<sp/>in<sp/>miliseconds<sp/>for<sp/>Wildcard<sp/>Query<sp/>GET<sp/>API*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2018" refid="struct__rbus_timeout_values_1a8587c13bdd10288d27f9665d6112f736" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="struct__rbus_timeout_values_1a8587c13bdd10288d27f9665d6112f736" kindref="member">subscribeTimeout</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>default<sp/>timeout<sp/>in<sp/>miliseconds<sp/>for<sp/>Subscribe<sp/>operation*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2019" refid="group___consumers_1ga8dd3d14ae30f63ccad0a6a377d13361a" refkind="member"><highlight class="normal">}<ref refid="group___consumers_1ga8dd3d14ae30f63ccad0a6a377d13361a" kindref="member">rbusTimeoutValues_t</ref>;</highlight></codeline>
+<codeline lineno="2020"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2033"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2034" refid="group___consumers_1gadd9ef292a4a12a4a21ad84e3cd88ecf0" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1gadd9ef292a4a12a4a21ad84e3cd88ecf0" kindref="member">rbusHandle_ConfigTimeoutValues</ref>(<ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,<sp/><ref refid="group___consumers_1ga8dd3d14ae30f63ccad0a6a377d13361a" kindref="member">rbusTimeoutValues_t</ref><sp/>timeoutValues);</highlight></codeline>
+<codeline lineno="2035"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2044" refid="group___consumers_1ga898ceb12f6376025672c33b8ba82b34a" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1ga898ceb12f6376025672c33b8ba82b34a" kindref="member">rbusHandle_ConfigSetTimeout</ref>(<ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,<sp/>uint32_t<sp/>timeout);</highlight></codeline>
+<codeline lineno="2045"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2054" refid="group___consumers_1gae2a58da3b8f2d33b761788abbe628cd9" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1gae2a58da3b8f2d33b761788abbe628cd9" kindref="member">rbusHandle_ConfigGetTimeout</ref>(<ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,<sp/>uint32_t<sp/>timeout);</highlight></codeline>
+<codeline lineno="2055"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2064" refid="group___consumers_1ga9fa2f1b83c5c5e2022eaa6e19e48d244" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1ga9fa2f1b83c5c5e2022eaa6e19e48d244" kindref="member">rbusHandle_ConfigGetMultiTimeout</ref>(<ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,<sp/>uint32_t<sp/>timeout);</highlight></codeline>
+<codeline lineno="2065"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2074" refid="group___consumers_1ga2026b681044493b88954ca0ff386fb77" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1ga2026b681044493b88954ca0ff386fb77" kindref="member">rbusHandle_ConfigSetMultiTimeout</ref>(<ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,<sp/>uint32_t<sp/>timeout);</highlight></codeline>
+<codeline lineno="2075"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2084" refid="group___consumers_1ga00d9098a0baa68fb39bff300678911dd" refkind="member"><highlight class="normal"><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref><sp/><ref refid="group___consumers_1ga00d9098a0baa68fb39bff300678911dd" kindref="member">rbusHandle_ConfigSubscribeTimeout</ref>(<ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref><sp/>handle,<sp/>uint32_t<sp/>timeout);</highlight></codeline>
+<codeline lineno="2086"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2087"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2088"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="2089"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2090"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2091"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2092"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="include/rbus.h"/>
+  </compounddef>
+</doxygen>

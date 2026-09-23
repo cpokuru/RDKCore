@@ -1,0 +1,238 @@
+"""Generator for north-bound-lowlevel-apis.html.
+
+Unlike gen_nbi_page.py (which is a dynamic two-level component/DML browser),
+this page is fully static: it documents the IPC communication matrix and links
+to the reference documentation for each IPC technology used between RDK-B
+components and apps.
+
+IPC matrix:
+  Component ↔ Component  →  rbus
+  Component ↔ App        →  rbus / USP UDS
+  App        ↔ Component  →  rbus / USP UDS
+  App        ↔ App        →  rbus / USP UDS
+
+Reference links:
+  rbus    → docs/doxygen-out/html/index.html  (local Doxygen output; formats: html, latex, xml)
+  USP UDS → https://usp.technology/specification/index.html  (TR-369)
+
+Rerun this only if the page design changes.  The content above is hard-coded
+here rather than pulled from a JSON file because it's definitional architecture
+policy, not a data file that grows over time.
+
+Usage:
+    python3 gen_nbi_lowlevel_page.py --out-dir .
+"""
+from __future__ import annotations
+
+import argparse
+from pathlib import Path
+
+from layout import render_hero, render_page
+
+EXTRA_CSS = """
+<style>
+  /* ---- IPC matrix table ---- */
+  table.ipc-table {
+    width: 100%; max-width: 820px; border-collapse: separate; border-spacing: 0;
+    margin: 14px 0 36px; font-size: 0.92rem;
+    border: 1px solid var(--border); border-radius: 12px;
+    overflow: hidden; box-shadow: var(--shadow-sm);
+  }
+  table.ipc-table th {
+    font-family: "Space Grotesk", sans-serif; font-size: 0.78rem;
+    text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; color: #fff;
+    background: linear-gradient(90deg, var(--hal), var(--middleware));
+    padding: 14px 18px; text-align: left; border-bottom: none;
+  }
+  table.ipc-table th:first-child { border-top-left-radius: 12px; }
+  table.ipc-table th:last-child  { border-top-right-radius: 12px; }
+  table.ipc-table tbody tr { border-bottom: 1px solid var(--border); }
+  table.ipc-table tbody tr:last-child { border-bottom: none; }
+  table.ipc-table tbody tr:nth-child(odd)  { background: #fbfcff; }
+  table.ipc-table tbody tr:nth-child(even) { background: #fff; }
+  table.ipc-table tbody tr:hover { background: var(--cloud-bg); }
+  table.ipc-table td { padding: 14px 18px; vertical-align: middle; color: var(--muted);
+                        border-right: 1px solid var(--border); }
+  table.ipc-table td:last-child { border-right: none; }
+  table.ipc-table td:first-child {
+    color: var(--ink); font-weight: 700; font-family: "Space Grotesk", sans-serif;
+    font-size: 0.94rem; border-left: 3px solid var(--rdk-blue);
+    background: rgba(41,182,232,0.04); width: 35%;
+  }
+  /* ---- pill badges ---- */
+  .ipc-pill {
+    display: inline-block; font-size: 0.78rem; font-weight: 600; padding: 4px 11px;
+    border-radius: 999px; margin: 2px 3px 2px 0; border: none;
+  }
+  .ipc-pill-rbus  { background: #e0e7ff; color: #3730a3; }
+  .ipc-pill-usp   { background: #d1fae5; color: #065f46; }
+  /* ---- reference cards ---- */
+  .ref-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 860px; margin-top: 4px; }
+  @media (max-width: 700px) { .ref-grid { grid-template-columns: 1fr; } }
+  .ref-card {
+    background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px;
+    padding: 22px 24px; box-shadow: var(--shadow-sm); transition: box-shadow 0.15s, transform 0.15s;
+  }
+  .ref-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+  .ref-card.rbus { border-left: 3px solid var(--rdk-blue); }
+  .ref-card.usp  { border-left: 3px solid var(--rdk-green); }
+  .ref-card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+  .ref-card-icon {
+    width: 40px; height: 40px; border-radius: 10px; display: flex;
+    align-items: center; justify-content: center; flex: 0 0 auto;
+  }
+  .ref-card-icon.rbus { background: linear-gradient(135deg,#e0e7ff,#c7d2fe); }
+  .ref-card-icon.usp  { background: linear-gradient(135deg,#d1fae5,#a7f3d0); }
+  .ref-card h3 { font-size: 1rem; margin-bottom: 2px; }
+  .ref-card .ref-sub { font-size: 0.78rem; color: var(--muted); margin: 0; }
+  .ref-card p  { font-size: 0.9rem; margin-bottom: 14px; }
+  .ref-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 8px 16px; border-radius: 999px; font-size: 0.82rem; font-weight: 600;
+    text-decoration: none; color: #fff;
+  }
+  .ref-btn.rbus { background: linear-gradient(90deg, var(--rdk-blue), #7c3aed); }
+  .ref-btn.usp  { background: linear-gradient(90deg, var(--rdk-green), #0ea5e9); }
+  .ref-meta {
+    font-size: 0.75rem; color: var(--muted); margin-top: 10px; margin-bottom: 0;
+    line-height: 1.6;
+  }
+  .ref-meta code { font-size: 0.72rem; background: #f1f3f9; padding: 1px 6px; border-radius: 4px; }
+</style>
+"""
+
+# SVG icons inlined so the page stays self-contained (no external fetch)
+_ICON_CODE = """<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>"""
+_ICON_LAYERS = """<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>"""
+_ICON_EXTLINK = """<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>"""
+
+
+def build_page() -> str:
+    body = f"""
+{render_hero("North Bound APIs", "North Bound Low Level APIs",
+    "Low-level inter-process communication (IPC) interfaces used between "
+    "RDK-B components, apps, and the system layer.",
+    compact=True, visual_key="nbi")}
+
+<section class="tight-top">
+
+  <div class="section-head">
+    <span class="eyebrow-lt">IPC Communication Matrix</span>
+    <h2>Component Communication Interfaces</h2>
+    <p>Maps each communication pattern to the IPC technology used between
+       RDK-B components and apps.</p>
+  </div>
+
+  <table class="ipc-table">
+    <thead>
+      <tr>
+        <th>Communication Pattern</th>
+        <th>IPC Technology</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Component &#8596; Component</td>
+        <td><span class="ipc-pill ipc-pill-rbus">rbus</span></td>
+      </tr>
+      <tr>
+        <td>Component &#8596; App</td>
+        <td>
+          <span class="ipc-pill ipc-pill-rbus">rbus</span>
+          <span style="color:var(--muted);margin:0 4px;">/</span>
+          <span class="ipc-pill ipc-pill-usp">USP UDS</span>
+        </td>
+      </tr>
+      <tr>
+        <td>App &#8596; Component</td>
+        <td>
+          <span class="ipc-pill ipc-pill-rbus">rbus</span>
+          <span style="color:var(--muted);margin:0 4px;">/</span>
+          <span class="ipc-pill ipc-pill-usp">USP UDS</span>
+        </td>
+      </tr>
+      <tr>
+        <td>App &#8596; App</td>
+        <td>
+          <span class="ipc-pill ipc-pill-rbus">rbus</span>
+          <span style="color:var(--muted);margin:0 4px;">/</span>
+          <span class="ipc-pill ipc-pill-usp">USP UDS</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section-head" style="margin-top:48px;">
+    <span class="eyebrow-lt">Reference Documentation</span>
+    <h2>IPC Library References</h2>
+    <p>Full API documentation and specifications for the underlying IPC technologies.</p>
+  </div>
+
+  <div class="ref-grid">
+
+    <div class="ref-card rbus">
+      <div class="ref-card-header">
+        <div class="ref-card-icon rbus">{_ICON_CODE.format(color="#3730a3")}</div>
+        <div>
+          <h3>rbus</h3>
+          <p class="ref-sub">RDK Message Bus &mdash; component-to-component IPC</p>
+        </div>
+      </div>
+      <p>Generated Doxygen API reference for the rbus library. Covers the full
+         C API used by RDK-B components to publish and consume data-model
+         parameters, methods, and events over the bus.</p>
+      <a class="ref-btn rbus" href="docs/doxygen-out/html/index.html"
+         target="_blank" rel="noopener">
+        {_ICON_EXTLINK} Open rbus Doxygen Docs
+      </a>
+      <p class="ref-meta">
+        Path: <code>docs/doxygen-out/html/</code>&nbsp;&nbsp;
+        Formats available: <code>html</code>&nbsp;<code>latex</code>&nbsp;<code>xml</code>
+      </p>
+    </div>
+
+    <div class="ref-card usp">
+      <div class="ref-card-header">
+        <div class="ref-card-icon usp">{_ICON_LAYERS.format(color="#065f46")}</div>
+        <div>
+          <h3>USP UDS</h3>
+          <p class="ref-sub">TR-369 &mdash; Unix Domain Socket MTP</p>
+        </div>
+      </div>
+      <p>The BBF TR-369 (USP) specification repository on GitHub. Covers the
+         full protocol spec including the Unix Domain Socket (UDS) MTP used for
+         local agent-to-controller and app-to-component communication.</p>
+      <a class="ref-btn usp"
+         href="https://usp.technology/specification/index.html"
+         target="_blank" rel="noopener">
+        {_ICON_EXTLINK} BBF USP Specification on GitHub
+      </a>
+      <p class="ref-meta">
+        Source: <code>usp.technology</code>&nbsp;&nbsp;
+        Standard: <code>TR-369</code>
+      </p>
+    </div>
+
+  </div>
+
+</section>
+"""
+    head_extra = "<title>North Bound Low Level APIs \u2014 RDK-B Core Broadband</title>\n" + EXTRA_CSS
+    return render_page("nbi-lowlevel", head_extra, body)
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser(
+        description="Generate north-bound-lowlevel-apis.html"
+    )
+    ap.add_argument("--out-dir", default=".", help="Directory to write the HTML file into")
+    args = ap.parse_args()
+    out_dir = Path(args.out_dir)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    path = out_dir / "north-bound-lowlevel-apis.html"
+    path.write_text(build_page(), encoding="utf-8")
+    print(f"Wrote {path}")
+
+
+if __name__ == "__main__":
+    main()

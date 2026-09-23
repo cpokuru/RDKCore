@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="structtm32" kind="struct" language="C++" prot="public">
+    <compoundname>tm32</compoundname>
+    <includes refid="rbus__value_8h" local="no">rbus_value.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structtm32_1a26248b0a24f31f4574695680d659f032" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t tm32::tm_sec</definition>
+        <argsstring></argsstring>
+        <name>tm_sec</name>
+        <qualifiedname>tm32::tm_sec</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_value.h" line="94" column="11" bodyfile="include/rbus_value.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtm32_1a554382a8c5657b15984347fa2e030c95" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t tm32::tm_min</definition>
+        <argsstring></argsstring>
+        <name>tm_min</name>
+        <qualifiedname>tm32::tm_min</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_value.h" line="95" column="11" bodyfile="include/rbus_value.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtm32_1af22056873b345468e8880af283effdde" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t tm32::tm_hour</definition>
+        <argsstring></argsstring>
+        <name>tm_hour</name>
+        <qualifiedname>tm32::tm_hour</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_value.h" line="96" column="11" bodyfile="include/rbus_value.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtm32_1a0f0763d2ee2b30476da4b9279b3a5ad5" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t tm32::tm_mday</definition>
+        <argsstring></argsstring>
+        <name>tm_mday</name>
+        <qualifiedname>tm32::tm_mday</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_value.h" line="97" column="11" bodyfile="include/rbus_value.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtm32_1a6ed33a70d74aa02e5bb489ec2741a649" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t tm32::tm_mon</definition>
+        <argsstring></argsstring>
+        <name>tm_mon</name>
+        <qualifiedname>tm32::tm_mon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_value.h" line="98" column="11" bodyfile="include/rbus_value.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtm32_1a285cadde065cb4c3f7c58117752f9f2d" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t tm32::tm_year</definition>
+        <argsstring></argsstring>
+        <name>tm_year</name>
+        <qualifiedname>tm32::tm_year</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_value.h" line="99" column="11" bodyfile="include/rbus_value.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtm32_1a52094f1f78dda0f2973fb808ffa16f65" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t tm32::tm_wday</definition>
+        <argsstring></argsstring>
+        <name>tm_wday</name>
+        <qualifiedname>tm32::tm_wday</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_value.h" line="100" column="11" bodyfile="include/rbus_value.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtm32_1a270ede466b4c8fc99b0b8e3615fce832" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t tm32::tm_yday</definition>
+        <argsstring></argsstring>
+        <name>tm_yday</name>
+        <qualifiedname>tm32::tm_yday</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_value.h" line="101" column="11" bodyfile="include/rbus_value.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtm32_1a4af7665965a2d2a2ff57db18ef3c0c3b" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t tm32::tm_isdst</definition>
+        <argsstring></argsstring>
+        <name>tm_isdst</name>
+        <qualifiedname>tm32::tm_isdst</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_value.h" line="102" column="11" bodyfile="include/rbus_value.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/rbus_value.h" line="92" column="1" bodyfile="include/rbus_value.h" bodystart="93" bodyend="103"/>
+    <listofallmembers>
+      <member refid="structtm32_1af22056873b345468e8880af283effdde" prot="public" virt="non-virtual"><scope>tm32</scope><name>tm_hour</name></member>
+      <member refid="structtm32_1a4af7665965a2d2a2ff57db18ef3c0c3b" prot="public" virt="non-virtual"><scope>tm32</scope><name>tm_isdst</name></member>
+      <member refid="structtm32_1a0f0763d2ee2b30476da4b9279b3a5ad5" prot="public" virt="non-virtual"><scope>tm32</scope><name>tm_mday</name></member>
+      <member refid="structtm32_1a554382a8c5657b15984347fa2e030c95" prot="public" virt="non-virtual"><scope>tm32</scope><name>tm_min</name></member>
+      <member refid="structtm32_1a6ed33a70d74aa02e5bb489ec2741a649" prot="public" virt="non-virtual"><scope>tm32</scope><name>tm_mon</name></member>
+      <member refid="structtm32_1a26248b0a24f31f4574695680d659f032" prot="public" virt="non-virtual"><scope>tm32</scope><name>tm_sec</name></member>
+      <member refid="structtm32_1a52094f1f78dda0f2973fb808ffa16f65" prot="public" virt="non-virtual"><scope>tm32</scope><name>tm_wday</name></member>
+      <member refid="structtm32_1a270ede466b4c8fc99b0b8e3615fce832" prot="public" virt="non-virtual"><scope>tm32</scope><name>tm_yday</name></member>
+      <member refid="structtm32_1a285cadde065cb4c3f7c58117752f9f2d" prot="public" virt="non-virtual"><scope>tm32</scope><name>tm_year</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

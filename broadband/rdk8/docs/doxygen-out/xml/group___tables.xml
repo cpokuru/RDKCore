@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="group___tables" kind="group">
+    <compoundname>Tables</compoundname>
+    <title>Tables</title>
+    <innerclass refid="struct__rbus_row_name" prot="public">_rbusRowName</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___tables_1ga7961456a63f83cb0b82cb712ef21fde4" prot="public" static="no">
+        <type>struct <ref refid="struct__rbus_row_name" kindref="compound">_rbusRowName</ref></type>
+        <definition>typedef struct _rbusRowName rbusRowName_t</definition>
+        <argsstring></argsstring>
+        <name>rbusRowName_t</name>
+        <briefdescription>
+<para><ref refid="group___tables_1ga7961456a63f83cb0b82cb712ef21fde4" kindref="member">rbusRowName_t</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="324" column="15"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

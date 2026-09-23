@@ -1,0 +1,579 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="group___common" kind="group">
+    <compoundname>Common</compoundname>
+    <title>Common</title>
+    <innerclass refid="struct__rbus_set_options" prot="public">_rbusSetOptions</innerclass>
+    <innerclass refid="struct__rbus_get_handler_options" prot="public">_rbusGetHandlerOptions</innerclass>
+    <innerclass refid="struct__rbus_set_handler_options" prot="public">_rbusSetHandlerOptions</innerclass>
+    <innerclass refid="structrbus_set_options__t" prot="public">rbusSetOptions_t</innerclass>
+    <innerclass refid="structrbus_get_handler_options__t" prot="public">rbusGetHandlerOptions_t</innerclass>
+    <innerclass refid="structrbus_set_handler_options__t" prot="public">rbusSetHandlerOptions_t</innerclass>
+    <innergroup refid="group___events">Events</innergroup>
+    <innergroup refid="group___tables">Tables</innergroup>
+    <innergroup refid="group___providers">Providers</innergroup>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___common_1ga5db8b0d14b831805c31bbf454b7a935a" prot="public" static="no" strong="no">
+        <type></type>
+        <name>_rbusError</name>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aaba78b39ff2a89c19cc9ecd770b0cff4f" prot="public">
+          <name>RBUS_ERROR_SUCCESS</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Succes </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa9ebae7acef31009e2da835821d25a3ec" prot="public">
+          <name>RBUS_ERROR_BUS_ERROR</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>General Error </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa9a1547d7a456c5a71f40dca3dc933ecd" prot="public">
+          <name>RBUS_ERROR_INVALID_INPUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Invalid Input </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aaaabc3cdfb97e47fcbde52848dc5f021f" prot="public">
+          <name>RBUS_ERROR_NOT_INITIALIZED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Bus not initialized </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aad8875a435b4194eff4cd3bafa8c3862c" prot="public">
+          <name>RBUS_ERROR_OUT_OF_RESOURCES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Running out of resources </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa73fa6a352bc465672bb6dfd2b0271ead" prot="public">
+          <name>RBUS_ERROR_DESTINATION_NOT_FOUND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Dest element not found </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aacc9db1e50b8109fa8c91744d52000638" prot="public">
+          <name>RBUS_ERROR_DESTINATION_NOT_REACHABLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Dest element not reachable </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa0df954487735ea77e61d8f6c23fd3e92" prot="public">
+          <name>RBUS_ERROR_DESTINATION_RESPONSE_FAILURE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Dest failed to respond </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa8b7c928dc06009a14410628532d596df" prot="public">
+          <name>RBUS_ERROR_INVALID_RESPONSE_FROM_DESTINATION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Invalid dest response </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aad7664e052e24bb56a42686f0468d99ce" prot="public">
+          <name>RBUS_ERROR_INVALID_OPERATION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Invalid Operation </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aaca5c22a12e1749596eb2fdf6cb7a26fa" prot="public">
+          <name>RBUS_ERROR_INVALID_EVENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Invalid Event </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa23c754e53e8196dce65d95ee826a2c98" prot="public">
+          <name>RBUS_ERROR_INVALID_HANDLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Invalid Handle </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa32c60b973204fe6388d6cab12aae4e94" prot="public">
+          <name>RBUS_ERROR_SESSION_ALREADY_EXIST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Session already opened </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa2ebcac8cb80181718ea1c13e745a37a0" prot="public">
+          <name>RBUS_ERROR_COMPONENT_NAME_DUPLICATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Comp name already exists </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa8b8b10b50cf0208abbbf9193524f6724" prot="public">
+          <name>RBUS_ERROR_ELEMENT_NAME_DUPLICATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>One or more element name(s) were previously registered </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa384ed573fc57710f2706ac0d7ca64097" prot="public">
+          <name>RBUS_ERROR_ELEMENT_NAME_MISSING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>No names were provided in the name field </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa9c7233f8915859c4548e5c50e1024463" prot="public">
+          <name>RBUS_ERROR_COMPONENT_DOES_NOT_EXIST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>A bus connection for this component name was not previously opened. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa76eff23270a64075adf86e2cc63849fa" prot="public">
+          <name>RBUS_ERROR_ELEMENT_DOES_NOT_EXIST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>One or more data element name(s) do not currently have a valid registration </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aab95268db5752e57383de180c77d78fc9" prot="public">
+          <name>RBUS_ERROR_ACCESS_NOT_ALLOWED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Access to the requested data element was not permitted by the provider component. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aad4464c897ddb28dcd2aff03f9039291a" prot="public">
+          <name>RBUS_ERROR_INVALID_CONTEXT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The Context is not same as what was sent in the get callback handler. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aab4d44c7302674778282781128274393b" prot="public">
+          <name>RBUS_ERROR_TIMEOUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The operation timedout </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa9db57791261df9863366b7b495bcd751" prot="public">
+          <name>RBUS_ERROR_ASYNC_RESPONSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The method request will be handle asynchronously by provider </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aab35998b6f42b6d7bb83150c8e3e56baa" prot="public">
+          <name>RBUS_ERROR_INVALID_METHOD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Invalid Method </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa3f44e9516a76968b9abce5b503cc6431" prot="public">
+          <name>RBUS_ERROR_NOSUBSCRIBERS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>No subscribers present </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aaab28f322a7dc1597c0e12d97267f8752" prot="public">
+          <name>RBUS_ERROR_SUBSCRIPTION_ALREADY_EXIST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The subscription already exists </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa80b7261d6fb49a21a9544e2141c86734" prot="public">
+          <name>RBUS_ERROR_INVALID_NAMESPACE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Invalid namespace as per standard </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aaf0e652a9d9b9c55ee8a2c3dc984501a7" prot="public">
+          <name>RBUS_ERROR_DIRECT_CON_NOT_EXIST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Direct connection not exist </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aac4125cfdc40b04fdee894b6be3993379" prot="public">
+          <name>RBUS_ERROR_NOT_WRITABLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Set to the requested data element was not permitted by the provider component. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa4ee4d733b46a54909111ad96f299b4b0" prot="public">
+          <name>RBUS_ERROR_NOT_READABLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Get to the requested data element was not permitted by the provider component. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa8c5f052671250be982fd245e4c69509c" prot="public">
+          <name>RBUS_ERROR_INVALID_PARAMETER_TYPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Invalid parameter type. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga5db8b0d14b831805c31bbf454b7a935aa8d8839f0a6640ddd0c926247b249e9a6" prot="public">
+          <name>RBUS_ERROR_INVALID_PARAMETER_VALUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Invalid parameter value. </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>All possible error codes this API can generate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="102" column="1" bodyfile="include/rbus.h" bodystart="103" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___common_1ga71193d2a24675a52cc00ca92cef9fdbb" prot="public" static="no" strong="no">
+        <type></type>
+        <name>rbusStatus_t</name>
+        <enumvalue id="group___common_1gga71193d2a24675a52cc00ca92cef9fdbbae87f091d3824f9d3d054a1fbe2d6a300" prot="public">
+          <name>RBUS_ENABLED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>RBus broker is Enabled and Running </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga71193d2a24675a52cc00ca92cef9fdbbad2cade803b5c812d555768e018934655" prot="public">
+          <name>RBUS_ENABLE_PENDING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>RBus broker will be Enabled on Reboot </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga71193d2a24675a52cc00ca92cef9fdbba80cb72be317f8f3f9c885a5770f90b89" prot="public">
+          <name>RBUS_DISABLE_PENDING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>RBus broker will be Disabled on Reboot </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga71193d2a24675a52cc00ca92cef9fdbbac85ff6b879da585a336e423d702614cd" prot="public">
+          <name>RBUS_DISABLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>RBus broker is disabled </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The type of events which can be subscribed to or published. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="635" column="1" bodyfile="include/rbus.h" bodystart="636" bodyend="641"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___common_1ga575fb21e48c1ee799d86568ddff009af" prot="public" static="no" strong="no">
+        <type></type>
+        <name>rbusLogLevel_t</name>
+        <enumvalue id="group___common_1gga575fb21e48c1ee799d86568ddff009afab4b1b0143cfd6f6b298faff4f8af9153" prot="public">
+          <name>RBUS_LOG_DEBUG</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga575fb21e48c1ee799d86568ddff009afafac938bb2282863c3e8940ef210f775c" prot="public">
+          <name>RBUS_LOG_INFO</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga575fb21e48c1ee799d86568ddff009afab520257584a977a99040496f38250791" prot="public">
+          <name>RBUS_LOG_WARN</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga575fb21e48c1ee799d86568ddff009afadeb4c90ed0ac3f8028972ee34d121916" prot="public">
+          <name>RBUS_LOG_ERROR</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___common_1gga575fb21e48c1ee799d86568ddff009afa75d9aa0c2847a3b3aecc3216a777fea4" prot="public">
+          <name>RBUS_LOG_FATAL</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="643" column="1" bodyfile="include/rbus.h" bodystart="644" bodyend="650"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___common_1gaaed81eae245cefcc40d7b82d136364af" prot="public" static="no">
+        <type>struct _rbusHandle *</type>
+        <definition>typedef struct _rbusHandle* rbusHandle_t</definition>
+        <argsstring></argsstring>
+        <name>rbusHandle_t</name>
+        <briefdescription>
+<para>An RBus handle which identifies an opened component. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="93" column="27" bodyfile="include/rbus.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" prot="public" static="no">
+        <type>enum <ref refid="group___common_1ga5db8b0d14b831805c31bbf454b7a935a" kindref="member">_rbusError</ref></type>
+        <definition>typedef enum _rbusError rbusError_t</definition>
+        <argsstring></argsstring>
+        <name>rbusError_t</name>
+        <briefdescription>
+<para>All possible error codes this API can generate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="136" column="13"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___common_1ga205190215fd7d6a1c899e5c5431e4a27" prot="public" static="no">
+        <type>struct <ref refid="struct__rbus_set_options" kindref="compound">_rbusSetOptions</ref></type>
+        <definition>typedef struct _rbusSetOptions rbusSetOptions_t</definition>
+        <argsstring></argsstring>
+        <name>rbusSetOptions_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="160" column="18"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___common_1gaad81a4f3aebbc2a324db415c24e552f3" prot="public" static="no">
+        <type>struct <ref refid="struct__rbus_get_handler_options" kindref="compound">_rbusGetHandlerOptions</ref></type>
+        <definition>typedef struct _rbusGetHandlerOptions rbusGetHandlerOptions_t</definition>
+        <argsstring></argsstring>
+        <name>rbusGetHandlerOptions_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="170" column="25"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___common_1ga1e3e6594721f0ad4d25bcb07e80f98ea" prot="public" static="no">
+        <type>struct <ref refid="struct__rbus_set_handler_options" kindref="compound">_rbusSetHandlerOptions</ref></type>
+        <definition>typedef struct _rbusSetHandlerOptions rbusSetHandlerOptions_t</definition>
+        <argsstring></argsstring>
+        <name>rbusSetHandlerOptions_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="191" column="25"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___common_1gaece2a4d09e44f67df52ebf1efe63e793" prot="public" static="no">
+        <type>struct _rbusMethodAsyncHandle *</type>
+        <definition>typedef struct _rbusMethodAsyncHandle* rbusMethodAsyncHandle_t</definition>
+        <argsstring></argsstring>
+        <name>rbusMethodAsyncHandle_t</name>
+        <briefdescription>
+<para>An RBus handle used for async method responses. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="196" column="38" bodyfile="include/rbus.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___common_1ga464c8091f6ed7aff0cfcc104e2087d9b" prot="public" static="no">
+        <type><ref refid="group___common_1ga575fb21e48c1ee799d86568ddff009af" kindref="member">rbusLogLevel_t</ref></type>
+        <definition>typedef rbusLogLevel_t rbusLogLevel</definition>
+        <argsstring></argsstring>
+        <name>rbusLogLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="652" column="24" bodyfile="include/rbus.h" bodystart="652" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___common_1ga2da9e884770cf882767389178e705252" prot="public" static="no">
+        <type>void(*)</type>
+        <definition>typedef void(*) rbusLogHandler(rbusLogLevel_t level, const char *file, int line, int threadId, char *message)</definition>
+        <argsstring>(rbusLogLevel_t level, const char *file, int line, int threadId, char *message)</argsstring>
+        <name>rbusLogHandler</name>
+        <briefdescription>
+<para>A callback handler to get the log messages to application context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A component that wants to handle the logs in its own way must register a callback handler to get the log messages. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>level</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the log level </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the file name that it prints </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the line number in the file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>threadId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the threadId. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>messages</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the log message the library prints. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="671" column="9" bodyfile="include/rbus.h" bodystart="671" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group___common_1ga8af15938b1656c306a21688b315a8d0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char const *</type>
+        <definition>char const  * rbusError_ToString</definition>
+        <argsstring>(rbusError_t e)</argsstring>
+        <name>rbusError_ToString</name>
+        <param>
+          <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="140" column="13" declfile="include/rbus.h" declline="140" declcolumn="13"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="group___common_1ga45e7c239d118b46856da709edceb1bf4" prot="public" static="no">
+        <name>RBUS_MAX_NAME_LENGTH</name>
+        <initializer>256</initializer>
+        <briefdescription>
+<para>The maximum length a name can be for any element. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="96" column="9" bodyfile="include/rbus.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group___common_1ga9c8ef2bafb8c56aa59b15fb0fe0d146b" prot="public" static="no">
+        <name>RBUS_MAX_NAME_DEPTH</name>
+        <initializer>16</initializer>
+        <briefdescription>
+<para>The maximum hierarchical depth (e.g. the max token count) a name can be for any element. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="99" column="9" bodyfile="include/rbus.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

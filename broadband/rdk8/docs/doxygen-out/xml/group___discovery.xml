@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="group___discovery" kind="group">
+    <compoundname>Discovery</compoundname>
+    <title>Discovery</title>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group___discovery_1gaf954e8a2c6b8c83af41a4f4aef5a9c3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbus_discoverComponentName</definition>
+        <argsstring>(rbusHandle_t handle, int numElements, char const **elementNames, int *numComponents, char ***componentName)</argsstring>
+        <name>rbus_discoverComponentName</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numElements</declname>
+        </param>
+        <param>
+          <type>char const **</type>
+          <declname>elementNames</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>numComponents</declname>
+        </param>
+        <param>
+          <type>char ***</type>
+          <declname>componentName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="827" column="13" declfile="include/rbus.h" declline="827" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___discovery_1gab25f5c66820a76026a0806515aeb2792" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbus_discoverComponentDataElements</definition>
+        <argsstring>(rbusHandle_t handle, char const *name, bool nextLevel, int *numElements, char ***elementNames)</argsstring>
+        <name>rbus_discoverComponentDataElements</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>nextLevel</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>numElements</declname>
+        </param>
+        <param>
+          <type>char ***</type>
+          <declname>elementNames</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="856" column="13" declfile="include/rbus.h" declline="856" declcolumn="13"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

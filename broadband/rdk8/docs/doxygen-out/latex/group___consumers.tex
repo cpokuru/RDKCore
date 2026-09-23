@@ -1,0 +1,612 @@
+\doxysection{Consumers }
+\hypertarget{group___consumers}{}\label{group___consumers}\index{Consumers@{Consumers}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct__rbus_timeout_values}{\+\_\+rbus\+Timeout\+Values}}
+\item 
+struct \doxymbox{\hyperlink{structrbus_set_options__t}{rbus\+Set\+Options\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Additional options a client can pass to a set function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \doxymbox{\hyperlink{struct__rbus_timeout_values}{\+\_\+rbus\+Timeout\+Values}} \doxymbox{\hyperlink{group___consumers_ga8dd3d14ae30f63ccad0a6a377d13361a}{rbus\+Timeout\+Values\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_ga4784460070e869774b9ed69d1b309571}{rbus\+\_\+get}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}name, \doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \texorpdfstring{$\ast$}{*}value)
+\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_gad83602486f8d318f53f41546647076c6}{rbus\+\_\+get\+Ext}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, int param\+Count, char const \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}param\+Names, int \texorpdfstring{$\ast$}{*}num\+Props, \doxymbox{\hyperlink{group__rbus_property_ga3cbb720004e64c4728a5e8ba3d8ecf6f}{rbus\+Property\+\_\+t}} \texorpdfstring{$\ast$}{*}properties)
+\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_ga0a36da6ad09e2d90da6484acf6304b4d}{rbus\+\_\+get\+Boolean}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}param\+Name, bool \texorpdfstring{$\ast$}{*}param\+Val)
+\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_gadd90b4781c53e8e70cf2700493471649}{rbus\+\_\+get\+Int}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}param\+Name, int \texorpdfstring{$\ast$}{*}param\+Val)
+\begin{DoxyCompactList}\small\item\em A component uses this to perform an integer get operation. ~\newline
+Used by: All components that need to get an integer parameter. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_ga57e80644c25398c293de5e38a32792aa}{rbus\+\_\+get\+Uint}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}param\+Name, unsigned int \texorpdfstring{$\ast$}{*}param\+Val)
+\begin{DoxyCompactList}\small\item\em A component uses this to perform a get operation on an unsigned int parameter. ~\newline
+Used by: All components that need to get an unsigned integer parameter. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_ga098336853b08dbb112d5a73db42ace4e}{rbus\+\_\+get\+Str}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}param\+Name, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}param\+Val)
+\begin{DoxyCompactList}\small\item\em A component uses this to perform a get operation on a string parameter. ~\newline
+Used by: All components that need to get a string parameter. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_ga69f715cea76a0ea395c416a0a0bbe19b}{rbus\+\_\+set}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}name, \doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, \doxymbox{\hyperlink{structrbus_set_options__t}{rbus\+Set\+Options\+\_\+t}} \texorpdfstring{$\ast$}{*}opts)
+\begin{DoxyCompactList}\small\item\em A component uses this to perform a set operation for a single explicit parameter and has the option to used delayed (coordinated) commit commands. ~\newline
+Used by: All components that need to set an individual parameter. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_ga586fb2942d0b05d0f24dfd473472cdd2}{rbus\+\_\+set\+Commit}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}name, \doxymbox{\hyperlink{structrbus_set_options__t}{rbus\+Set\+Options\+\_\+t}} \texorpdfstring{$\ast$}{*}opts)
+\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_gaa96eac6a85b77e37b6e8c1d6df6db5c6}{rbus\+\_\+set\+Multi}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, int num\+Props, \doxymbox{\hyperlink{group__rbus_property_ga3cbb720004e64c4728a5e8ba3d8ecf6f}{rbus\+Property\+\_\+t}} properties, \doxymbox{\hyperlink{structrbus_set_options__t}{rbus\+Set\+Options\+\_\+t}} \texorpdfstring{$\ast$}{*}opts)
+\begin{DoxyCompactList}\small\item\em A component uses this to perform a set operation for multiple parameters at once. ~\newline
+Used by: All components that need to set multiple parameters. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_gaec64999a2acfd1579f143beb0bfe262e}{rbus\+\_\+set\+Multi\+Ext}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, uint32\+\_\+t num\+Props, \doxymbox{\hyperlink{group__rbus_property_ga3cbb720004e64c4728a5e8ba3d8ecf6f}{rbus\+Property\+\_\+t}} properties, \doxymbox{\hyperlink{structrbus_set_options__t}{rbus\+Set\+Options\+\_\+t}} \texorpdfstring{$\ast$}{*}opts, uint32\+\_\+t timeout, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}failed\+Parameter\+Name)
+\begin{DoxyCompactList}\small\item\em A component uses this to perform a set operation for multiple parameters at once. This method identifies the provider component of each parameter, groups them and makes the SET call ~\newline
+per provider component. The given order is NOT maintained. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_ga7444bf14c9a527140224de4c8bb0c51e}{rbus\+\_\+set\+Boolean}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}param\+Name, bool param\+Val)
+\begin{DoxyCompactList}\small\item\em A component uses this to perform a simple set operation on a boolean parameter and commit the operation. ~\newline
+Used by: All components that need to set a boolean parameter. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_gaa8cec0ffe802cd2522f069682759d3c6}{rbus\+\_\+set\+Int}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}param\+Name, int param\+Val)
+\begin{DoxyCompactList}\small\item\em A component uses this to perform a simple set operation on an integer parameter and commit the operation. ~\newline
+Used by: All components that need to set an integer and commit the change. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_gad05911a08098d00b5c4910766e6c235f}{rbus\+\_\+set\+UInt}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}param\+Name, unsigned int param\+Val)
+\begin{DoxyCompactList}\small\item\em A component uses this to perform a simple set operation on an unsigned integer parameter and commit the operation. ~\newline
+Used by: All components that need to set an unsigned integer and commit the change. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_ga12f13fac8dc16728cbd064ae65b5887d}{rbus\+\_\+set\+Str}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}param\+Name, char const \texorpdfstring{$\ast$}{*}param\+Val)
+\begin{DoxyCompactList}\small\item\em A component uses this to perform a simple set operation on a string parameter and commit the operation. ~\newline
+Used by: All components that need to set a string parameter. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_ga9ec84149b182b69ca3b61a415ded52d9}{rbus\+Table\+\_\+add\+Row}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}table\+Name, char const \texorpdfstring{$\ast$}{*}alias\+Name, uint32\+\_\+t \texorpdfstring{$\ast$}{*}inst\+Num)
+\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_gac435ca7a91197e0e144034c044528b2e}{rbus\+Table\+\_\+remove\+Row}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}row\+Name)
+\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_ga5cff99f0d675b5636d8ac7882308b7c1}{rbus\+Table\+\_\+get\+Row\+Names}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}table\+Name, \doxymbox{\hyperlink{group___tables_ga7961456a63f83cb0b82cb712ef21fde4}{rbus\+Row\+Name\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}row\+Names)
+\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_gab04298bf2b87426984e580e8ff8191f0}{rbus\+Table\+\_\+free\+Row\+Names}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, \doxymbox{\hyperlink{group___tables_ga7961456a63f83cb0b82cb712ef21fde4}{rbus\+Row\+Name\+\_\+t}} \texorpdfstring{$\ast$}{*}rows)
+\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_ga959a5929fc0cbfad9d0faa2fa251e1c2}{rbus\+Element\+Info\+\_\+get}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}elem\+Name, int depth, \doxymbox{\hyperlink{group___consumer_ga24c9c4e69cdd245d80fd806d4527ee4a}{rbus\+Element\+Info\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}elem\+Info)
+\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_gae93dc65f7795e56be214b930bfa72f12}{rbus\+Element\+Info\+\_\+free}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, \doxymbox{\hyperlink{group___consumer_ga24c9c4e69cdd245d80fd806d4527ee4a}{rbus\+Element\+Info\+\_\+t}} \texorpdfstring{$\ast$}{*}elem\+Info)
+\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_ga9b13bb2bd22f73c972efb5a0dd1d659c}{rbus\+Method\+\_\+\+Invoke\+Async}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}method\+Name, \doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} in\+Params, \doxymbox{\hyperlink{group___methods_ga43bf44c6acbf3bf8a90be2e2621d1612}{rbus\+Method\+Async\+Resp\+Handler\+\_\+t}} callback, int timeout)
+\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_ga1532bd543ad9e86683b6df7f000733a4}{rbus\+\_\+get\+Current\+Session}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, uint32\+\_\+t \texorpdfstring{$\ast$}{*}p\+Session\+Id)
+\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_ga67a89787b1fb79de3b7605499d2bccb1}{rbus\+\_\+close\+Session}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, uint32\+\_\+t session\+Id)
+\begin{DoxyCompactList}\small\item\em Components use this API to close the current session that was used to set 1 or more parameters and action on table like add/\+remove rows. ~\newline
+Used by: Components that used the session for Set Param \& Update Tables. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_ga027c931bcb02271719f0773fef67058f}{rbus\+\_\+register\+Log\+Handler}} (\doxymbox{\hyperlink{group___common_ga2da9e884770cf882767389178e705252}{rbus\+Log\+Handler}} log\+Handler)
+\begin{DoxyCompactList}\small\item\em A callback handler to get the log messages to application context. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_gaab4241ff7e106815e7cfaffb7c08af63}{rbus\+\_\+set\+Log\+Level}} (\doxymbox{\hyperlink{group___common_ga575fb21e48c1ee799d86568ddff009af}{rbus\+Log\+Level\+\_\+t}} level)
+\begin{DoxyCompactList}\small\item\em Component use this API to set the log level to be printed. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_ga413ba5cd92734c0454d72a2477b99182}{rbus\+\_\+open\+Direct}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} \texorpdfstring{$\ast$}{*}my\+Direct\+Handle, char const \texorpdfstring{$\ast$}{*}parameter\+Name)
+\begin{DoxyCompactList}\small\item\em Component use this API to open direct connection to the provider. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_ga3a57cd3f015fe0d652bb46d88f195317}{rbus\+\_\+close\+Direct}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle)
+\begin{DoxyCompactList}\small\item\em Component use this API to close existing direct connection to the provider for the given DML. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_ga49889d2770a3a0604da821b3442b4d17}{rbus\+\_\+register\+Dynamic\+Table\+Sync\+Handler}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}table\+Name, \doxymbox{\hyperlink{group___providers_ga509ea174d80c816237fcdf4cb3f321ce}{rbus\+Table\+Sync\+Handler\+\_\+t}} sync\+Handler)
+\begin{DoxyCompactList}\small\item\em Register table\+Sync\+Handler for table element with dynamic rows. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_gadd9ef292a4a12a4a21ad84e3cd88ecf0}{rbus\+Handle\+\_\+\+Config\+Timeout\+Values}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, \doxymbox{\hyperlink{group___consumers_ga8dd3d14ae30f63ccad0a6a377d13361a}{rbus\+Timeout\+Values\+\_\+t}} timeout\+Values)
+\begin{DoxyCompactList}\small\item\em Configure timeout values for each rbus\+\_\+handle. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_ga898ceb12f6376025672c33b8ba82b34a}{rbus\+Handle\+\_\+\+Config\+Set\+Timeout}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, uint32\+\_\+t timeout)
+\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_gae2a58da3b8f2d33b761788abbe628cd9}{rbus\+Handle\+\_\+\+Config\+Get\+Timeout}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, uint32\+\_\+t timeout)
+\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_ga9fa2f1b83c5c5e2022eaa6e19e48d244}{rbus\+Handle\+\_\+\+Config\+Get\+Multi\+Timeout}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, uint32\+\_\+t timeout)
+\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_ga2026b681044493b88954ca0ff386fb77}{rbus\+Handle\+\_\+\+Config\+Set\+Multi\+Timeout}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, uint32\+\_\+t timeout)
+\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___consumers_ga00d9098a0baa68fb39bff300678911dd}{rbus\+Handle\+\_\+\+Config\+Subscribe\+Timeout}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, uint32\+\_\+t timeout)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\label{group___consumers_doc-typedef-members}
+\Hypertarget{group___consumers_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{group___consumers_ga8dd3d14ae30f63ccad0a6a377d13361a}\index{Consumers@{Consumers}!rbusTimeoutValues\_t@{rbusTimeoutValues\_t}}
+\index{rbusTimeoutValues\_t@{rbusTimeoutValues\_t}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbusTimeoutValues\_t}{rbusTimeoutValues\_t}}
+{\footnotesize\ttfamily \label{group___consumers_ga8dd3d14ae30f63ccad0a6a377d13361a} 
+typedef struct \doxymbox{\hyperlink{struct__rbus_timeout_values}{\+\_\+rbus\+Timeout\+Values}} \doxymbox{\hyperlink{group___consumers_ga8dd3d14ae30f63ccad0a6a377d13361a}{rbus\+Timeout\+Values\+\_\+t}}}
+
+
+
+\label{group___consumers_doc-func-members}
+\Hypertarget{group___consumers_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{group___consumers_ga3a57cd3f015fe0d652bb46d88f195317}\index{Consumers@{Consumers}!rbus\_closeDirect@{rbus\_closeDirect}}
+\index{rbus\_closeDirect@{rbus\_closeDirect}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbus\_closeDirect()}{rbus\_closeDirect()}}
+{\footnotesize\ttfamily \label{group___consumers_ga3a57cd3f015fe0d652bb46d88f195317} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+\_\+close\+Direct (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{my\+Direct\+Handle}{}\end{DoxyParamCaption})}
+
+
+
+Component use this API to close existing direct connection to the provider for the given DML. 
+
+Used by: Component that is no more need the direct connection and wants to switch to RBUS Daemon
+
+
+\begin{DoxyParams}{Parameters}
+{\em my\+Direct\+Handle} & Direct handle that is created \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. 
+\end{DoxyReturn}
+\Hypertarget{group___consumers_ga67a89787b1fb79de3b7605499d2bccb1}\index{Consumers@{Consumers}!rbus\_closeSession@{rbus\_closeSession}}
+\index{rbus\_closeSession@{rbus\_closeSession}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbus\_closeSession()}{rbus\_closeSession()}}
+{\footnotesize\ttfamily \label{group___consumers_ga67a89787b1fb79de3b7605499d2bccb1} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+\_\+close\+Session (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{uint32\+\_\+t}]{session\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Components use this API to close the current session that was used to set 1 or more parameters and action on table like add/\+remove rows. ~\newline
+Used by: Components that used the session for Set Param \& Update Tables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em session\+Id} & unique session Identifier that is currently in use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+BUS\+\_\+\+ERROR; 
+\end{DoxyReturn}
+\Hypertarget{group___consumers_ga4784460070e869774b9ed69d1b309571}\index{Consumers@{Consumers}!rbus\_get@{rbus\_get}}
+\index{rbus\_get@{rbus\_get}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbus\_get()}{rbus\_get()}}
+{\footnotesize\ttfamily \label{group___consumers_ga4784460070e869774b9ed69d1b309571} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+\_\+get (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group___consumers_ga0a36da6ad09e2d90da6484acf6304b4d}\index{Consumers@{Consumers}!rbus\_getBoolean@{rbus\_getBoolean}}
+\index{rbus\_getBoolean@{rbus\_getBoolean}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbus\_getBoolean()}{rbus\_getBoolean()}}
+{\footnotesize\ttfamily \label{group___consumers_ga0a36da6ad09e2d90da6484acf6304b4d} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+\_\+get\+Boolean (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{param\+Name}{, }\item[{bool \texorpdfstring{$\ast$}{*}}]{param\+Val}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group___consumers_ga1532bd543ad9e86683b6df7f000733a4}\index{Consumers@{Consumers}!rbus\_getCurrentSession@{rbus\_getCurrentSession}}
+\index{rbus\_getCurrentSession@{rbus\_getCurrentSession}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbus\_getCurrentSession()}{rbus\_getCurrentSession()}}
+{\footnotesize\ttfamily \label{group___consumers_ga1532bd543ad9e86683b6df7f000733a4} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+\_\+get\+Current\+Session (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+Session\+Id}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group___consumers_gad83602486f8d318f53f41546647076c6}\index{Consumers@{Consumers}!rbus\_getExt@{rbus\_getExt}}
+\index{rbus\_getExt@{rbus\_getExt}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbus\_getExt()}{rbus\_getExt()}}
+{\footnotesize\ttfamily \label{group___consumers_gad83602486f8d318f53f41546647076c6} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+\_\+get\+Ext (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{int}]{param\+Count}{, }\item[{char const \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{param\+Names}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{num\+Props}{, }\item[{\doxymbox{\hyperlink{group__rbus_property_ga3cbb720004e64c4728a5e8ba3d8ecf6f}{rbus\+Property\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{properties}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group___consumers_gadd90b4781c53e8e70cf2700493471649}\index{Consumers@{Consumers}!rbus\_getInt@{rbus\_getInt}}
+\index{rbus\_getInt@{rbus\_getInt}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbus\_getInt()}{rbus\_getInt()}}
+{\footnotesize\ttfamily \label{group___consumers_gadd90b4781c53e8e70cf2700493471649} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+\_\+get\+Int (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{param\+Name}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{param\+Val}{}\end{DoxyParamCaption})}
+
+
+
+A component uses this to perform an integer get operation. ~\newline
+Used by: All components that need to get an integer parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em param\+Name} & The name of the integer parameter \\
+\hline
+{\em param\+Val} & The value of the integer parameter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+ACCESS\+\_\+\+NOT\+\_\+\+ALLOWED: Access to the requested parameter is not permitted 
+\end{DoxyReturn}
+\Hypertarget{group___consumers_ga098336853b08dbb112d5a73db42ace4e}\index{Consumers@{Consumers}!rbus\_getStr@{rbus\_getStr}}
+\index{rbus\_getStr@{rbus\_getStr}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbus\_getStr()}{rbus\_getStr()}}
+{\footnotesize\ttfamily \label{group___consumers_ga098336853b08dbb112d5a73db42ace4e} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+\_\+get\+Str (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{param\+Name}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{param\+Val}{}\end{DoxyParamCaption})}
+
+
+
+A component uses this to perform a get operation on a string parameter. ~\newline
+Used by: All components that need to get a string parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em param\+Name} & The name of the string parameter \\
+\hline
+{\em param\+Val} & The value of the string parameter which the caller must free \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+ACCESS\+\_\+\+NOT\+\_\+\+ALLOWED: Access to requested parameter is not permitted. 
+\end{DoxyReturn}
+\Hypertarget{group___consumers_ga57e80644c25398c293de5e38a32792aa}\index{Consumers@{Consumers}!rbus\_getUint@{rbus\_getUint}}
+\index{rbus\_getUint@{rbus\_getUint}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbus\_getUint()}{rbus\_getUint()}}
+{\footnotesize\ttfamily \label{group___consumers_ga57e80644c25398c293de5e38a32792aa} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+\_\+get\+Uint (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{param\+Name}{, }\item[{unsigned int \texorpdfstring{$\ast$}{*}}]{param\+Val}{}\end{DoxyParamCaption})}
+
+
+
+A component uses this to perform a get operation on an unsigned int parameter. ~\newline
+Used by: All components that need to get an unsigned integer parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em param\+Name} & The name of the unsigned integer parameter \\
+\hline
+{\em param\+Val} & The value of the unsigned integer parameter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+ACCESS\+\_\+\+NOT\+\_\+\+ALLOWED: Access to requested parameter is not permitted. 
+\end{DoxyReturn}
+\Hypertarget{group___consumers_ga413ba5cd92734c0454d72a2477b99182}\index{Consumers@{Consumers}!rbus\_openDirect@{rbus\_openDirect}}
+\index{rbus\_openDirect@{rbus\_openDirect}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbus\_openDirect()}{rbus\_openDirect()}}
+{\footnotesize\ttfamily \label{group___consumers_ga413ba5cd92734c0454d72a2477b99182} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+\_\+open\+Direct (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{my\+Direct\+Handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{parameter\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Component use this API to open direct connection to the provider. 
+
+Rbus supports a mode that optimizes performance for very frequent, high data rate transfers or rbus operations that need extremely low latency. This is known as rbus\+\_\+direct mode. While this mode improves performance, reduces CPU usage and improves latency, it also uses more memory and resources compared with normal rbus operation. Rbus\+\_\+direct mode should only be used where it\textquotesingle{}s needed and avoided where its not needed. Developers should use normal rbus operation modes unless there are special circumstances that require rbus\+\_\+direct mode. Developers should NOT use rbus\+\_\+direct mode for all operations. For more information on rbus\+\_\+direct see the instructions for \doxylink{group___consumers_ga413ba5cd92734c0454d72a2477b99182}{rbus\+\_\+open\+Direct()} in \doxylink{rbus_8h}{rbus.\+h}.
+
+Used by: Component that wants to use private connection to provider and avoid RBUS Daemon.
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Current active rbus handle \\
+\hline
+{\em my\+Direct\+Handle} & Direct handle that is created \\
+\hline
+{\em parameter\+Name} & Direct connection for the given parameter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. 
+\end{DoxyReturn}
+\Hypertarget{group___consumers_ga49889d2770a3a0604da821b3442b4d17}\index{Consumers@{Consumers}!rbus\_registerDynamicTableSyncHandler@{rbus\_registerDynamicTableSyncHandler}}
+\index{rbus\_registerDynamicTableSyncHandler@{rbus\_registerDynamicTableSyncHandler}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbus\_registerDynamicTableSyncHandler()}{rbus\_registerDynamicTableSyncHandler()}}
+{\footnotesize\ttfamily \label{group___consumers_ga49889d2770a3a0604da821b3442b4d17} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+\_\+register\+Dynamic\+Table\+Sync\+Handler (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{table\+Name}{, }\item[{\doxymbox{\hyperlink{group___providers_ga509ea174d80c816237fcdf4cb3f321ce}{rbus\+Table\+Sync\+Handler\+\_\+t}}}]{sync\+Handler}{}\end{DoxyParamCaption})}
+
+
+
+Register table\+Sync\+Handler for table element with dynamic rows. 
+
+Used by: Component that wants to register table\+Sync\+Handler that will register/\+unregister rows of dynamic table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em table\+Name} & The name of a table (e.\+g. "{}\+Device.\+IP.\+Interface."{}) \\
+\hline
+{\em sync\+Handler} & Dymanic table sync callback \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. 
+\end{DoxyReturn}
+\Hypertarget{group___consumers_ga027c931bcb02271719f0773fef67058f}\index{Consumers@{Consumers}!rbus\_registerLogHandler@{rbus\_registerLogHandler}}
+\index{rbus\_registerLogHandler@{rbus\_registerLogHandler}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbus\_registerLogHandler()}{rbus\_registerLogHandler()}}
+{\footnotesize\ttfamily \label{group___consumers_ga027c931bcb02271719f0773fef67058f} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+\_\+register\+Log\+Handler (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_ga2da9e884770cf882767389178e705252}{rbus\+Log\+Handler}}}]{log\+Handler}{}\end{DoxyParamCaption})}
+
+
+
+A callback handler to get the log messages to application context. 
+
+Used by: Component that wants to handle the logs in its own way must register a callback handler to get the log messages.
+
+
+\begin{DoxyParams}{Parameters}
+{\em log\+Handler} & handler function pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. 
+\end{DoxyReturn}
+\Hypertarget{group___consumers_ga69f715cea76a0ea395c416a0a0bbe19b}\index{Consumers@{Consumers}!rbus\_set@{rbus\_set}}
+\index{rbus\_set@{rbus\_set}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbus\_set()}{rbus\_set()}}
+{\footnotesize\ttfamily \label{group___consumers_ga69f715cea76a0ea395c416a0a0bbe19b} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+\_\+set (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{\doxymbox{\hyperlink{structrbus_set_options__t}{rbus\+Set\+Options\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{opts}{}\end{DoxyParamCaption})}
+
+
+
+A component uses this to perform a set operation for a single explicit parameter and has the option to used delayed (coordinated) commit commands. ~\newline
+Used by: All components that need to set an individual parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em name} & The name of the parameter to set. \\
+\hline
+{\em value} & The value to set the parameter to. \\
+\hline
+{\em opts} & Extra options such as session info. Set NULL if not needed, in which case a session is not used and the set is commited immediately. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+ACCESS\+\_\+\+NOT\+\_\+\+ALLOWED: Access to requested parameter is not permitted 
+\end{DoxyReturn}
+\Hypertarget{group___consumers_ga7444bf14c9a527140224de4c8bb0c51e}\index{Consumers@{Consumers}!rbus\_setBoolean@{rbus\_setBoolean}}
+\index{rbus\_setBoolean@{rbus\_setBoolean}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbus\_setBoolean()}{rbus\_setBoolean()}}
+{\footnotesize\ttfamily \label{group___consumers_ga7444bf14c9a527140224de4c8bb0c51e} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+\_\+set\+Boolean (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{param\+Name}{, }\item[{bool}]{param\+Val}{}\end{DoxyParamCaption})}
+
+
+
+A component uses this to perform a simple set operation on a boolean parameter and commit the operation. ~\newline
+Used by: All components that need to set a boolean parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em param\+Name} & The name of the string parameter \\
+\hline
+{\em param\+Val} & The value to set the boolean parameter to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+ACCESS\+\_\+\+NOT\+\_\+\+ALLOWED: Access to requested parameter is not permitted. 
+\end{DoxyReturn}
+\Hypertarget{group___consumers_ga586fb2942d0b05d0f24dfd473472cdd2}\index{Consumers@{Consumers}!rbus\_setCommit@{rbus\_setCommit}}
+\index{rbus\_setCommit@{rbus\_setCommit}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbus\_setCommit()}{rbus\_setCommit()}}
+{\footnotesize\ttfamily \label{group___consumers_ga586fb2942d0b05d0f24dfd473472cdd2} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+\_\+set\+Commit (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{\doxymbox{\hyperlink{structrbus_set_options__t}{rbus\+Set\+Options\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{opts}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group___consumers_gaa8cec0ffe802cd2522f069682759d3c6}\index{Consumers@{Consumers}!rbus\_setInt@{rbus\_setInt}}
+\index{rbus\_setInt@{rbus\_setInt}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbus\_setInt()}{rbus\_setInt()}}
+{\footnotesize\ttfamily \label{group___consumers_gaa8cec0ffe802cd2522f069682759d3c6} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+\_\+set\+Int (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{param\+Name}{, }\item[{int}]{param\+Val}{}\end{DoxyParamCaption})}
+
+
+
+A component uses this to perform a simple set operation on an integer parameter and commit the operation. ~\newline
+Used by: All components that need to set an integer and commit the change. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em param\+Name} & The name of the integer parameter \\
+\hline
+{\em param\+Val} & The value to set the integer parameter to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+ACCESS\+\_\+\+NOT\+\_\+\+ALLOWED: Access to requested parameter is not permitted 
+\end{DoxyReturn}
+\Hypertarget{group___consumers_gaab4241ff7e106815e7cfaffb7c08af63}\index{Consumers@{Consumers}!rbus\_setLogLevel@{rbus\_setLogLevel}}
+\index{rbus\_setLogLevel@{rbus\_setLogLevel}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbus\_setLogLevel()}{rbus\_setLogLevel()}}
+{\footnotesize\ttfamily \label{group___consumers_gaab4241ff7e106815e7cfaffb7c08af63} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+\_\+set\+Log\+Level (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_ga575fb21e48c1ee799d86568ddff009af}{rbus\+Log\+Level\+\_\+t}}}]{level}{}\end{DoxyParamCaption})}
+
+
+
+Component use this API to set the log level to be printed. 
+
+Used by: Component that wants to use default logging of RBUS instead of overriding the logging, can set the log level by this.
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & Log level \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. 
+\end{DoxyReturn}
+\Hypertarget{group___consumers_gaa96eac6a85b77e37b6e8c1d6df6db5c6}\index{Consumers@{Consumers}!rbus\_setMulti@{rbus\_setMulti}}
+\index{rbus\_setMulti@{rbus\_setMulti}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbus\_setMulti()}{rbus\_setMulti()}}
+{\footnotesize\ttfamily \label{group___consumers_gaa96eac6a85b77e37b6e8c1d6df6db5c6} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+\_\+set\+Multi (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{int}]{num\+Props}{, }\item[{\doxymbox{\hyperlink{group__rbus_property_ga3cbb720004e64c4728a5e8ba3d8ecf6f}{rbus\+Property\+\_\+t}}}]{properties}{, }\item[{\doxymbox{\hyperlink{structrbus_set_options__t}{rbus\+Set\+Options\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{opts}{}\end{DoxyParamCaption})}
+
+
+
+A component uses this to perform a set operation for multiple parameters at once. ~\newline
+Used by: All components that need to set multiple parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em num\+Props} & The number (count) of parameters \\
+\hline
+{\em properties} & The list of properties to set the parameters to. For each parameter, a property should be created which contains the parameter\textquotesingle{}s name and the respective value to set that parameter to. \\
+\hline
+{\em opts} & Extra options such as session info. Set NULL if not needed, in which case a session is not used and the set is commited immediately. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+ACCESS\+\_\+\+NOT\+\_\+\+ALLOWED: Access to requested parameter is not permitted. RBUS\+\_\+\+ERROR\+\_\+\+DESTINATION\+\_\+\+NOT\+\_\+\+REACHABLE: Destination element was not reachable. 
+\end{DoxyReturn}
+\Hypertarget{group___consumers_gaec64999a2acfd1579f143beb0bfe262e}\index{Consumers@{Consumers}!rbus\_setMultiExt@{rbus\_setMultiExt}}
+\index{rbus\_setMultiExt@{rbus\_setMultiExt}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbus\_setMultiExt()}{rbus\_setMultiExt()}}
+{\footnotesize\ttfamily \label{group___consumers_gaec64999a2acfd1579f143beb0bfe262e} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+\_\+set\+Multi\+Ext (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{uint32\+\_\+t}]{num\+Props}{, }\item[{\doxymbox{\hyperlink{group__rbus_property_ga3cbb720004e64c4728a5e8ba3d8ecf6f}{rbus\+Property\+\_\+t}}}]{properties}{, }\item[{\doxymbox{\hyperlink{structrbus_set_options__t}{rbus\+Set\+Options\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{opts}{, }\item[{uint32\+\_\+t}]{timeout}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{failed\+Parameter\+Name}{}\end{DoxyParamCaption})}
+
+
+
+A component uses this to perform a set operation for multiple parameters at once. This method identifies the provider component of each parameter, groups them and makes the SET call ~\newline
+per provider component. The given order is NOT maintained. 
+
+This API ensures rolling back of all the property to previous value upon failure to set any single parameter in the given list. Used by: All components that need to set multiple parameters
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em num\+Props} & The number (count) of parameters \\
+\hline
+{\em properties} & The list of dml properties to set to. For each parameter, a property should be created which contains the parameter\textquotesingle{}s name and the respective value to set that parameter to. \\
+\hline
+{\em opts} & Extra options such as session info. Set NULL if not needed, in which case a session is not used and the set is commited immediately. \\
+\hline
+{\em timeout} & Timeout in milliseconds to be used for each SET per provider; Set to 0 to use the default value (15s). \\
+\hline
+{\em failed\+Parameter\+Name} & Output parameter that represents the failed property. On success, it will returning NULL. Caller responsible to free() this. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+INPUT: Given inputs are not correct. RBUS\+\_\+\+ERROR\+\_\+\+ACCESS\+\_\+\+NOT\+\_\+\+ALLOWED: Access to requested parameter is not permitted. RBUS\+\_\+\+ERROR\+\_\+\+DESTINATION\+\_\+\+NOT\+\_\+\+REACHABLE: Destination element was not reachable. 
+\end{DoxyReturn}
+\Hypertarget{group___consumers_ga12f13fac8dc16728cbd064ae65b5887d}\index{Consumers@{Consumers}!rbus\_setStr@{rbus\_setStr}}
+\index{rbus\_setStr@{rbus\_setStr}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbus\_setStr()}{rbus\_setStr()}}
+{\footnotesize\ttfamily \label{group___consumers_ga12f13fac8dc16728cbd064ae65b5887d} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+\_\+set\+Str (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{param\+Name}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{param\+Val}{}\end{DoxyParamCaption})}
+
+
+
+A component uses this to perform a simple set operation on a string parameter and commit the operation. ~\newline
+Used by: All components that need to set a string parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em param\+Name} & The name of the string parameter \\
+\hline
+{\em param\+Val} & The value to set the string parameter to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+ACCESS\+\_\+\+NOT\+\_\+\+ALLOWED: Access to requested parameter is not permitted. 
+\end{DoxyReturn}
+\Hypertarget{group___consumers_gad05911a08098d00b5c4910766e6c235f}\index{Consumers@{Consumers}!rbus\_setUInt@{rbus\_setUInt}}
+\index{rbus\_setUInt@{rbus\_setUInt}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbus\_setUInt()}{rbus\_setUInt()}}
+{\footnotesize\ttfamily \label{group___consumers_gad05911a08098d00b5c4910766e6c235f} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+\_\+set\+UInt (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{param\+Name}{, }\item[{unsigned int}]{param\+Val}{}\end{DoxyParamCaption})}
+
+
+
+A component uses this to perform a simple set operation on an unsigned integer parameter and commit the operation. ~\newline
+Used by: All components that need to set an unsigned integer and commit the change. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em param\+Name} & The name of the unsigned integer parameter \\
+\hline
+{\em param\+Val} & The value to set the unsigned integer parameter to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+ACCESS\+\_\+\+NOT\+\_\+\+ALLOWED: Access to requested parameter is not permitted. 
+\end{DoxyReturn}
+\Hypertarget{group___consumers_gae93dc65f7795e56be214b930bfa72f12}\index{Consumers@{Consumers}!rbusElementInfo\_free@{rbusElementInfo\_free}}
+\index{rbusElementInfo\_free@{rbusElementInfo\_free}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbusElementInfo\_free()}{rbusElementInfo\_free()}}
+{\footnotesize\ttfamily \label{group___consumers_gae93dc65f7795e56be214b930bfa72f12} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Element\+Info\+\_\+free (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{\doxymbox{\hyperlink{group___consumer_ga24c9c4e69cdd245d80fd806d4527ee4a}{rbus\+Element\+Info\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{elem\+Info}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group___consumers_ga959a5929fc0cbfad9d0faa2fa251e1c2}\index{Consumers@{Consumers}!rbusElementInfo\_get@{rbusElementInfo\_get}}
+\index{rbusElementInfo\_get@{rbusElementInfo\_get}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbusElementInfo\_get()}{rbusElementInfo\_get()}}
+{\footnotesize\ttfamily \label{group___consumers_ga959a5929fc0cbfad9d0faa2fa251e1c2} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Element\+Info\+\_\+get (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{elem\+Name}{, }\item[{int}]{depth}{, }\item[{\doxymbox{\hyperlink{group___consumer_ga24c9c4e69cdd245d80fd806d4527ee4a}{rbus\+Element\+Info\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{elem\+Info}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group___consumers_ga9fa2f1b83c5c5e2022eaa6e19e48d244}\index{Consumers@{Consumers}!rbusHandle\_ConfigGetMultiTimeout@{rbusHandle\_ConfigGetMultiTimeout}}
+\index{rbusHandle\_ConfigGetMultiTimeout@{rbusHandle\_ConfigGetMultiTimeout}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbusHandle\_ConfigGetMultiTimeout()}{rbusHandle\_ConfigGetMultiTimeout()}}
+{\footnotesize\ttfamily \label{group___consumers_ga9fa2f1b83c5c5e2022eaa6e19e48d244} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Handle\+\_\+\+Config\+Get\+Multi\+Timeout (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{uint32\+\_\+t}]{timeout}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group___consumers_gae2a58da3b8f2d33b761788abbe628cd9}\index{Consumers@{Consumers}!rbusHandle\_ConfigGetTimeout@{rbusHandle\_ConfigGetTimeout}}
+\index{rbusHandle\_ConfigGetTimeout@{rbusHandle\_ConfigGetTimeout}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbusHandle\_ConfigGetTimeout()}{rbusHandle\_ConfigGetTimeout()}}
+{\footnotesize\ttfamily \label{group___consumers_gae2a58da3b8f2d33b761788abbe628cd9} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Handle\+\_\+\+Config\+Get\+Timeout (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{uint32\+\_\+t}]{timeout}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group___consumers_ga2026b681044493b88954ca0ff386fb77}\index{Consumers@{Consumers}!rbusHandle\_ConfigSetMultiTimeout@{rbusHandle\_ConfigSetMultiTimeout}}
+\index{rbusHandle\_ConfigSetMultiTimeout@{rbusHandle\_ConfigSetMultiTimeout}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbusHandle\_ConfigSetMultiTimeout()}{rbusHandle\_ConfigSetMultiTimeout()}}
+{\footnotesize\ttfamily \label{group___consumers_ga2026b681044493b88954ca0ff386fb77} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Handle\+\_\+\+Config\+Set\+Multi\+Timeout (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{uint32\+\_\+t}]{timeout}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group___consumers_ga898ceb12f6376025672c33b8ba82b34a}\index{Consumers@{Consumers}!rbusHandle\_ConfigSetTimeout@{rbusHandle\_ConfigSetTimeout}}
+\index{rbusHandle\_ConfigSetTimeout@{rbusHandle\_ConfigSetTimeout}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbusHandle\_ConfigSetTimeout()}{rbusHandle\_ConfigSetTimeout()}}
+{\footnotesize\ttfamily \label{group___consumers_ga898ceb12f6376025672c33b8ba82b34a} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Handle\+\_\+\+Config\+Set\+Timeout (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{uint32\+\_\+t}]{timeout}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group___consumers_ga00d9098a0baa68fb39bff300678911dd}\index{Consumers@{Consumers}!rbusHandle\_ConfigSubscribeTimeout@{rbusHandle\_ConfigSubscribeTimeout}}
+\index{rbusHandle\_ConfigSubscribeTimeout@{rbusHandle\_ConfigSubscribeTimeout}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbusHandle\_ConfigSubscribeTimeout()}{rbusHandle\_ConfigSubscribeTimeout()}}
+{\footnotesize\ttfamily \label{group___consumers_ga00d9098a0baa68fb39bff300678911dd} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Handle\+\_\+\+Config\+Subscribe\+Timeout (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{uint32\+\_\+t}]{timeout}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group___consumers_gadd9ef292a4a12a4a21ad84e3cd88ecf0}\index{Consumers@{Consumers}!rbusHandle\_ConfigTimeoutValues@{rbusHandle\_ConfigTimeoutValues}}
+\index{rbusHandle\_ConfigTimeoutValues@{rbusHandle\_ConfigTimeoutValues}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbusHandle\_ConfigTimeoutValues()}{rbusHandle\_ConfigTimeoutValues()}}
+{\footnotesize\ttfamily \label{group___consumers_gadd9ef292a4a12a4a21ad84e3cd88ecf0} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Handle\+\_\+\+Config\+Timeout\+Values (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{\doxymbox{\hyperlink{group___consumers_ga8dd3d14ae30f63ccad0a6a377d13361a}{rbus\+Timeout\+Values\+\_\+t}}}]{timeout\+Values}{}\end{DoxyParamCaption})}
+
+
+
+Configure timeout values for each rbus\+\_\+handle. 
+
+Used by: Component wants to configure its own timeout values per rbus\+\_\+handle.
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em timeout\+Values} & Timeout values in miliseconds for SET, GET operations. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. 
+\end{DoxyReturn}
+\Hypertarget{group___consumers_ga9b13bb2bd22f73c972efb5a0dd1d659c}\index{Consumers@{Consumers}!rbusMethod\_InvokeAsync@{rbusMethod\_InvokeAsync}}
+\index{rbusMethod\_InvokeAsync@{rbusMethod\_InvokeAsync}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbusMethod\_InvokeAsync()}{rbusMethod\_InvokeAsync()}}
+{\footnotesize\ttfamily \label{group___consumers_ga9b13bb2bd22f73c972efb5a0dd1d659c} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Method\+\_\+\+Invoke\+Async (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{method\+Name}{, }\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{in\+Params}{, }\item[{\doxymbox{\hyperlink{group___methods_ga43bf44c6acbf3bf8a90be2e2621d1612}{rbus\+Method\+Async\+Resp\+Handler\+\_\+t}}}]{callback}{, }\item[{int}]{timeout}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group___consumers_ga9ec84149b182b69ca3b61a415ded52d9}\index{Consumers@{Consumers}!rbusTable\_addRow@{rbusTable\_addRow}}
+\index{rbusTable\_addRow@{rbusTable\_addRow}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbusTable\_addRow()}{rbusTable\_addRow()}}
+{\footnotesize\ttfamily \label{group___consumers_ga9ec84149b182b69ca3b61a415ded52d9} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Table\+\_\+add\+Row (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{table\+Name}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{alias\+Name}{, }\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{inst\+Num}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group___consumers_gab04298bf2b87426984e580e8ff8191f0}\index{Consumers@{Consumers}!rbusTable\_freeRowNames@{rbusTable\_freeRowNames}}
+\index{rbusTable\_freeRowNames@{rbusTable\_freeRowNames}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbusTable\_freeRowNames()}{rbusTable\_freeRowNames()}}
+{\footnotesize\ttfamily \label{group___consumers_gab04298bf2b87426984e580e8ff8191f0} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Table\+\_\+free\+Row\+Names (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{\doxymbox{\hyperlink{group___tables_ga7961456a63f83cb0b82cb712ef21fde4}{rbus\+Row\+Name\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{rows}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group___consumers_ga5cff99f0d675b5636d8ac7882308b7c1}\index{Consumers@{Consumers}!rbusTable\_getRowNames@{rbusTable\_getRowNames}}
+\index{rbusTable\_getRowNames@{rbusTable\_getRowNames}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbusTable\_getRowNames()}{rbusTable\_getRowNames()}}
+{\footnotesize\ttfamily \label{group___consumers_ga5cff99f0d675b5636d8ac7882308b7c1} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Table\+\_\+get\+Row\+Names (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{table\+Name}{, }\item[{\doxymbox{\hyperlink{group___tables_ga7961456a63f83cb0b82cb712ef21fde4}{rbus\+Row\+Name\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{row\+Names}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group___consumers_gac435ca7a91197e0e144034c044528b2e}\index{Consumers@{Consumers}!rbusTable\_removeRow@{rbusTable\_removeRow}}
+\index{rbusTable\_removeRow@{rbusTable\_removeRow}!Consumers@{Consumers}}
+\doxysubsubsection{\texorpdfstring{rbusTable\_removeRow()}{rbusTable\_removeRow()}}
+{\footnotesize\ttfamily \label{group___consumers_gac435ca7a91197e0e144034c044528b2e} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Table\+\_\+remove\+Row (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{row\+Name}{}\end{DoxyParamCaption})}
+

@@ -1,0 +1,355 @@
+\doxysubsection{Providers }
+\hypertarget{group___providers}{}\label{group___providers}\index{Providers@{Providers}}
+\doxysubsubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structrbus_element_callback_table__t}{rbus\+Element\+Callback\+Table\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em The list of callback handlers supported by a data element. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structrbus_callback_table__t}{rbus\+Callback\+Table\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Backward compatibility version of \doxylink{structrbus_element_callback_table__t}{rbus\+Element\+Callback\+Table\+\_\+t}. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structrbus_data_element__t}{rbus\+Data\+Element\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em \doxylink{structrbus_data_element__t}{rbus\+Data\+Element\+\_\+t} The structure used when registering or unregistering a data element to the bus. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structrbus_get_handler_options__t}{rbus\+Get\+Handler\+Options\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Additional options that are passed to the provider when GET function called. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structrbus_set_handler_options__t}{rbus\+Set\+Handler\+Options\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Additional options that are passed to the provider when SET function called. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}}(\texorpdfstring{$\ast$}{*}) \doxymbox{\hyperlink{group___providers_ga8183a9f8eb04494909d260d9c563538b}{rbus\+Get\+Handler\+\_\+t}}(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, \doxymbox{\hyperlink{group__rbus_property_ga3cbb720004e64c4728a5e8ba3d8ecf6f}{rbus\+Property\+\_\+t}} property, \doxymbox{\hyperlink{structrbus_get_handler_options__t}{rbus\+Get\+Handler\+Options\+\_\+t}} \texorpdfstring{$\ast$}{*}options)
+\begin{DoxyCompactList}\small\item\em A property get callback handler. \end{DoxyCompactList}\item 
+typedef \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}}(\texorpdfstring{$\ast$}{*}) \doxymbox{\hyperlink{group___providers_gad83da8f5d21226d482ca822d57401d77}{rbus\+Set\+Handler\+\_\+t}}(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, \doxymbox{\hyperlink{group__rbus_property_ga3cbb720004e64c4728a5e8ba3d8ecf6f}{rbus\+Property\+\_\+t}} property, \doxymbox{\hyperlink{structrbus_set_handler_options__t}{rbus\+Set\+Handler\+Options\+\_\+t}} \texorpdfstring{$\ast$}{*}options)
+\begin{DoxyCompactList}\small\item\em A property set callback handler. \end{DoxyCompactList}\item 
+typedef \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}}(\texorpdfstring{$\ast$}{*}) \doxymbox{\hyperlink{group___providers_gaf8bd07fc7f695a02b93a9aab467e032b}{rbus\+Table\+Add\+Row\+Handler\+\_\+t}}(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}table\+Name, char const \texorpdfstring{$\ast$}{*}alias\+Name, uint32\+\_\+t \texorpdfstring{$\ast$}{*}inst\+Num)
+\begin{DoxyCompactList}\small\item\em A table row add callback handler. \end{DoxyCompactList}\item 
+typedef \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}}(\texorpdfstring{$\ast$}{*}) \doxymbox{\hyperlink{group___providers_ga2acce3313e6c4131647874c51411c668}{rbus\+Table\+Remove\+Row\+Handler\+\_\+t}}(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}row\+Name)
+\begin{DoxyCompactList}\small\item\em A table row remove callback handler. \end{DoxyCompactList}\item 
+typedef \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}}(\texorpdfstring{$\ast$}{*}) \doxymbox{\hyperlink{group___providers_gace673660999b800a3f21a239b5a40f8d}{rbus\+Method\+Handler\+\_\+t}}(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}method\+Name, \doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} in\+Params, \doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} out\+Params, \doxymbox{\hyperlink{group___common_gaece2a4d09e44f67df52ebf1efe63e793}{rbus\+Method\+Async\+Handle\+\_\+t}} async\+Handle)
+\begin{DoxyCompactList}\small\item\em A method invocation callback handler. \end{DoxyCompactList}\item 
+typedef \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}}(\texorpdfstring{$\ast$}{*}) \doxymbox{\hyperlink{group___providers_ga845118048502243dac351969766ce2e9}{rbus\+Event\+Sub\+Handler\+\_\+t}}(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, \doxymbox{\hyperlink{group___events_ga0aa4feac1e56279c9d61e90771534785}{rbus\+Event\+Sub\+Action\+\_\+t}} action, char const \texorpdfstring{$\ast$}{*}event\+Name, \doxymbox{\hyperlink{group__rbus_filter_ga03ad5f80346294826fffde5c271dd22e}{rbus\+Filter\+\_\+t}} filter, int32\+\_\+t interval, bool \texorpdfstring{$\ast$}{*}auto\+Publish)
+\begin{DoxyCompactList}\small\item\em An event subcribe callback handler. \end{DoxyCompactList}\item 
+typedef \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}}(\texorpdfstring{$\ast$}{*}) \doxymbox{\hyperlink{group___providers_ga509ea174d80c816237fcdf4cb3f321ce}{rbus\+Table\+Sync\+Handler\+\_\+t}}(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}table\+Name)
+\begin{DoxyCompactList}\small\item\em A table sync callback handler. \end{DoxyCompactList}\item 
+typedef struct rbus\+Element\+Callback\+Table\+\_\+t \doxymbox{\hyperlink{group___providers_ga33cd345f4902d497719af3cf9b292c5a}{rbus\+Element\+Callback\+Table\+\_\+t}}
+\item 
+typedef struct rbus\+Callback\+Table\+\_\+t \doxymbox{\hyperlink{group___providers_ga5ef9cc1af2178775686741d6bda9bc4b}{rbus\+Callback\+Table\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{group___providers_ga4b24d155a070a1d73e0a1f3b00195ace}{rbus\+Element\+Type\+\_\+t}} \{ \doxymbox{\hyperlink{group___providers_gga4b24d155a070a1d73e0a1f3b00195aceaecda73fecc321492fcc9ddf33d0baa2e}{RBUS\+\_\+\+ELEMENT\+\_\+\+TYPE\+\_\+\+PROPERTY}} = 1
+, \doxymbox{\hyperlink{group___providers_gga4b24d155a070a1d73e0a1f3b00195acea3a47f7e829cba15e8f5fe82f33ed377b}{RBUS\+\_\+\+ELEMENT\+\_\+\+TYPE\+\_\+\+TABLE}}
+, \doxymbox{\hyperlink{group___providers_gga4b24d155a070a1d73e0a1f3b00195acea24c7c9ca3dde7b4a661a8ea565d15e91}{RBUS\+\_\+\+ELEMENT\+\_\+\+TYPE\+\_\+\+EVENT}}
+, \doxymbox{\hyperlink{group___providers_gga4b24d155a070a1d73e0a1f3b00195acea9171cee62cfa142748b9b10a3dcb7e69}{RBUS\+\_\+\+ELEMENT\+\_\+\+TYPE\+\_\+\+METHOD}}
+ \}
+\begin{DoxyCompactList}\small\item\em \doxylink{group___providers_ga4b24d155a070a1d73e0a1f3b00195ace}{rbus\+Element\+Type\+\_\+t} indicates the type of data elements which can be registered with RBus \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___providers_ga58d4e15c31e566321fcbf96e4b4deace}{rbus\+\_\+reg\+Data\+Elements}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, int num\+Data\+Elements, \doxymbox{\hyperlink{structrbus_data_element__t}{rbus\+Data\+Element\+\_\+t}} \texorpdfstring{$\ast$}{*}elements)
+\begin{DoxyCompactList}\small\item\em A Component uses this API to register one or more named Data Elements (i.\+e., parameters and/\+or event names) that will be accessible / subscribable by other components. This also registers the callback functions associated with each data element using the data\+Element structure. ~\newline
+Used by: All components that provide named parameters and/\+or events that may be accessed/\+subscribed by other component(s). \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___providers_ga91dfd7fea098f4e6b500344133ade0a2}{rbus\+\_\+unreg\+Data\+Elements}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, int num\+Data\+Elements, \doxymbox{\hyperlink{structrbus_data_element__t}{rbus\+Data\+Element\+\_\+t}} \texorpdfstring{$\ast$}{*}elements)
+\begin{DoxyCompactList}\small\item\em A Component uses this API to unregister one or more previously registered Data Elements (i.\+e., named parameters and/\+or event names) that will no longer be accessible / subscribable by other components. ~\newline
+Used by: All components that provide named parameters and/\+or events that may be accessed/\+subscribed by other component(s). \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___providers_ga299310a0ae625b51b688f5062f486f9e}{rbus\+Table\+\_\+register\+Row}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}table\+Name, uint32\+\_\+t inst\+Num, char const \texorpdfstring{$\ast$}{*}alias\+Name)
+\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___providers_ga0df49f35236940e6c567fe692aa45379}{rbus\+Table\+\_\+unregister\+Row}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}row\+Name)
+\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___providers_gaf5fb7bd4640ccc9aa7c93c07ee0d4b67}{rbus\+Event\+\_\+\+Publish\+Raw\+Data}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, \doxymbox{\hyperlink{structrbus_event_raw_data__t}{rbus\+Event\+Raw\+Data\+\_\+t}} \texorpdfstring{$\ast$}{*}event\+Data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+
+
+\label{group___providers_doc-typedef-members}
+\Hypertarget{group___providers_doc-typedef-members}
+\doxysubsubsection{Typedef Documentation}
+\Hypertarget{group___providers_ga5ef9cc1af2178775686741d6bda9bc4b}\index{Providers@{Providers}!rbusCallbackTable\_t@{rbusCallbackTable\_t}}
+\index{rbusCallbackTable\_t@{rbusCallbackTable\_t}!Providers@{Providers}}
+\doxysubsubsubsection{\texorpdfstring{rbusCallbackTable\_t}{rbusCallbackTable\_t}}
+{\footnotesize\ttfamily \label{group___providers_ga5ef9cc1af2178775686741d6bda9bc4b} 
+typedef struct rbus\+Callback\+Table\+\_\+t rbus\+Callback\+Table\+\_\+t}
+
+\Hypertarget{group___providers_ga33cd345f4902d497719af3cf9b292c5a}\index{Providers@{Providers}!rbusElementCallbackTable\_t@{rbusElementCallbackTable\_t}}
+\index{rbusElementCallbackTable\_t@{rbusElementCallbackTable\_t}!Providers@{Providers}}
+\doxysubsubsubsection{\texorpdfstring{rbusElementCallbackTable\_t}{rbusElementCallbackTable\_t}}
+{\footnotesize\ttfamily \label{group___providers_ga33cd345f4902d497719af3cf9b292c5a} 
+typedef struct rbus\+Element\+Callback\+Table\+\_\+t rbus\+Element\+Callback\+Table\+\_\+t}
+
+\Hypertarget{group___providers_ga845118048502243dac351969766ce2e9}\index{Providers@{Providers}!rbusEventSubHandler\_t@{rbusEventSubHandler\_t}}
+\index{rbusEventSubHandler\_t@{rbusEventSubHandler\_t}!Providers@{Providers}}
+\doxysubsubsubsection{\texorpdfstring{rbusEventSubHandler\_t}{rbusEventSubHandler\_t}}
+{\footnotesize\ttfamily \label{group___providers_ga845118048502243dac351969766ce2e9} 
+typedef \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}}(\texorpdfstring{$\ast$}{*}) rbus\+Event\+Sub\+Handler\+\_\+t(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, \doxymbox{\hyperlink{group___events_ga0aa4feac1e56279c9d61e90771534785}{rbus\+Event\+Sub\+Action\+\_\+t}} action, char const  \texorpdfstring{$\ast$}{*}event\+Name, \doxymbox{\hyperlink{group__rbus_filter_ga03ad5f80346294826fffde5c271dd22e}{rbus\+Filter\+\_\+t}} filter, int32\+\_\+t interval, bool \texorpdfstring{$\ast$}{*}auto\+Publish)}
+
+
+
+An event subcribe callback handler. 
+
+A provider will receive this callback when the first client subscribes to an event/\+filter pair or the last client unsubscribes to an event/\+filter pair or all subscribers have timed out due to max duration. Distribution of the event to multiple subscribers will be transparently handled by the library. 
+\begin{DoxyParams}{Parameters}
+{\em handle} & the rbus handle the event is registered to. \\
+\hline
+{\em action} & whether the event is being subscribed or unsubscribe to. \\
+\hline
+{\em event\+Name} & the fully qualified event name. \\
+\hline
+{\em filter} & an the filter the subscriber would like the provider to use to decide when the event can be sent. This can be NULL if no filter was specified by the client. \\
+\hline
+{\em interval} & if non-\/zero, indicates that the event should be publish repeatedly every \textquotesingle{}interval\textquotesingle{} seconds. if a filter is also provided, it would publish only when the filter is triggered \\
+\hline
+{\em auto\+Publish} & output parameter used to disable the default behaviour where rbus automatically publishing events for provider data elements. When providers set auto\+Publish to true the value will be checked once per second and the maximum event rate is one event per two seconds. If faster eventing or real-\/time eventing is required providers can set auto\+Publish to false and implement a custom approach. For fastest response time and to avoid missing changes that occur faster than once per second, the preferred way is to use a callback triggered from the lowest level of code to detect a value change. This callback may be invoked by vendor code via a HAL API or other method. This callback can be received by the component that provides this event and used to send the publish message in real time. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. 
+\end{DoxyReturn}
+\Hypertarget{group___providers_ga8183a9f8eb04494909d260d9c563538b}\index{Providers@{Providers}!rbusGetHandler\_t@{rbusGetHandler\_t}}
+\index{rbusGetHandler\_t@{rbusGetHandler\_t}!Providers@{Providers}}
+\doxysubsubsubsection{\texorpdfstring{rbusGetHandler\_t}{rbusGetHandler\_t}}
+{\footnotesize\ttfamily \label{group___providers_ga8183a9f8eb04494909d260d9c563538b} 
+typedef \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}}(\texorpdfstring{$\ast$}{*}) rbus\+Get\+Handler\+\_\+t(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, \doxymbox{\hyperlink{group__rbus_property_ga3cbb720004e64c4728a5e8ba3d8ecf6f}{rbus\+Property\+\_\+t}} property, \doxymbox{\hyperlink{structrbus_get_handler_options__t}{rbus\+Get\+Handler\+Options\+\_\+t}} \texorpdfstring{$\ast$}{*}options)}
+
+
+
+A property get callback handler. 
+
+A provider must implement this handler to allow a property to be read. The property parameter passed to this function will have the name of the property already set. The provider can use this name to identify the property if needed. The provider\textquotesingle{}s responsibility is to set the value of the property parameter. A provider may install this get handler on a table if the provider doesn\textquotesingle{}t use rbus\+Table\+\_\+add\+Row to add rows and instead will handle partial path queries through this get handler. 
+\begin{DoxyParams}{Parameters}
+{\em handle} & the rbus handle the property is registered to. \\
+\hline
+{\em property} & the property whose value must be set by the handler. \\
+\hline
+{\em options} & the additional information that to be used for GET. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. 
+\end{DoxyReturn}
+\Hypertarget{group___providers_gace673660999b800a3f21a239b5a40f8d}\index{Providers@{Providers}!rbusMethodHandler\_t@{rbusMethodHandler\_t}}
+\index{rbusMethodHandler\_t@{rbusMethodHandler\_t}!Providers@{Providers}}
+\doxysubsubsubsection{\texorpdfstring{rbusMethodHandler\_t}{rbusMethodHandler\_t}}
+{\footnotesize\ttfamily \label{group___providers_gace673660999b800a3f21a239b5a40f8d} 
+typedef \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}}(\texorpdfstring{$\ast$}{*}) rbus\+Method\+Handler\+\_\+t(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const  \texorpdfstring{$\ast$}{*}method\+Name, \doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} in\+Params, \doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} out\+Params, \doxymbox{\hyperlink{group___common_gaece2a4d09e44f67df52ebf1efe63e793}{rbus\+Method\+Async\+Handle\+\_\+t}} async\+Handle)}
+
+
+
+A method invocation callback handler. 
+
+A provider must implement this handler to support methods. ~\newline
+ There are two ways to return a response to the method. The first is to set out\+Params in the handler and return RBUS\+\_\+\+ERROR\+\_\+\+SUCCESS. The second is to send the response later by storing the async\+Handle, returning RBUS\+\_\+\+ERROR\+\_\+\+ASYNC\+\_\+\+RESPONSE from the handler, and later calling rbus\+Method\+\_\+\+Send\+Async\+Response, passing the async\+Handle and output params. 
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em method\+Name} & The name of the method being invoked ( e.\+g. "{}\+Device.\+Foo.\+Some\+Func()"{}); \\
+\hline
+{\em in\+Params} & The input parameters to the functions \\
+\hline
+{\em out\+Params} & The output/\+return parameters of the functions \\
+\hline
+{\em async\+Handle} & Handle passed to rbus\+Method\+\_\+\+Send\+Async\+Response \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+INPUT 
+\end{DoxyReturn}
+\Hypertarget{group___providers_gad83da8f5d21226d482ca822d57401d77}\index{Providers@{Providers}!rbusSetHandler\_t@{rbusSetHandler\_t}}
+\index{rbusSetHandler\_t@{rbusSetHandler\_t}!Providers@{Providers}}
+\doxysubsubsubsection{\texorpdfstring{rbusSetHandler\_t}{rbusSetHandler\_t}}
+{\footnotesize\ttfamily \label{group___providers_gad83da8f5d21226d482ca822d57401d77} 
+typedef \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}}(\texorpdfstring{$\ast$}{*}) rbus\+Set\+Handler\+\_\+t(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, \doxymbox{\hyperlink{group__rbus_property_ga3cbb720004e64c4728a5e8ba3d8ecf6f}{rbus\+Property\+\_\+t}} property, \doxymbox{\hyperlink{structrbus_set_handler_options__t}{rbus\+Set\+Handler\+Options\+\_\+t}} \texorpdfstring{$\ast$}{*}options)}
+
+
+
+A property set callback handler. 
+
+A provider must implement this handler to allow a property to be written. The property parameter passed to this function will have the name of the property already set. The provider can use this name to identify the property if needed. The property parameter will also have the value. The \doxylink{structrbus_set_handler_options__t}{rbus\+Set\+Handler\+Options\+\_\+t} contains addition information which the provider must use to handle how the write should occur. It is the provider\textquotesingle{}s responsibility to set its internal representation of that property\textquotesingle{}s value with the value contained within the property parameter. 
+\begin{DoxyParams}{Parameters}
+{\em handle} & the rbus handle the property is registered to. \\
+\hline
+{\em property} & the property whose value must be set by the handler. \\
+\hline
+{\em options} & the additional information that to be used for SET. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. 
+\end{DoxyReturn}
+\Hypertarget{group___providers_gaf8bd07fc7f695a02b93a9aab467e032b}\index{Providers@{Providers}!rbusTableAddRowHandler\_t@{rbusTableAddRowHandler\_t}}
+\index{rbusTableAddRowHandler\_t@{rbusTableAddRowHandler\_t}!Providers@{Providers}}
+\doxysubsubsubsection{\texorpdfstring{rbusTableAddRowHandler\_t}{rbusTableAddRowHandler\_t}}
+{\footnotesize\ttfamily \label{group___providers_gaf8bd07fc7f695a02b93a9aab467e032b} 
+typedef \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}}(\texorpdfstring{$\ast$}{*}) rbus\+Table\+Add\+Row\+Handler\+\_\+t(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const  \texorpdfstring{$\ast$}{*}table\+Name, char const  \texorpdfstring{$\ast$}{*}alias\+Name, uint32\+\_\+t \texorpdfstring{$\ast$}{*}inst\+Num)}
+
+
+
+A table row add callback handler. 
+
+A provider must implement this handler to allow rows to be added to a table. The table\+Name parameter will end in "{}."{} such as "{}\+Device.\+IP.\+Interface."{} The alias\+Name parameter can optionally be used to specify a unique name for the row. A new row should be assigned a unique instance number and this number should be returned in the inst\+Num output parameter. ~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em table\+Name} & The name of a table (e.\+g. "{}\+Device.\+IP.\+Interface."{}) \\
+\hline
+{\em alias\+Name} & An optional name for the new row. Must be unique in the table. Can be NULL. \\
+\hline
+{\em inst\+Num} & Output parameter where the instance number for the new row is returned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+INPUT 
+\end{DoxyReturn}
+\Hypertarget{group___providers_ga2acce3313e6c4131647874c51411c668}\index{Providers@{Providers}!rbusTableRemoveRowHandler\_t@{rbusTableRemoveRowHandler\_t}}
+\index{rbusTableRemoveRowHandler\_t@{rbusTableRemoveRowHandler\_t}!Providers@{Providers}}
+\doxysubsubsubsection{\texorpdfstring{rbusTableRemoveRowHandler\_t}{rbusTableRemoveRowHandler\_t}}
+{\footnotesize\ttfamily \label{group___providers_ga2acce3313e6c4131647874c51411c668} 
+typedef \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}}(\texorpdfstring{$\ast$}{*}) rbus\+Table\+Remove\+Row\+Handler\+\_\+t(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const  \texorpdfstring{$\ast$}{*}row\+Name)}
+
+
+
+A table row remove callback handler. 
+
+A provider must implement this handler to allow rows to be removed from a table. The row\+Name parameter will be a fully qualified name, specifying either the row\textquotesingle{}s instance number (e.\+g. "{}\+Device.\+IP.\+Interface.\+1"{}) or the row\textquotesingle{}s alias (e.\+g. "{}\+Device.\+IP.\+Interface.\+[lan1]\+"{}). 
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em row\+Name} & The name of a table row (e.\+g. "{}\+Device.\+IP.\+Interface.\+1"{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+INPUT 
+\end{DoxyReturn}
+\Hypertarget{group___providers_ga509ea174d80c816237fcdf4cb3f321ce}\index{Providers@{Providers}!rbusTableSyncHandler\_t@{rbusTableSyncHandler\_t}}
+\index{rbusTableSyncHandler\_t@{rbusTableSyncHandler\_t}!Providers@{Providers}}
+\doxysubsubsubsection{\texorpdfstring{rbusTableSyncHandler\_t}{rbusTableSyncHandler\_t}}
+{\footnotesize\ttfamily \label{group___providers_ga509ea174d80c816237fcdf4cb3f321ce} 
+typedef \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}}(\texorpdfstring{$\ast$}{*}) rbus\+Table\+Sync\+Handler\+\_\+t(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const  \texorpdfstring{$\ast$}{*}table\+Name)}
+
+
+
+A table sync callback handler. 
+
+A provider can implement this handler to allow dynamic tables to synchronize rows. The table\+Name parameter will be a fully qualified name, specifying table\textquotesingle{}s name (e.\+g. "{}\+Device.\+IP.\+Interface."{}). 
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em table\+Name} & The name of a table (e.\+g. "{}\+Device.\+IP.\+Interface."{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. 
+\end{DoxyReturn}
+
+
+\label{group___providers_doc-enum-members}
+\Hypertarget{group___providers_doc-enum-members}
+\doxysubsubsection{Enumeration Type Documentation}
+\Hypertarget{group___providers_ga4b24d155a070a1d73e0a1f3b00195ace}\index{Providers@{Providers}!rbusElementType\_t@{rbusElementType\_t}}
+\index{rbusElementType\_t@{rbusElementType\_t}!Providers@{Providers}}
+\doxysubsubsubsection{\texorpdfstring{rbusElementType\_t}{rbusElementType\_t}}
+{\footnotesize\ttfamily \label{group___providers_ga4b24d155a070a1d73e0a1f3b00195ace} 
+enum \doxymbox{\hyperlink{group___providers_ga4b24d155a070a1d73e0a1f3b00195ace}{rbus\+Element\+Type\+\_\+t}}}
+
+
+
+\doxylink{group___providers_ga4b24d155a070a1d73e0a1f3b00195ace}{rbus\+Element\+Type\+\_\+t} indicates the type of data elements which can be registered with RBus 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ELEMENT\_TYPE\_PROPERTY@{RBUS\_ELEMENT\_TYPE\_PROPERTY}!Providers@{Providers}}
+\index{Providers@{Providers}!RBUS\_ELEMENT\_TYPE\_PROPERTY@{RBUS\_ELEMENT\_TYPE\_PROPERTY}}
+}\Hypertarget{group___providers_gga4b24d155a070a1d73e0a1f3b00195aceaecda73fecc321492fcc9ddf33d0baa2e}\label{group___providers_gga4b24d155a070a1d73e0a1f3b00195aceaecda73fecc321492fcc9ddf33d0baa2e} 
+RBUS\+\_\+\+ELEMENT\+\_\+\+TYPE\+\_\+\+PROPERTY&Property Element. Sample names: x.\+y, p.\+q.\{i\}.r, aaa, etc Can also be monitored and event notifications be obtained in the form of events \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ELEMENT\_TYPE\_TABLE@{RBUS\_ELEMENT\_TYPE\_TABLE}!Providers@{Providers}}
+\index{Providers@{Providers}!RBUS\_ELEMENT\_TYPE\_TABLE@{RBUS\_ELEMENT\_TYPE\_TABLE}}
+}\Hypertarget{group___providers_gga4b24d155a070a1d73e0a1f3b00195acea3a47f7e829cba15e8f5fe82f33ed377b}\label{group___providers_gga4b24d155a070a1d73e0a1f3b00195acea3a47f7e829cba15e8f5fe82f33ed377b} 
+RBUS\+\_\+\+ELEMENT\+\_\+\+TYPE\+\_\+\+TABLE&Table (e.\+g. multi-\/instance object) Sample names: a.\+b.\{i\}, a.\+b.\{i\}.x.\+y.\{i\} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ELEMENT\_TYPE\_EVENT@{RBUS\_ELEMENT\_TYPE\_EVENT}!Providers@{Providers}}
+\index{Providers@{Providers}!RBUS\_ELEMENT\_TYPE\_EVENT@{RBUS\_ELEMENT\_TYPE\_EVENT}}
+}\Hypertarget{group___providers_gga4b24d155a070a1d73e0a1f3b00195acea24c7c9ca3dde7b4a661a8ea565d15e91}\label{group___providers_gga4b24d155a070a1d73e0a1f3b00195acea24c7c9ca3dde7b4a661a8ea565d15e91} 
+RBUS\+\_\+\+ELEMENT\+\_\+\+TYPE\+\_\+\+EVENT&(Exclusive) Event Element Sample names: a.\+b.\+c!, zzzz! \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ELEMENT\_TYPE\_METHOD@{RBUS\_ELEMENT\_TYPE\_METHOD}!Providers@{Providers}}
+\index{Providers@{Providers}!RBUS\_ELEMENT\_TYPE\_METHOD@{RBUS\_ELEMENT\_TYPE\_METHOD}}
+}\Hypertarget{group___providers_gga4b24d155a070a1d73e0a1f3b00195acea9171cee62cfa142748b9b10a3dcb7e69}\label{group___providers_gga4b24d155a070a1d73e0a1f3b00195acea9171cee62cfa142748b9b10a3dcb7e69} 
+RBUS\+\_\+\+ELEMENT\+\_\+\+TYPE\+\_\+\+METHOD&Method Element ~\newline
+ Sample names: m.\+n.\+o(), dddddd() \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{group___providers_doc-func-members}
+\Hypertarget{group___providers_doc-func-members}
+\doxysubsubsection{Function Documentation}
+\Hypertarget{group___providers_ga58d4e15c31e566321fcbf96e4b4deace}\index{Providers@{Providers}!rbus\_regDataElements@{rbus\_regDataElements}}
+\index{rbus\_regDataElements@{rbus\_regDataElements}!Providers@{Providers}}
+\doxysubsubsubsection{\texorpdfstring{rbus\_regDataElements()}{rbus\_regDataElements()}}
+{\footnotesize\ttfamily \label{group___providers_ga58d4e15c31e566321fcbf96e4b4deace} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+\_\+reg\+Data\+Elements (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{int}]{num\+Data\+Elements}{, }\item[{\doxymbox{\hyperlink{structrbus_data_element__t}{rbus\+Data\+Element\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{elements}{}\end{DoxyParamCaption})}
+
+
+
+A Component uses this API to register one or more named Data Elements (i.\+e., parameters and/\+or event names) that will be accessible / subscribable by other components. This also registers the callback functions associated with each data element using the data\+Element structure. ~\newline
+Used by: All components that provide named parameters and/\+or events that may be accessed/\+subscribed by other component(s). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em num\+Data\+Elements} & The number (count) of data elements to register \\
+\hline
+{\em elements} & The list of data elements to register \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+ELEMENT\+\_\+\+NAME\+\_\+\+DUPLICATE: Data Element name already exists 
+\end{DoxyReturn}
+\Hypertarget{group___providers_ga91dfd7fea098f4e6b500344133ade0a2}\index{Providers@{Providers}!rbus\_unregDataElements@{rbus\_unregDataElements}}
+\index{rbus\_unregDataElements@{rbus\_unregDataElements}!Providers@{Providers}}
+\doxysubsubsubsection{\texorpdfstring{rbus\_unregDataElements()}{rbus\_unregDataElements()}}
+{\footnotesize\ttfamily \label{group___providers_ga91dfd7fea098f4e6b500344133ade0a2} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+\_\+unreg\+Data\+Elements (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{int}]{num\+Data\+Elements}{, }\item[{\doxymbox{\hyperlink{structrbus_data_element__t}{rbus\+Data\+Element\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{elements}{}\end{DoxyParamCaption})}
+
+
+
+A Component uses this API to unregister one or more previously registered Data Elements (i.\+e., named parameters and/\+or event names) that will no longer be accessible / subscribable by other components. ~\newline
+Used by: All components that provide named parameters and/\+or events that may be accessed/\+subscribed by other component(s). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em num\+Data\+Elements} & The number (count) of data elements to unregister \\
+\hline
+{\em elements} & The list of data elements to unregister \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+ELEMENT\+\_\+\+NAME\+\_\+\+MISSING: No data element names provided. 
+\end{DoxyReturn}
+\Hypertarget{group___providers_gaf5fb7bd4640ccc9aa7c93c07ee0d4b67}\index{Providers@{Providers}!rbusEvent\_PublishRawData@{rbusEvent\_PublishRawData}}
+\index{rbusEvent\_PublishRawData@{rbusEvent\_PublishRawData}!Providers@{Providers}}
+\doxysubsubsubsection{\texorpdfstring{rbusEvent\_PublishRawData()}{rbusEvent\_PublishRawData()}}
+{\footnotesize\ttfamily \label{group___providers_gaf5fb7bd4640ccc9aa7c93c07ee0d4b67} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Event\+\_\+\+Publish\+Raw\+Data (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{\doxymbox{\hyperlink{structrbus_event_raw_data__t}{rbus\+Event\+Raw\+Data\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{event\+Data}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group___providers_ga299310a0ae625b51b688f5062f486f9e}\index{Providers@{Providers}!rbusTable\_registerRow@{rbusTable\_registerRow}}
+\index{rbusTable\_registerRow@{rbusTable\_registerRow}!Providers@{Providers}}
+\doxysubsubsubsection{\texorpdfstring{rbusTable\_registerRow()}{rbusTable\_registerRow()}}
+{\footnotesize\ttfamily \label{group___providers_ga299310a0ae625b51b688f5062f486f9e} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Table\+\_\+register\+Row (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{table\+Name}{, }\item[{uint32\+\_\+t}]{inst\+Num}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{alias\+Name}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group___providers_ga0df49f35236940e6c567fe692aa45379}\index{Providers@{Providers}!rbusTable\_unregisterRow@{rbusTable\_unregisterRow}}
+\index{rbusTable\_unregisterRow@{rbusTable\_unregisterRow}!Providers@{Providers}}
+\doxysubsubsubsection{\texorpdfstring{rbusTable\_unregisterRow()}{rbusTable\_unregisterRow()}}
+{\footnotesize\ttfamily \label{group___providers_ga0df49f35236940e6c567fe692aa45379} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Table\+\_\+unregister\+Row (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{row\+Name}{}\end{DoxyParamCaption})}
+

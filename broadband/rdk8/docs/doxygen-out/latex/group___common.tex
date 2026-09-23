@@ -1,0 +1,520 @@
+\doxysection{Common }
+\hypertarget{group___common}{}\label{group___common}\index{Common@{Common}}
+\doxysubsubsection*{Topics}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{group___events}{Events}}
+\item 
+\doxymbox{\hyperlink{group___tables}{Tables}}
+\item 
+\doxymbox{\hyperlink{group___providers}{Providers}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct__rbus_set_options}{\+\_\+rbus\+Set\+Options}}
+\item 
+struct \doxymbox{\hyperlink{struct__rbus_get_handler_options}{\+\_\+rbus\+Get\+Handler\+Options}}
+\item 
+struct \doxymbox{\hyperlink{struct__rbus_set_handler_options}{\+\_\+rbus\+Set\+Handler\+Options}}
+\item 
+struct \doxymbox{\hyperlink{structrbus_set_options__t}{rbus\+Set\+Options\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Additional options a client can pass to a set function. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structrbus_get_handler_options__t}{rbus\+Get\+Handler\+Options\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Additional options that are passed to the provider when GET function called. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structrbus_set_handler_options__t}{rbus\+Set\+Handler\+Options\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Additional options that are passed to the provider when SET function called. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{group___common_ga45e7c239d118b46856da709edceb1bf4}{RBUS\+\_\+\+MAX\+\_\+\+NAME\+\_\+\+LENGTH}}~256
+\begin{DoxyCompactList}\small\item\em The maximum length a name can be for any element. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group___common_ga9c8ef2bafb8c56aa59b15fb0fe0d146b}{RBUS\+\_\+\+MAX\+\_\+\+NAME\+\_\+\+DEPTH}}~16
+\begin{DoxyCompactList}\small\item\em The maximum hierarchical depth (e.\+g. the max token count) a name can be for any element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \+\_\+rbus\+Handle \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em An RBus handle which identifies an opened component. \end{DoxyCompactList}\item 
+typedef enum \doxymbox{\hyperlink{group___common_ga5db8b0d14b831805c31bbf454b7a935a}{\+\_\+rbus\+Error}} \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em All possible error codes this API can generate. \end{DoxyCompactList}\item 
+typedef struct \doxymbox{\hyperlink{struct__rbus_set_options}{\+\_\+rbus\+Set\+Options}} \doxymbox{\hyperlink{group___common_ga205190215fd7d6a1c899e5c5431e4a27}{rbus\+Set\+Options\+\_\+t}}
+\item 
+typedef struct \doxymbox{\hyperlink{struct__rbus_get_handler_options}{\+\_\+rbus\+Get\+Handler\+Options}} \doxymbox{\hyperlink{group___common_gaad81a4f3aebbc2a324db415c24e552f3}{rbus\+Get\+Handler\+Options\+\_\+t}}
+\item 
+typedef struct \doxymbox{\hyperlink{struct__rbus_set_handler_options}{\+\_\+rbus\+Set\+Handler\+Options}} \doxymbox{\hyperlink{group___common_ga1e3e6594721f0ad4d25bcb07e80f98ea}{rbus\+Set\+Handler\+Options\+\_\+t}}
+\item 
+typedef struct \+\_\+rbus\+Method\+Async\+Handle \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group___common_gaece2a4d09e44f67df52ebf1efe63e793}{rbus\+Method\+Async\+Handle\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em An RBus handle used for async method responses. \end{DoxyCompactList}\item 
+typedef \doxymbox{\hyperlink{group___common_ga575fb21e48c1ee799d86568ddff009af}{rbus\+Log\+Level\+\_\+t}} \doxymbox{\hyperlink{group___common_ga464c8091f6ed7aff0cfcc104e2087d9b}{rbus\+Log\+Level}}
+\item 
+typedef void(\texorpdfstring{$\ast$}{*}) \doxymbox{\hyperlink{group___common_ga2da9e884770cf882767389178e705252}{rbus\+Log\+Handler}}(\doxymbox{\hyperlink{group___common_ga575fb21e48c1ee799d86568ddff009af}{rbus\+Log\+Level\+\_\+t}} level, const char \texorpdfstring{$\ast$}{*}file, int line, int thread\+Id, char \texorpdfstring{$\ast$}{*}message)
+\begin{DoxyCompactList}\small\item\em A callback handler to get the log messages to application context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{group___common_ga5db8b0d14b831805c31bbf454b7a935a}{\+\_\+rbus\+Error}} \{ \newline
+\doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aaba78b39ff2a89c19cc9ecd770b0cff4f}{RBUS\+\_\+\+ERROR\+\_\+\+SUCCESS}} = 0
+, \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa9ebae7acef31009e2da835821d25a3ec}{RBUS\+\_\+\+ERROR\+\_\+\+BUS\+\_\+\+ERROR}} = 1
+, \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa9a1547d7a456c5a71f40dca3dc933ecd}{RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+INPUT}}
+, \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aaaabc3cdfb97e47fcbde52848dc5f021f}{RBUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED}}
+, \newline
+\doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aad8875a435b4194eff4cd3bafa8c3862c}{RBUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES}}
+, \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa73fa6a352bc465672bb6dfd2b0271ead}{RBUS\+\_\+\+ERROR\+\_\+\+DESTINATION\+\_\+\+NOT\+\_\+\+FOUND}}
+, \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aacc9db1e50b8109fa8c91744d52000638}{RBUS\+\_\+\+ERROR\+\_\+\+DESTINATION\+\_\+\+NOT\+\_\+\+REACHABLE}}
+, \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa0df954487735ea77e61d8f6c23fd3e92}{RBUS\+\_\+\+ERROR\+\_\+\+DESTINATION\+\_\+\+RESPONSE\+\_\+\+FAILURE}}
+, \newline
+\doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa8b7c928dc06009a14410628532d596df}{RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+RESPONSE\+\_\+\+FROM\+\_\+\+DESTINATION}}
+, \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aad7664e052e24bb56a42686f0468d99ce}{RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+OPERATION}}
+, \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aaca5c22a12e1749596eb2fdf6cb7a26fa}{RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EVENT}}
+, \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa23c754e53e8196dce65d95ee826a2c98}{RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE}}
+, \newline
+\doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa32c60b973204fe6388d6cab12aae4e94}{RBUS\+\_\+\+ERROR\+\_\+\+SESSION\+\_\+\+ALREADY\+\_\+\+EXIST}}
+, \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa2ebcac8cb80181718ea1c13e745a37a0}{RBUS\+\_\+\+ERROR\+\_\+\+COMPONENT\+\_\+\+NAME\+\_\+\+DUPLICATE}}
+, \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa8b8b10b50cf0208abbbf9193524f6724}{RBUS\+\_\+\+ERROR\+\_\+\+ELEMENT\+\_\+\+NAME\+\_\+\+DUPLICATE}}
+, \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa384ed573fc57710f2706ac0d7ca64097}{RBUS\+\_\+\+ERROR\+\_\+\+ELEMENT\+\_\+\+NAME\+\_\+\+MISSING}}
+, \newline
+\doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa9c7233f8915859c4548e5c50e1024463}{RBUS\+\_\+\+ERROR\+\_\+\+COMPONENT\+\_\+\+DOES\+\_\+\+NOT\+\_\+\+EXIST}}
+, \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa76eff23270a64075adf86e2cc63849fa}{RBUS\+\_\+\+ERROR\+\_\+\+ELEMENT\+\_\+\+DOES\+\_\+\+NOT\+\_\+\+EXIST}}
+, \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aab95268db5752e57383de180c77d78fc9}{RBUS\+\_\+\+ERROR\+\_\+\+ACCESS\+\_\+\+NOT\+\_\+\+ALLOWED}}
+, \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aad4464c897ddb28dcd2aff03f9039291a}{RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT}}
+, \newline
+\doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aab4d44c7302674778282781128274393b}{RBUS\+\_\+\+ERROR\+\_\+\+TIMEOUT}}
+, \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa9db57791261df9863366b7b495bcd751}{RBUS\+\_\+\+ERROR\+\_\+\+ASYNC\+\_\+\+RESPONSE}}
+, \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aab35998b6f42b6d7bb83150c8e3e56baa}{RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+METHOD}}
+, \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa3f44e9516a76968b9abce5b503cc6431}{RBUS\+\_\+\+ERROR\+\_\+\+NOSUBSCRIBERS}}
+, \newline
+\doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aaab28f322a7dc1597c0e12d97267f8752}{RBUS\+\_\+\+ERROR\+\_\+\+SUBSCRIPTION\+\_\+\+ALREADY\+\_\+\+EXIST}}
+, \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa80b7261d6fb49a21a9544e2141c86734}{RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+NAMESPACE}}
+, \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aaf0e652a9d9b9c55ee8a2c3dc984501a7}{RBUS\+\_\+\+ERROR\+\_\+\+DIRECT\+\_\+\+CON\+\_\+\+NOT\+\_\+\+EXIST}}
+, \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aac4125cfdc40b04fdee894b6be3993379}{RBUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+WRITABLE}}
+, \newline
+\doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa4ee4d733b46a54909111ad96f299b4b0}{RBUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+READABLE}}
+, \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa8c5f052671250be982fd245e4c69509c}{RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+PARAMETER\+\_\+\+TYPE}}
+, \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa8d8839f0a6640ddd0c926247b249e9a6}{RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+PARAMETER\+\_\+\+VALUE}}
+ \}
+\begin{DoxyCompactList}\small\item\em All possible error codes this API can generate. \end{DoxyCompactList}\item 
+enum \doxymbox{\hyperlink{group___common_ga71193d2a24675a52cc00ca92cef9fdbb}{rbus\+Status\+\_\+t}} \{ \doxymbox{\hyperlink{group___common_gga71193d2a24675a52cc00ca92cef9fdbbae87f091d3824f9d3d054a1fbe2d6a300}{RBUS\+\_\+\+ENABLED}} = 0
+, \doxymbox{\hyperlink{group___common_gga71193d2a24675a52cc00ca92cef9fdbbad2cade803b5c812d555768e018934655}{RBUS\+\_\+\+ENABLE\+\_\+\+PENDING}}
+, \doxymbox{\hyperlink{group___common_gga71193d2a24675a52cc00ca92cef9fdbba80cb72be317f8f3f9c885a5770f90b89}{RBUS\+\_\+\+DISABLE\+\_\+\+PENDING}}
+, \doxymbox{\hyperlink{group___common_gga71193d2a24675a52cc00ca92cef9fdbbac85ff6b879da585a336e423d702614cd}{RBUS\+\_\+\+DISABLED}}
+ \}
+\begin{DoxyCompactList}\small\item\em The type of events which can be subscribed to or published. \end{DoxyCompactList}\item 
+enum \doxymbox{\hyperlink{group___common_ga575fb21e48c1ee799d86568ddff009af}{rbus\+Log\+Level\+\_\+t}} \{ \newline
+\doxymbox{\hyperlink{group___common_gga575fb21e48c1ee799d86568ddff009afab4b1b0143cfd6f6b298faff4f8af9153}{RBUS\+\_\+\+LOG\+\_\+\+DEBUG}} = 0
+, \doxymbox{\hyperlink{group___common_gga575fb21e48c1ee799d86568ddff009afafac938bb2282863c3e8940ef210f775c}{RBUS\+\_\+\+LOG\+\_\+\+INFO}} = 1
+, \doxymbox{\hyperlink{group___common_gga575fb21e48c1ee799d86568ddff009afab520257584a977a99040496f38250791}{RBUS\+\_\+\+LOG\+\_\+\+WARN}} = 2
+, \doxymbox{\hyperlink{group___common_gga575fb21e48c1ee799d86568ddff009afadeb4c90ed0ac3f8028972ee34d121916}{RBUS\+\_\+\+LOG\+\_\+\+ERROR}} = 3
+, \newline
+\doxymbox{\hyperlink{group___common_gga575fb21e48c1ee799d86568ddff009afa75d9aa0c2847a3b3aecc3216a777fea4}{RBUS\+\_\+\+LOG\+\_\+\+FATAL}} = 4
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char const \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group___common_ga8af15938b1656c306a21688b315a8d0a}{rbus\+Error\+\_\+\+To\+String}} (\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} e)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\label{group___common_doc-define-members}
+\Hypertarget{group___common_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{group___common_ga9c8ef2bafb8c56aa59b15fb0fe0d146b}\index{Common@{Common}!RBUS\_MAX\_NAME\_DEPTH@{RBUS\_MAX\_NAME\_DEPTH}}
+\index{RBUS\_MAX\_NAME\_DEPTH@{RBUS\_MAX\_NAME\_DEPTH}!Common@{Common}}
+\doxysubsubsection{\texorpdfstring{RBUS\_MAX\_NAME\_DEPTH}{RBUS\_MAX\_NAME\_DEPTH}}
+{\footnotesize\ttfamily \label{group___common_ga9c8ef2bafb8c56aa59b15fb0fe0d146b} 
+\+\#define RBUS\+\_\+\+MAX\+\_\+\+NAME\+\_\+\+DEPTH~16}
+
+
+
+The maximum hierarchical depth (e.\+g. the max token count) a name can be for any element. 
+
+\Hypertarget{group___common_ga45e7c239d118b46856da709edceb1bf4}\index{Common@{Common}!RBUS\_MAX\_NAME\_LENGTH@{RBUS\_MAX\_NAME\_LENGTH}}
+\index{RBUS\_MAX\_NAME\_LENGTH@{RBUS\_MAX\_NAME\_LENGTH}!Common@{Common}}
+\doxysubsubsection{\texorpdfstring{RBUS\_MAX\_NAME\_LENGTH}{RBUS\_MAX\_NAME\_LENGTH}}
+{\footnotesize\ttfamily \label{group___common_ga45e7c239d118b46856da709edceb1bf4} 
+\+\#define RBUS\+\_\+\+MAX\+\_\+\+NAME\+\_\+\+LENGTH~256}
+
+
+
+The maximum length a name can be for any element. 
+
+
+
+\label{group___common_doc-typedef-members}
+\Hypertarget{group___common_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}\index{Common@{Common}!rbusError\_t@{rbusError\_t}}
+\index{rbusError\_t@{rbusError\_t}!Common@{Common}}
+\doxysubsubsection{\texorpdfstring{rbusError\_t}{rbusError\_t}}
+{\footnotesize\ttfamily \label{group___common_ga8fc1f9c96c061b20db5e56188296c8ef} 
+typedef enum \doxymbox{\hyperlink{group___common_ga5db8b0d14b831805c31bbf454b7a935a}{\+\_\+rbus\+Error}} \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}}}
+
+
+
+All possible error codes this API can generate. 
+
+\Hypertarget{group___common_gaad81a4f3aebbc2a324db415c24e552f3}\index{Common@{Common}!rbusGetHandlerOptions\_t@{rbusGetHandlerOptions\_t}}
+\index{rbusGetHandlerOptions\_t@{rbusGetHandlerOptions\_t}!Common@{Common}}
+\doxysubsubsection{\texorpdfstring{rbusGetHandlerOptions\_t}{rbusGetHandlerOptions\_t}}
+{\footnotesize\ttfamily \label{group___common_gaad81a4f3aebbc2a324db415c24e552f3} 
+typedef struct \doxymbox{\hyperlink{struct__rbus_get_handler_options}{\+\_\+rbus\+Get\+Handler\+Options}} rbus\+Get\+Handler\+Options\+\_\+t}
+
+\Hypertarget{group___common_gaaed81eae245cefcc40d7b82d136364af}\index{Common@{Common}!rbusHandle\_t@{rbusHandle\_t}}
+\index{rbusHandle\_t@{rbusHandle\_t}!Common@{Common}}
+\doxysubsubsection{\texorpdfstring{rbusHandle\_t}{rbusHandle\_t}}
+{\footnotesize\ttfamily \label{group___common_gaaed81eae245cefcc40d7b82d136364af} 
+typedef struct \+\_\+rbus\+Handle\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}
+
+
+
+An RBus handle which identifies an opened component. 
+
+\Hypertarget{group___common_ga2da9e884770cf882767389178e705252}\index{Common@{Common}!rbusLogHandler@{rbusLogHandler}}
+\index{rbusLogHandler@{rbusLogHandler}!Common@{Common}}
+\doxysubsubsection{\texorpdfstring{rbusLogHandler}{rbusLogHandler}}
+{\footnotesize\ttfamily \label{group___common_ga2da9e884770cf882767389178e705252} 
+typedef void(\texorpdfstring{$\ast$}{*}) rbus\+Log\+Handler(\doxymbox{\hyperlink{group___common_ga575fb21e48c1ee799d86568ddff009af}{rbus\+Log\+Level\+\_\+t}} level, const char \texorpdfstring{$\ast$}{*}file, int line, int thread\+Id, char \texorpdfstring{$\ast$}{*}message)}
+
+
+
+A callback handler to get the log messages to application context. 
+
+A component that wants to handle the logs in its own way must register a callback handler to get the log messages. 
+\begin{DoxyParams}{Parameters}
+{\em level} & the log level \\
+\hline
+{\em file} & the file name that it prints \\
+\hline
+{\em line} & the line number in the file. \\
+\hline
+{\em thread\+Id} & the thread\+Id. \\
+\hline
+{\em messages} & the log message the library prints. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\Hypertarget{group___common_ga464c8091f6ed7aff0cfcc104e2087d9b}\index{Common@{Common}!rbusLogLevel@{rbusLogLevel}}
+\index{rbusLogLevel@{rbusLogLevel}!Common@{Common}}
+\doxysubsubsection{\texorpdfstring{rbusLogLevel}{rbusLogLevel}}
+{\footnotesize\ttfamily \label{group___common_ga464c8091f6ed7aff0cfcc104e2087d9b} 
+typedef \doxymbox{\hyperlink{group___common_ga575fb21e48c1ee799d86568ddff009af}{rbus\+Log\+Level\+\_\+t}} \doxymbox{\hyperlink{group___common_ga575fb21e48c1ee799d86568ddff009af}{rbus\+Log\+Level}}}
+
+\Hypertarget{group___common_gaece2a4d09e44f67df52ebf1efe63e793}\index{Common@{Common}!rbusMethodAsyncHandle\_t@{rbusMethodAsyncHandle\_t}}
+\index{rbusMethodAsyncHandle\_t@{rbusMethodAsyncHandle\_t}!Common@{Common}}
+\doxysubsubsection{\texorpdfstring{rbusMethodAsyncHandle\_t}{rbusMethodAsyncHandle\_t}}
+{\footnotesize\ttfamily \label{group___common_gaece2a4d09e44f67df52ebf1efe63e793} 
+typedef struct \+\_\+rbus\+Method\+Async\+Handle\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group___common_gaece2a4d09e44f67df52ebf1efe63e793}{rbus\+Method\+Async\+Handle\+\_\+t}}}
+
+
+
+An RBus handle used for async method responses. 
+
+\Hypertarget{group___common_ga1e3e6594721f0ad4d25bcb07e80f98ea}\index{Common@{Common}!rbusSetHandlerOptions\_t@{rbusSetHandlerOptions\_t}}
+\index{rbusSetHandlerOptions\_t@{rbusSetHandlerOptions\_t}!Common@{Common}}
+\doxysubsubsection{\texorpdfstring{rbusSetHandlerOptions\_t}{rbusSetHandlerOptions\_t}}
+{\footnotesize\ttfamily \label{group___common_ga1e3e6594721f0ad4d25bcb07e80f98ea} 
+typedef struct \doxymbox{\hyperlink{struct__rbus_set_handler_options}{\+\_\+rbus\+Set\+Handler\+Options}} rbus\+Set\+Handler\+Options\+\_\+t}
+
+\Hypertarget{group___common_ga205190215fd7d6a1c899e5c5431e4a27}\index{Common@{Common}!rbusSetOptions\_t@{rbusSetOptions\_t}}
+\index{rbusSetOptions\_t@{rbusSetOptions\_t}!Common@{Common}}
+\doxysubsubsection{\texorpdfstring{rbusSetOptions\_t}{rbusSetOptions\_t}}
+{\footnotesize\ttfamily \label{group___common_ga205190215fd7d6a1c899e5c5431e4a27} 
+typedef struct \doxymbox{\hyperlink{struct__rbus_set_options}{\+\_\+rbus\+Set\+Options}} rbus\+Set\+Options\+\_\+t}
+
+
+
+\label{group___common_doc-enum-members}
+\Hypertarget{group___common_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{group___common_ga5db8b0d14b831805c31bbf454b7a935a}\index{Common@{Common}!\_rbusError@{\_rbusError}}
+\index{\_rbusError@{\_rbusError}!Common@{Common}}
+\doxysubsubsection{\texorpdfstring{\_rbusError}{\_rbusError}}
+{\footnotesize\ttfamily \label{group___common_ga5db8b0d14b831805c31bbf454b7a935a} 
+enum \doxymbox{\hyperlink{group___common_ga5db8b0d14b831805c31bbf454b7a935a}{\+\_\+rbus\+Error}}}
+
+
+
+All possible error codes this API can generate. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_SUCCESS@{RBUS\_ERROR\_SUCCESS}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_SUCCESS@{RBUS\_ERROR\_SUCCESS}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aaba78b39ff2a89c19cc9ecd770b0cff4f}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aaba78b39ff2a89c19cc9ecd770b0cff4f} 
+RBUS\+\_\+\+ERROR\+\_\+\+SUCCESS&Succes \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_BUS\_ERROR@{RBUS\_ERROR\_BUS\_ERROR}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_BUS\_ERROR@{RBUS\_ERROR\_BUS\_ERROR}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aa9ebae7acef31009e2da835821d25a3ec}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aa9ebae7acef31009e2da835821d25a3ec} 
+RBUS\+\_\+\+ERROR\+\_\+\+BUS\+\_\+\+ERROR&General Error \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_INVALID\_INPUT@{RBUS\_ERROR\_INVALID\_INPUT}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_INVALID\_INPUT@{RBUS\_ERROR\_INVALID\_INPUT}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aa9a1547d7a456c5a71f40dca3dc933ecd}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aa9a1547d7a456c5a71f40dca3dc933ecd} 
+RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+INPUT&Invalid Input \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_NOT\_INITIALIZED@{RBUS\_ERROR\_NOT\_INITIALIZED}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_NOT\_INITIALIZED@{RBUS\_ERROR\_NOT\_INITIALIZED}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aaaabc3cdfb97e47fcbde52848dc5f021f}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aaaabc3cdfb97e47fcbde52848dc5f021f} 
+RBUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+INITIALIZED&Bus not initialized \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_OUT\_OF\_RESOURCES@{RBUS\_ERROR\_OUT\_OF\_RESOURCES}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_OUT\_OF\_RESOURCES@{RBUS\_ERROR\_OUT\_OF\_RESOURCES}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aad8875a435b4194eff4cd3bafa8c3862c}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aad8875a435b4194eff4cd3bafa8c3862c} 
+RBUS\+\_\+\+ERROR\+\_\+\+OUT\+\_\+\+OF\+\_\+\+RESOURCES&Running out of resources \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_DESTINATION\_NOT\_FOUND@{RBUS\_ERROR\_DESTINATION\_NOT\_FOUND}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_DESTINATION\_NOT\_FOUND@{RBUS\_ERROR\_DESTINATION\_NOT\_FOUND}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aa73fa6a352bc465672bb6dfd2b0271ead}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aa73fa6a352bc465672bb6dfd2b0271ead} 
+RBUS\+\_\+\+ERROR\+\_\+\+DESTINATION\+\_\+\+NOT\+\_\+\+FOUND&Dest element not found \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_DESTINATION\_NOT\_REACHABLE@{RBUS\_ERROR\_DESTINATION\_NOT\_REACHABLE}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_DESTINATION\_NOT\_REACHABLE@{RBUS\_ERROR\_DESTINATION\_NOT\_REACHABLE}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aacc9db1e50b8109fa8c91744d52000638}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aacc9db1e50b8109fa8c91744d52000638} 
+RBUS\+\_\+\+ERROR\+\_\+\+DESTINATION\+\_\+\+NOT\+\_\+\+REACHABLE&Dest element not reachable \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_DESTINATION\_RESPONSE\_FAILURE@{RBUS\_ERROR\_DESTINATION\_RESPONSE\_FAILURE}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_DESTINATION\_RESPONSE\_FAILURE@{RBUS\_ERROR\_DESTINATION\_RESPONSE\_FAILURE}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aa0df954487735ea77e61d8f6c23fd3e92}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aa0df954487735ea77e61d8f6c23fd3e92} 
+RBUS\+\_\+\+ERROR\+\_\+\+DESTINATION\+\_\+\+RESPONSE\+\_\+\+FAILURE&Dest failed to respond \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_INVALID\_RESPONSE\_FROM\_DESTINATION@{RBUS\_ERROR\_INVALID\_RESPONSE\_FROM\_DESTINATION}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_INVALID\_RESPONSE\_FROM\_DESTINATION@{RBUS\_ERROR\_INVALID\_RESPONSE\_FROM\_DESTINATION}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aa8b7c928dc06009a14410628532d596df}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aa8b7c928dc06009a14410628532d596df} 
+RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+RESPONSE\+\_\+\+FROM\+\_\+\+DESTINATION&Invalid dest response \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_INVALID\_OPERATION@{RBUS\_ERROR\_INVALID\_OPERATION}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_INVALID\_OPERATION@{RBUS\_ERROR\_INVALID\_OPERATION}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aad7664e052e24bb56a42686f0468d99ce}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aad7664e052e24bb56a42686f0468d99ce} 
+RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+OPERATION&Invalid Operation \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_INVALID\_EVENT@{RBUS\_ERROR\_INVALID\_EVENT}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_INVALID\_EVENT@{RBUS\_ERROR\_INVALID\_EVENT}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aaca5c22a12e1749596eb2fdf6cb7a26fa}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aaca5c22a12e1749596eb2fdf6cb7a26fa} 
+RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EVENT&Invalid Event \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_INVALID\_HANDLE@{RBUS\_ERROR\_INVALID\_HANDLE}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_INVALID\_HANDLE@{RBUS\_ERROR\_INVALID\_HANDLE}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aa23c754e53e8196dce65d95ee826a2c98}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aa23c754e53e8196dce65d95ee826a2c98} 
+RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+HANDLE&Invalid Handle \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_SESSION\_ALREADY\_EXIST@{RBUS\_ERROR\_SESSION\_ALREADY\_EXIST}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_SESSION\_ALREADY\_EXIST@{RBUS\_ERROR\_SESSION\_ALREADY\_EXIST}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aa32c60b973204fe6388d6cab12aae4e94}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aa32c60b973204fe6388d6cab12aae4e94} 
+RBUS\+\_\+\+ERROR\+\_\+\+SESSION\+\_\+\+ALREADY\+\_\+\+EXIST&Session already opened \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_COMPONENT\_NAME\_DUPLICATE@{RBUS\_ERROR\_COMPONENT\_NAME\_DUPLICATE}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_COMPONENT\_NAME\_DUPLICATE@{RBUS\_ERROR\_COMPONENT\_NAME\_DUPLICATE}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aa2ebcac8cb80181718ea1c13e745a37a0}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aa2ebcac8cb80181718ea1c13e745a37a0} 
+RBUS\+\_\+\+ERROR\+\_\+\+COMPONENT\+\_\+\+NAME\+\_\+\+DUPLICATE&Comp name already exists \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_ELEMENT\_NAME\_DUPLICATE@{RBUS\_ERROR\_ELEMENT\_NAME\_DUPLICATE}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_ELEMENT\_NAME\_DUPLICATE@{RBUS\_ERROR\_ELEMENT\_NAME\_DUPLICATE}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aa8b8b10b50cf0208abbbf9193524f6724}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aa8b8b10b50cf0208abbbf9193524f6724} 
+RBUS\+\_\+\+ERROR\+\_\+\+ELEMENT\+\_\+\+NAME\+\_\+\+DUPLICATE&One or more element name(s) were previously registered \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_ELEMENT\_NAME\_MISSING@{RBUS\_ERROR\_ELEMENT\_NAME\_MISSING}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_ELEMENT\_NAME\_MISSING@{RBUS\_ERROR\_ELEMENT\_NAME\_MISSING}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aa384ed573fc57710f2706ac0d7ca64097}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aa384ed573fc57710f2706ac0d7ca64097} 
+RBUS\+\_\+\+ERROR\+\_\+\+ELEMENT\+\_\+\+NAME\+\_\+\+MISSING&No names were provided in the name field \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_COMPONENT\_DOES\_NOT\_EXIST@{RBUS\_ERROR\_COMPONENT\_DOES\_NOT\_EXIST}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_COMPONENT\_DOES\_NOT\_EXIST@{RBUS\_ERROR\_COMPONENT\_DOES\_NOT\_EXIST}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aa9c7233f8915859c4548e5c50e1024463}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aa9c7233f8915859c4548e5c50e1024463} 
+RBUS\+\_\+\+ERROR\+\_\+\+COMPONENT\+\_\+\+DOES\+\_\+\+NOT\+\_\+\+EXIST&A bus connection for this component name was not previously opened. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_ELEMENT\_DOES\_NOT\_EXIST@{RBUS\_ERROR\_ELEMENT\_DOES\_NOT\_EXIST}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_ELEMENT\_DOES\_NOT\_EXIST@{RBUS\_ERROR\_ELEMENT\_DOES\_NOT\_EXIST}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aa76eff23270a64075adf86e2cc63849fa}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aa76eff23270a64075adf86e2cc63849fa} 
+RBUS\+\_\+\+ERROR\+\_\+\+ELEMENT\+\_\+\+DOES\+\_\+\+NOT\+\_\+\+EXIST&One or more data element name(s) do not currently have a valid registration \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_ACCESS\_NOT\_ALLOWED@{RBUS\_ERROR\_ACCESS\_NOT\_ALLOWED}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_ACCESS\_NOT\_ALLOWED@{RBUS\_ERROR\_ACCESS\_NOT\_ALLOWED}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aab95268db5752e57383de180c77d78fc9}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aab95268db5752e57383de180c77d78fc9} 
+RBUS\+\_\+\+ERROR\+\_\+\+ACCESS\+\_\+\+NOT\+\_\+\+ALLOWED&Access to the requested data element was not permitted by the provider component. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_INVALID\_CONTEXT@{RBUS\_ERROR\_INVALID\_CONTEXT}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_INVALID\_CONTEXT@{RBUS\_ERROR\_INVALID\_CONTEXT}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aad4464c897ddb28dcd2aff03f9039291a}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aad4464c897ddb28dcd2aff03f9039291a} 
+RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+CONTEXT&The Context is not same as what was sent in the get callback handler. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_TIMEOUT@{RBUS\_ERROR\_TIMEOUT}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_TIMEOUT@{RBUS\_ERROR\_TIMEOUT}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aab4d44c7302674778282781128274393b}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aab4d44c7302674778282781128274393b} 
+RBUS\+\_\+\+ERROR\+\_\+\+TIMEOUT&The operation timedout \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_ASYNC\_RESPONSE@{RBUS\_ERROR\_ASYNC\_RESPONSE}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_ASYNC\_RESPONSE@{RBUS\_ERROR\_ASYNC\_RESPONSE}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aa9db57791261df9863366b7b495bcd751}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aa9db57791261df9863366b7b495bcd751} 
+RBUS\+\_\+\+ERROR\+\_\+\+ASYNC\+\_\+\+RESPONSE&The method request will be handle asynchronously by provider \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_INVALID\_METHOD@{RBUS\_ERROR\_INVALID\_METHOD}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_INVALID\_METHOD@{RBUS\_ERROR\_INVALID\_METHOD}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aab35998b6f42b6d7bb83150c8e3e56baa}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aab35998b6f42b6d7bb83150c8e3e56baa} 
+RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+METHOD&Invalid Method \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_NOSUBSCRIBERS@{RBUS\_ERROR\_NOSUBSCRIBERS}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_NOSUBSCRIBERS@{RBUS\_ERROR\_NOSUBSCRIBERS}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aa3f44e9516a76968b9abce5b503cc6431}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aa3f44e9516a76968b9abce5b503cc6431} 
+RBUS\+\_\+\+ERROR\+\_\+\+NOSUBSCRIBERS&No subscribers present \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_SUBSCRIPTION\_ALREADY\_EXIST@{RBUS\_ERROR\_SUBSCRIPTION\_ALREADY\_EXIST}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_SUBSCRIPTION\_ALREADY\_EXIST@{RBUS\_ERROR\_SUBSCRIPTION\_ALREADY\_EXIST}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aaab28f322a7dc1597c0e12d97267f8752}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aaab28f322a7dc1597c0e12d97267f8752} 
+RBUS\+\_\+\+ERROR\+\_\+\+SUBSCRIPTION\+\_\+\+ALREADY\+\_\+\+EXIST&The subscription already exists \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_INVALID\_NAMESPACE@{RBUS\_ERROR\_INVALID\_NAMESPACE}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_INVALID\_NAMESPACE@{RBUS\_ERROR\_INVALID\_NAMESPACE}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aa80b7261d6fb49a21a9544e2141c86734}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aa80b7261d6fb49a21a9544e2141c86734} 
+RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+NAMESPACE&Invalid namespace as per standard \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_DIRECT\_CON\_NOT\_EXIST@{RBUS\_ERROR\_DIRECT\_CON\_NOT\_EXIST}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_DIRECT\_CON\_NOT\_EXIST@{RBUS\_ERROR\_DIRECT\_CON\_NOT\_EXIST}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aaf0e652a9d9b9c55ee8a2c3dc984501a7}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aaf0e652a9d9b9c55ee8a2c3dc984501a7} 
+RBUS\+\_\+\+ERROR\+\_\+\+DIRECT\+\_\+\+CON\+\_\+\+NOT\+\_\+\+EXIST&Direct connection not exist \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_NOT\_WRITABLE@{RBUS\_ERROR\_NOT\_WRITABLE}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_NOT\_WRITABLE@{RBUS\_ERROR\_NOT\_WRITABLE}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aac4125cfdc40b04fdee894b6be3993379}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aac4125cfdc40b04fdee894b6be3993379} 
+RBUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+WRITABLE&Set to the requested data element was not permitted by the provider component. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_NOT\_READABLE@{RBUS\_ERROR\_NOT\_READABLE}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_NOT\_READABLE@{RBUS\_ERROR\_NOT\_READABLE}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aa4ee4d733b46a54909111ad96f299b4b0}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aa4ee4d733b46a54909111ad96f299b4b0} 
+RBUS\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+READABLE&Get to the requested data element was not permitted by the provider component. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_INVALID\_PARAMETER\_TYPE@{RBUS\_ERROR\_INVALID\_PARAMETER\_TYPE}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_INVALID\_PARAMETER\_TYPE@{RBUS\_ERROR\_INVALID\_PARAMETER\_TYPE}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aa8c5f052671250be982fd245e4c69509c}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aa8c5f052671250be982fd245e4c69509c} 
+RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+PARAMETER\+\_\+\+TYPE&Invalid parameter type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ERROR\_INVALID\_PARAMETER\_VALUE@{RBUS\_ERROR\_INVALID\_PARAMETER\_VALUE}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ERROR\_INVALID\_PARAMETER\_VALUE@{RBUS\_ERROR\_INVALID\_PARAMETER\_VALUE}}
+}\Hypertarget{group___common_gga5db8b0d14b831805c31bbf454b7a935aa8d8839f0a6640ddd0c926247b249e9a6}\label{group___common_gga5db8b0d14b831805c31bbf454b7a935aa8d8839f0a6640ddd0c926247b249e9a6} 
+RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+PARAMETER\+\_\+\+VALUE&Invalid parameter value. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{group___common_ga575fb21e48c1ee799d86568ddff009af}\index{Common@{Common}!rbusLogLevel\_t@{rbusLogLevel\_t}}
+\index{rbusLogLevel\_t@{rbusLogLevel\_t}!Common@{Common}}
+\doxysubsubsection{\texorpdfstring{rbusLogLevel\_t}{rbusLogLevel\_t}}
+{\footnotesize\ttfamily \label{group___common_ga575fb21e48c1ee799d86568ddff009af} 
+enum \doxymbox{\hyperlink{group___common_ga575fb21e48c1ee799d86568ddff009af}{rbus\+Log\+Level\+\_\+t}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_LOG\_DEBUG@{RBUS\_LOG\_DEBUG}!Common@{Common}}
+\index{Common@{Common}!RBUS\_LOG\_DEBUG@{RBUS\_LOG\_DEBUG}}
+}\Hypertarget{group___common_gga575fb21e48c1ee799d86568ddff009afab4b1b0143cfd6f6b298faff4f8af9153}\label{group___common_gga575fb21e48c1ee799d86568ddff009afab4b1b0143cfd6f6b298faff4f8af9153} 
+RBUS\+\_\+\+LOG\+\_\+\+DEBUG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_LOG\_INFO@{RBUS\_LOG\_INFO}!Common@{Common}}
+\index{Common@{Common}!RBUS\_LOG\_INFO@{RBUS\_LOG\_INFO}}
+}\Hypertarget{group___common_gga575fb21e48c1ee799d86568ddff009afafac938bb2282863c3e8940ef210f775c}\label{group___common_gga575fb21e48c1ee799d86568ddff009afafac938bb2282863c3e8940ef210f775c} 
+RBUS\+\_\+\+LOG\+\_\+\+INFO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_LOG\_WARN@{RBUS\_LOG\_WARN}!Common@{Common}}
+\index{Common@{Common}!RBUS\_LOG\_WARN@{RBUS\_LOG\_WARN}}
+}\Hypertarget{group___common_gga575fb21e48c1ee799d86568ddff009afab520257584a977a99040496f38250791}\label{group___common_gga575fb21e48c1ee799d86568ddff009afab520257584a977a99040496f38250791} 
+RBUS\+\_\+\+LOG\+\_\+\+WARN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_LOG\_ERROR@{RBUS\_LOG\_ERROR}!Common@{Common}}
+\index{Common@{Common}!RBUS\_LOG\_ERROR@{RBUS\_LOG\_ERROR}}
+}\Hypertarget{group___common_gga575fb21e48c1ee799d86568ddff009afadeb4c90ed0ac3f8028972ee34d121916}\label{group___common_gga575fb21e48c1ee799d86568ddff009afadeb4c90ed0ac3f8028972ee34d121916} 
+RBUS\+\_\+\+LOG\+\_\+\+ERROR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_LOG\_FATAL@{RBUS\_LOG\_FATAL}!Common@{Common}}
+\index{Common@{Common}!RBUS\_LOG\_FATAL@{RBUS\_LOG\_FATAL}}
+}\Hypertarget{group___common_gga575fb21e48c1ee799d86568ddff009afa75d9aa0c2847a3b3aecc3216a777fea4}\label{group___common_gga575fb21e48c1ee799d86568ddff009afa75d9aa0c2847a3b3aecc3216a777fea4} 
+RBUS\+\_\+\+LOG\+\_\+\+FATAL&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{group___common_ga71193d2a24675a52cc00ca92cef9fdbb}\index{Common@{Common}!rbusStatus\_t@{rbusStatus\_t}}
+\index{rbusStatus\_t@{rbusStatus\_t}!Common@{Common}}
+\doxysubsubsection{\texorpdfstring{rbusStatus\_t}{rbusStatus\_t}}
+{\footnotesize\ttfamily \label{group___common_ga71193d2a24675a52cc00ca92cef9fdbb} 
+enum \doxymbox{\hyperlink{group___common_ga71193d2a24675a52cc00ca92cef9fdbb}{rbus\+Status\+\_\+t}}}
+
+
+
+The type of events which can be subscribed to or published. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ENABLED@{RBUS\_ENABLED}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ENABLED@{RBUS\_ENABLED}}
+}\Hypertarget{group___common_gga71193d2a24675a52cc00ca92cef9fdbbae87f091d3824f9d3d054a1fbe2d6a300}\label{group___common_gga71193d2a24675a52cc00ca92cef9fdbbae87f091d3824f9d3d054a1fbe2d6a300} 
+RBUS\+\_\+\+ENABLED&RBus broker is Enabled and Running \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_ENABLE\_PENDING@{RBUS\_ENABLE\_PENDING}!Common@{Common}}
+\index{Common@{Common}!RBUS\_ENABLE\_PENDING@{RBUS\_ENABLE\_PENDING}}
+}\Hypertarget{group___common_gga71193d2a24675a52cc00ca92cef9fdbbad2cade803b5c812d555768e018934655}\label{group___common_gga71193d2a24675a52cc00ca92cef9fdbbad2cade803b5c812d555768e018934655} 
+RBUS\+\_\+\+ENABLE\+\_\+\+PENDING&RBus broker will be Enabled on Reboot \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_DISABLE\_PENDING@{RBUS\_DISABLE\_PENDING}!Common@{Common}}
+\index{Common@{Common}!RBUS\_DISABLE\_PENDING@{RBUS\_DISABLE\_PENDING}}
+}\Hypertarget{group___common_gga71193d2a24675a52cc00ca92cef9fdbba80cb72be317f8f3f9c885a5770f90b89}\label{group___common_gga71193d2a24675a52cc00ca92cef9fdbba80cb72be317f8f3f9c885a5770f90b89} 
+RBUS\+\_\+\+DISABLE\+\_\+\+PENDING&RBus broker will be Disabled on Reboot \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_DISABLED@{RBUS\_DISABLED}!Common@{Common}}
+\index{Common@{Common}!RBUS\_DISABLED@{RBUS\_DISABLED}}
+}\Hypertarget{group___common_gga71193d2a24675a52cc00ca92cef9fdbbac85ff6b879da585a336e423d702614cd}\label{group___common_gga71193d2a24675a52cc00ca92cef9fdbbac85ff6b879da585a336e423d702614cd} 
+RBUS\+\_\+\+DISABLED&RBus broker is disabled \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{group___common_doc-func-members}
+\Hypertarget{group___common_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{group___common_ga8af15938b1656c306a21688b315a8d0a}\index{Common@{Common}!rbusError\_ToString@{rbusError\_ToString}}
+\index{rbusError\_ToString@{rbusError\_ToString}!Common@{Common}}
+\doxysubsubsection{\texorpdfstring{rbusError\_ToString()}{rbusError\_ToString()}}
+{\footnotesize\ttfamily \label{group___common_ga8af15938b1656c306a21688b315a8d0a} 
+char const  \texorpdfstring{$\ast$}{*} rbus\+Error\+\_\+\+To\+String (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}}}]{e}{}\end{DoxyParamCaption})}
+
+\input{group___events}
+\input{group___tables}
+\input{group___providers}

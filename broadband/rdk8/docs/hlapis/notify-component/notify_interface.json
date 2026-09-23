@@ -1,0 +1,80 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "NotifyComponent",
+    "moduleName": "NotifyComponent",
+    "version": "0.1.0-draft",
+    "description": "Centralized notification broker for RDK-B, managing TR-181 parameter-change subscriptions and distributing notifications to protocol agents (WebPA, TR-069, DMCLI, SNMP, Wi-Fi, and Mesh).",
+    "sourceBranch": "1.2.0",
+    "sourceCommit": "3cb9874b8bb9bc654b984a538ce4cd0fa278e4b4",
+    "generated": "2026-09-21",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --config-dir scripts --name NotifyComponent --module-name NotifyComponent --description Centralized notification broker for RDK-B, managing TR-181 parameter-change subscriptions and distributing notifications to protocol agents (WebPA, TR-069, DMCLI, SNMP, Wi-Fi, and Mesh). --output notify_interface.json"
+  },
+  "elements": {
+    "Device.NotifyComponent.Notifi_ParamName": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "NotifyComponent.xml"
+      }
+    },
+    "Device.NotifyComponent.SetNotifi_ParamName": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "NotifyComponent.xml"
+      }
+    },
+    "Device.NotifyComponent.X_RDKCENTRAL-COM_Connected-Client": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "NotifyComponent.xml"
+      }
+    },
+    "Device.NotifyComponent.X_RDKCENTRAL-COM_PresenceNotification": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "NotifyComponent.xml"
+      }
+    }
+  }
+}

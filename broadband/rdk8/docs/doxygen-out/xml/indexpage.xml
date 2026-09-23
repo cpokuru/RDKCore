@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>RDK Bus (RBus)</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>RDK Bus (RBus) is a lightweight, fast and efficient bus messaging system. It allows interprocess communication (IPC) and remote procedure call (RPC) between multiple process running on a hardware device. It supports the creation and use of a data model, which is a hierarchical tree of named objects with properties, events, and methods.</para>
+<para>From a developer perspective, there are providers and clients. Providers implement the data model which clients consume.</para>
+<para>Providers perform these tasks:<itemizedlist>
+<listitem><para>register properties and implement their get and set operations</para>
+</listitem><listitem><para>register object and implement their get, set, create, and delete operations</para>
+</listitem><listitem><para>register and plublish events</para>
+</listitem><listitem><para>register and implement methods which can be called remotely</para>
+</listitem></itemizedlist>
+</para>
+<para>Consumers perform these tasks:<itemizedlist>
+<listitem><para>get and set property values.</para>
+</listitem><listitem><para>get, set, create, and delete objects.</para>
+</listitem><listitem><para>subscribe and listen to events</para>
+</listitem><listitem><para>invoke remote methods</para>
+</listitem></itemizedlist>
+</para>
+<para>A process can be both a provider and a client. A process can implement many properties, objects, events, and remote methods, and also be a client of the same coming from other providers.</para>
+<para>All objects, properties, events, and methods are assigned names by the provider. Each name should be unique across a system, otherwise there will be conflicts in the bus routing.</para>
+<para>RBus supports the naming convention defined by TR-069, where a name has a hierarchical structure like a file directory structure, with each level of the hierarchy separated by a dot (&apos;.&apos;), and where object instances and denoted using brace({}).</para>
+<para>The RBus API is intended, but not limited, to allow the implementation of a TR-181 data model. </para>
+    </detaileddescription>
+    <location file="include/rbus.h"/>
+  </compounddef>
+</doxygen>

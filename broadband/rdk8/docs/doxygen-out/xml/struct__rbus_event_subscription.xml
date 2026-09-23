@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="struct__rbus_event_subscription" kind="struct" language="C++" prot="public">
+    <compoundname>_rbusEventSubscription</compoundname>
+    <includes refid="rbus_8h" local="no">rbus.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__rbus_event_subscription_1aa5f81da5ad5176915ed1d1b40b7ffe5d" prot="public" static="no" mutable="no">
+        <type>char const  *</type>
+        <definition>char const* _rbusEventSubscription::eventName</definition>
+        <argsstring></argsstring>
+        <name>eventName</name>
+        <qualifiedname>_rbusEventSubscription::eventName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="290" column="24" bodyfile="include/rbus.h" bodystart="290" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__rbus_event_subscription_1ad975aaaadb953b18585f96660374f3b6" prot="public" static="no" mutable="no">
+        <type><ref refid="group__rbus_filter_1ga03ad5f80346294826fffde5c271dd22e" kindref="member">rbusFilter_t</ref></type>
+        <definition>rbusFilter_t _rbusEventSubscription::filter</definition>
+        <argsstring></argsstring>
+        <name>filter</name>
+        <qualifiedname>_rbusEventSubscription::filter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fully qualified event name </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="291" column="25" bodyfile="include/rbus.h" bodystart="291" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__rbus_event_subscription_1ab984e9c7c70a32dbb064f29e6c140cd9" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t _rbusEventSubscription::interval</definition>
+        <argsstring></argsstring>
+        <name>interval</name>
+        <qualifiedname>_rbusEventSubscription::interval</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Optional filter that the client would like the sender to apply before sending the event Total interval period after which the event needs to be fired. Should be in multiples of minInterval </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="294" column="26" bodyfile="include/rbus.h" bodystart="294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__rbus_event_subscription_1af0542981da073930ab7d5441ccfa3585" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t _rbusEventSubscription::duration</definition>
+        <argsstring></argsstring>
+        <name>duration</name>
+        <qualifiedname>_rbusEventSubscription::duration</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="298" column="25" bodyfile="include/rbus.h" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__rbus_event_subscription_1ac7ef6bb6c1a7053cd2915d1e42c673a6" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _rbusEventSubscription::handler</definition>
+        <argsstring></argsstring>
+        <name>handler</name>
+        <qualifiedname>_rbusEventSubscription::handler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Optional maximum duration in seconds until which the subscription should be in effect. Beyond this duration, the event would be unsubscribed automatically. Pass &quot;0&quot; for indefinite event subscription which requires the rbusEvent_Unsubscribe API to be called explicitly. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="304" column="24" bodyfile="include/rbus.h" bodystart="304" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__rbus_event_subscription_1ab8739843ed4fbac99eee7419bd29df64" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _rbusEventSubscription::userData</definition>
+        <argsstring></argsstring>
+        <name>userData</name>
+        <qualifiedname>_rbusEventSubscription::userData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>fixme <ref refid="group___events_1gaf0a4f17d9440f3216fc6f06eda8b81bf" kindref="member">rbusEventHandler_t</ref> internal </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="305" column="24" bodyfile="include/rbus.h" bodystart="305" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__rbus_event_subscription_1a63e09bbea5d562727645c5a287b19077" prot="public" static="no" mutable="no">
+        <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+        <definition>rbusHandle_t _rbusEventSubscription::handle</definition>
+        <argsstring></argsstring>
+        <name>handle</name>
+        <qualifiedname>_rbusEventSubscription::handle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The userData set when subscribing to the event. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="306" column="25" bodyfile="include/rbus.h" bodystart="306" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__rbus_event_subscription_1a7945cd09582ac9f11d23fbfc50ad70d0" prot="public" static="no" mutable="no">
+        <type><ref refid="group___events_1ga8c91c27fc5c9f944d4e82f6f97c7c6e6" kindref="member">rbusSubscribeAsyncRespHandler_t</ref></type>
+        <definition>rbusSubscribeAsyncRespHandler_t _rbusEventSubscription::asyncHandler</definition>
+        <argsstring></argsstring>
+        <name>asyncHandler</name>
+        <qualifiedname>_rbusEventSubscription::asyncHandler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Private use only: The rbus handle associated with this subscription </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="307" column="37" bodyfile="include/rbus.h" bodystart="307" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__rbus_event_subscription_1a4896288c353bbfb5b61289d27a1ab8c4" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool _rbusEventSubscription::publishOnSubscribe</definition>
+        <argsstring></argsstring>
+        <name>publishOnSubscribe</name>
+        <qualifiedname>_rbusEventSubscription::publishOnSubscribe</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Private use only: The async handler being used for any background subscription retries </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="308" column="25" bodyfile="include/rbus.h" bodystart="308" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kindref="member">rbusEventSubscription_t</ref> </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/rbus.h" line="288" column="1" bodyfile="include/rbus.h" bodystart="289" bodyend="309"/>
+    <listofallmembers>
+      <member refid="struct__rbus_event_subscription_1a7945cd09582ac9f11d23fbfc50ad70d0" prot="public" virt="non-virtual"><scope>_rbusEventSubscription</scope><name>asyncHandler</name></member>
+      <member refid="struct__rbus_event_subscription_1af0542981da073930ab7d5441ccfa3585" prot="public" virt="non-virtual"><scope>_rbusEventSubscription</scope><name>duration</name></member>
+      <member refid="struct__rbus_event_subscription_1aa5f81da5ad5176915ed1d1b40b7ffe5d" prot="public" virt="non-virtual"><scope>_rbusEventSubscription</scope><name>eventName</name></member>
+      <member refid="struct__rbus_event_subscription_1ad975aaaadb953b18585f96660374f3b6" prot="public" virt="non-virtual"><scope>_rbusEventSubscription</scope><name>filter</name></member>
+      <member refid="struct__rbus_event_subscription_1a63e09bbea5d562727645c5a287b19077" prot="public" virt="non-virtual"><scope>_rbusEventSubscription</scope><name>handle</name></member>
+      <member refid="struct__rbus_event_subscription_1ac7ef6bb6c1a7053cd2915d1e42c673a6" prot="public" virt="non-virtual"><scope>_rbusEventSubscription</scope><name>handler</name></member>
+      <member refid="struct__rbus_event_subscription_1ab984e9c7c70a32dbb064f29e6c140cd9" prot="public" virt="non-virtual"><scope>_rbusEventSubscription</scope><name>interval</name></member>
+      <member refid="struct__rbus_event_subscription_1a4896288c353bbfb5b61289d27a1ab8c4" prot="public" virt="non-virtual"><scope>_rbusEventSubscription</scope><name>publishOnSubscribe</name></member>
+      <member refid="struct__rbus_event_subscription_1ab8739843ed4fbac99eee7419bd29df64" prot="public" virt="non-virtual"><scope>_rbusEventSubscription</scope><name>userData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

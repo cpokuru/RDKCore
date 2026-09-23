@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="struct__rbus_element_info" kind="struct" language="C++" prot="public">
+    <compoundname>_rbusElementInfo</compoundname>
+    <includes refid="rbus_8h" local="no">rbus.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__rbus_element_info_1adb165e09b70a26f1f92b829c82ed53f9" prot="public" static="no" mutable="no">
+        <type>char const  *</type>
+        <definition>char const* _rbusElementInfo::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>_rbusElementInfo::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="696" column="16" bodyfile="include/rbus.h" bodystart="696" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__rbus_element_info_1a4c5123a378421255264c6d60c3fe39dc" prot="public" static="no" mutable="no">
+        <type>char const  *</type>
+        <definition>char const* _rbusElementInfo::component</definition>
+        <argsstring></argsstring>
+        <name>component</name>
+        <qualifiedname>_rbusElementInfo::component</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fully qualified element name </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="697" column="16" bodyfile="include/rbus.h" bodystart="697" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__rbus_element_info_1a397fc5aceb58692517284414fd4c85b9" prot="public" static="no" mutable="no">
+        <type><ref refid="group___providers_1ga4b24d155a070a1d73e0a1f3b00195ace" kindref="member">rbusElementType_t</ref></type>
+        <definition>rbusElementType_t _rbusElementInfo::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>_rbusElementInfo::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Name of the component providing this element </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="698" column="23" bodyfile="include/rbus.h" bodystart="698" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__rbus_element_info_1a88147c98190b6fbd3a1ef8ef7c72ab5a" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t _rbusElementInfo::access</definition>
+        <argsstring></argsstring>
+        <name>access</name>
+        <qualifiedname>_rbusElementInfo::access</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The type of element </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="699" column="14" bodyfile="include/rbus.h" bodystart="699" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__rbus_element_info_1ae31564a78bf297a37797b20d3608950e" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="struct__rbus_element_info" kindref="compound">_rbusElementInfo</ref> *</type>
+        <definition>struct _rbusElementInfo* _rbusElementInfo::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <qualifiedname>_rbusElementInfo::next</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="group___consumer_1gac11e3760580881d7c086f4a00c9451de" kindref="member">rbusAccess_t</ref> flags OR&apos;d </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="700" column="28" bodyfile="include/rbus.h" bodystart="700" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>_rbusElementInfo</label>
+        <link refid="struct__rbus_element_info"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/rbus.h" line="694" column="1" bodyfile="include/rbus.h" bodystart="695" bodyend="701"/>
+    <listofallmembers>
+      <member refid="struct__rbus_element_info_1a88147c98190b6fbd3a1ef8ef7c72ab5a" prot="public" virt="non-virtual"><scope>_rbusElementInfo</scope><name>access</name></member>
+      <member refid="struct__rbus_element_info_1a4c5123a378421255264c6d60c3fe39dc" prot="public" virt="non-virtual"><scope>_rbusElementInfo</scope><name>component</name></member>
+      <member refid="struct__rbus_element_info_1adb165e09b70a26f1f92b829c82ed53f9" prot="public" virt="non-virtual"><scope>_rbusElementInfo</scope><name>name</name></member>
+      <member refid="struct__rbus_element_info_1ae31564a78bf297a37797b20d3608950e" prot="public" virt="non-virtual"><scope>_rbusElementInfo</scope><name>next</name></member>
+      <member refid="struct__rbus_element_info_1a397fc5aceb58692517284414fd4c85b9" prot="public" virt="non-virtual"><scope>_rbusElementInfo</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

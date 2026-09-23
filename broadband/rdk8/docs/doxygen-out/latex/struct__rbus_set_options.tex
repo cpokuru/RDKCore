@@ -1,0 +1,35 @@
+\doxysection{\+\_\+rbus\+Set\+Options Struct Reference}
+\hypertarget{struct__rbus_set_options}{}\label{struct__rbus_set_options}\index{\_rbusSetOptions@{\_rbusSetOptions}}
+
+
+{\ttfamily \+\#include $<$rbus.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{struct__rbus_set_options_a22a2a78889208a55322dbda9db0271da}{commit}}
+\item 
+uint32\+\_\+t \doxymbox{\hyperlink{struct__rbus_set_options_ae3e988869e6d6d6181fe7895b897ecd0}{session\+Id}}
+\end{DoxyCompactItemize}
+
+
+\label{struct__rbus_set_options_doc-variable-members}
+\Hypertarget{struct__rbus_set_options_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct__rbus_set_options_a22a2a78889208a55322dbda9db0271da}\index{\_rbusSetOptions@{\_rbusSetOptions}!commit@{commit}}
+\index{commit@{commit}!\_rbusSetOptions@{\_rbusSetOptions}}
+\doxysubsubsection{\texorpdfstring{commit}{commit}}
+{\footnotesize\ttfamily \label{struct__rbus_set_options_a22a2a78889208a55322dbda9db0271da} 
+bool \+\_\+rbus\+Set\+Options::\+commit}
+
+Commit flag indicating which set operation is the last set operation in a particular session. Set to true to for the final set of a session. Set to false to for all other sets of a session, which indicates that the set operation should be remembered until the final set occurs. \Hypertarget{struct__rbus_set_options_ae3e988869e6d6d6181fe7895b897ecd0}\index{\_rbusSetOptions@{\_rbusSetOptions}!sessionId@{sessionId}}
+\index{sessionId@{sessionId}!\_rbusSetOptions@{\_rbusSetOptions}}
+\doxysubsubsection{\texorpdfstring{sessionId}{sessionId}}
+{\footnotesize\ttfamily \label{struct__rbus_set_options_ae3e988869e6d6d6181fe7895b897ecd0} 
+uint32\+\_\+t \+\_\+rbus\+Set\+Options::\+session\+Id}
+
+Session id. One or more parameter can be set together over a session. The session ID binds all set operations. A value of 0 indicates this is not a session based operation. A non-\/zero value indicates that the value should be "{}remembered"{} temporarily. Only when the "{}commit"{} parameter is "{}true"{}, should all remembered parameters in this session be set together. Call rbus\+\_\+create\+Session to generate a session id. 
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{rbus_8h}{rbus.\+h}}\end{DoxyCompactItemize}

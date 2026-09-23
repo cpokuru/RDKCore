@@ -1,0 +1,43 @@
+\doxysection{\+\_\+rbus\+Set\+Handler\+Options Struct Reference}
+\hypertarget{struct__rbus_set_handler_options}{}\label{struct__rbus_set_handler_options}\index{\_rbusSetHandlerOptions@{\_rbusSetHandlerOptions}}
+
+
+{\ttfamily \+\#include $<$rbus.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{struct__rbus_set_handler_options_abd5a690fec5b07e1a2d1b3f2cad63d0f}{commit}}
+\item 
+uint32\+\_\+t \doxymbox{\hyperlink{struct__rbus_set_handler_options_a955e177bee4e43325c08719be2de9fd6}{session\+Id}}
+\item 
+char const  \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct__rbus_set_handler_options_a225d451d7d2e3adfe049ddae4d7f428b}{requesting\+Component}}
+\end{DoxyCompactItemize}
+
+
+\label{struct__rbus_set_handler_options_doc-variable-members}
+\Hypertarget{struct__rbus_set_handler_options_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct__rbus_set_handler_options_abd5a690fec5b07e1a2d1b3f2cad63d0f}\index{\_rbusSetHandlerOptions@{\_rbusSetHandlerOptions}!commit@{commit}}
+\index{commit@{commit}!\_rbusSetHandlerOptions@{\_rbusSetHandlerOptions}}
+\doxysubsubsection{\texorpdfstring{commit}{commit}}
+{\footnotesize\ttfamily \label{struct__rbus_set_handler_options_abd5a690fec5b07e1a2d1b3f2cad63d0f} 
+bool \+\_\+rbus\+Set\+Handler\+Options::\+commit}
+
+Commit flag indicating which set operation is the last set operation in a particular session. Set to true to for the final set of a session. Set to false to for all other sets of a session, which indicates that the set operation should be remembered until the final set occurs. \Hypertarget{struct__rbus_set_handler_options_a225d451d7d2e3adfe049ddae4d7f428b}\index{\_rbusSetHandlerOptions@{\_rbusSetHandlerOptions}!requestingComponent@{requestingComponent}}
+\index{requestingComponent@{requestingComponent}!\_rbusSetHandlerOptions@{\_rbusSetHandlerOptions}}
+\doxysubsubsection{\texorpdfstring{requestingComponent}{requestingComponent}}
+{\footnotesize\ttfamily \label{struct__rbus_set_handler_options_a225d451d7d2e3adfe049ddae4d7f428b} 
+char const\texorpdfstring{$\ast$}{*} \+\_\+rbus\+Set\+Handler\+Options::\+requesting\+Component}
+
+Component that invoking the SET method. \Hypertarget{struct__rbus_set_handler_options_a955e177bee4e43325c08719be2de9fd6}\index{\_rbusSetHandlerOptions@{\_rbusSetHandlerOptions}!sessionId@{sessionId}}
+\index{sessionId@{sessionId}!\_rbusSetHandlerOptions@{\_rbusSetHandlerOptions}}
+\doxysubsubsection{\texorpdfstring{sessionId}{sessionId}}
+{\footnotesize\ttfamily \label{struct__rbus_set_handler_options_a955e177bee4e43325c08719be2de9fd6} 
+uint32\+\_\+t \+\_\+rbus\+Set\+Handler\+Options::\+session\+Id}
+
+Session id. One or more parameter can be set together over a session. The session ID binds all set operations. A value of 0 indicates this is not a session based operation. A non-\/zero value indicates that the value should be "{}remembered"{} temporarily. Only when the "{}commit"{} parameter is "{}true"{}, should all remembered parameters in this session be set together. Call rbus\+\_\+create\+Session to generate a session id. 
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{rbus_8h}{rbus.\+h}}\end{DoxyCompactItemize}
