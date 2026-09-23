@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="structrbus_data_element__t" kind="struct" language="C++" prot="public">
+    <compoundname>rbusDataElement_t</compoundname>
+    <includes refid="rbus_8h" local="no">rbus.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structrbus_data_element__t_1ad5396131cb6120760b63fa888d1478eb" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* rbusDataElement_t::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>rbusDataElement_t::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Name of an element </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="623" column="23" bodyfile="include/rbus.h" bodystart="623" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrbus_data_element__t_1a3d5387db4049b27e4003fbf3881477a8" prot="public" static="no" mutable="no">
+        <type><ref refid="group___providers_1ga4b24d155a070a1d73e0a1f3b00195ace" kindref="member">rbusElementType_t</ref></type>
+        <definition>rbusElementType_t rbusDataElement_t::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>rbusDataElement_t::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type of an element </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="624" column="29" bodyfile="include/rbus.h" bodystart="624" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrbus_data_element__t_1ad0f4959205636345fdd1f1eb0163a51c" prot="public" static="no" mutable="no">
+        <type><ref refid="structrbus_callback_table__t" kindref="compound">rbusCallbackTable_t</ref></type>
+        <definition>rbusCallbackTable_t rbusDataElement_t::cbTable</definition>
+        <argsstring></argsstring>
+        <name>cbTable</name>
+        <qualifiedname>rbusDataElement_t::cbTable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Element Handler table. A specific callback can be NULL, if no usage </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="625" column="29" bodyfile="include/rbus.h" bodystart="625" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="structrbus_data_element__t" kindref="compound">rbusDataElement_t</ref> The structure used when registering or unregistering a data element to the bus. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>rbusCallbackTable_t</label>
+        <link refid="structrbus_callback_table__t"/>
+      </node>
+      <node id="1">
+        <label>rbusDataElement_t</label>
+        <link refid="structrbus_data_element__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>cbTable</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/rbus.h" line="621" column="1" bodyfile="include/rbus.h" bodystart="622" bodyend="627"/>
+    <listofallmembers>
+      <member refid="structrbus_data_element__t_1ad0f4959205636345fdd1f1eb0163a51c" prot="public" virt="non-virtual"><scope>rbusDataElement_t</scope><name>cbTable</name></member>
+      <member refid="structrbus_data_element__t_1ad5396131cb6120760b63fa888d1478eb" prot="public" virt="non-virtual"><scope>rbusDataElement_t</scope><name>name</name></member>
+      <member refid="structrbus_data_element__t_1a3d5387db4049b27e4003fbf3881477a8" prot="public" virt="non-virtual"><scope>rbusDataElement_t</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

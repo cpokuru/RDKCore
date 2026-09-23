@@ -1,0 +1,89 @@
+\doxysection{rbus\+Element\+Callback\+Table\+\_\+t Struct Reference}
+\hypertarget{structrbus_element_callback_table__t}{}\label{structrbus_element_callback_table__t}\index{rbusElementCallbackTable\_t@{rbusElementCallbackTable\_t}}
+
+
+The list of callback handlers supported by a data element.  
+
+
+
+
+{\ttfamily \+\#include $<$rbus.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{group___providers_ga8183a9f8eb04494909d260d9c563538b}{rbus\+Get\+Handler\+\_\+t}} \doxymbox{\hyperlink{structrbus_element_callback_table__t_a6d018a2e250df956765c699ec17808b3}{get\+Handler}}
+\item 
+\doxymbox{\hyperlink{group___providers_gad83da8f5d21226d482ca822d57401d77}{rbus\+Set\+Handler\+\_\+t}} \doxymbox{\hyperlink{structrbus_element_callback_table__t_a8aaaffa54dbc327d9c34d4e8aa2795e1}{set\+Handler}}
+\item 
+\doxymbox{\hyperlink{group___providers_gaf8bd07fc7f695a02b93a9aab467e032b}{rbus\+Table\+Add\+Row\+Handler\+\_\+t}} \doxymbox{\hyperlink{structrbus_element_callback_table__t_a73898c477bc0c400a293e9e0fb27b048}{table\+Add\+Row\+Handler}}
+\item 
+\doxymbox{\hyperlink{group___providers_ga2acce3313e6c4131647874c51411c668}{rbus\+Table\+Remove\+Row\+Handler\+\_\+t}} \doxymbox{\hyperlink{structrbus_element_callback_table__t_abfd7052973bfdccd3c097ea333c016f6}{table\+Remove\+Row\+Handler}}
+\item 
+\doxymbox{\hyperlink{group___providers_ga845118048502243dac351969766ce2e9}{rbus\+Event\+Sub\+Handler\+\_\+t}} \doxymbox{\hyperlink{structrbus_element_callback_table__t_ae51023cd4ad9d8914e97af080c9b9f9c}{event\+Sub\+Handler}}
+\item 
+\doxymbox{\hyperlink{group___providers_gace673660999b800a3f21a239b5a40f8d}{rbus\+Method\+Handler\+\_\+t}} \doxymbox{\hyperlink{structrbus_element_callback_table__t_aa40df3586833f88c3add37fc89756e0c}{method\+Handler}}
+\item 
+\doxymbox{\hyperlink{group___providers_ga509ea174d80c816237fcdf4cb3f321ce}{rbus\+Table\+Sync\+Handler\+\_\+t}} \doxymbox{\hyperlink{structrbus_element_callback_table__t_aff02b938ff3fe3c3394a31c331f54b0c}{table\+Sync\+Handler}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The list of callback handlers supported by a data element. 
+
+This table also specifies the possible usage for each data element.
+
+For properties, the callbacks can be set to control usage as follows: Callback\texorpdfstring{$\vert$}{|}\+Property Usage\texorpdfstring{$\vert$}{|}\+Table Usage -\/\texorpdfstring{$\vert$}{|}-\/ get\+Handler\texorpdfstring{$\vert$}{|}allow read access and value-\/change events\texorpdfstring{$\vert$}{|}unused set\+Handler\texorpdfstring{$\vert$}{|}allow write access\texorpdfstring{$\vert$}{|}unused update\+Table\+Handler\texorpdfstring{$\vert$}{|}unused\texorpdfstring{$\vert$}{|}all table row add and remove event\+Sub\+Handler\texorpdfstring{$\vert$}{|}allow a provider to know when value-\/change was subscribed to\texorpdfstring{$\vert$}{|}allow a provider to know when a table update event is subscribed to
+
+If a particular usage is supported, then that callback must be set to a function pointer for the handler. If a particular usage is not supported by the component, the callback shall be set "{}\+NULL"{}. On call to registger the data element, the rbus library checks for NULL and substitutes a pointer to an error handler function for all unused features 
+
+\label{structrbus_element_callback_table__t_doc-variable-members}
+\Hypertarget{structrbus_element_callback_table__t_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structrbus_element_callback_table__t_ae51023cd4ad9d8914e97af080c9b9f9c}\index{rbusElementCallbackTable\_t@{rbusElementCallbackTable\_t}!eventSubHandler@{eventSubHandler}}
+\index{eventSubHandler@{eventSubHandler}!rbusElementCallbackTable\_t@{rbusElementCallbackTable\_t}}
+\doxysubsubsection{\texorpdfstring{eventSubHandler}{eventSubHandler}}
+{\footnotesize\ttfamily \label{structrbus_element_callback_table__t_ae51023cd4ad9d8914e97af080c9b9f9c} 
+\doxymbox{\hyperlink{group___providers_ga845118048502243dac351969766ce2e9}{rbus\+Event\+Sub\+Handler\+\_\+t}} rbus\+Element\+Callback\+Table\+\_\+t::\+event\+Sub\+Handler}
+
+Event subscribe and unsubscribe handler for the event name \Hypertarget{structrbus_element_callback_table__t_a6d018a2e250df956765c699ec17808b3}\index{rbusElementCallbackTable\_t@{rbusElementCallbackTable\_t}!getHandler@{getHandler}}
+\index{getHandler@{getHandler}!rbusElementCallbackTable\_t@{rbusElementCallbackTable\_t}}
+\doxysubsubsection{\texorpdfstring{getHandler}{getHandler}}
+{\footnotesize\ttfamily \label{structrbus_element_callback_table__t_a6d018a2e250df956765c699ec17808b3} 
+\doxymbox{\hyperlink{group___providers_ga8183a9f8eb04494909d260d9c563538b}{rbus\+Get\+Handler\+\_\+t}} rbus\+Element\+Callback\+Table\+\_\+t::\+get\+Handler}
+
+Get parameters handler for the named paramter \Hypertarget{structrbus_element_callback_table__t_aa40df3586833f88c3add37fc89756e0c}\index{rbusElementCallbackTable\_t@{rbusElementCallbackTable\_t}!methodHandler@{methodHandler}}
+\index{methodHandler@{methodHandler}!rbusElementCallbackTable\_t@{rbusElementCallbackTable\_t}}
+\doxysubsubsection{\texorpdfstring{methodHandler}{methodHandler}}
+{\footnotesize\ttfamily \label{structrbus_element_callback_table__t_aa40df3586833f88c3add37fc89756e0c} 
+\doxymbox{\hyperlink{group___providers_gace673660999b800a3f21a239b5a40f8d}{rbus\+Method\+Handler\+\_\+t}} rbus\+Element\+Callback\+Table\+\_\+t::\+method\+Handler}
+
+Method handler \Hypertarget{structrbus_element_callback_table__t_a8aaaffa54dbc327d9c34d4e8aa2795e1}\index{rbusElementCallbackTable\_t@{rbusElementCallbackTable\_t}!setHandler@{setHandler}}
+\index{setHandler@{setHandler}!rbusElementCallbackTable\_t@{rbusElementCallbackTable\_t}}
+\doxysubsubsection{\texorpdfstring{setHandler}{setHandler}}
+{\footnotesize\ttfamily \label{structrbus_element_callback_table__t_a8aaaffa54dbc327d9c34d4e8aa2795e1} 
+\doxymbox{\hyperlink{group___providers_gad83da8f5d21226d482ca822d57401d77}{rbus\+Set\+Handler\+\_\+t}} rbus\+Element\+Callback\+Table\+\_\+t::\+set\+Handler}
+
+Set parameters handler for the named parameter \Hypertarget{structrbus_element_callback_table__t_a73898c477bc0c400a293e9e0fb27b048}\index{rbusElementCallbackTable\_t@{rbusElementCallbackTable\_t}!tableAddRowHandler@{tableAddRowHandler}}
+\index{tableAddRowHandler@{tableAddRowHandler}!rbusElementCallbackTable\_t@{rbusElementCallbackTable\_t}}
+\doxysubsubsection{\texorpdfstring{tableAddRowHandler}{tableAddRowHandler}}
+{\footnotesize\ttfamily \label{structrbus_element_callback_table__t_a73898c477bc0c400a293e9e0fb27b048} 
+\doxymbox{\hyperlink{group___providers_gaf8bd07fc7f695a02b93a9aab467e032b}{rbus\+Table\+Add\+Row\+Handler\+\_\+t}} rbus\+Element\+Callback\+Table\+\_\+t::\+table\+Add\+Row\+Handler}
+
+Add row handler to a table \Hypertarget{structrbus_element_callback_table__t_abfd7052973bfdccd3c097ea333c016f6}\index{rbusElementCallbackTable\_t@{rbusElementCallbackTable\_t}!tableRemoveRowHandler@{tableRemoveRowHandler}}
+\index{tableRemoveRowHandler@{tableRemoveRowHandler}!rbusElementCallbackTable\_t@{rbusElementCallbackTable\_t}}
+\doxysubsubsection{\texorpdfstring{tableRemoveRowHandler}{tableRemoveRowHandler}}
+{\footnotesize\ttfamily \label{structrbus_element_callback_table__t_abfd7052973bfdccd3c097ea333c016f6} 
+\doxymbox{\hyperlink{group___providers_ga2acce3313e6c4131647874c51411c668}{rbus\+Table\+Remove\+Row\+Handler\+\_\+t}} rbus\+Element\+Callback\+Table\+\_\+t::\+table\+Remove\+Row\+Handler}
+
+Remove a row from a table \Hypertarget{structrbus_element_callback_table__t_aff02b938ff3fe3c3394a31c331f54b0c}\index{rbusElementCallbackTable\_t@{rbusElementCallbackTable\_t}!tableSyncHandler@{tableSyncHandler}}
+\index{tableSyncHandler@{tableSyncHandler}!rbusElementCallbackTable\_t@{rbusElementCallbackTable\_t}}
+\doxysubsubsection{\texorpdfstring{tableSyncHandler}{tableSyncHandler}}
+{\footnotesize\ttfamily \label{structrbus_element_callback_table__t_aff02b938ff3fe3c3394a31c331f54b0c} 
+\doxymbox{\hyperlink{group___providers_ga509ea174d80c816237fcdf4cb3f321ce}{rbus\+Table\+Sync\+Handler\+\_\+t}} rbus\+Element\+Callback\+Table\+\_\+t::\+table\+Sync\+Handler}
+
+
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{rbus_8h}{rbus.\+h}}\end{DoxyCompactItemize}

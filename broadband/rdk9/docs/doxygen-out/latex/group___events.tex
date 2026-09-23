@@ -1,0 +1,556 @@
+\doxysubsection{Events }
+\hypertarget{group___events}{}\label{group___events}\index{Events@{Events}}
+\doxysubsubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structrbus_event__t}{rbus\+Event\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em The set of data associated with a published event. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structrbus_event_raw_data__t}{rbus\+Event\+Raw\+Data\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{struct__rbus_event_subscription}{\+\_\+rbus\+Event\+Subscription}}
+\begin{DoxyCompactList}\small\item\em \doxylink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \doxymbox{\hyperlink{struct__rbus_event_subscription}{\+\_\+rbus\+Event\+Subscription}} \doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em \doxylink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t} \end{DoxyCompactList}\item 
+typedef void(\texorpdfstring{$\ast$}{*}) \doxymbox{\hyperlink{group___events_ga8c91c27fc5c9f944d4e82f6f97c7c6e6}{rbus\+Subscribe\+Async\+Resp\+Handler\+\_\+t}}(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, \doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t}} \texorpdfstring{$\ast$}{*}subscription, \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} error)
+\begin{DoxyCompactList}\small\item\em A component will receive this API callback when a subscription response is received. This callback is registered with rbus\+Event\+\_\+\+Subscribe\+Async or rbus\+Event\+\_\+\+Subscribe\+Ex\+Async. ~\newline
+Used by: Any component that subscribes async for events. \end{DoxyCompactList}\item 
+typedef void(\texorpdfstring{$\ast$}{*}) \doxymbox{\hyperlink{group___events_gaf0a4f17d9440f3216fc6f06eda8b81bf}{rbus\+Event\+Handler\+\_\+t}}(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, \doxymbox{\hyperlink{structrbus_event__t}{rbus\+Event\+\_\+t}} const \texorpdfstring{$\ast$}{*}event\+Data, \doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t}} \texorpdfstring{$\ast$}{*}subscription)
+\begin{DoxyCompactList}\small\item\em A component will receive this API callback when an event is received. This callback is registered with rbus\+Event\+\_\+\+Subscribe. ~\newline
+Used by: Any component that subscribes for events. \end{DoxyCompactList}\item 
+typedef void(\texorpdfstring{$\ast$}{*}) \doxymbox{\hyperlink{group___events_ga1e28c9d30371c7fda325fe856281a712}{rbus\+Event\+Handler\+Raw\+Data\+\_\+t}}(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, \doxymbox{\hyperlink{structrbus_event_raw_data__t}{rbus\+Event\+Raw\+Data\+\_\+t}} const \texorpdfstring{$\ast$}{*}event\+Data, \doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t}} \texorpdfstring{$\ast$}{*}subscription)
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{group___events_ga0aa4feac1e56279c9d61e90771534785}{rbus\+Event\+Sub\+Action\+\_\+t}} \{ \doxymbox{\hyperlink{group___events_gga0aa4feac1e56279c9d61e90771534785a106483a07da50a7f580933ea53ea0290}{RBUS\+\_\+\+EVENT\+\_\+\+ACTION\+\_\+\+SUBSCRIBE}} = 0
+, \doxymbox{\hyperlink{group___events_gga0aa4feac1e56279c9d61e90771534785ac825c61e11602ba29c81aebff8bdedde}{RBUS\+\_\+\+EVENT\+\_\+\+ACTION\+\_\+\+UNSUBSCRIBE}}
+ \}
+\begin{DoxyCompactList}\small\item\em \doxylink{group___events_ga0aa4feac1e56279c9d61e90771534785}{rbus\+Event\+Sub\+Action\+\_\+t} Actions that can be performed for an event \end{DoxyCompactList}\item 
+enum \doxymbox{\hyperlink{group___events_ga8572487d31c269212da91488e8eb33b9}{rbus\+Event\+Type\+\_\+t}} \{ \newline
+\doxymbox{\hyperlink{group___events_gga8572487d31c269212da91488e8eb33b9af4fcd18da8c8186f6a731f551557f1d0}{RBUS\+\_\+\+EVENT\+\_\+\+OBJECT\+\_\+\+CREATED}}
+, \doxymbox{\hyperlink{group___events_gga8572487d31c269212da91488e8eb33b9ade6bf62371a6ee6c9d5b3eb7d12f9419}{RBUS\+\_\+\+EVENT\+\_\+\+OBJECT\+\_\+\+DELETED}}
+, \doxymbox{\hyperlink{group___events_gga8572487d31c269212da91488e8eb33b9a433ddaf617d8570b2afd8a46dcabeefe}{RBUS\+\_\+\+EVENT\+\_\+\+VALUE\+\_\+\+CHANGED}}
+, \doxymbox{\hyperlink{group___events_gga8572487d31c269212da91488e8eb33b9a8864f6f4a367453b8fc5b6c71fae4399}{RBUS\+\_\+\+EVENT\+\_\+\+GENERAL}}
+, \newline
+\doxymbox{\hyperlink{group___events_gga8572487d31c269212da91488e8eb33b9a7924fd04efc3a9946b6c3d0fa3423f71}{RBUS\+\_\+\+EVENT\+\_\+\+INITIAL\+\_\+\+VALUE}}
+, \doxymbox{\hyperlink{group___events_gga8572487d31c269212da91488e8eb33b9a7c87c82dd764272760bd73c350400931}{RBUS\+\_\+\+EVENT\+\_\+\+INTERVAL}}
+, \doxymbox{\hyperlink{group___events_gga8572487d31c269212da91488e8eb33b9a4a8f3752c84a8d02195732f1a9c8b322}{RBUS\+\_\+\+EVENT\+\_\+\+DURATION\+\_\+\+COMPLETE}}
+ \}
+\begin{DoxyCompactList}\small\item\em The type of events which can be subscribed to or published. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{group___events_ga6a5e6fdca2de593b7526ec819040fbe0}{rbus\+Event\+\_\+\+Is\+Subscription\+Exist}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}event\+Name, \doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t}} \texorpdfstring{$\ast$}{*}subscription)
+\begin{DoxyCompactList}\small\item\em Find active subscription given event\+Name with subscription structure. Used by: Components that need to find whether they have active subscription already or not for the given event\+Name with subscription structure. The event\+Name should be a name which was previously subscribed. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___events_gab5889c0424ae3e4efb9208de22b92835}{rbus\+Event\+\_\+\+Subscribe}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}event\+Name, \doxymbox{\hyperlink{group___events_gaf0a4f17d9440f3216fc6f06eda8b81bf}{rbus\+Event\+Handler\+\_\+t}} handler, void \texorpdfstring{$\ast$}{*}user\+Data, int timeout)
+\begin{DoxyCompactList}\small\item\em Subscribe to a single event. ~\newline
+ Used by: Components that need to subscribe to an event. The handler will be called back when the event is generated. The type of event and when the event is generated is based on the type of data element event\+Name refers to. If event\+Name is the name of a general event, the event is generated when the provider of the event, publishes it. If event\+Name is the name of a parameter, the event is generated when the value of that parameter changes. If event\+Name is the name of a table, the event is generated when a row is added or deleted from that table. If timeout is positive, internal retries will be attempted if the subscription cannot be routed to an existing provider, and the retries will continue until either a provider is found, an unrecoverable error occurs, or retry timeout reached. A component should call rbus\+Event\+\_\+\+Unsubscribe to stop receiving the event. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___events_ga2ef91bf25813c3d3e482bffbef2866ed}{rbus\+Event\+\_\+\+Subscribe\+Raw\+Data}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}event\+Name, \doxymbox{\hyperlink{group___events_gaf0a4f17d9440f3216fc6f06eda8b81bf}{rbus\+Event\+Handler\+\_\+t}} handler, void \texorpdfstring{$\ast$}{*}user\+Data, int timeout)
+\begin{DoxyCompactList}\small\item\em Subscribe to a single event using rawdata method, with reduced memory and cpu footprint. Used by: Components that need to subscribe to an event. The handler will be called back when the event is generated. If timeout is positive, internal retries will be attempted if the subscription cannot be routed to an existing provider, and the retries will continue until either a provider is found, an unrecoverable error occurs, or retry timeout reached. A component should call rbus\+Event\+\_\+\+Unsubscribe\+Raw\+Data to stop receiving the event. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___events_gab3cf21821b5289220c08d8fd62189edb}{rbus\+Event\+\_\+\+Subscribe\+Async}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}event\+Name, \doxymbox{\hyperlink{group___events_gaf0a4f17d9440f3216fc6f06eda8b81bf}{rbus\+Event\+Handler\+\_\+t}} handler, \doxymbox{\hyperlink{group___events_ga8c91c27fc5c9f944d4e82f6f97c7c6e6}{rbus\+Subscribe\+Async\+Resp\+Handler\+\_\+t}} subscribe\+Handler, void \texorpdfstring{$\ast$}{*}user\+Data, int timeout)
+\begin{DoxyCompactList}\small\item\em Subscribe asynchronously to a single event. ~\newline
+ Used by: Components that need to subscribe asynchronously to an event. The handler will be called back when the event is generated. The type of event and when the event is generated is based on the type of data element event\+Name refers to. If event\+Name is the name of a general event, the event is generated when the provider of the event, publishes it. If event\+Name is the name of a parameter, the event is generated when the value of that parameter changes. If event\+Name is the name of a table, the event is generated when a row is added or deleted from that table. The subscribe\+Handler is called when either a provider responds to the subscription request, an unrecoverable error occurs, or retry timeout reached. If timeout is positive, internal retries will be attempted if the subscription cannot be routed to an existing provider, and the retries will continue until either a provider is found, an unrecoverable error occurs, or retry timeout reached. A component should call rbus\+Event\+\_\+\+Unsubscribe to stop receiving the event. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___events_gaf218030e960675a9652366fe22d5b1df}{rbus\+Event\+\_\+\+Unsubscribe}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}event\+Name)
+\begin{DoxyCompactList}\small\item\em Unsubscribe from a single event. ~\newline
+ Used by: Components that need to unsubscribe from an event. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___events_ga0dfc895c048da0f94ebfcd9eba84eae7}{rbus\+Event\+\_\+\+Unsubscribe\+Raw\+Data}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, char const \texorpdfstring{$\ast$}{*}event\+Name)
+\begin{DoxyCompactList}\small\item\em Unsubscribe from a single event. ~\newline
+ Used by: Components that need to unsubscribe from an event subscribed using rbus\+Event\+\_\+\+Subscribe\+Raw\+Data. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___events_ga247738028c08f160b79e2d4239537ebe}{rbus\+Event\+\_\+\+Subscribe\+Ex}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, \doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t}} \texorpdfstring{$\ast$}{*}subscription, int num\+Subscriptions, int timeout)
+\begin{DoxyCompactList}\small\item\em Subscribe to one or more events with the option to add extra attributes to each subscription through the \doxylink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t} structure~\newline
+ Used by: Components that need to subscribe to events. For each \doxylink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t} subscription, the event\+Name and handler are required to be set. Other options may be set to NULL or 0 if not needed. Subscribing to all items in the subscription array is transactional. ~\newline
+ That is, all must succeed to subscribe or none will be subscribed. If timeout is positive, internal retries will be attempted if the subscription cannot be routed to an existing provider, and the retries will continue until either a provider is found, an unrecoverable error occurs, or retry timeout reached. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___events_gaec8a3850598cdf124442651908dd6d18}{rbus\+Event\+\_\+\+Subscribe\+Ex\+Raw\+Data}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, \doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t}} \texorpdfstring{$\ast$}{*}subscription, int num\+Subscriptions, int timeout)
+\begin{DoxyCompactList}\small\item\em Subscribe to one or more events with the option to add extra attributes to each subscription through the \doxylink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t} structure~\newline
+ Used by: Components that need to subscribe to events using rawdata method, with reduced memory and cpu footprint. For each \doxylink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t} subscription, the event\+Name and handler are required to be set. Other options may be set to NULL or 0 if not needed. Subscribing to all items in the subscription array is transactional. ~\newline
+ That is, all must succeed to subscribe or none will be subscribed. If timeout is positive, internal retries will be attempted if the subscription cannot be routed to an existing provider, and the retries will continue until either a provider is found, an unrecoverable error occurs, or retry timeout reached. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___events_ga5660e5ab4c6b04015c63fe9baf71ac24}{rbus\+Event\+\_\+\+Subscribe\+Ex\+Async}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, \doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t}} \texorpdfstring{$\ast$}{*}subscription, int num\+Subscriptions, \doxymbox{\hyperlink{group___events_ga8c91c27fc5c9f944d4e82f6f97c7c6e6}{rbus\+Subscribe\+Async\+Resp\+Handler\+\_\+t}} subscribe\+Handler, int timeout)
+\begin{DoxyCompactList}\small\item\em Subscribe asynchronously to one or more events with the option to add extra attributes to each subscription through the \doxylink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t} structure~\newline
+ Used by: Components that need to subscribe asynchronously to events. For each \doxylink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t} subscription, the event\+Name and handler are required to be set. Other options may be set to NULL or 0 if not needed. Subscribing to all items in the subscription array is transactional. ~\newline
+ That is, all must succeed to subscribe or none will be subscribed. The subscribe\+Handler is called after either all subscriptions were successfully made to providers, any one subscriptions received an error response from a provider, an unrecoverable error occurs, or retry timeout reached. If timeout is positive, internal retries will be attempted for each subscription that cannot be routed to an existing provider, and the retries will continue until either a provider is found, an unrecoverable error occurs, or retry timeout reached. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___events_gab7ef1ebf1eb77546d8ebe10d743e8d09}{rbus\+Event\+\_\+\+Unsubscribe\+Ex}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, \doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t}} \texorpdfstring{$\ast$}{*}subscriptions, int num\+Subscriptions)
+\begin{DoxyCompactList}\small\item\em Unsubscribe from one or more events~\newline
+ Used by: Components that need to unsubscribe from events. For each \doxylink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t} subscription, the event\+Name is required to be set. Other options may be set NULL or 0. The subscriptions pointer can be the same as that passed to rbus\+Event\+\_\+\+Subscribe\+Ex, or it can be a different list; however, the event\+Name for each subsription must be one previously subscribed to with either rbus\+Event\+\_\+\+Subscribe or rbus\+Event\+\_\+\+Subscribe\+Ex. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___events_gaf3337c7615b9f96501d743de350f7bb1}{rbus\+Event\+\_\+\+Unsubscribe\+Ex\+Raw\+Data}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, \doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t}} \texorpdfstring{$\ast$}{*}subscription, int num\+Subscriptions)
+\begin{DoxyCompactList}\small\item\em Unsubscribe from one or more events~\newline
+ Used by: Components that need to unsubscribe from events subscribed with rawdata method. For each \doxylink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t} subscription, the event\+Name is required to be set. Other options may be set NULL or 0. The subscriptions pointer can be the same as that passed to rbus\+Event\+\_\+\+Subscribe\+Ex, or it can be a different list; however, the event\+Name for each subsription must be one previously subscribed to with either rbus\+Event\+\_\+\+Subscribe or rbus\+Event\+\_\+\+Subscribe\+Ex. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___events_gac29791ff3418ef6cd6e24aff209a6f8a}{rbus\+Event\+\_\+\+Publish}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, \doxymbox{\hyperlink{structrbus_event__t}{rbus\+Event\+\_\+t}} \texorpdfstring{$\ast$}{*}event\+Data)
+\begin{DoxyCompactList}\small\item\em Publish an event. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___events_ga06d8f8b2d571102c2c025b28ffbd3dd6}{rbus\+\_\+create\+Session}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, uint32\+\_\+t \texorpdfstring{$\ast$}{*}p\+Session\+Id)
+\begin{DoxyCompactList}\small\item\em Components use this API to create a new session to set 1 or more parameters and action on table like add/\+remove rows. ~\newline
+Used by: Components that needs to Set Param \& Update Tables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+
+
+\label{group___events_doc-typedef-members}
+\Hypertarget{group___events_doc-typedef-members}
+\doxysubsubsection{Typedef Documentation}
+\Hypertarget{group___events_gaf0a4f17d9440f3216fc6f06eda8b81bf}\index{Events@{Events}!rbusEventHandler\_t@{rbusEventHandler\_t}}
+\index{rbusEventHandler\_t@{rbusEventHandler\_t}!Events@{Events}}
+\doxysubsubsubsection{\texorpdfstring{rbusEventHandler\_t}{rbusEventHandler\_t}}
+{\footnotesize\ttfamily \label{group___events_gaf0a4f17d9440f3216fc6f06eda8b81bf} 
+typedef void(\texorpdfstring{$\ast$}{*}) rbus\+Event\+Handler\+\_\+t(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, \doxymbox{\hyperlink{structrbus_event__t}{rbus\+Event\+\_\+t}} const  \texorpdfstring{$\ast$}{*}event\+Data, \doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t}} \texorpdfstring{$\ast$}{*}subscription)}
+
+
+
+A component will receive this API callback when an event is received. This callback is registered with rbus\+Event\+\_\+\+Subscribe. ~\newline
+Used by: Any component that subscribes for events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rbus\+Handle} & Bus Handle \\
+\hline
+{\em event\+Data} & Event data sent from the publishing component \\
+\hline
+{\em subscription} & Subscription data created when the client subscribed for the event. This will contain the user\+\_\+data, for example. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\Hypertarget{group___events_ga1e28c9d30371c7fda325fe856281a712}\index{Events@{Events}!rbusEventHandlerRawData\_t@{rbusEventHandlerRawData\_t}}
+\index{rbusEventHandlerRawData\_t@{rbusEventHandlerRawData\_t}!Events@{Events}}
+\doxysubsubsubsection{\texorpdfstring{rbusEventHandlerRawData\_t}{rbusEventHandlerRawData\_t}}
+{\footnotesize\ttfamily \label{group___events_ga1e28c9d30371c7fda325fe856281a712} 
+typedef void(\texorpdfstring{$\ast$}{*}) rbus\+Event\+Handler\+Raw\+Data\+\_\+t(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, \doxymbox{\hyperlink{structrbus_event_raw_data__t}{rbus\+Event\+Raw\+Data\+\_\+t}} const  \texorpdfstring{$\ast$}{*}event\+Data, \doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t}} \texorpdfstring{$\ast$}{*}subscription)}
+
+\Hypertarget{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}\index{Events@{Events}!rbusEventSubscription\_t@{rbusEventSubscription\_t}}
+\index{rbusEventSubscription\_t@{rbusEventSubscription\_t}!Events@{Events}}
+\doxysubsubsubsection{\texorpdfstring{rbusEventSubscription\_t}{rbusEventSubscription\_t}}
+{\footnotesize\ttfamily \label{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9} 
+typedef struct \doxymbox{\hyperlink{struct__rbus_event_subscription}{\+\_\+rbus\+Event\+Subscription}} \doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t}}}
+
+
+
+\doxylink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t} 
+
+\Hypertarget{group___events_ga8c91c27fc5c9f944d4e82f6f97c7c6e6}\index{Events@{Events}!rbusSubscribeAsyncRespHandler\_t@{rbusSubscribeAsyncRespHandler\_t}}
+\index{rbusSubscribeAsyncRespHandler\_t@{rbusSubscribeAsyncRespHandler\_t}!Events@{Events}}
+\doxysubsubsubsection{\texorpdfstring{rbusSubscribeAsyncRespHandler\_t}{rbusSubscribeAsyncRespHandler\_t}}
+{\footnotesize\ttfamily \label{group___events_ga8c91c27fc5c9f944d4e82f6f97c7c6e6} 
+typedef void(\texorpdfstring{$\ast$}{*}) rbus\+Subscribe\+Async\+Resp\+Handler\+\_\+t(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle, \doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t}} \texorpdfstring{$\ast$}{*}subscription, \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} error)}
+
+
+
+A component will receive this API callback when a subscription response is received. This callback is registered with rbus\+Event\+\_\+\+Subscribe\+Async or rbus\+Event\+\_\+\+Subscribe\+Ex\+Async. ~\newline
+Used by: Any component that subscribes async for events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rbus\+Handle} & Bus Handle \\
+\hline
+{\em subscription} & Subscription data created when the client subscribed for the event. This will contain the user\+Data, for example. \\
+\hline
+{\em error} & Any error that occured success, or any provider error code, or timeout (if retry limit reached) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\label{group___events_doc-enum-members}
+\Hypertarget{group___events_doc-enum-members}
+\doxysubsubsection{Enumeration Type Documentation}
+\Hypertarget{group___events_ga0aa4feac1e56279c9d61e90771534785}\index{Events@{Events}!rbusEventSubAction\_t@{rbusEventSubAction\_t}}
+\index{rbusEventSubAction\_t@{rbusEventSubAction\_t}!Events@{Events}}
+\doxysubsubsubsection{\texorpdfstring{rbusEventSubAction\_t}{rbusEventSubAction\_t}}
+{\footnotesize\ttfamily \label{group___events_ga0aa4feac1e56279c9d61e90771534785} 
+enum \doxymbox{\hyperlink{group___events_ga0aa4feac1e56279c9d61e90771534785}{rbus\+Event\+Sub\+Action\+\_\+t}}}
+
+
+
+\doxylink{group___events_ga0aa4feac1e56279c9d61e90771534785}{rbus\+Event\+Sub\+Action\+\_\+t} Actions that can be performed for an event 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_EVENT\_ACTION\_SUBSCRIBE@{RBUS\_EVENT\_ACTION\_SUBSCRIBE}!Events@{Events}}
+\index{Events@{Events}!RBUS\_EVENT\_ACTION\_SUBSCRIBE@{RBUS\_EVENT\_ACTION\_SUBSCRIBE}}
+}\Hypertarget{group___events_gga0aa4feac1e56279c9d61e90771534785a106483a07da50a7f580933ea53ea0290}\label{group___events_gga0aa4feac1e56279c9d61e90771534785a106483a07da50a7f580933ea53ea0290} 
+RBUS\+\_\+\+EVENT\+\_\+\+ACTION\+\_\+\+SUBSCRIBE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_EVENT\_ACTION\_UNSUBSCRIBE@{RBUS\_EVENT\_ACTION\_UNSUBSCRIBE}!Events@{Events}}
+\index{Events@{Events}!RBUS\_EVENT\_ACTION\_UNSUBSCRIBE@{RBUS\_EVENT\_ACTION\_UNSUBSCRIBE}}
+}\Hypertarget{group___events_gga0aa4feac1e56279c9d61e90771534785ac825c61e11602ba29c81aebff8bdedde}\label{group___events_gga0aa4feac1e56279c9d61e90771534785ac825c61e11602ba29c81aebff8bdedde} 
+RBUS\+\_\+\+EVENT\+\_\+\+ACTION\+\_\+\+UNSUBSCRIBE&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{group___events_ga8572487d31c269212da91488e8eb33b9}\index{Events@{Events}!rbusEventType\_t@{rbusEventType\_t}}
+\index{rbusEventType\_t@{rbusEventType\_t}!Events@{Events}}
+\doxysubsubsubsection{\texorpdfstring{rbusEventType\_t}{rbusEventType\_t}}
+{\footnotesize\ttfamily \label{group___events_ga8572487d31c269212da91488e8eb33b9} 
+enum \doxymbox{\hyperlink{group___events_ga8572487d31c269212da91488e8eb33b9}{rbus\+Event\+Type\+\_\+t}}}
+
+
+
+The type of events which can be subscribed to or published. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_EVENT\_OBJECT\_CREATED@{RBUS\_EVENT\_OBJECT\_CREATED}!Events@{Events}}
+\index{Events@{Events}!RBUS\_EVENT\_OBJECT\_CREATED@{RBUS\_EVENT\_OBJECT\_CREATED}}
+}\Hypertarget{group___events_gga8572487d31c269212da91488e8eb33b9af4fcd18da8c8186f6a731f551557f1d0}\label{group___events_gga8572487d31c269212da91488e8eb33b9af4fcd18da8c8186f6a731f551557f1d0} 
+RBUS\+\_\+\+EVENT\+\_\+\+OBJECT\+\_\+\+CREATED&Notification that an object instance was created in table. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_EVENT\_OBJECT\_DELETED@{RBUS\_EVENT\_OBJECT\_DELETED}!Events@{Events}}
+\index{Events@{Events}!RBUS\_EVENT\_OBJECT\_DELETED@{RBUS\_EVENT\_OBJECT\_DELETED}}
+}\Hypertarget{group___events_gga8572487d31c269212da91488e8eb33b9ade6bf62371a6ee6c9d5b3eb7d12f9419}\label{group___events_gga8572487d31c269212da91488e8eb33b9ade6bf62371a6ee6c9d5b3eb7d12f9419} 
+RBUS\+\_\+\+EVENT\+\_\+\+OBJECT\+\_\+\+DELETED&Notification that an object instance was deleted in table. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_EVENT\_VALUE\_CHANGED@{RBUS\_EVENT\_VALUE\_CHANGED}!Events@{Events}}
+\index{Events@{Events}!RBUS\_EVENT\_VALUE\_CHANGED@{RBUS\_EVENT\_VALUE\_CHANGED}}
+}\Hypertarget{group___events_gga8572487d31c269212da91488e8eb33b9a433ddaf617d8570b2afd8a46dcabeefe}\label{group___events_gga8572487d31c269212da91488e8eb33b9a433ddaf617d8570b2afd8a46dcabeefe} 
+RBUS\+\_\+\+EVENT\+\_\+\+VALUE\+\_\+\+CHANGED&Notification that a property value was changed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_EVENT\_GENERAL@{RBUS\_EVENT\_GENERAL}!Events@{Events}}
+\index{Events@{Events}!RBUS\_EVENT\_GENERAL@{RBUS\_EVENT\_GENERAL}}
+}\Hypertarget{group___events_gga8572487d31c269212da91488e8eb33b9a8864f6f4a367453b8fc5b6c71fae4399}\label{group___events_gga8572487d31c269212da91488e8eb33b9a8864f6f4a367453b8fc5b6c71fae4399} 
+RBUS\+\_\+\+EVENT\+\_\+\+GENERAL&Provider defined event. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_EVENT\_INITIAL\_VALUE@{RBUS\_EVENT\_INITIAL\_VALUE}!Events@{Events}}
+\index{Events@{Events}!RBUS\_EVENT\_INITIAL\_VALUE@{RBUS\_EVENT\_INITIAL\_VALUE}}
+}\Hypertarget{group___events_gga8572487d31c269212da91488e8eb33b9a7924fd04efc3a9946b6c3d0fa3423f71}\label{group___events_gga8572487d31c269212da91488e8eb33b9a7924fd04efc3a9946b6c3d0fa3423f71} 
+RBUS\+\_\+\+EVENT\+\_\+\+INITIAL\+\_\+\+VALUE&Notification of initial value immediately after subscription \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_EVENT\_INTERVAL@{RBUS\_EVENT\_INTERVAL}!Events@{Events}}
+\index{Events@{Events}!RBUS\_EVENT\_INTERVAL@{RBUS\_EVENT\_INTERVAL}}
+}\Hypertarget{group___events_gga8572487d31c269212da91488e8eb33b9a7c87c82dd764272760bd73c350400931}\label{group___events_gga8572487d31c269212da91488e8eb33b9a7c87c82dd764272760bd73c350400931} 
+RBUS\+\_\+\+EVENT\+\_\+\+INTERVAL&For event with interval \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_EVENT\_DURATION\_COMPLETE@{RBUS\_EVENT\_DURATION\_COMPLETE}!Events@{Events}}
+\index{Events@{Events}!RBUS\_EVENT\_DURATION\_COMPLETE@{RBUS\_EVENT\_DURATION\_COMPLETE}}
+}\Hypertarget{group___events_gga8572487d31c269212da91488e8eb33b9a4a8f3752c84a8d02195732f1a9c8b322}\label{group___events_gga8572487d31c269212da91488e8eb33b9a4a8f3752c84a8d02195732f1a9c8b322} 
+RBUS\+\_\+\+EVENT\+\_\+\+DURATION\+\_\+\+COMPLETE&For event with duration timeout \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{group___events_doc-func-members}
+\Hypertarget{group___events_doc-func-members}
+\doxysubsubsection{Function Documentation}
+\Hypertarget{group___events_ga06d8f8b2d571102c2c025b28ffbd3dd6}\index{Events@{Events}!rbus\_createSession@{rbus\_createSession}}
+\index{rbus\_createSession@{rbus\_createSession}!Events@{Events}}
+\doxysubsubsubsection{\texorpdfstring{rbus\_createSession()}{rbus\_createSession()}}
+{\footnotesize\ttfamily \label{group___events_ga06d8f8b2d571102c2c025b28ffbd3dd6} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+\_\+create\+Session (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+Session\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Components use this API to create a new session to set 1 or more parameters and action on table like add/\+remove rows. ~\newline
+Used by: Components that needs to Set Param \& Update Tables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em p\+Session\+Id} & unique session identified \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+SESSION\+\_\+\+ALREADY\+\_\+\+EXIST; 
+\end{DoxyReturn}
+\Hypertarget{group___events_ga6a5e6fdca2de593b7526ec819040fbe0}\index{Events@{Events}!rbusEvent\_IsSubscriptionExist@{rbusEvent\_IsSubscriptionExist}}
+\index{rbusEvent\_IsSubscriptionExist@{rbusEvent\_IsSubscriptionExist}!Events@{Events}}
+\doxysubsubsubsection{\texorpdfstring{rbusEvent\_IsSubscriptionExist()}{rbusEvent\_IsSubscriptionExist()}}
+{\footnotesize\ttfamily \label{group___events_ga6a5e6fdca2de593b7526ec819040fbe0} 
+bool rbus\+Event\+\_\+\+Is\+Subscription\+Exist (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{event\+Name}{, }\item[{\doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{subscription}{}\end{DoxyParamCaption})}
+
+
+
+Find active subscription given event\+Name with subscription structure. Used by: Components that need to find whether they have active subscription already or not for the given event\+Name with subscription structure. The event\+Name should be a name which was previously subscribed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em event\+Name} & The fully qualified name of the event \\
+\hline
+{\em subscription} & The subscription which was previously subscribed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+\Hypertarget{group___events_gac29791ff3418ef6cd6e24aff209a6f8a}\index{Events@{Events}!rbusEvent\_Publish@{rbusEvent\_Publish}}
+\index{rbusEvent\_Publish@{rbusEvent\_Publish}!Events@{Events}}
+\doxysubsubsubsection{\texorpdfstring{rbusEvent\_Publish()}{rbusEvent\_Publish()}}
+{\footnotesize\ttfamily \label{group___events_gac29791ff3418ef6cd6e24aff209a6f8a} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Event\+\_\+\+Publish (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{\doxymbox{\hyperlink{structrbus_event__t}{rbus\+Event\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{event\+Data}{}\end{DoxyParamCaption})}
+
+
+
+Publish an event. 
+
+Publishes an event which will be sent to all subscribers of this event. This library keeps state of all event subscriptions and duplicates event messages as needed for distribution. ~\newline
+Used by: Components that provide events 
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em event\+Data} & The event data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EVENT 
+\end{DoxyReturn}
+\Hypertarget{group___events_gab5889c0424ae3e4efb9208de22b92835}\index{Events@{Events}!rbusEvent\_Subscribe@{rbusEvent\_Subscribe}}
+\index{rbusEvent\_Subscribe@{rbusEvent\_Subscribe}!Events@{Events}}
+\doxysubsubsubsection{\texorpdfstring{rbusEvent\_Subscribe()}{rbusEvent\_Subscribe()}}
+{\footnotesize\ttfamily \label{group___events_gab5889c0424ae3e4efb9208de22b92835} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Event\+\_\+\+Subscribe (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{event\+Name}{, }\item[{\doxymbox{\hyperlink{group___events_gaf0a4f17d9440f3216fc6f06eda8b81bf}{rbus\+Event\+Handler\+\_\+t}}}]{handler}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{user\+Data}{, }\item[{int}]{timeout}{}\end{DoxyParamCaption})}
+
+
+
+Subscribe to a single event. ~\newline
+ Used by: Components that need to subscribe to an event. The handler will be called back when the event is generated. The type of event and when the event is generated is based on the type of data element event\+Name refers to. If event\+Name is the name of a general event, the event is generated when the provider of the event, publishes it. If event\+Name is the name of a parameter, the event is generated when the value of that parameter changes. If event\+Name is the name of a table, the event is generated when a row is added or deleted from that table. If timeout is positive, internal retries will be attempted if the subscription cannot be routed to an existing provider, and the retries will continue until either a provider is found, an unrecoverable error occurs, or retry timeout reached. A component should call rbus\+Event\+\_\+\+Unsubscribe to stop receiving the event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em event\+Name} & The fully qualified name of the event \\
+\hline
+{\em handler} & The event callback handler \\
+\hline
+{\em user\+Data} & User data to be passed back to the callback handler \\
+\hline
+{\em timeout} & Max time in seconds to attempt retrying subscribe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EVENT 
+\end{DoxyReturn}
+\Hypertarget{group___events_gab3cf21821b5289220c08d8fd62189edb}\index{Events@{Events}!rbusEvent\_SubscribeAsync@{rbusEvent\_SubscribeAsync}}
+\index{rbusEvent\_SubscribeAsync@{rbusEvent\_SubscribeAsync}!Events@{Events}}
+\doxysubsubsubsection{\texorpdfstring{rbusEvent\_SubscribeAsync()}{rbusEvent\_SubscribeAsync()}}
+{\footnotesize\ttfamily \label{group___events_gab3cf21821b5289220c08d8fd62189edb} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Event\+\_\+\+Subscribe\+Async (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{event\+Name}{, }\item[{\doxymbox{\hyperlink{group___events_gaf0a4f17d9440f3216fc6f06eda8b81bf}{rbus\+Event\+Handler\+\_\+t}}}]{handler}{, }\item[{\doxymbox{\hyperlink{group___events_ga8c91c27fc5c9f944d4e82f6f97c7c6e6}{rbus\+Subscribe\+Async\+Resp\+Handler\+\_\+t}}}]{subscribe\+Handler}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{user\+Data}{, }\item[{int}]{timeout}{}\end{DoxyParamCaption})}
+
+
+
+Subscribe asynchronously to a single event. ~\newline
+ Used by: Components that need to subscribe asynchronously to an event. The handler will be called back when the event is generated. The type of event and when the event is generated is based on the type of data element event\+Name refers to. If event\+Name is the name of a general event, the event is generated when the provider of the event, publishes it. If event\+Name is the name of a parameter, the event is generated when the value of that parameter changes. If event\+Name is the name of a table, the event is generated when a row is added or deleted from that table. The subscribe\+Handler is called when either a provider responds to the subscription request, an unrecoverable error occurs, or retry timeout reached. If timeout is positive, internal retries will be attempted if the subscription cannot be routed to an existing provider, and the retries will continue until either a provider is found, an unrecoverable error occurs, or retry timeout reached. A component should call rbus\+Event\+\_\+\+Unsubscribe to stop receiving the event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em event\+Name} & The fully qualified name of the event \\
+\hline
+{\em handler} & The event callback handler \\
+\hline
+{\em subscribe\+Handler} & The subscribe callback handler \\
+\hline
+{\em user\+Data} & User data to be passed back to the callback handler \\
+\hline
+{\em timeout} & Max time in seconds to attempt retrying subscribe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EVENT 
+\end{DoxyReturn}
+\Hypertarget{group___events_ga247738028c08f160b79e2d4239537ebe}\index{Events@{Events}!rbusEvent\_SubscribeEx@{rbusEvent\_SubscribeEx}}
+\index{rbusEvent\_SubscribeEx@{rbusEvent\_SubscribeEx}!Events@{Events}}
+\doxysubsubsubsection{\texorpdfstring{rbusEvent\_SubscribeEx()}{rbusEvent\_SubscribeEx()}}
+{\footnotesize\ttfamily \label{group___events_ga247738028c08f160b79e2d4239537ebe} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Event\+\_\+\+Subscribe\+Ex (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{\doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{subscription}{, }\item[{int}]{num\+Subscriptions}{, }\item[{int}]{timeout}{}\end{DoxyParamCaption})}
+
+
+
+Subscribe to one or more events with the option to add extra attributes to each subscription through the \doxylink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t} structure~\newline
+ Used by: Components that need to subscribe to events. For each \doxylink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t} subscription, the event\+Name and handler are required to be set. Other options may be set to NULL or 0 if not needed. Subscribing to all items in the subscription array is transactional. ~\newline
+ That is, all must succeed to subscribe or none will be subscribed. If timeout is positive, internal retries will be attempted if the subscription cannot be routed to an existing provider, and the retries will continue until either a provider is found, an unrecoverable error occurs, or retry timeout reached. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em subscription} & The array of subscriptions to register to \\
+\hline
+{\em num\+Subscriptions} & The number of subscriptions to register to \\
+\hline
+{\em timeout} & Max time in seconds to attempt retrying subscribe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EVENT 
+\end{DoxyReturn}
+\Hypertarget{group___events_ga5660e5ab4c6b04015c63fe9baf71ac24}\index{Events@{Events}!rbusEvent\_SubscribeExAsync@{rbusEvent\_SubscribeExAsync}}
+\index{rbusEvent\_SubscribeExAsync@{rbusEvent\_SubscribeExAsync}!Events@{Events}}
+\doxysubsubsubsection{\texorpdfstring{rbusEvent\_SubscribeExAsync()}{rbusEvent\_SubscribeExAsync()}}
+{\footnotesize\ttfamily \label{group___events_ga5660e5ab4c6b04015c63fe9baf71ac24} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Event\+\_\+\+Subscribe\+Ex\+Async (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{\doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{subscription}{, }\item[{int}]{num\+Subscriptions}{, }\item[{\doxymbox{\hyperlink{group___events_ga8c91c27fc5c9f944d4e82f6f97c7c6e6}{rbus\+Subscribe\+Async\+Resp\+Handler\+\_\+t}}}]{subscribe\+Handler}{, }\item[{int}]{timeout}{}\end{DoxyParamCaption})}
+
+
+
+Subscribe asynchronously to one or more events with the option to add extra attributes to each subscription through the \doxylink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t} structure~\newline
+ Used by: Components that need to subscribe asynchronously to events. For each \doxylink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t} subscription, the event\+Name and handler are required to be set. Other options may be set to NULL or 0 if not needed. Subscribing to all items in the subscription array is transactional. ~\newline
+ That is, all must succeed to subscribe or none will be subscribed. The subscribe\+Handler is called after either all subscriptions were successfully made to providers, any one subscriptions received an error response from a provider, an unrecoverable error occurs, or retry timeout reached. If timeout is positive, internal retries will be attempted for each subscription that cannot be routed to an existing provider, and the retries will continue until either a provider is found, an unrecoverable error occurs, or retry timeout reached. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em subscription} & The array of subscriptions to register to \\
+\hline
+{\em num\+Subscriptions} & The number of subscriptions to register to \\
+\hline
+{\em subscribe\+Handler} & The subscribe callback handler \\
+\hline
+{\em timeout} & Max time in seconds to attempt retrying subscribe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EVENT 
+\end{DoxyReturn}
+\Hypertarget{group___events_gaec8a3850598cdf124442651908dd6d18}\index{Events@{Events}!rbusEvent\_SubscribeExRawData@{rbusEvent\_SubscribeExRawData}}
+\index{rbusEvent\_SubscribeExRawData@{rbusEvent\_SubscribeExRawData}!Events@{Events}}
+\doxysubsubsubsection{\texorpdfstring{rbusEvent\_SubscribeExRawData()}{rbusEvent\_SubscribeExRawData()}}
+{\footnotesize\ttfamily \label{group___events_gaec8a3850598cdf124442651908dd6d18} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Event\+\_\+\+Subscribe\+Ex\+Raw\+Data (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{\doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{subscription}{, }\item[{int}]{num\+Subscriptions}{, }\item[{int}]{timeout}{}\end{DoxyParamCaption})}
+
+
+
+Subscribe to one or more events with the option to add extra attributes to each subscription through the \doxylink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t} structure~\newline
+ Used by: Components that need to subscribe to events using rawdata method, with reduced memory and cpu footprint. For each \doxylink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t} subscription, the event\+Name and handler are required to be set. Other options may be set to NULL or 0 if not needed. Subscribing to all items in the subscription array is transactional. ~\newline
+ That is, all must succeed to subscribe or none will be subscribed. If timeout is positive, internal retries will be attempted if the subscription cannot be routed to an existing provider, and the retries will continue until either a provider is found, an unrecoverable error occurs, or retry timeout reached. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em subscription} & The array of subscriptions to register to \\
+\hline
+{\em num\+Subscriptions} & The number of subscriptions to register to \\
+\hline
+{\em timeout} & Max time in seconds to attempt retrying subscribe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EVENT 
+\end{DoxyReturn}
+\Hypertarget{group___events_ga2ef91bf25813c3d3e482bffbef2866ed}\index{Events@{Events}!rbusEvent\_SubscribeRawData@{rbusEvent\_SubscribeRawData}}
+\index{rbusEvent\_SubscribeRawData@{rbusEvent\_SubscribeRawData}!Events@{Events}}
+\doxysubsubsubsection{\texorpdfstring{rbusEvent\_SubscribeRawData()}{rbusEvent\_SubscribeRawData()}}
+{\footnotesize\ttfamily \label{group___events_ga2ef91bf25813c3d3e482bffbef2866ed} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Event\+\_\+\+Subscribe\+Raw\+Data (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{event\+Name}{, }\item[{\doxymbox{\hyperlink{group___events_gaf0a4f17d9440f3216fc6f06eda8b81bf}{rbus\+Event\+Handler\+\_\+t}}}]{handler}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{user\+Data}{, }\item[{int}]{timeout}{}\end{DoxyParamCaption})}
+
+
+
+Subscribe to a single event using rawdata method, with reduced memory and cpu footprint. Used by: Components that need to subscribe to an event. The handler will be called back when the event is generated. If timeout is positive, internal retries will be attempted if the subscription cannot be routed to an existing provider, and the retries will continue until either a provider is found, an unrecoverable error occurs, or retry timeout reached. A component should call rbus\+Event\+\_\+\+Unsubscribe\+Raw\+Data to stop receiving the event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em event\+Name} & The fully qualified name of the event \\
+\hline
+{\em handler} & The event callback handler \\
+\hline
+{\em user\+Data} & User data to be passed back to the callback handler \\
+\hline
+{\em timeout} & Max time in seconds to attempt retrying subscribe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EVENT 
+\end{DoxyReturn}
+\Hypertarget{group___events_gaf218030e960675a9652366fe22d5b1df}\index{Events@{Events}!rbusEvent\_Unsubscribe@{rbusEvent\_Unsubscribe}}
+\index{rbusEvent\_Unsubscribe@{rbusEvent\_Unsubscribe}!Events@{Events}}
+\doxysubsubsubsection{\texorpdfstring{rbusEvent\_Unsubscribe()}{rbusEvent\_Unsubscribe()}}
+{\footnotesize\ttfamily \label{group___events_gaf218030e960675a9652366fe22d5b1df} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Event\+\_\+\+Unsubscribe (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{event\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Unsubscribe from a single event. ~\newline
+ Used by: Components that need to unsubscribe from an event. 
+
+The event\+Name should be a name which was previously subscribed to with either rbus\+Event\+\_\+\+Subscribe or rbus\+Event\+\_\+\+Subscribe\+Ex. 
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em event\+Name} & The fully qualified name of the event. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EVENT 
+\end{DoxyReturn}
+\Hypertarget{group___events_gab7ef1ebf1eb77546d8ebe10d743e8d09}\index{Events@{Events}!rbusEvent\_UnsubscribeEx@{rbusEvent\_UnsubscribeEx}}
+\index{rbusEvent\_UnsubscribeEx@{rbusEvent\_UnsubscribeEx}!Events@{Events}}
+\doxysubsubsubsection{\texorpdfstring{rbusEvent\_UnsubscribeEx()}{rbusEvent\_UnsubscribeEx()}}
+{\footnotesize\ttfamily \label{group___events_gab7ef1ebf1eb77546d8ebe10d743e8d09} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Event\+\_\+\+Unsubscribe\+Ex (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{\doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{subscriptions}{, }\item[{int}]{num\+Subscriptions}{}\end{DoxyParamCaption})}
+
+
+
+Unsubscribe from one or more events~\newline
+ Used by: Components that need to unsubscribe from events. For each \doxylink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t} subscription, the event\+Name is required to be set. Other options may be set NULL or 0. The subscriptions pointer can be the same as that passed to rbus\+Event\+\_\+\+Subscribe\+Ex, or it can be a different list; however, the event\+Name for each subsription must be one previously subscribed to with either rbus\+Event\+\_\+\+Subscribe or rbus\+Event\+\_\+\+Subscribe\+Ex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em subscriptions} & The array of subscriptions to unregister from \\
+\hline
+{\em num\+Subscriptions} & The number of subscriptions to unregister from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EVENT 
+\end{DoxyReturn}
+\Hypertarget{group___events_gaf3337c7615b9f96501d743de350f7bb1}\index{Events@{Events}!rbusEvent\_UnsubscribeExRawData@{rbusEvent\_UnsubscribeExRawData}}
+\index{rbusEvent\_UnsubscribeExRawData@{rbusEvent\_UnsubscribeExRawData}!Events@{Events}}
+\doxysubsubsubsection{\texorpdfstring{rbusEvent\_UnsubscribeExRawData()}{rbusEvent\_UnsubscribeExRawData()}}
+{\footnotesize\ttfamily \label{group___events_gaf3337c7615b9f96501d743de350f7bb1} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Event\+\_\+\+Unsubscribe\+Ex\+Raw\+Data (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{\doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{subscriptions}{, }\item[{int}]{num\+Subscriptions}{}\end{DoxyParamCaption})}
+
+
+
+Unsubscribe from one or more events~\newline
+ Used by: Components that need to unsubscribe from events subscribed with rawdata method. For each \doxylink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t} subscription, the event\+Name is required to be set. Other options may be set NULL or 0. The subscriptions pointer can be the same as that passed to rbus\+Event\+\_\+\+Subscribe\+Ex, or it can be a different list; however, the event\+Name for each subsription must be one previously subscribed to with either rbus\+Event\+\_\+\+Subscribe or rbus\+Event\+\_\+\+Subscribe\+Ex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em subscriptions} & The array of subscriptions to unregister from \\
+\hline
+{\em num\+Subscriptions} & The number of subscriptions to unregister from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EVENT 
+\end{DoxyReturn}
+\Hypertarget{group___events_ga0dfc895c048da0f94ebfcd9eba84eae7}\index{Events@{Events}!rbusEvent\_UnsubscribeRawData@{rbusEvent\_UnsubscribeRawData}}
+\index{rbusEvent\_UnsubscribeRawData@{rbusEvent\_UnsubscribeRawData}!Events@{Events}}
+\doxysubsubsubsection{\texorpdfstring{rbusEvent\_UnsubscribeRawData()}{rbusEvent\_UnsubscribeRawData()}}
+{\footnotesize\ttfamily \label{group___events_ga0dfc895c048da0f94ebfcd9eba84eae7} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+Event\+\_\+\+Unsubscribe\+Raw\+Data (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{event\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Unsubscribe from a single event. ~\newline
+ Used by: Components that need to unsubscribe from an event subscribed using rbus\+Event\+\_\+\+Subscribe\+Raw\+Data. 
+
+The event\+Name should be a name which was previously subscribed to with either rbus\+Event\+\_\+\+Subscribe or rbus\+Event\+\_\+\+Subscribe\+Ex. 
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em event\+Name} & The fully qualified name of the event. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+INVALID\+\_\+\+EVENT 
+\end{DoxyReturn}

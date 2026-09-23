@@ -1,0 +1,1029 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="group___events" kind="group">
+    <compoundname>Events</compoundname>
+    <title>Events</title>
+    <innerclass refid="structrbus_event__t" prot="public">rbusEvent_t</innerclass>
+    <innerclass refid="structrbus_event_raw_data__t" prot="public">rbusEventRawData_t</innerclass>
+    <innerclass refid="struct__rbus_event_subscription" prot="public">_rbusEventSubscription</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___events_1ga0aa4feac1e56279c9d61e90771534785" prot="public" static="no" strong="no">
+        <type></type>
+        <name>rbusEventSubAction_t</name>
+        <enumvalue id="group___events_1gga0aa4feac1e56279c9d61e90771534785a106483a07da50a7f580933ea53ea0290" prot="public">
+          <name>RBUS_EVENT_ACTION_SUBSCRIBE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___events_1gga0aa4feac1e56279c9d61e90771534785ac825c61e11602ba29c81aebff8bdedde" prot="public">
+          <name>RBUS_EVENT_ACTION_UNSUBSCRIBE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para><ref refid="group___events_1ga0aa4feac1e56279c9d61e90771534785" kindref="member">rbusEventSubAction_t</ref> Actions that can be performed for an event </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="202" column="1" bodyfile="include/rbus.h" bodystart="203" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___events_1ga8572487d31c269212da91488e8eb33b9" prot="public" static="no" strong="no">
+        <type></type>
+        <name>rbusEventType_t</name>
+        <enumvalue id="group___events_1gga8572487d31c269212da91488e8eb33b9af4fcd18da8c8186f6a731f551557f1d0" prot="public">
+          <name>RBUS_EVENT_OBJECT_CREATED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Notification that an object instance was created in table. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___events_1gga8572487d31c269212da91488e8eb33b9ade6bf62371a6ee6c9d5b3eb7d12f9419" prot="public">
+          <name>RBUS_EVENT_OBJECT_DELETED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Notification that an object instance was deleted in table. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___events_1gga8572487d31c269212da91488e8eb33b9a433ddaf617d8570b2afd8a46dcabeefe" prot="public">
+          <name>RBUS_EVENT_VALUE_CHANGED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Notification that a property value was changed. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___events_1gga8572487d31c269212da91488e8eb33b9a8864f6f4a367453b8fc5b6c71fae4399" prot="public">
+          <name>RBUS_EVENT_GENERAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Provider defined event. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___events_1gga8572487d31c269212da91488e8eb33b9a7924fd04efc3a9946b6c3d0fa3423f71" prot="public">
+          <name>RBUS_EVENT_INITIAL_VALUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Notification of initial value immediately after subscription </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___events_1gga8572487d31c269212da91488e8eb33b9a7c87c82dd764272760bd73c350400931" prot="public">
+          <name>RBUS_EVENT_INTERVAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>For event with interval </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___events_1gga8572487d31c269212da91488e8eb33b9a4a8f3752c84a8d02195732f1a9c8b322" prot="public">
+          <name>RBUS_EVENT_DURATION_COMPLETE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>For event with duration timeout </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The type of events which can be subscribed to or published. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="212" column="1" bodyfile="include/rbus.h" bodystart="213" bodyend="221"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" prot="public" static="no">
+        <type>struct <ref refid="struct__rbus_event_subscription" kindref="compound">_rbusEventSubscription</ref></type>
+        <definition>typedef struct _rbusEventSubscription rbusEventSubscription_t</definition>
+        <argsstring></argsstring>
+        <name>rbusEventSubscription_t</name>
+        <briefdescription>
+<para><ref refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kindref="member">rbusEventSubscription_t</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="241" column="37" bodyfile="include/rbus.h" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___events_1ga8c91c27fc5c9f944d4e82f6f97c7c6e6" prot="public" static="no">
+        <type>void(*)</type>
+        <definition>typedef void(*) rbusSubscribeAsyncRespHandler_t(rbusHandle_t handle, rbusEventSubscription_t *subscription, rbusError_t error)</definition>
+        <argsstring>(rbusHandle_t handle, rbusEventSubscription_t *subscription, rbusError_t error)</argsstring>
+        <name>rbusSubscribeAsyncRespHandler_t</name>
+        <briefdescription>
+<para>A component will receive this API callback when a subscription response is received. This callback is registered with rbusEvent_SubscribeAsync or rbusEvent_SubscribeExAsync. <linebreak/>
+Used by: Any component that subscribes async for events. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rbusHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subscription</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Subscription data created when the client subscribed for the event. This will contain the userData, for example. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Any error that occured success, or any provider error code, or timeout (if retry limit reached) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="257" column="9" bodyfile="include/rbus.h" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___events_1gaf0a4f17d9440f3216fc6f06eda8b81bf" prot="public" static="no">
+        <type>void(*)</type>
+        <definition>typedef void(*) rbusEventHandler_t(rbusHandle_t handle, rbusEvent_t const  *eventData, rbusEventSubscription_t *subscription)</definition>
+        <argsstring>(rbusHandle_t handle, rbusEvent_t const *eventData, rbusEventSubscription_t *subscription)</argsstring>
+        <name>rbusEventHandler_t</name>
+        <briefdescription>
+<para>A component will receive this API callback when an event is received. This callback is registered with rbusEvent_Subscribe. <linebreak/>
+Used by: Any component that subscribes for events. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rbusHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>eventData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Event data sent from the publishing component </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subscription</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Subscription data created when the client subscribed for the event. This will contain the user_data, for example. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="275" column="9" bodyfile="include/rbus.h" bodystart="275" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___events_1ga1e28c9d30371c7fda325fe856281a712" prot="public" static="no">
+        <type>void(*)</type>
+        <definition>typedef void(*) rbusEventHandlerRawData_t(rbusHandle_t handle, rbusEventRawData_t const  *eventData, rbusEventSubscription_t *subscription)</definition>
+        <argsstring>(rbusHandle_t handle, rbusEventRawData_t const *eventData, rbusEventSubscription_t *subscription)</argsstring>
+        <name>rbusEventHandlerRawData_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="281" column="9" bodyfile="include/rbus.h" bodystart="281" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group___events_1ga6a5e6fdca2de593b7526ec819040fbe0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool rbusEvent_IsSubscriptionExist</definition>
+        <argsstring>(rbusHandle_t handle, char const *eventName, rbusEventSubscription_t *subscription)</argsstring>
+        <name>rbusEvent_IsSubscriptionExist</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>eventName</declname>
+        </param>
+        <param>
+          <type><ref refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kindref="member">rbusEventSubscription_t</ref> *</type>
+          <declname>subscription</declname>
+        </param>
+        <briefdescription>
+<para>Find active subscription given eventName with subscription structure. Used by: Components that need to find whether they have active subscription already or not for the given eventName with subscription structure. The eventName should be a name which was previously subscribed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>eventName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fully qualified name of the event </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subscription</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The subscription which was previously subscribed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true or false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1445" column="7" declfile="include/rbus.h" declline="1445" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="group___events_1gab5889c0424ae3e4efb9208de22b92835" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbusEvent_Subscribe</definition>
+        <argsstring>(rbusHandle_t handle, char const *eventName, rbusEventHandler_t handler, void *userData, int timeout)</argsstring>
+        <name>rbusEvent_Subscribe</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>eventName</declname>
+        </param>
+        <param>
+          <type><ref refid="group___events_1gaf0a4f17d9440f3216fc6f06eda8b81bf" kindref="member">rbusEventHandler_t</ref></type>
+          <declname>handler</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>userData</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+<para>Subscribe to a single event. <linebreak/>
+ Used by: Components that need to subscribe to an event. The handler will be called back when the event is generated. The type of event and when the event is generated is based on the type of data element eventName refers to. If eventName is the name of a general event, the event is generated when the provider of the event, publishes it. If eventName is the name of a parameter, the event is generated when the value of that parameter changes. If eventName is the name of a table, the event is generated when a row is added or deleted from that table. If timeout is positive, internal retries will be attempted if the subscription cannot be routed to an existing provider, and the retries will continue until either a provider is found, an unrecoverable error occurs, or retry timeout reached. A component should call rbusEvent_Unsubscribe to stop receiving the event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>eventName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fully qualified name of the event </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event callback handler </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User data to be passed back to the callback handler </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Max time in seconds to attempt retrying subscribe </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. Possible values are: RBUS_ERROR_INVALID_EVENT </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1480" column="14" declfile="include/rbus.h" declline="1480" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group___events_1ga2ef91bf25813c3d3e482bffbef2866ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbusEvent_SubscribeRawData</definition>
+        <argsstring>(rbusHandle_t handle, char const *eventName, rbusEventHandler_t handler, void *userData, int timeout)</argsstring>
+        <name>rbusEvent_SubscribeRawData</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>eventName</declname>
+        </param>
+        <param>
+          <type><ref refid="group___events_1gaf0a4f17d9440f3216fc6f06eda8b81bf" kindref="member">rbusEventHandler_t</ref></type>
+          <declname>handler</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>userData</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+<para>Subscribe to a single event using rawdata method, with reduced memory and cpu footprint. Used by: Components that need to subscribe to an event. The handler will be called back when the event is generated. If timeout is positive, internal retries will be attempted if the subscription cannot be routed to an existing provider, and the retries will continue until either a provider is found, an unrecoverable error occurs, or retry timeout reached. A component should call rbusEvent_UnsubscribeRawData to stop receiving the event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>eventName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fully qualified name of the event </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event callback handler </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User data to be passed back to the callback handler </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Max time in seconds to attempt retrying subscribe </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. Possible values are: RBUS_ERROR_INVALID_EVENT </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1510" column="14" declfile="include/rbus.h" declline="1510" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group___events_1gab3cf21821b5289220c08d8fd62189edb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbusEvent_SubscribeAsync</definition>
+        <argsstring>(rbusHandle_t handle, char const *eventName, rbusEventHandler_t handler, rbusSubscribeAsyncRespHandler_t subscribeHandler, void *userData, int timeout)</argsstring>
+        <name>rbusEvent_SubscribeAsync</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>eventName</declname>
+        </param>
+        <param>
+          <type><ref refid="group___events_1gaf0a4f17d9440f3216fc6f06eda8b81bf" kindref="member">rbusEventHandler_t</ref></type>
+          <declname>handler</declname>
+        </param>
+        <param>
+          <type><ref refid="group___events_1ga8c91c27fc5c9f944d4e82f6f97c7c6e6" kindref="member">rbusSubscribeAsyncRespHandler_t</ref></type>
+          <declname>subscribeHandler</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>userData</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+<para>Subscribe asynchronously to a single event. <linebreak/>
+ Used by: Components that need to subscribe asynchronously to an event. The handler will be called back when the event is generated. The type of event and when the event is generated is based on the type of data element eventName refers to. If eventName is the name of a general event, the event is generated when the provider of the event, publishes it. If eventName is the name of a parameter, the event is generated when the value of that parameter changes. If eventName is the name of a table, the event is generated when a row is added or deleted from that table. The subscribeHandler is called when either a provider responds to the subscription request, an unrecoverable error occurs, or retry timeout reached. If timeout is positive, internal retries will be attempted if the subscription cannot be routed to an existing provider, and the retries will continue until either a provider is found, an unrecoverable error occurs, or retry timeout reached. A component should call rbusEvent_Unsubscribe to stop receiving the event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>eventName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fully qualified name of the event </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event callback handler </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subscribeHandler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The subscribe callback handler </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User data to be passed back to the callback handler </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Max time in seconds to attempt retrying subscribe </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. Possible values are: RBUS_ERROR_INVALID_EVENT </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1551" column="14" declfile="include/rbus.h" declline="1551" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group___events_1gaf218030e960675a9652366fe22d5b1df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbusEvent_Unsubscribe</definition>
+        <argsstring>(rbusHandle_t handle, char const *eventName)</argsstring>
+        <name>rbusEvent_Unsubscribe</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>eventName</declname>
+        </param>
+        <briefdescription>
+<para>Unsubscribe from a single event. <linebreak/>
+ Used by: Components that need to unsubscribe from an event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The eventName should be a name which was previously subscribed to with either rbusEvent_Subscribe or rbusEvent_SubscribeEx. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>eventName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fully qualified name of the event. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. Possible values are: RBUS_ERROR_INVALID_EVENT </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1573" column="13" declfile="include/rbus.h" declline="1573" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___events_1ga0dfc895c048da0f94ebfcd9eba84eae7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbusEvent_UnsubscribeRawData</definition>
+        <argsstring>(rbusHandle_t handle, char const *eventName)</argsstring>
+        <name>rbusEvent_UnsubscribeRawData</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>eventName</declname>
+        </param>
+        <briefdescription>
+<para>Unsubscribe from a single event. <linebreak/>
+ Used by: Components that need to unsubscribe from an event subscribed using rbusEvent_SubscribeRawData. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The eventName should be a name which was previously subscribed to with either rbusEvent_Subscribe or rbusEvent_SubscribeEx. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>eventName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fully qualified name of the event. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. Possible values are: RBUS_ERROR_INVALID_EVENT </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1593" column="13" declfile="include/rbus.h" declline="1593" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___events_1ga247738028c08f160b79e2d4239537ebe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbusEvent_SubscribeEx</definition>
+        <argsstring>(rbusHandle_t handle, rbusEventSubscription_t *subscription, int numSubscriptions, int timeout)</argsstring>
+        <name>rbusEvent_SubscribeEx</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type><ref refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kindref="member">rbusEventSubscription_t</ref> *</type>
+          <declname>subscription</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numSubscriptions</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+<para>Subscribe to one or more events with the option to add extra attributes to each subscription through the <ref refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kindref="member">rbusEventSubscription_t</ref> structure<linebreak/>
+ Used by: Components that need to subscribe to events. For each <ref refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kindref="member">rbusEventSubscription_t</ref> subscription, the eventName and handler are required to be set. Other options may be set to NULL or 0 if not needed. Subscribing to all items in the subscription array is transactional. <linebreak/>
+ That is, all must succeed to subscribe or none will be subscribed. If timeout is positive, internal retries will be attempted if the subscription cannot be routed to an existing provider, and the retries will continue until either a provider is found, an unrecoverable error occurs, or retry timeout reached. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subscription</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array of subscriptions to register to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numSubscriptions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of subscriptions to register to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Max time in seconds to attempt retrying subscribe </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. Possible values are: RBUS_ERROR_INVALID_EVENT </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1620" column="13" declfile="include/rbus.h" declline="1620" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___events_1gaec8a3850598cdf124442651908dd6d18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbusEvent_SubscribeExRawData</definition>
+        <argsstring>(rbusHandle_t handle, rbusEventSubscription_t *subscription, int numSubscriptions, int timeout)</argsstring>
+        <name>rbusEvent_SubscribeExRawData</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type><ref refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kindref="member">rbusEventSubscription_t</ref> *</type>
+          <declname>subscription</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numSubscriptions</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+<para>Subscribe to one or more events with the option to add extra attributes to each subscription through the <ref refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kindref="member">rbusEventSubscription_t</ref> structure<linebreak/>
+ Used by: Components that need to subscribe to events using rawdata method, with reduced memory and cpu footprint. For each <ref refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kindref="member">rbusEventSubscription_t</ref> subscription, the eventName and handler are required to be set. Other options may be set to NULL or 0 if not needed. Subscribing to all items in the subscription array is transactional. <linebreak/>
+ That is, all must succeed to subscribe or none will be subscribed. If timeout is positive, internal retries will be attempted if the subscription cannot be routed to an existing provider, and the retries will continue until either a provider is found, an unrecoverable error occurs, or retry timeout reached. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subscription</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array of subscriptions to register to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numSubscriptions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of subscriptions to register to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Max time in seconds to attempt retrying subscribe </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. Possible values are: RBUS_ERROR_INVALID_EVENT </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1650" column="13" declfile="include/rbus.h" declline="1650" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___events_1ga5660e5ab4c6b04015c63fe9baf71ac24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbusEvent_SubscribeExAsync</definition>
+        <argsstring>(rbusHandle_t handle, rbusEventSubscription_t *subscription, int numSubscriptions, rbusSubscribeAsyncRespHandler_t subscribeHandler, int timeout)</argsstring>
+        <name>rbusEvent_SubscribeExAsync</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type><ref refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kindref="member">rbusEventSubscription_t</ref> *</type>
+          <declname>subscription</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numSubscriptions</declname>
+        </param>
+        <param>
+          <type><ref refid="group___events_1ga8c91c27fc5c9f944d4e82f6f97c7c6e6" kindref="member">rbusSubscribeAsyncRespHandler_t</ref></type>
+          <declname>subscribeHandler</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+<para>Subscribe asynchronously to one or more events with the option to add extra attributes to each subscription through the <ref refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kindref="member">rbusEventSubscription_t</ref> structure<linebreak/>
+ Used by: Components that need to subscribe asynchronously to events. For each <ref refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kindref="member">rbusEventSubscription_t</ref> subscription, the eventName and handler are required to be set. Other options may be set to NULL or 0 if not needed. Subscribing to all items in the subscription array is transactional. <linebreak/>
+ That is, all must succeed to subscribe or none will be subscribed. The subscribeHandler is called after either all subscriptions were successfully made to providers, any one subscriptions received an error response from a provider, an unrecoverable error occurs, or retry timeout reached. If timeout is positive, internal retries will be attempted for each subscription that cannot be routed to an existing provider, and the retries will continue until either a provider is found, an unrecoverable error occurs, or retry timeout reached. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subscription</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array of subscriptions to register to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numSubscriptions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of subscriptions to register to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subscribeHandler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The subscribe callback handler </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Max time in seconds to attempt retrying subscribe </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. Possible values are: RBUS_ERROR_INVALID_EVENT </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1684" column="13" declfile="include/rbus.h" declline="1684" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___events_1gab7ef1ebf1eb77546d8ebe10d743e8d09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbusEvent_UnsubscribeEx</definition>
+        <argsstring>(rbusHandle_t handle, rbusEventSubscription_t *subscriptions, int numSubscriptions)</argsstring>
+        <name>rbusEvent_UnsubscribeEx</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type><ref refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kindref="member">rbusEventSubscription_t</ref> *</type>
+          <declname>subscriptions</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numSubscriptions</declname>
+        </param>
+        <briefdescription>
+<para>Unsubscribe from one or more events<linebreak/>
+ Used by: Components that need to unsubscribe from events. For each <ref refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kindref="member">rbusEventSubscription_t</ref> subscription, the eventName is required to be set. Other options may be set NULL or 0. The subscriptions pointer can be the same as that passed to rbusEvent_SubscribeEx, or it can be a different list; however, the eventName for each subsription must be one previously subscribed to with either rbusEvent_Subscribe or rbusEvent_SubscribeEx. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subscriptions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array of subscriptions to unregister from </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numSubscriptions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of subscriptions to unregister from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. Possible values are: RBUS_ERROR_INVALID_EVENT </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1709" column="13" declfile="include/rbus.h" declline="1709" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___events_1gaf3337c7615b9f96501d743de350f7bb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbusEvent_UnsubscribeExRawData</definition>
+        <argsstring>(rbusHandle_t handle, rbusEventSubscription_t *subscription, int numSubscriptions)</argsstring>
+        <name>rbusEvent_UnsubscribeExRawData</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type><ref refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kindref="member">rbusEventSubscription_t</ref> *</type>
+          <declname>subscription</declname>
+          <defname>subscriptions</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numSubscriptions</declname>
+        </param>
+        <briefdescription>
+<para>Unsubscribe from one or more events<linebreak/>
+ Used by: Components that need to unsubscribe from events subscribed with rawdata method. For each <ref refid="group___events_1gaa057c1d714c08fa0c831a0bb88e08ac9" kindref="member">rbusEventSubscription_t</ref> subscription, the eventName is required to be set. Other options may be set NULL or 0. The subscriptions pointer can be the same as that passed to rbusEvent_SubscribeEx, or it can be a different list; however, the eventName for each subsription must be one previously subscribed to with either rbusEvent_Subscribe or rbusEvent_SubscribeEx. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subscriptions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array of subscriptions to unregister from </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numSubscriptions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of subscriptions to unregister from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. Possible values are: RBUS_ERROR_INVALID_EVENT </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1733" column="13" declfile="include/rbus.h" declline="1733" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___events_1gac29791ff3418ef6cd6e24aff209a6f8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbusEvent_Publish</definition>
+        <argsstring>(rbusHandle_t handle, rbusEvent_t *eventData)</argsstring>
+        <name>rbusEvent_Publish</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type><ref refid="structrbus_event__t" kindref="compound">rbusEvent_t</ref> *</type>
+          <declname>eventData</declname>
+        </param>
+        <briefdescription>
+<para>Publish an event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Publishes an event which will be sent to all subscribers of this event. This library keeps state of all event subscriptions and duplicates event messages as needed for distribution. <linebreak/>
+Used by: Components that provide events <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>eventData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. Possible values are: RBUS_ERROR_INVALID_EVENT </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1759" column="14" declfile="include/rbus.h" declline="1759" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group___events_1ga06d8f8b2d571102c2c025b28ffbd3dd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbus_createSession</definition>
+        <argsstring>(rbusHandle_t handle, uint32_t *pSessionId)</argsstring>
+        <name>rbus_createSession</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>pSessionId</declname>
+        </param>
+        <briefdescription>
+<para>Components use this API to create a new session to set 1 or more parameters and action on table like add/remove rows. <linebreak/>
+Used by: Components that needs to Set Param &amp; Update Tables. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pSessionId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unique session identified </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. Possible values are: RBUS_ERROR_SESSION_ALREADY_EXIST; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1895" column="13" declfile="include/rbus.h" declline="1895" declcolumn="13"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

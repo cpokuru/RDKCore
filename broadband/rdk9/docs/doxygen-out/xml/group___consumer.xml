@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="group___consumer" kind="group">
+    <compoundname>Consumer</compoundname>
+    <title>Consumer</title>
+    <innerclass refid="struct__rbus_element_info" prot="public">_rbusElementInfo</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___consumer_1gac11e3760580881d7c086f4a00c9451de" prot="public" static="no" strong="no">
+        <type></type>
+        <name>rbusAccess_t</name>
+        <enumvalue id="group___consumer_1ggac11e3760580881d7c086f4a00c9451deafb76479ff2213b61df5de554709eb40f" prot="public">
+          <name>RBUS_ACCESS_GET</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___consumer_1ggac11e3760580881d7c086f4a00c9451dea2a84ab590a6ab4342ccd5a39f5cb71ff" prot="public">
+          <name>RBUS_ACCESS_SET</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___consumer_1ggac11e3760580881d7c086f4a00c9451dea890dc874ff3845cee39c592c26944023" prot="public">
+          <name>RBUS_ACCESS_ADDROW</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___consumer_1ggac11e3760580881d7c086f4a00c9451deac21ef5955d65dd7117a8d73ad51110a9" prot="public">
+          <name>RBUS_ACCESS_REMOVEROW</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___consumer_1ggac11e3760580881d7c086f4a00c9451dea2b79f0545f396edde232a4bd95bdba50" prot="public">
+          <name>RBUS_ACCESS_SUBSCRIBE</name>
+          <initializer>= 16</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___consumer_1ggac11e3760580881d7c086f4a00c9451dea6e43b3421459813fe2351616a0d59778" prot="public">
+          <name>RBUS_ACCESS_INVOKE</name>
+          <initializer>= 32</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="684" column="1" bodyfile="include/rbus.h" bodystart="685" bodyend="692"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___consumer_1ga24c9c4e69cdd245d80fd806d4527ee4a" prot="public" static="no">
+        <type>struct <ref refid="struct__rbus_element_info" kindref="compound">_rbusElementInfo</ref></type>
+        <definition>typedef struct _rbusElementInfo rbusElementInfo_t</definition>
+        <argsstring></argsstring>
+        <name>rbusElementInfo_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="701" column="19"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

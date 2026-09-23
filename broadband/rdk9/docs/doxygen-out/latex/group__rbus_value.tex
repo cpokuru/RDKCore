@@ -1,0 +1,1147 @@
+\doxysection{Rbus\+Value }
+\hypertarget{group__rbus_value}{}\label{group__rbus_value}\index{RbusValue@{RbusValue}}
+
+
+An rbus value is a variant data type representing a fundamental piece of data passed through rbus. An \doxylink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t} is a reference counted handle to an rbus value.  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct__rbus_time_zone}{\+\_\+rbus\+Time\+Zone}}
+\item 
+struct \doxymbox{\hyperlink{structtm32}{tm32}}
+\item 
+struct \doxymbox{\hyperlink{struct__rbus_date_time}{\+\_\+rbus\+Date\+Time}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \doxymbox{\hyperlink{struct__rbus_time_zone}{\+\_\+rbus\+Time\+Zone}} \doxymbox{\hyperlink{group__rbus_value_ga33e095dfad8e8ee1507a06fd80f0efed}{rbus\+Time\+Zone\+\_\+t}}
+\item 
+typedef struct \doxymbox{\hyperlink{struct__rbus_date_time}{\+\_\+rbus\+Date\+Time}} \doxymbox{\hyperlink{group__rbus_value_ga2009eccbb6b430aef0ebcbf6165d1382}{rbus\+Date\+Time\+\_\+t}}
+\item 
+typedef struct \+\_\+rbus\+Value \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em A handle to an rbus value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{group__rbus_value_ga7405acfdc3b4162ff9a9c711b834aba8}{rbus\+Value\+Type\+\_\+t}} \{ \newline
+\doxymbox{\hyperlink{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a87a7d1c91583cf9710380a89e29996ba}{RBUS\+\_\+\+BOOLEAN}} = 0x500
+, \doxymbox{\hyperlink{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8aeaf5d1420b7e7afb08d94cf6eecebb60}{RBUS\+\_\+\+CHAR}}
+, \doxymbox{\hyperlink{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a434e4d6e26f117e8e702e5c9a626f8d5}{RBUS\+\_\+\+BYTE}}
+, \doxymbox{\hyperlink{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a73b12fffc5fed16fdb99625c297b16d9}{RBUS\+\_\+\+INT8}}
+, \newline
+\doxymbox{\hyperlink{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a30f0e099abc85bdfcf9dc79951c4b065}{RBUS\+\_\+\+UINT8}}
+, \doxymbox{\hyperlink{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a63aac9a75105e004f04ff0f69fbfa738}{RBUS\+\_\+\+INT16}}
+, \doxymbox{\hyperlink{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a97e2aabdad52183de937feed9ac2884f}{RBUS\+\_\+\+UINT16}}
+, \doxymbox{\hyperlink{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a7d3192121e66bfaee4ad2078001d3db8}{RBUS\+\_\+\+INT32}}
+, \newline
+\doxymbox{\hyperlink{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a82213c17854c5e7ed164bce3e58c274b}{RBUS\+\_\+\+UINT32}}
+, \doxymbox{\hyperlink{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a906a701a8b9e3da55cc12a194c7c4232}{RBUS\+\_\+\+INT64}}
+, \doxymbox{\hyperlink{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a5e346c56198ceef347a6e7e584edbaf7}{RBUS\+\_\+\+UINT64}}
+, \doxymbox{\hyperlink{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a90565fa8de579457d83a44db291908d7}{RBUS\+\_\+\+SINGLE}}
+, \newline
+\doxymbox{\hyperlink{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8af09445c9a4b6d1c174a087325ee9d84e}{RBUS\+\_\+\+DOUBLE}}
+, \doxymbox{\hyperlink{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8abae8e13cf10131bc317d4ba14c1b840f}{RBUS\+\_\+\+DATETIME}}
+, \doxymbox{\hyperlink{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a161fe761c409489a04f24eacaf7a9969}{RBUS\+\_\+\+STRING}}
+, \doxymbox{\hyperlink{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a1360572647f93ebd0da25cb645435684}{RBUS\+\_\+\+BYTES}}
+, \newline
+\doxymbox{\hyperlink{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8af2d8d1d45af94269f2f91efde60076f1}{RBUS\+\_\+\+PROPERTY}}
+, \doxymbox{\hyperlink{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a46e8daca439ed580438f76efd8a3f8be}{RBUS\+\_\+\+OBJECT}}
+, \doxymbox{\hyperlink{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a830be7b3edd7ab2ff9d19ea78736b391}{RBUS\+\_\+\+NONE}}
+ \}
+\begin{DoxyCompactList}\small\item\em The value types that can be contained inside an \doxylink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}. \end{DoxyCompactList}\item 
+enum \doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \{ \doxymbox{\hyperlink{group__rbus_value_gga161d6cea4485877b304950784de3fbeaa449e23db3e6d81a716c985840ce5e112}{RBUS\+\_\+\+VALUE\+\_\+\+ERROR\+\_\+\+SUCCESS}} = 0
+, \doxymbox{\hyperlink{group__rbus_value_gga161d6cea4485877b304950784de3fbeaab96abc1a6fbac8508c981886718e84cf}{RBUS\+\_\+\+VALUE\+\_\+\+ERROR\+\_\+\+TYPE}}
+, \doxymbox{\hyperlink{group__rbus_value_gga161d6cea4485877b304950784de3fbeaad0aba2779b0e903e549759d9fd41b1f3}{RBUS\+\_\+\+VALUE\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+FOUND}}
+, \doxymbox{\hyperlink{group__rbus_value_gga161d6cea4485877b304950784de3fbeaa0c102d78100204b6aa57403b07496882}{RBUS\+\_\+\+VALUE\+\_\+\+ERROR\+\_\+\+NULL}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_ga2f851eaa49d3a192a6d9397923a616b4}{rbus\+Value\+\_\+\+Init}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \texorpdfstring{$\ast$}{*}pvalue)
+\begin{DoxyCompactList}\small\item\em Allocate and initialize a value to an empty state with its type set to RBUS\+\_\+\+NONE and data set to NULL. This automatically retains ownership of the value. It\textquotesingle{}s the caller\textquotesingle{}s responsibility to release ownership by calling rbus\+Value\+\_\+\+Release once it\textquotesingle{}s done with it. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__rbus_value_gaaa23e19ed23b718b31d18b893f9d1dff}{rbus\+Value\+\_\+\+Retain}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Take shared ownership of the value. This allows a value to have multiple owners. The first owner obtains ownership with rbus\+Value\+\_\+\+Init. Additional owners can be assigned afterwards with rbus\+Value\+\_\+\+Retain. ~\newline
+ Each owner must call rbus\+Value\+\_\+\+Release once done using the value. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__rbus_value_gaa376b6cb46e324379dd038bc82628db6}{rbus\+Value\+\_\+\+Release}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Release ownership of the value. This must be called when done using a value that was retained with either rbus\+Value\+\_\+\+Init or rbus\+Value\+\_\+\+Retain. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__rbus_value_gada207f7b8da7538980ac56580eb019a4}{rbus\+Value\+\_\+\+Releases}} (int count,...)
+\item 
+int \doxymbox{\hyperlink{group__rbus_value_ga656d553e488f458452c3f4e4f21e9bb7}{rbus\+Value\+\_\+\+Compare}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value1, \doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value2)
+\begin{DoxyCompactList}\small\item\em Compare two values for equality. They are equal if both the type and data are equal. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__rbus_value_ga8d6d13cc8876554cb9bdb22f0ce8631b}{rbus\+Value\+\_\+\+Set\+Pointer}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \texorpdfstring{$\ast$}{*}value1, \doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value2)
+\item 
+void \doxymbox{\hyperlink{group__rbus_value_ga36b02a94353cee70da3189fe14c9fdeb}{rbus\+Value\+\_\+\+Copy}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} dest, \doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} source)
+\begin{DoxyCompactList}\small\item\em Copy data from source to dest. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__rbus_value_gaf0e4d552ef438f0036446bc57b853a4c}{rbus\+Value\+\_\+\+To\+String}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, char \texorpdfstring{$\ast$}{*}buf, size\+\_\+t buflen)
+\begin{DoxyCompactList}\small\item\em Returns a null terminated string representing the data of the value. ~\newline
+ Parameters buf and buflen are optional and allow the caller to pass in a buffer to write the string to. If parameter buf is NULL, this method will allocate a buffer to write the string to and the caller should call free to deallocate the buffer. For Date\+Time datatype, below ISO-\/8601 formats as per TR-\/069\+\_\+\+Amendment-\/6 will be used for printing. YYYY-\/\+MM-\/\+DDThh:mm:ssZ YYYY-\/\+MM-\/\+DDThh:mm:ss+00:00 YYYY-\/\+MM-\/\+DDThh:mm:ss-\/00:00. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__rbus_value_ga9ad1d32f8e65a0e3d54bc2c04d32871e}{rbus\+Value\+\_\+\+To\+Debug\+String}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, char \texorpdfstring{$\ast$}{*}buf, size\+\_\+t buflen)
+\begin{DoxyCompactList}\small\item\em Returns a null terminated string representing the type and data of the value. ~\newline
+ Parameters buf and buflen are optional and allow the caller to pass in a buffer to write the string to. If parameter buf is NULL, this method will allocate a buffer to write the string to and the caller should call free to deallocate the buffer. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group__rbus_value_ga7405acfdc3b4162ff9a9c711b834aba8}{rbus\+Value\+Type\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_ga6a84635c88b2adc492244d54e3aefcad}{rbus\+Value\+\_\+\+Get\+Type}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Get the type of a value. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__rbus_value_gac71131df88af37b3e7d1d2c404782049}{rbus\+Value\+\_\+\+Swap}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \texorpdfstring{$\ast$}{*}v1, \doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \texorpdfstring{$\ast$}{*}v2)
+\item 
+bool \doxymbox{\hyperlink{group__rbus_value_ga2cf0d1eb55a7d32cfec79647835b604c}{rbus\+Value\+\_\+\+Set\+From\+String}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, \doxymbox{\hyperlink{group__rbus_value_ga7405acfdc3b4162ff9a9c711b834aba8}{rbus\+Value\+Type\+\_\+t}} type, const char \texorpdfstring{$\ast$}{*}str)
+\begin{DoxyCompactList}\small\item\em rbus\+Value\+\_\+\+Set\+From\+String sets the value\textquotesingle{}s type to given type and data to appropriate by converting the string \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__rbus_value_ga334df74eb3fadd1cce25d3d98f7448e5}{rbus\+Value\+\_\+fwrite}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} obj, int depth, FILE \texorpdfstring{$\ast$}{*}fout)
+\begin{DoxyCompactList}\small\item\em A debug utility function to write the value as a string to a file stream. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__rbus_value_gaf7b014591ada632939908097eacf4f9e}{rbus\+Value\+\_\+\+Marshall\+TMto\+RBUS}} (\doxymbox{\hyperlink{group__rbus_value_ga2009eccbb6b430aef0ebcbf6165d1382}{rbus\+Date\+Time\+\_\+t}} \texorpdfstring{$\ast$}{*}outvalue, const struct tm \texorpdfstring{$\ast$}{*}invalue)
+\begin{DoxyCompactList}\small\item\em Convert a local "{}struct tm"{} type to an explicit length version, which allows 64/\+32 bit platform message interchange. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__rbus_value_gaa1ef48e246e36b26ba6e2e85ce7ab5a0}{rbus\+Value\+\_\+\+Un\+Marshall\+RBUSto\+TM}} (struct tm \texorpdfstring{$\ast$}{*}outvalue, const \doxymbox{\hyperlink{group__rbus_value_ga2009eccbb6b430aef0ebcbf6165d1382}{rbus\+Date\+Time\+\_\+t}} \texorpdfstring{$\ast$}{*}invalue)
+\begin{DoxyCompactList}\small\item\em Convert an explicit length time structure to a local "{}struct tm"{}, which allows 64/\+32 bit platform message interchange. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{rbus\+Value\+\_\+\+Get\+[Type]}
+These functions return the data stored in the value by type. The data is not coerced to the type, thus the caller should ensure the value\textquotesingle{}s actual type matches the function being called. The caller can call rbus\+Value\+\_\+\+Get\+Type to get the type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & A value to get data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The data as a specific type. This is meant to be a const accessor. To avoid large copies, if the type is a buffer or struct type, a const pointer to the actual data is returned. 
+\end{DoxyReturn}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_ga07652277c7af5b65f16901cb139a6533}{rbus\+Value\+\_\+\+Init\+Boolean}} (bool b)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_ga6df8061c50175a37e1cf05dd8b962f4c}{rbus\+Value\+\_\+\+Init\+Char}} (char c)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_ga861b55d7cad3f947c56ef8751ac49310}{rbus\+Value\+\_\+\+Init\+Byte}} (unsigned char u)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_gafc8161cd0cf6b1609e690ec9612db624}{rbus\+Value\+\_\+\+Init\+Int8}} (int8\+\_\+t i8)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_ga48cbceeb4ea559f926832baad5b24295}{rbus\+Value\+\_\+\+Init\+UInt8}} (uint8\+\_\+t u8)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_gaa450b1dce3746c19f4b27b6b8576b9ac}{rbus\+Value\+\_\+\+Init\+Int16}} (int16\+\_\+t i16)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_ga1f760489f9dd4e80f470935dc80ace34}{rbus\+Value\+\_\+\+Init\+UInt16}} (uint16\+\_\+t u16)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_gac022c7131d16e7add3dd43c524eb572b}{rbus\+Value\+\_\+\+Init\+Int32}} (int32\+\_\+t i32)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_ga7438046ca7344cc715e2e5a177720f7d}{rbus\+Value\+\_\+\+Init\+UInt32}} (uint32\+\_\+t u32)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_ga5d847dafc95b38ba154f9a31a53f4c20}{rbus\+Value\+\_\+\+Init\+Int64}} (int64\+\_\+t i64)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_ga5fc1298b5b666a3dc02500d17441821b}{rbus\+Value\+\_\+\+Init\+UInt64}} (uint64\+\_\+t u64)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_ga0859fcaca8fd307ab6bed93a4e458515}{rbus\+Value\+\_\+\+Init\+Single}} (float f32)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_gad05faf19110d55aa178a601a6c895e11}{rbus\+Value\+\_\+\+Init\+Double}} (double f64)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_gaf774d3080a8aad8f88533ef70c32b8ae}{rbus\+Value\+\_\+\+Init\+Time}} (\doxymbox{\hyperlink{group__rbus_value_ga2009eccbb6b430aef0ebcbf6165d1382}{rbus\+Date\+Time\+\_\+t}} const \texorpdfstring{$\ast$}{*}tv)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_ga9b32991fab839f231151c50479d84dd4}{rbus\+Value\+\_\+\+Init\+String}} (char const \texorpdfstring{$\ast$}{*}s)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_ga6ada0cbfcaaf7f51b39d619d8dedc99b}{rbus\+Value\+\_\+\+Init\+Bytes}} (uint8\+\_\+t const \texorpdfstring{$\ast$}{*}bytes, int len)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_gabd1616110a355c58e0c92efe492181c8}{rbus\+Value\+\_\+\+Init\+Property}} (struct \+\_\+rbus\+Property \texorpdfstring{$\ast$}{*}property)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_ga099c4142b2f143f280d69f5b74fd442d}{rbus\+Value\+\_\+\+Init\+Object}} (struct \+\_\+rbus\+Object \texorpdfstring{$\ast$}{*}object)
+\item 
+bool \doxymbox{\hyperlink{group__rbus_value_ga6d48458292dd223c1b70b5b9a3f2a97a}{rbus\+Value\+\_\+\+Get\+Boolean}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value)
+\item 
+char \doxymbox{\hyperlink{group__rbus_value_gaf33e8c7826dbf342723de5db8759435b}{rbus\+Value\+\_\+\+Get\+Char}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value)
+\item 
+unsigned char \doxymbox{\hyperlink{group__rbus_value_gaa8209ad718ef3aad4cb17eaba88504de}{rbus\+Value\+\_\+\+Get\+Byte}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value)
+\item 
+int8\+\_\+t \doxymbox{\hyperlink{group__rbus_value_gacf1f21ea88bd8a312b47c8a781551db0}{rbus\+Value\+\_\+\+Get\+Int8}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value)
+\item 
+uint8\+\_\+t \doxymbox{\hyperlink{group__rbus_value_ga7ef12cbb758f3b0ca62ed64bdc6fb9d7}{rbus\+Value\+\_\+\+Get\+UInt8}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value)
+\item 
+int16\+\_\+t \doxymbox{\hyperlink{group__rbus_value_gaaf6fc8ab300be4b53b9b1ca82c74724a}{rbus\+Value\+\_\+\+Get\+Int16}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value)
+\item 
+uint16\+\_\+t \doxymbox{\hyperlink{group__rbus_value_gaf27c520744ca65df0727d0fc97a902cd}{rbus\+Value\+\_\+\+Get\+UInt16}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value)
+\item 
+int32\+\_\+t \doxymbox{\hyperlink{group__rbus_value_ga100c599009a8391264182ea82cb94258}{rbus\+Value\+\_\+\+Get\+Int32}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value)
+\item 
+uint32\+\_\+t \doxymbox{\hyperlink{group__rbus_value_gaebda66b13baf4e03c8a532b57383ff45}{rbus\+Value\+\_\+\+Get\+UInt32}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value)
+\item 
+int64\+\_\+t \doxymbox{\hyperlink{group__rbus_value_ga4313c7487cbf46e016267d234924092d}{rbus\+Value\+\_\+\+Get\+Int64}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value)
+\item 
+uint64\+\_\+t \doxymbox{\hyperlink{group__rbus_value_ga5023b6089057a860291bcf8dbceb69e8}{rbus\+Value\+\_\+\+Get\+UInt64}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value)
+\item 
+float \doxymbox{\hyperlink{group__rbus_value_ga718d778434bdc6859297b95e937d48cb}{rbus\+Value\+\_\+\+Get\+Single}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value)
+\item 
+double \doxymbox{\hyperlink{group__rbus_value_ga1ddd4b97a1aab4b98e1a1ff6e83d899e}{rbus\+Value\+\_\+\+Get\+Double}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga2009eccbb6b430aef0ebcbf6165d1382}{rbus\+Date\+Time\+\_\+t}} const \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__rbus_value_ga94f61584fc716bcfa47db27716e58760}{rbus\+Value\+\_\+\+Get\+Time}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value)
+\item 
+char const \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__rbus_value_ga8f14ea602b1a12b7af2ea9e3ef2bda81}{rbus\+Value\+\_\+\+Get\+String}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, int \texorpdfstring{$\ast$}{*}len)
+\item 
+uint8\+\_\+t const \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__rbus_value_gaf97c33f37dabb6c519dacb72d23a37ab}{rbus\+Value\+\_\+\+Get\+Bytes}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, int \texorpdfstring{$\ast$}{*}len)
+\item 
+struct \+\_\+rbus\+Property \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__rbus_value_ga349678eb71a6fd25afdef08eb29c1e3e}{rbus\+Value\+\_\+\+Get\+Property}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value)
+\item 
+struct \+\_\+rbus\+Object \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__rbus_value_gaae1d1574460b6ba537cfc2faa440d3f0}{rbus\+Value\+\_\+\+Get\+Object}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{rbus\+Value\+\_\+\+Get\+[Type]Ex}
+These functions check that the type being requested matches the value\textquotesingle{}s actual type, and returns the data if it does. If the type does not match, an error is returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & A value to get data from. \\
+\hline
+{\em value} & Type specific data to return \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+error code as defined by \doxylink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}. Possible errors are: RBUS\+\_\+\+VALUE\+\_\+\+ERROR\+\_\+\+TYPE 
+\end{DoxyReturn}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_ga94a7ce5995f453de82d04c492df032b9}{rbus\+Value\+\_\+\+Get\+Boolean\+Ex}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, bool \texorpdfstring{$\ast$}{*}b)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_ga6f62bf3ef9ad06e5363846933a14fb23}{rbus\+Value\+\_\+\+Get\+Char\+Ex}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} v, char \texorpdfstring{$\ast$}{*}c)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_gacedecbadb9ae6dff60b67aa7f7a869c2}{rbus\+Value\+\_\+\+Get\+Byte\+Ex}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} v, unsigned char \texorpdfstring{$\ast$}{*}u)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_ga59268517bf0765e820378eac59be3195}{rbus\+Value\+\_\+\+Get\+Int8\+Ex}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} v, int8\+\_\+t \texorpdfstring{$\ast$}{*}i8)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_ga158fbcd2eabbea945d898f3267de4e36}{rbus\+Value\+\_\+\+Get\+UInt8\+Ex}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} v, uint8\+\_\+t \texorpdfstring{$\ast$}{*}u8)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_gaca11fb97ef0a8a646bbd0fb2935ddaca}{rbus\+Value\+\_\+\+Get\+Int16\+Ex}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, int16\+\_\+t \texorpdfstring{$\ast$}{*}i16)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_ga067148cb5c6888469947144076b6946b}{rbus\+Value\+\_\+\+Get\+UInt16\+Ex}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, uint16\+\_\+t \texorpdfstring{$\ast$}{*}u16)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_gaf5ce179da2cb10c7a81093ee9b7db81d}{rbus\+Value\+\_\+\+Get\+Int32\+Ex}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, int32\+\_\+t \texorpdfstring{$\ast$}{*}i32)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_gae2972a40e83f825eb1b13323328d495f}{rbus\+Value\+\_\+\+Get\+UInt32\+Ex}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, uint32\+\_\+t \texorpdfstring{$\ast$}{*}u32)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_ga229e2aa3aecb0eb2e3190c11cac85d52}{rbus\+Value\+\_\+\+Get\+Int64\+Ex}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, int64\+\_\+t \texorpdfstring{$\ast$}{*}i64)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_gadce084c7999763522ca8b8aed464bb60}{rbus\+Value\+\_\+\+Get\+UInt64\+Ex}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, uint64\+\_\+t \texorpdfstring{$\ast$}{*}u64)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_gad2c2947ca8fd93cbd1453b0c85e6a9cf}{rbus\+Value\+\_\+\+Get\+Single\+Ex}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, float \texorpdfstring{$\ast$}{*}f32)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_ga4c960623ba43a5a3afe8bddd4639e106}{rbus\+Value\+\_\+\+Get\+Double\+Ex}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, double \texorpdfstring{$\ast$}{*}f64)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_gabf660f9b98fc5b2e0b423c6bd837eb98}{rbus\+Value\+\_\+\+Get\+Time\+Ex}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, \doxymbox{\hyperlink{group__rbus_value_ga2009eccbb6b430aef0ebcbf6165d1382}{rbus\+Date\+Time\+\_\+t}} const \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}tv)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_gad1919c42e4ba187cbf10490cc93b7763}{rbus\+Value\+\_\+\+Get\+String\+Ex}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, char const \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}s, int \texorpdfstring{$\ast$}{*}len)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_gaf0fa8534415797d29fb635c480a5f9bc}{rbus\+Value\+\_\+\+Get\+Bytes\+Ex}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, uint8\+\_\+t const \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}bytes, int \texorpdfstring{$\ast$}{*}len)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_ga26ee424117d23faa649672d9bf57e139}{rbus\+Value\+\_\+\+Get\+Property\+Ex}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, struct \+\_\+rbus\+Property \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}property)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_value_ga6566252e90ea576678dd01ab5ff4d532}{rbus\+Value\+\_\+\+Get\+Object\+Ex}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, struct \+\_\+rbus\+Object \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}object)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{rbus\+Value\+\_\+\+Set\+[Type]}
+These functions set the type and data of a value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & A value to set. \\
+\hline
+{\em data} & The type specific data to set on the value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{group__rbus_value_gad2bf4925655e8a742cc0835c10533a97}{rbus\+Value\+\_\+\+Set\+Boolean}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, bool b)
+\item 
+void \doxymbox{\hyperlink{group__rbus_value_gaf5e3df76583dcc70b41b98ec0fc33ceb}{rbus\+Value\+\_\+\+Set\+Char}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} v, char c)
+\item 
+void \doxymbox{\hyperlink{group__rbus_value_ga7fe0eddaa3fc12d2689dde66c35fad33}{rbus\+Value\+\_\+\+Set\+Byte}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} v, unsigned char u)
+\item 
+void \doxymbox{\hyperlink{group__rbus_value_ga493312938428296cfcb903bfb1d13666}{rbus\+Value\+\_\+\+Set\+Int8}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} v, int8\+\_\+t i8)
+\item 
+void \doxymbox{\hyperlink{group__rbus_value_ga7c8db98d8934fe64963e5b04ff36d7ba}{rbus\+Value\+\_\+\+Set\+UInt8}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} v, uint8\+\_\+t u8)
+\item 
+void \doxymbox{\hyperlink{group__rbus_value_ga960f2ae1c086bb5eaeb18543ba94fbdd}{rbus\+Value\+\_\+\+Set\+Int16}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, int16\+\_\+t i16)
+\item 
+void \doxymbox{\hyperlink{group__rbus_value_gaf60fde12c1384a368f44aff91ec1bf30}{rbus\+Value\+\_\+\+Set\+UInt16}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, uint16\+\_\+t u16)
+\item 
+void \doxymbox{\hyperlink{group__rbus_value_gaac4628d3e9f78ba23ff5e2c6779abf42}{rbus\+Value\+\_\+\+Set\+Int32}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, int32\+\_\+t i32)
+\item 
+void \doxymbox{\hyperlink{group__rbus_value_gaa4a95f93f5c18cc0b43b0e3300497e6c}{rbus\+Value\+\_\+\+Set\+UInt32}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, uint32\+\_\+t u32)
+\item 
+void \doxymbox{\hyperlink{group__rbus_value_ga0c96d39922a1ac6f22d8121a60dd95ef}{rbus\+Value\+\_\+\+Set\+Int64}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, int64\+\_\+t i64)
+\item 
+void \doxymbox{\hyperlink{group__rbus_value_ga795c0d19375180b6c42ab7b53cacf9a7}{rbus\+Value\+\_\+\+Set\+UInt64}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, uint64\+\_\+t u64)
+\item 
+void \doxymbox{\hyperlink{group__rbus_value_ga4c2d7c1f245ad5ae5000c99217755425}{rbus\+Value\+\_\+\+Set\+Single}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, float f32)
+\item 
+void \doxymbox{\hyperlink{group__rbus_value_ga470242a926fac945d5b1049a46fc3bdd}{rbus\+Value\+\_\+\+Set\+Double}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, double f64)
+\item 
+void \doxymbox{\hyperlink{group__rbus_value_ga141186b17c50c96623785c1a3f2963ac}{rbus\+Value\+\_\+\+Set\+Time}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, \doxymbox{\hyperlink{group__rbus_value_ga2009eccbb6b430aef0ebcbf6165d1382}{rbus\+Date\+Time\+\_\+t}} const \texorpdfstring{$\ast$}{*}tv)
+\item 
+void \doxymbox{\hyperlink{group__rbus_value_ga2e72baea30f6dfb4e8962beb0ab6886e}{rbus\+Value\+\_\+\+Set\+String}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, char const \texorpdfstring{$\ast$}{*}s)
+\item 
+void \doxymbox{\hyperlink{group__rbus_value_ga30507d1068aefac2a72e7847010649a2}{rbus\+Value\+\_\+\+Set\+Bytes}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, uint8\+\_\+t const \texorpdfstring{$\ast$}{*}bytes, int len)
+\item 
+void \doxymbox{\hyperlink{group__rbus_value_ga98ed372215b54a78fe276357f0217e3b}{rbus\+Value\+\_\+\+Set\+Property}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, struct \+\_\+rbus\+Property \texorpdfstring{$\ast$}{*}property)
+\item 
+void \doxymbox{\hyperlink{group__rbus_value_ga3dc630d1d35717af2b0d4893770d133a}{rbus\+Value\+\_\+\+Set\+Object}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, struct \+\_\+rbus\+Object \texorpdfstring{$\ast$}{*}object)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An rbus value is a variant data type representing a fundamental piece of data passed through rbus. An \doxylink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t} is a reference counted handle to an rbus value. 
+
+This API is not thread-\/safe. ~\newline
+ All instances of types \doxylink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}, \doxylink{group__rbus_property_ga3cbb720004e64c4728a5e8ba3d8ecf6f}{rbus\+Property\+\_\+t}, and \doxylink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t} are referenced counted. Instances of these types may have private references to other instances of these types. There are read methods in this api that return references to these private instances. There are write methods in this api that release current references and retain new ones. When this happens any reference held by the user becomes unlinked from the parent instance. The instance will also be destroyed unless the user retains it for themselves. 
+
+\label{group__rbus_value_doc-typedef-members}
+\Hypertarget{group__rbus_value_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{group__rbus_value_ga2009eccbb6b430aef0ebcbf6165d1382}\index{RbusValue@{RbusValue}!rbusDateTime\_t@{rbusDateTime\_t}}
+\index{rbusDateTime\_t@{rbusDateTime\_t}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusDateTime\_t}{rbusDateTime\_t}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga2009eccbb6b430aef0ebcbf6165d1382} 
+typedef struct \doxymbox{\hyperlink{struct__rbus_date_time}{\+\_\+rbus\+Date\+Time}} \doxymbox{\hyperlink{group__rbus_value_ga2009eccbb6b430aef0ebcbf6165d1382}{rbus\+Date\+Time\+\_\+t}}}
+
+\Hypertarget{group__rbus_value_ga33e095dfad8e8ee1507a06fd80f0efed}\index{RbusValue@{RbusValue}!rbusTimeZone\_t@{rbusTimeZone\_t}}
+\index{rbusTimeZone\_t@{rbusTimeZone\_t}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusTimeZone\_t}{rbusTimeZone\_t}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga33e095dfad8e8ee1507a06fd80f0efed} 
+typedef struct \doxymbox{\hyperlink{struct__rbus_time_zone}{\+\_\+rbus\+Time\+Zone}} \doxymbox{\hyperlink{group__rbus_value_ga33e095dfad8e8ee1507a06fd80f0efed}{rbus\+Time\+Zone\+\_\+t}}}
+
+\Hypertarget{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}\index{RbusValue@{RbusValue}!rbusValue\_t@{rbusValue\_t}}
+\index{rbusValue\_t@{rbusValue\_t}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_t}{rbusValue\_t}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6} 
+typedef struct \+\_\+rbus\+Value\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}
+
+
+
+A handle to an rbus value. 
+
+
+
+\label{group__rbus_value_doc-enum-members}
+\Hypertarget{group__rbus_value_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{group__rbus_value_ga161d6cea4485877b304950784de3fbea}\index{RbusValue@{RbusValue}!rbusValueError\_t@{rbusValueError\_t}}
+\index{rbusValueError\_t@{rbusValueError\_t}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValueError\_t}{rbusValueError\_t}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga161d6cea4485877b304950784de3fbea} 
+enum \doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_VALUE\_ERROR\_SUCCESS@{RBUS\_VALUE\_ERROR\_SUCCESS}!RbusValue@{RbusValue}}
+\index{RbusValue@{RbusValue}!RBUS\_VALUE\_ERROR\_SUCCESS@{RBUS\_VALUE\_ERROR\_SUCCESS}}
+}\Hypertarget{group__rbus_value_gga161d6cea4485877b304950784de3fbeaa449e23db3e6d81a716c985840ce5e112}\label{group__rbus_value_gga161d6cea4485877b304950784de3fbeaa449e23db3e6d81a716c985840ce5e112} 
+RBUS\+\_\+\+VALUE\+\_\+\+ERROR\+\_\+\+SUCCESS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_VALUE\_ERROR\_TYPE@{RBUS\_VALUE\_ERROR\_TYPE}!RbusValue@{RbusValue}}
+\index{RbusValue@{RbusValue}!RBUS\_VALUE\_ERROR\_TYPE@{RBUS\_VALUE\_ERROR\_TYPE}}
+}\Hypertarget{group__rbus_value_gga161d6cea4485877b304950784de3fbeaab96abc1a6fbac8508c981886718e84cf}\label{group__rbus_value_gga161d6cea4485877b304950784de3fbeaab96abc1a6fbac8508c981886718e84cf} 
+RBUS\+\_\+\+VALUE\+\_\+\+ERROR\+\_\+\+TYPE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_VALUE\_ERROR\_NOT\_FOUND@{RBUS\_VALUE\_ERROR\_NOT\_FOUND}!RbusValue@{RbusValue}}
+\index{RbusValue@{RbusValue}!RBUS\_VALUE\_ERROR\_NOT\_FOUND@{RBUS\_VALUE\_ERROR\_NOT\_FOUND}}
+}\Hypertarget{group__rbus_value_gga161d6cea4485877b304950784de3fbeaad0aba2779b0e903e549759d9fd41b1f3}\label{group__rbus_value_gga161d6cea4485877b304950784de3fbeaad0aba2779b0e903e549759d9fd41b1f3} 
+RBUS\+\_\+\+VALUE\+\_\+\+ERROR\+\_\+\+NOT\+\_\+\+FOUND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_VALUE\_ERROR\_NULL@{RBUS\_VALUE\_ERROR\_NULL}!RbusValue@{RbusValue}}
+\index{RbusValue@{RbusValue}!RBUS\_VALUE\_ERROR\_NULL@{RBUS\_VALUE\_ERROR\_NULL}}
+}\Hypertarget{group__rbus_value_gga161d6cea4485877b304950784de3fbeaa0c102d78100204b6aa57403b07496882}\label{group__rbus_value_gga161d6cea4485877b304950784de3fbeaa0c102d78100204b6aa57403b07496882} 
+RBUS\+\_\+\+VALUE\+\_\+\+ERROR\+\_\+\+NULL&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{group__rbus_value_ga7405acfdc3b4162ff9a9c711b834aba8}\index{RbusValue@{RbusValue}!rbusValueType\_t@{rbusValueType\_t}}
+\index{rbusValueType\_t@{rbusValueType\_t}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValueType\_t}{rbusValueType\_t}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga7405acfdc3b4162ff9a9c711b834aba8} 
+enum \doxymbox{\hyperlink{group__rbus_value_ga7405acfdc3b4162ff9a9c711b834aba8}{rbus\+Value\+Type\+\_\+t}}}
+
+
+
+The value types that can be contained inside an \doxylink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_BOOLEAN@{RBUS\_BOOLEAN}!RbusValue@{RbusValue}}
+\index{RbusValue@{RbusValue}!RBUS\_BOOLEAN@{RBUS\_BOOLEAN}}
+}\Hypertarget{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a87a7d1c91583cf9710380a89e29996ba}\label{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a87a7d1c91583cf9710380a89e29996ba} 
+RBUS\+\_\+\+BOOLEAN&bool true or false \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_CHAR@{RBUS\_CHAR}!RbusValue@{RbusValue}}
+\index{RbusValue@{RbusValue}!RBUS\_CHAR@{RBUS\_CHAR}}
+}\Hypertarget{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8aeaf5d1420b7e7afb08d94cf6eecebb60}\label{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8aeaf5d1420b7e7afb08d94cf6eecebb60} 
+RBUS\+\_\+\+CHAR&char of size 1 byte \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_BYTE@{RBUS\_BYTE}!RbusValue@{RbusValue}}
+\index{RbusValue@{RbusValue}!RBUS\_BYTE@{RBUS\_BYTE}}
+}\Hypertarget{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a434e4d6e26f117e8e702e5c9a626f8d5}\label{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a434e4d6e26f117e8e702e5c9a626f8d5} 
+RBUS\+\_\+\+BYTE&unsigned char \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_INT8@{RBUS\_INT8}!RbusValue@{RbusValue}}
+\index{RbusValue@{RbusValue}!RBUS\_INT8@{RBUS\_INT8}}
+}\Hypertarget{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a73b12fffc5fed16fdb99625c297b16d9}\label{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a73b12fffc5fed16fdb99625c297b16d9} 
+RBUS\+\_\+\+INT8&8 bit int \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_UINT8@{RBUS\_UINT8}!RbusValue@{RbusValue}}
+\index{RbusValue@{RbusValue}!RBUS\_UINT8@{RBUS\_UINT8}}
+}\Hypertarget{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a30f0e099abc85bdfcf9dc79951c4b065}\label{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a30f0e099abc85bdfcf9dc79951c4b065} 
+RBUS\+\_\+\+UINT8&8 bit unsigned int \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_INT16@{RBUS\_INT16}!RbusValue@{RbusValue}}
+\index{RbusValue@{RbusValue}!RBUS\_INT16@{RBUS\_INT16}}
+}\Hypertarget{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a63aac9a75105e004f04ff0f69fbfa738}\label{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a63aac9a75105e004f04ff0f69fbfa738} 
+RBUS\+\_\+\+INT16&16 bit int \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_UINT16@{RBUS\_UINT16}!RbusValue@{RbusValue}}
+\index{RbusValue@{RbusValue}!RBUS\_UINT16@{RBUS\_UINT16}}
+}\Hypertarget{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a97e2aabdad52183de937feed9ac2884f}\label{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a97e2aabdad52183de937feed9ac2884f} 
+RBUS\+\_\+\+UINT16&16 bit unsigned int \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_INT32@{RBUS\_INT32}!RbusValue@{RbusValue}}
+\index{RbusValue@{RbusValue}!RBUS\_INT32@{RBUS\_INT32}}
+}\Hypertarget{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a7d3192121e66bfaee4ad2078001d3db8}\label{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a7d3192121e66bfaee4ad2078001d3db8} 
+RBUS\+\_\+\+INT32&32 bit int \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_UINT32@{RBUS\_UINT32}!RbusValue@{RbusValue}}
+\index{RbusValue@{RbusValue}!RBUS\_UINT32@{RBUS\_UINT32}}
+}\Hypertarget{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a82213c17854c5e7ed164bce3e58c274b}\label{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a82213c17854c5e7ed164bce3e58c274b} 
+RBUS\+\_\+\+UINT32&32 bit unsigned int \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_INT64@{RBUS\_INT64}!RbusValue@{RbusValue}}
+\index{RbusValue@{RbusValue}!RBUS\_INT64@{RBUS\_INT64}}
+}\Hypertarget{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a906a701a8b9e3da55cc12a194c7c4232}\label{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a906a701a8b9e3da55cc12a194c7c4232} 
+RBUS\+\_\+\+INT64&64 bit int \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_UINT64@{RBUS\_UINT64}!RbusValue@{RbusValue}}
+\index{RbusValue@{RbusValue}!RBUS\_UINT64@{RBUS\_UINT64}}
+}\Hypertarget{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a5e346c56198ceef347a6e7e584edbaf7}\label{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a5e346c56198ceef347a6e7e584edbaf7} 
+RBUS\+\_\+\+UINT64&64 bit unsigned int \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_SINGLE@{RBUS\_SINGLE}!RbusValue@{RbusValue}}
+\index{RbusValue@{RbusValue}!RBUS\_SINGLE@{RBUS\_SINGLE}}
+}\Hypertarget{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a90565fa8de579457d83a44db291908d7}\label{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a90565fa8de579457d83a44db291908d7} 
+RBUS\+\_\+\+SINGLE&32 bit float \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_DOUBLE@{RBUS\_DOUBLE}!RbusValue@{RbusValue}}
+\index{RbusValue@{RbusValue}!RBUS\_DOUBLE@{RBUS\_DOUBLE}}
+}\Hypertarget{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8af09445c9a4b6d1c174a087325ee9d84e}\label{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8af09445c9a4b6d1c174a087325ee9d84e} 
+RBUS\+\_\+\+DOUBLE&64 bit float \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_DATETIME@{RBUS\_DATETIME}!RbusValue@{RbusValue}}
+\index{RbusValue@{RbusValue}!RBUS\_DATETIME@{RBUS\_DATETIME}}
+}\Hypertarget{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8abae8e13cf10131bc317d4ba14c1b840f}\label{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8abae8e13cf10131bc317d4ba14c1b840f} 
+RBUS\+\_\+\+DATETIME&\doxylink{group__rbus_value_ga2009eccbb6b430aef0ebcbf6165d1382}{rbus\+Date\+Time\+\_\+t} structure for Date/\+\+Time \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_STRING@{RBUS\_STRING}!RbusValue@{RbusValue}}
+\index{RbusValue@{RbusValue}!RBUS\_STRING@{RBUS\_STRING}}
+}\Hypertarget{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a161fe761c409489a04f24eacaf7a9969}\label{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a161fe761c409489a04f24eacaf7a9969} 
+RBUS\+\_\+\+STRING&null terminated C style string \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_BYTES@{RBUS\_BYTES}!RbusValue@{RbusValue}}
+\index{RbusValue@{RbusValue}!RBUS\_BYTES@{RBUS\_BYTES}}
+}\Hypertarget{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a1360572647f93ebd0da25cb645435684}\label{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a1360572647f93ebd0da25cb645435684} 
+RBUS\+\_\+\+BYTES&byte array \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_PROPERTY@{RBUS\_PROPERTY}!RbusValue@{RbusValue}}
+\index{RbusValue@{RbusValue}!RBUS\_PROPERTY@{RBUS\_PROPERTY}}
+}\Hypertarget{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8af2d8d1d45af94269f2f91efde60076f1}\label{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8af2d8d1d45af94269f2f91efde60076f1} 
+RBUS\+\_\+\+PROPERTY&property instance \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_OBJECT@{RBUS\_OBJECT}!RbusValue@{RbusValue}}
+\index{RbusValue@{RbusValue}!RBUS\_OBJECT@{RBUS\_OBJECT}}
+}\Hypertarget{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a46e8daca439ed580438f76efd8a3f8be}\label{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a46e8daca439ed580438f76efd8a3f8be} 
+RBUS\+\_\+\+OBJECT&object instance \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_NONE@{RBUS\_NONE}!RbusValue@{RbusValue}}
+\index{RbusValue@{RbusValue}!RBUS\_NONE@{RBUS\_NONE}}
+}\Hypertarget{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a830be7b3edd7ab2ff9d19ea78736b391}\label{group__rbus_value_gga7405acfdc3b4162ff9a9c711b834aba8a830be7b3edd7ab2ff9d19ea78736b391} 
+RBUS\+\_\+\+NONE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{group__rbus_value_doc-func-members}
+\Hypertarget{group__rbus_value_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{group__rbus_value_ga656d553e488f458452c3f4e4f21e9bb7}\index{RbusValue@{RbusValue}!rbusValue\_Compare@{rbusValue\_Compare}}
+\index{rbusValue\_Compare@{rbusValue\_Compare}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_Compare()}{rbusValue\_Compare()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga656d553e488f458452c3f4e4f21e9bb7} 
+int rbus\+Value\+\_\+\+Compare (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value1}{, }\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value2}{}\end{DoxyParamCaption})}
+
+
+
+Compare two values for equality. They are equal if both the type and data are equal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value1} & the first value to compare \\
+\hline
+{\em value2} & the second value to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The compare result where 0 is equal and non-\/zero if not equal. If value1 
+\end{DoxyReturn}
+\Hypertarget{group__rbus_value_ga36b02a94353cee70da3189fe14c9fdeb}\index{RbusValue@{RbusValue}!rbusValue\_Copy@{rbusValue\_Copy}}
+\index{rbusValue\_Copy@{rbusValue\_Copy}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_Copy()}{rbusValue\_Copy()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga36b02a94353cee70da3189fe14c9fdeb} 
+void rbus\+Value\+\_\+\+Copy (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{dest}{, }\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{source}{}\end{DoxyParamCaption})}
+
+
+
+Copy data from source to dest. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & destination to copy data into \\
+\hline
+{\em source} & source of data to copy from \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__rbus_value_ga334df74eb3fadd1cce25d3d98f7448e5}\index{RbusValue@{RbusValue}!rbusValue\_fwrite@{rbusValue\_fwrite}}
+\index{rbusValue\_fwrite@{rbusValue\_fwrite}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_fwrite()}{rbusValue\_fwrite()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga334df74eb3fadd1cce25d3d98f7448e5} 
+void rbus\+Value\+\_\+fwrite (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{obj}{, }\item[{int}]{depth}{, }\item[{FILE \texorpdfstring{$\ast$}{*}}]{fout}{}\end{DoxyParamCaption})}
+
+
+
+A debug utility function to write the value as a string to a file stream. 
+
+\Hypertarget{group__rbus_value_ga6d48458292dd223c1b70b5b9a3f2a97a}\index{RbusValue@{RbusValue}!rbusValue\_GetBoolean@{rbusValue\_GetBoolean}}
+\index{rbusValue\_GetBoolean@{rbusValue\_GetBoolean}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetBoolean()}{rbusValue\_GetBoolean()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga6d48458292dd223c1b70b5b9a3f2a97a} 
+bool rbus\+Value\+\_\+\+Get\+Boolean (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga94a7ce5995f453de82d04c492df032b9}\index{RbusValue@{RbusValue}!rbusValue\_GetBooleanEx@{rbusValue\_GetBooleanEx}}
+\index{rbusValue\_GetBooleanEx@{rbusValue\_GetBooleanEx}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetBooleanEx()}{rbusValue\_GetBooleanEx()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga94a7ce5995f453de82d04c492df032b9} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Value\+\_\+\+Get\+Boolean\+Ex (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{bool \texorpdfstring{$\ast$}{*}}]{b}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gaa8209ad718ef3aad4cb17eaba88504de}\index{RbusValue@{RbusValue}!rbusValue\_GetByte@{rbusValue\_GetByte}}
+\index{rbusValue\_GetByte@{rbusValue\_GetByte}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetByte()}{rbusValue\_GetByte()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gaa8209ad718ef3aad4cb17eaba88504de} 
+unsigned char rbus\+Value\+\_\+\+Get\+Byte (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gacedecbadb9ae6dff60b67aa7f7a869c2}\index{RbusValue@{RbusValue}!rbusValue\_GetByteEx@{rbusValue\_GetByteEx}}
+\index{rbusValue\_GetByteEx@{rbusValue\_GetByteEx}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetByteEx()}{rbusValue\_GetByteEx()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gacedecbadb9ae6dff60b67aa7f7a869c2} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Value\+\_\+\+Get\+Byte\+Ex (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{v}{, }\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{u}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gaf97c33f37dabb6c519dacb72d23a37ab}\index{RbusValue@{RbusValue}!rbusValue\_GetBytes@{rbusValue\_GetBytes}}
+\index{rbusValue\_GetBytes@{rbusValue\_GetBytes}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetBytes()}{rbusValue\_GetBytes()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gaf97c33f37dabb6c519dacb72d23a37ab} 
+uint8\+\_\+t const  \texorpdfstring{$\ast$}{*} rbus\+Value\+\_\+\+Get\+Bytes (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{len}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gaf0fa8534415797d29fb635c480a5f9bc}\index{RbusValue@{RbusValue}!rbusValue\_GetBytesEx@{rbusValue\_GetBytesEx}}
+\index{rbusValue\_GetBytesEx@{rbusValue\_GetBytesEx}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetBytesEx()}{rbusValue\_GetBytesEx()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gaf0fa8534415797d29fb635c480a5f9bc} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Value\+\_\+\+Get\+Bytes\+Ex (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{uint8\+\_\+t const \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{bytes}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{len}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gaf33e8c7826dbf342723de5db8759435b}\index{RbusValue@{RbusValue}!rbusValue\_GetChar@{rbusValue\_GetChar}}
+\index{rbusValue\_GetChar@{rbusValue\_GetChar}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetChar()}{rbusValue\_GetChar()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gaf33e8c7826dbf342723de5db8759435b} 
+char rbus\+Value\+\_\+\+Get\+Char (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga6f62bf3ef9ad06e5363846933a14fb23}\index{RbusValue@{RbusValue}!rbusValue\_GetCharEx@{rbusValue\_GetCharEx}}
+\index{rbusValue\_GetCharEx@{rbusValue\_GetCharEx}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetCharEx()}{rbusValue\_GetCharEx()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga6f62bf3ef9ad06e5363846933a14fb23} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Value\+\_\+\+Get\+Char\+Ex (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{v}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{c}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga1ddd4b97a1aab4b98e1a1ff6e83d899e}\index{RbusValue@{RbusValue}!rbusValue\_GetDouble@{rbusValue\_GetDouble}}
+\index{rbusValue\_GetDouble@{rbusValue\_GetDouble}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetDouble()}{rbusValue\_GetDouble()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga1ddd4b97a1aab4b98e1a1ff6e83d899e} 
+double rbus\+Value\+\_\+\+Get\+Double (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga4c960623ba43a5a3afe8bddd4639e106}\index{RbusValue@{RbusValue}!rbusValue\_GetDoubleEx@{rbusValue\_GetDoubleEx}}
+\index{rbusValue\_GetDoubleEx@{rbusValue\_GetDoubleEx}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetDoubleEx()}{rbusValue\_GetDoubleEx()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga4c960623ba43a5a3afe8bddd4639e106} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Value\+\_\+\+Get\+Double\+Ex (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{f64}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gaaf6fc8ab300be4b53b9b1ca82c74724a}\index{RbusValue@{RbusValue}!rbusValue\_GetInt16@{rbusValue\_GetInt16}}
+\index{rbusValue\_GetInt16@{rbusValue\_GetInt16}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetInt16()}{rbusValue\_GetInt16()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gaaf6fc8ab300be4b53b9b1ca82c74724a} 
+int16\+\_\+t rbus\+Value\+\_\+\+Get\+Int16 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gaca11fb97ef0a8a646bbd0fb2935ddaca}\index{RbusValue@{RbusValue}!rbusValue\_GetInt16Ex@{rbusValue\_GetInt16Ex}}
+\index{rbusValue\_GetInt16Ex@{rbusValue\_GetInt16Ex}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetInt16Ex()}{rbusValue\_GetInt16Ex()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gaca11fb97ef0a8a646bbd0fb2935ddaca} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Value\+\_\+\+Get\+Int16\+Ex (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{i16}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga100c599009a8391264182ea82cb94258}\index{RbusValue@{RbusValue}!rbusValue\_GetInt32@{rbusValue\_GetInt32}}
+\index{rbusValue\_GetInt32@{rbusValue\_GetInt32}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetInt32()}{rbusValue\_GetInt32()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga100c599009a8391264182ea82cb94258} 
+int32\+\_\+t rbus\+Value\+\_\+\+Get\+Int32 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gaf5ce179da2cb10c7a81093ee9b7db81d}\index{RbusValue@{RbusValue}!rbusValue\_GetInt32Ex@{rbusValue\_GetInt32Ex}}
+\index{rbusValue\_GetInt32Ex@{rbusValue\_GetInt32Ex}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetInt32Ex()}{rbusValue\_GetInt32Ex()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gaf5ce179da2cb10c7a81093ee9b7db81d} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Value\+\_\+\+Get\+Int32\+Ex (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{int32\+\_\+t \texorpdfstring{$\ast$}{*}}]{i32}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga4313c7487cbf46e016267d234924092d}\index{RbusValue@{RbusValue}!rbusValue\_GetInt64@{rbusValue\_GetInt64}}
+\index{rbusValue\_GetInt64@{rbusValue\_GetInt64}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetInt64()}{rbusValue\_GetInt64()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga4313c7487cbf46e016267d234924092d} 
+int64\+\_\+t rbus\+Value\+\_\+\+Get\+Int64 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga229e2aa3aecb0eb2e3190c11cac85d52}\index{RbusValue@{RbusValue}!rbusValue\_GetInt64Ex@{rbusValue\_GetInt64Ex}}
+\index{rbusValue\_GetInt64Ex@{rbusValue\_GetInt64Ex}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetInt64Ex()}{rbusValue\_GetInt64Ex()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga229e2aa3aecb0eb2e3190c11cac85d52} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Value\+\_\+\+Get\+Int64\+Ex (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{int64\+\_\+t \texorpdfstring{$\ast$}{*}}]{i64}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gacf1f21ea88bd8a312b47c8a781551db0}\index{RbusValue@{RbusValue}!rbusValue\_GetInt8@{rbusValue\_GetInt8}}
+\index{rbusValue\_GetInt8@{rbusValue\_GetInt8}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetInt8()}{rbusValue\_GetInt8()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gacf1f21ea88bd8a312b47c8a781551db0} 
+int8\+\_\+t rbus\+Value\+\_\+\+Get\+Int8 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga59268517bf0765e820378eac59be3195}\index{RbusValue@{RbusValue}!rbusValue\_GetInt8Ex@{rbusValue\_GetInt8Ex}}
+\index{rbusValue\_GetInt8Ex@{rbusValue\_GetInt8Ex}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetInt8Ex()}{rbusValue\_GetInt8Ex()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga59268517bf0765e820378eac59be3195} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Value\+\_\+\+Get\+Int8\+Ex (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{v}{, }\item[{int8\+\_\+t \texorpdfstring{$\ast$}{*}}]{i8}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gaae1d1574460b6ba537cfc2faa440d3f0}\index{RbusValue@{RbusValue}!rbusValue\_GetObject@{rbusValue\_GetObject}}
+\index{rbusValue\_GetObject@{rbusValue\_GetObject}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetObject()}{rbusValue\_GetObject()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gaae1d1574460b6ba537cfc2faa440d3f0} 
+struct \+\_\+rbus\+Object \texorpdfstring{$\ast$}{*} rbus\+Value\+\_\+\+Get\+Object (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga6566252e90ea576678dd01ab5ff4d532}\index{RbusValue@{RbusValue}!rbusValue\_GetObjectEx@{rbusValue\_GetObjectEx}}
+\index{rbusValue\_GetObjectEx@{rbusValue\_GetObjectEx}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetObjectEx()}{rbusValue\_GetObjectEx()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga6566252e90ea576678dd01ab5ff4d532} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Value\+\_\+\+Get\+Object\+Ex (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{struct \+\_\+rbus\+Object \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{object}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga349678eb71a6fd25afdef08eb29c1e3e}\index{RbusValue@{RbusValue}!rbusValue\_GetProperty@{rbusValue\_GetProperty}}
+\index{rbusValue\_GetProperty@{rbusValue\_GetProperty}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetProperty()}{rbusValue\_GetProperty()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga349678eb71a6fd25afdef08eb29c1e3e} 
+struct \+\_\+rbus\+Property \texorpdfstring{$\ast$}{*} rbus\+Value\+\_\+\+Get\+Property (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga26ee424117d23faa649672d9bf57e139}\index{RbusValue@{RbusValue}!rbusValue\_GetPropertyEx@{rbusValue\_GetPropertyEx}}
+\index{rbusValue\_GetPropertyEx@{rbusValue\_GetPropertyEx}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetPropertyEx()}{rbusValue\_GetPropertyEx()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga26ee424117d23faa649672d9bf57e139} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Value\+\_\+\+Get\+Property\+Ex (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{struct \+\_\+rbus\+Property \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{property}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga718d778434bdc6859297b95e937d48cb}\index{RbusValue@{RbusValue}!rbusValue\_GetSingle@{rbusValue\_GetSingle}}
+\index{rbusValue\_GetSingle@{rbusValue\_GetSingle}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetSingle()}{rbusValue\_GetSingle()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga718d778434bdc6859297b95e937d48cb} 
+float rbus\+Value\+\_\+\+Get\+Single (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gad2c2947ca8fd93cbd1453b0c85e6a9cf}\index{RbusValue@{RbusValue}!rbusValue\_GetSingleEx@{rbusValue\_GetSingleEx}}
+\index{rbusValue\_GetSingleEx@{rbusValue\_GetSingleEx}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetSingleEx()}{rbusValue\_GetSingleEx()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gad2c2947ca8fd93cbd1453b0c85e6a9cf} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Value\+\_\+\+Get\+Single\+Ex (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{float \texorpdfstring{$\ast$}{*}}]{f32}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga8f14ea602b1a12b7af2ea9e3ef2bda81}\index{RbusValue@{RbusValue}!rbusValue\_GetString@{rbusValue\_GetString}}
+\index{rbusValue\_GetString@{rbusValue\_GetString}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetString()}{rbusValue\_GetString()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga8f14ea602b1a12b7af2ea9e3ef2bda81} 
+char const  \texorpdfstring{$\ast$}{*} rbus\+Value\+\_\+\+Get\+String (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{len}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gad1919c42e4ba187cbf10490cc93b7763}\index{RbusValue@{RbusValue}!rbusValue\_GetStringEx@{rbusValue\_GetStringEx}}
+\index{rbusValue\_GetStringEx@{rbusValue\_GetStringEx}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetStringEx()}{rbusValue\_GetStringEx()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gad1919c42e4ba187cbf10490cc93b7763} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Value\+\_\+\+Get\+String\+Ex (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{char const \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{s}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{len}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga94f61584fc716bcfa47db27716e58760}\index{RbusValue@{RbusValue}!rbusValue\_GetTime@{rbusValue\_GetTime}}
+\index{rbusValue\_GetTime@{rbusValue\_GetTime}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetTime()}{rbusValue\_GetTime()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga94f61584fc716bcfa47db27716e58760} 
+\doxymbox{\hyperlink{group__rbus_value_ga2009eccbb6b430aef0ebcbf6165d1382}{rbus\+Date\+Time\+\_\+t}} const  \texorpdfstring{$\ast$}{*} rbus\+Value\+\_\+\+Get\+Time (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gabf660f9b98fc5b2e0b423c6bd837eb98}\index{RbusValue@{RbusValue}!rbusValue\_GetTimeEx@{rbusValue\_GetTimeEx}}
+\index{rbusValue\_GetTimeEx@{rbusValue\_GetTimeEx}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetTimeEx()}{rbusValue\_GetTimeEx()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gabf660f9b98fc5b2e0b423c6bd837eb98} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Value\+\_\+\+Get\+Time\+Ex (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{\doxymbox{\hyperlink{group__rbus_value_ga2009eccbb6b430aef0ebcbf6165d1382}{rbus\+Date\+Time\+\_\+t}} const \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{tv}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga6a84635c88b2adc492244d54e3aefcad}\index{RbusValue@{RbusValue}!rbusValue\_GetType@{rbusValue\_GetType}}
+\index{rbusValue\_GetType@{rbusValue\_GetType}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetType()}{rbusValue\_GetType()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga6a84635c88b2adc492244d54e3aefcad} 
+\doxymbox{\hyperlink{group__rbus_value_ga7405acfdc3b4162ff9a9c711b834aba8}{rbus\+Value\+Type\+\_\+t}} rbus\+Value\+\_\+\+Get\+Type (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Get the type of a value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & A value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The type of the value. 
+\end{DoxyReturn}
+\Hypertarget{group__rbus_value_gaf27c520744ca65df0727d0fc97a902cd}\index{RbusValue@{RbusValue}!rbusValue\_GetUInt16@{rbusValue\_GetUInt16}}
+\index{rbusValue\_GetUInt16@{rbusValue\_GetUInt16}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetUInt16()}{rbusValue\_GetUInt16()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gaf27c520744ca65df0727d0fc97a902cd} 
+uint16\+\_\+t rbus\+Value\+\_\+\+Get\+UInt16 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga067148cb5c6888469947144076b6946b}\index{RbusValue@{RbusValue}!rbusValue\_GetUInt16Ex@{rbusValue\_GetUInt16Ex}}
+\index{rbusValue\_GetUInt16Ex@{rbusValue\_GetUInt16Ex}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetUInt16Ex()}{rbusValue\_GetUInt16Ex()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga067148cb5c6888469947144076b6946b} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Value\+\_\+\+Get\+UInt16\+Ex (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{u16}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gaebda66b13baf4e03c8a532b57383ff45}\index{RbusValue@{RbusValue}!rbusValue\_GetUInt32@{rbusValue\_GetUInt32}}
+\index{rbusValue\_GetUInt32@{rbusValue\_GetUInt32}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetUInt32()}{rbusValue\_GetUInt32()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gaebda66b13baf4e03c8a532b57383ff45} 
+uint32\+\_\+t rbus\+Value\+\_\+\+Get\+UInt32 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gae2972a40e83f825eb1b13323328d495f}\index{RbusValue@{RbusValue}!rbusValue\_GetUInt32Ex@{rbusValue\_GetUInt32Ex}}
+\index{rbusValue\_GetUInt32Ex@{rbusValue\_GetUInt32Ex}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetUInt32Ex()}{rbusValue\_GetUInt32Ex()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gae2972a40e83f825eb1b13323328d495f} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Value\+\_\+\+Get\+UInt32\+Ex (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{u32}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga5023b6089057a860291bcf8dbceb69e8}\index{RbusValue@{RbusValue}!rbusValue\_GetUInt64@{rbusValue\_GetUInt64}}
+\index{rbusValue\_GetUInt64@{rbusValue\_GetUInt64}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetUInt64()}{rbusValue\_GetUInt64()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga5023b6089057a860291bcf8dbceb69e8} 
+uint64\+\_\+t rbus\+Value\+\_\+\+Get\+UInt64 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gadce084c7999763522ca8b8aed464bb60}\index{RbusValue@{RbusValue}!rbusValue\_GetUInt64Ex@{rbusValue\_GetUInt64Ex}}
+\index{rbusValue\_GetUInt64Ex@{rbusValue\_GetUInt64Ex}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetUInt64Ex()}{rbusValue\_GetUInt64Ex()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gadce084c7999763522ca8b8aed464bb60} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Value\+\_\+\+Get\+UInt64\+Ex (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{uint64\+\_\+t \texorpdfstring{$\ast$}{*}}]{u64}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga7ef12cbb758f3b0ca62ed64bdc6fb9d7}\index{RbusValue@{RbusValue}!rbusValue\_GetUInt8@{rbusValue\_GetUInt8}}
+\index{rbusValue\_GetUInt8@{rbusValue\_GetUInt8}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetUInt8()}{rbusValue\_GetUInt8()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga7ef12cbb758f3b0ca62ed64bdc6fb9d7} 
+uint8\+\_\+t rbus\+Value\+\_\+\+Get\+UInt8 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga158fbcd2eabbea945d898f3267de4e36}\index{RbusValue@{RbusValue}!rbusValue\_GetUInt8Ex@{rbusValue\_GetUInt8Ex}}
+\index{rbusValue\_GetUInt8Ex@{rbusValue\_GetUInt8Ex}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetUInt8Ex()}{rbusValue\_GetUInt8Ex()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga158fbcd2eabbea945d898f3267de4e36} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Value\+\_\+\+Get\+UInt8\+Ex (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{v}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{u8}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga2f851eaa49d3a192a6d9397923a616b4}\index{RbusValue@{RbusValue}!rbusValue\_Init@{rbusValue\_Init}}
+\index{rbusValue\_Init@{rbusValue\_Init}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_Init()}{rbusValue\_Init()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga2f851eaa49d3a192a6d9397923a616b4} 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} rbus\+Value\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{pvalue}{}\end{DoxyParamCaption})}
+
+
+
+Allocate and initialize a value to an empty state with its type set to RBUS\+\_\+\+NONE and data set to NULL. This automatically retains ownership of the value. It\textquotesingle{}s the caller\textquotesingle{}s responsibility to release ownership by calling rbus\+Value\+\_\+\+Release once it\textquotesingle{}s done with it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Optional} & pvalue reference to an address where the new value will be assigned. The caller is responsible for releasing the value with rbus\+Value\+\_\+\+Release \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new value 
+\end{DoxyReturn}
+\Hypertarget{group__rbus_value_ga07652277c7af5b65f16901cb139a6533}\index{RbusValue@{RbusValue}!rbusValue\_InitBoolean@{rbusValue\_InitBoolean}}
+\index{rbusValue\_InitBoolean@{rbusValue\_InitBoolean}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_InitBoolean()}{rbusValue\_InitBoolean()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga07652277c7af5b65f16901cb139a6533} 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} rbus\+Value\+\_\+\+Init\+Boolean (\begin{DoxyParamCaption}\item[{bool}]{b}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga861b55d7cad3f947c56ef8751ac49310}\index{RbusValue@{RbusValue}!rbusValue\_InitByte@{rbusValue\_InitByte}}
+\index{rbusValue\_InitByte@{rbusValue\_InitByte}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_InitByte()}{rbusValue\_InitByte()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga861b55d7cad3f947c56ef8751ac49310} 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} rbus\+Value\+\_\+\+Init\+Byte (\begin{DoxyParamCaption}\item[{unsigned char}]{u}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga6ada0cbfcaaf7f51b39d619d8dedc99b}\index{RbusValue@{RbusValue}!rbusValue\_InitBytes@{rbusValue\_InitBytes}}
+\index{rbusValue\_InitBytes@{rbusValue\_InitBytes}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_InitBytes()}{rbusValue\_InitBytes()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga6ada0cbfcaaf7f51b39d619d8dedc99b} 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} rbus\+Value\+\_\+\+Init\+Bytes (\begin{DoxyParamCaption}\item[{uint8\+\_\+t const \texorpdfstring{$\ast$}{*}}]{bytes}{, }\item[{int}]{len}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga6df8061c50175a37e1cf05dd8b962f4c}\index{RbusValue@{RbusValue}!rbusValue\_InitChar@{rbusValue\_InitChar}}
+\index{rbusValue\_InitChar@{rbusValue\_InitChar}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_InitChar()}{rbusValue\_InitChar()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga6df8061c50175a37e1cf05dd8b962f4c} 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} rbus\+Value\+\_\+\+Init\+Char (\begin{DoxyParamCaption}\item[{char}]{c}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gad05faf19110d55aa178a601a6c895e11}\index{RbusValue@{RbusValue}!rbusValue\_InitDouble@{rbusValue\_InitDouble}}
+\index{rbusValue\_InitDouble@{rbusValue\_InitDouble}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_InitDouble()}{rbusValue\_InitDouble()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gad05faf19110d55aa178a601a6c895e11} 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} rbus\+Value\+\_\+\+Init\+Double (\begin{DoxyParamCaption}\item[{double}]{f64}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gaa450b1dce3746c19f4b27b6b8576b9ac}\index{RbusValue@{RbusValue}!rbusValue\_InitInt16@{rbusValue\_InitInt16}}
+\index{rbusValue\_InitInt16@{rbusValue\_InitInt16}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_InitInt16()}{rbusValue\_InitInt16()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gaa450b1dce3746c19f4b27b6b8576b9ac} 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} rbus\+Value\+\_\+\+Init\+Int16 (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{i16}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gac022c7131d16e7add3dd43c524eb572b}\index{RbusValue@{RbusValue}!rbusValue\_InitInt32@{rbusValue\_InitInt32}}
+\index{rbusValue\_InitInt32@{rbusValue\_InitInt32}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_InitInt32()}{rbusValue\_InitInt32()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gac022c7131d16e7add3dd43c524eb572b} 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} rbus\+Value\+\_\+\+Init\+Int32 (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{i32}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga5d847dafc95b38ba154f9a31a53f4c20}\index{RbusValue@{RbusValue}!rbusValue\_InitInt64@{rbusValue\_InitInt64}}
+\index{rbusValue\_InitInt64@{rbusValue\_InitInt64}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_InitInt64()}{rbusValue\_InitInt64()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga5d847dafc95b38ba154f9a31a53f4c20} 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} rbus\+Value\+\_\+\+Init\+Int64 (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{i64}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gafc8161cd0cf6b1609e690ec9612db624}\index{RbusValue@{RbusValue}!rbusValue\_InitInt8@{rbusValue\_InitInt8}}
+\index{rbusValue\_InitInt8@{rbusValue\_InitInt8}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_InitInt8()}{rbusValue\_InitInt8()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gafc8161cd0cf6b1609e690ec9612db624} 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} rbus\+Value\+\_\+\+Init\+Int8 (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{i8}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga099c4142b2f143f280d69f5b74fd442d}\index{RbusValue@{RbusValue}!rbusValue\_InitObject@{rbusValue\_InitObject}}
+\index{rbusValue\_InitObject@{rbusValue\_InitObject}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_InitObject()}{rbusValue\_InitObject()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga099c4142b2f143f280d69f5b74fd442d} 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} rbus\+Value\+\_\+\+Init\+Object (\begin{DoxyParamCaption}\item[{struct \+\_\+rbus\+Object \texorpdfstring{$\ast$}{*}}]{object}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gabd1616110a355c58e0c92efe492181c8}\index{RbusValue@{RbusValue}!rbusValue\_InitProperty@{rbusValue\_InitProperty}}
+\index{rbusValue\_InitProperty@{rbusValue\_InitProperty}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_InitProperty()}{rbusValue\_InitProperty()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gabd1616110a355c58e0c92efe492181c8} 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} rbus\+Value\+\_\+\+Init\+Property (\begin{DoxyParamCaption}\item[{struct \+\_\+rbus\+Property \texorpdfstring{$\ast$}{*}}]{property}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga0859fcaca8fd307ab6bed93a4e458515}\index{RbusValue@{RbusValue}!rbusValue\_InitSingle@{rbusValue\_InitSingle}}
+\index{rbusValue\_InitSingle@{rbusValue\_InitSingle}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_InitSingle()}{rbusValue\_InitSingle()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga0859fcaca8fd307ab6bed93a4e458515} 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} rbus\+Value\+\_\+\+Init\+Single (\begin{DoxyParamCaption}\item[{float}]{f32}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga9b32991fab839f231151c50479d84dd4}\index{RbusValue@{RbusValue}!rbusValue\_InitString@{rbusValue\_InitString}}
+\index{rbusValue\_InitString@{rbusValue\_InitString}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_InitString()}{rbusValue\_InitString()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga9b32991fab839f231151c50479d84dd4} 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} rbus\+Value\+\_\+\+Init\+String (\begin{DoxyParamCaption}\item[{char const \texorpdfstring{$\ast$}{*}}]{s}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gaf774d3080a8aad8f88533ef70c32b8ae}\index{RbusValue@{RbusValue}!rbusValue\_InitTime@{rbusValue\_InitTime}}
+\index{rbusValue\_InitTime@{rbusValue\_InitTime}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_InitTime()}{rbusValue\_InitTime()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gaf774d3080a8aad8f88533ef70c32b8ae} 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} rbus\+Value\+\_\+\+Init\+Time (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga2009eccbb6b430aef0ebcbf6165d1382}{rbus\+Date\+Time\+\_\+t}} const \texorpdfstring{$\ast$}{*}}]{tv}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga1f760489f9dd4e80f470935dc80ace34}\index{RbusValue@{RbusValue}!rbusValue\_InitUInt16@{rbusValue\_InitUInt16}}
+\index{rbusValue\_InitUInt16@{rbusValue\_InitUInt16}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_InitUInt16()}{rbusValue\_InitUInt16()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga1f760489f9dd4e80f470935dc80ace34} 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} rbus\+Value\+\_\+\+Init\+UInt16 (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{u16}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga7438046ca7344cc715e2e5a177720f7d}\index{RbusValue@{RbusValue}!rbusValue\_InitUInt32@{rbusValue\_InitUInt32}}
+\index{rbusValue\_InitUInt32@{rbusValue\_InitUInt32}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_InitUInt32()}{rbusValue\_InitUInt32()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga7438046ca7344cc715e2e5a177720f7d} 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} rbus\+Value\+\_\+\+Init\+UInt32 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{u32}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga5fc1298b5b666a3dc02500d17441821b}\index{RbusValue@{RbusValue}!rbusValue\_InitUInt64@{rbusValue\_InitUInt64}}
+\index{rbusValue\_InitUInt64@{rbusValue\_InitUInt64}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_InitUInt64()}{rbusValue\_InitUInt64()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga5fc1298b5b666a3dc02500d17441821b} 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} rbus\+Value\+\_\+\+Init\+UInt64 (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{u64}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga48cbceeb4ea559f926832baad5b24295}\index{RbusValue@{RbusValue}!rbusValue\_InitUInt8@{rbusValue\_InitUInt8}}
+\index{rbusValue\_InitUInt8@{rbusValue\_InitUInt8}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_InitUInt8()}{rbusValue\_InitUInt8()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga48cbceeb4ea559f926832baad5b24295} 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} rbus\+Value\+\_\+\+Init\+UInt8 (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{u8}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gaf7b014591ada632939908097eacf4f9e}\index{RbusValue@{RbusValue}!rbusValue\_MarshallTMtoRBUS@{rbusValue\_MarshallTMtoRBUS}}
+\index{rbusValue\_MarshallTMtoRBUS@{rbusValue\_MarshallTMtoRBUS}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_MarshallTMtoRBUS()}{rbusValue\_MarshallTMtoRBUS()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gaf7b014591ada632939908097eacf4f9e} 
+void rbus\+Value\+\_\+\+Marshall\+TMto\+RBUS (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga2009eccbb6b430aef0ebcbf6165d1382}{rbus\+Date\+Time\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{outvalue}{, }\item[{const struct tm \texorpdfstring{$\ast$}{*}}]{invalue}{}\end{DoxyParamCaption})}
+
+
+
+Convert a local "{}struct tm"{} type to an explicit length version, which allows 64/\+32 bit platform message interchange. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em invalue} & An incoming struct tm \\
+\hline
+{\em outvalue} & An outgoing explicit length time structure \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__rbus_value_gaa376b6cb46e324379dd038bc82628db6}\index{RbusValue@{RbusValue}!rbusValue\_Release@{rbusValue\_Release}}
+\index{rbusValue\_Release@{rbusValue\_Release}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_Release()}{rbusValue\_Release()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gaa376b6cb46e324379dd038bc82628db6} 
+void rbus\+Value\+\_\+\+Release (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Release ownership of the value. This must be called when done using a value that was retained with either rbus\+Value\+\_\+\+Init or rbus\+Value\+\_\+\+Retain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & the value to release \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__rbus_value_gada207f7b8da7538980ac56580eb019a4}\index{RbusValue@{RbusValue}!rbusValue\_Releases@{rbusValue\_Releases}}
+\index{rbusValue\_Releases@{rbusValue\_Releases}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_Releases()}{rbusValue\_Releases()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gada207f7b8da7538980ac56580eb019a4} 
+void rbus\+Value\+\_\+\+Releases (\begin{DoxyParamCaption}\item[{int}]{count}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gaaa23e19ed23b718b31d18b893f9d1dff}\index{RbusValue@{RbusValue}!rbusValue\_Retain@{rbusValue\_Retain}}
+\index{rbusValue\_Retain@{rbusValue\_Retain}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_Retain()}{rbusValue\_Retain()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gaaa23e19ed23b718b31d18b893f9d1dff} 
+void rbus\+Value\+\_\+\+Retain (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Take shared ownership of the value. This allows a value to have multiple owners. The first owner obtains ownership with rbus\+Value\+\_\+\+Init. Additional owners can be assigned afterwards with rbus\+Value\+\_\+\+Retain. ~\newline
+ Each owner must call rbus\+Value\+\_\+\+Release once done using the value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & the value to retain \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__rbus_value_gad2bf4925655e8a742cc0835c10533a97}\index{RbusValue@{RbusValue}!rbusValue\_SetBoolean@{rbusValue\_SetBoolean}}
+\index{rbusValue\_SetBoolean@{rbusValue\_SetBoolean}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_SetBoolean()}{rbusValue\_SetBoolean()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gad2bf4925655e8a742cc0835c10533a97} 
+void rbus\+Value\+\_\+\+Set\+Boolean (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{bool}]{b}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga7fe0eddaa3fc12d2689dde66c35fad33}\index{RbusValue@{RbusValue}!rbusValue\_SetByte@{rbusValue\_SetByte}}
+\index{rbusValue\_SetByte@{rbusValue\_SetByte}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_SetByte()}{rbusValue\_SetByte()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga7fe0eddaa3fc12d2689dde66c35fad33} 
+void rbus\+Value\+\_\+\+Set\+Byte (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{v}{, }\item[{unsigned char}]{u}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga30507d1068aefac2a72e7847010649a2}\index{RbusValue@{RbusValue}!rbusValue\_SetBytes@{rbusValue\_SetBytes}}
+\index{rbusValue\_SetBytes@{rbusValue\_SetBytes}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_SetBytes()}{rbusValue\_SetBytes()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga30507d1068aefac2a72e7847010649a2} 
+void rbus\+Value\+\_\+\+Set\+Bytes (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{uint8\+\_\+t const \texorpdfstring{$\ast$}{*}}]{bytes}{, }\item[{int}]{len}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gaf5e3df76583dcc70b41b98ec0fc33ceb}\index{RbusValue@{RbusValue}!rbusValue\_SetChar@{rbusValue\_SetChar}}
+\index{rbusValue\_SetChar@{rbusValue\_SetChar}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_SetChar()}{rbusValue\_SetChar()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gaf5e3df76583dcc70b41b98ec0fc33ceb} 
+void rbus\+Value\+\_\+\+Set\+Char (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{v}{, }\item[{char}]{c}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga470242a926fac945d5b1049a46fc3bdd}\index{RbusValue@{RbusValue}!rbusValue\_SetDouble@{rbusValue\_SetDouble}}
+\index{rbusValue\_SetDouble@{rbusValue\_SetDouble}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_SetDouble()}{rbusValue\_SetDouble()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga470242a926fac945d5b1049a46fc3bdd} 
+void rbus\+Value\+\_\+\+Set\+Double (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{double}]{f64}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga2cf0d1eb55a7d32cfec79647835b604c}\index{RbusValue@{RbusValue}!rbusValue\_SetFromString@{rbusValue\_SetFromString}}
+\index{rbusValue\_SetFromString@{rbusValue\_SetFromString}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_SetFromString()}{rbusValue\_SetFromString()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga2cf0d1eb55a7d32cfec79647835b604c} 
+bool rbus\+Value\+\_\+\+Set\+From\+String (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{\doxymbox{\hyperlink{group__rbus_value_ga7405acfdc3b4162ff9a9c711b834aba8}{rbus\+Value\+Type\+\_\+t}}}]{type}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+
+
+rbus\+Value\+\_\+\+Set\+From\+String sets the value\textquotesingle{}s type to given type and data to appropriate by converting the string 
+
+Sets the type and data of a value by converting a string representation of the data to a specific typed data. 
+\begin{DoxyParams}{Parameters}
+{\em value} & A value to set. \\
+\hline
+{\em type} & The type of data represented by the input string and to which the value will be assigned. \\
+\hline
+{\em str} & A string representation of the data which will be coerced to the type specified by the type param and assigned to the value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true if this function succeeds to coerce the type and set the value or false if it fails 
+\end{DoxyReturn}
+\Hypertarget{group__rbus_value_ga960f2ae1c086bb5eaeb18543ba94fbdd}\index{RbusValue@{RbusValue}!rbusValue\_SetInt16@{rbusValue\_SetInt16}}
+\index{rbusValue\_SetInt16@{rbusValue\_SetInt16}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_SetInt16()}{rbusValue\_SetInt16()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga960f2ae1c086bb5eaeb18543ba94fbdd} 
+void rbus\+Value\+\_\+\+Set\+Int16 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{int16\+\_\+t}]{i16}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gaac4628d3e9f78ba23ff5e2c6779abf42}\index{RbusValue@{RbusValue}!rbusValue\_SetInt32@{rbusValue\_SetInt32}}
+\index{rbusValue\_SetInt32@{rbusValue\_SetInt32}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_SetInt32()}{rbusValue\_SetInt32()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gaac4628d3e9f78ba23ff5e2c6779abf42} 
+void rbus\+Value\+\_\+\+Set\+Int32 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{int32\+\_\+t}]{i32}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga0c96d39922a1ac6f22d8121a60dd95ef}\index{RbusValue@{RbusValue}!rbusValue\_SetInt64@{rbusValue\_SetInt64}}
+\index{rbusValue\_SetInt64@{rbusValue\_SetInt64}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_SetInt64()}{rbusValue\_SetInt64()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga0c96d39922a1ac6f22d8121a60dd95ef} 
+void rbus\+Value\+\_\+\+Set\+Int64 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{int64\+\_\+t}]{i64}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga493312938428296cfcb903bfb1d13666}\index{RbusValue@{RbusValue}!rbusValue\_SetInt8@{rbusValue\_SetInt8}}
+\index{rbusValue\_SetInt8@{rbusValue\_SetInt8}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_SetInt8()}{rbusValue\_SetInt8()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga493312938428296cfcb903bfb1d13666} 
+void rbus\+Value\+\_\+\+Set\+Int8 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{v}{, }\item[{int8\+\_\+t}]{i8}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga3dc630d1d35717af2b0d4893770d133a}\index{RbusValue@{RbusValue}!rbusValue\_SetObject@{rbusValue\_SetObject}}
+\index{rbusValue\_SetObject@{rbusValue\_SetObject}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_SetObject()}{rbusValue\_SetObject()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga3dc630d1d35717af2b0d4893770d133a} 
+void rbus\+Value\+\_\+\+Set\+Object (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{struct \+\_\+rbus\+Object \texorpdfstring{$\ast$}{*}}]{object}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga8d6d13cc8876554cb9bdb22f0ce8631b}\index{RbusValue@{RbusValue}!rbusValue\_SetPointer@{rbusValue\_SetPointer}}
+\index{rbusValue\_SetPointer@{rbusValue\_SetPointer}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_SetPointer()}{rbusValue\_SetPointer()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga8d6d13cc8876554cb9bdb22f0ce8631b} 
+void rbus\+Value\+\_\+\+Set\+Pointer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{value1}{, }\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value2}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga98ed372215b54a78fe276357f0217e3b}\index{RbusValue@{RbusValue}!rbusValue\_SetProperty@{rbusValue\_SetProperty}}
+\index{rbusValue\_SetProperty@{rbusValue\_SetProperty}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_SetProperty()}{rbusValue\_SetProperty()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga98ed372215b54a78fe276357f0217e3b} 
+void rbus\+Value\+\_\+\+Set\+Property (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{struct \+\_\+rbus\+Property \texorpdfstring{$\ast$}{*}}]{property}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga4c2d7c1f245ad5ae5000c99217755425}\index{RbusValue@{RbusValue}!rbusValue\_SetSingle@{rbusValue\_SetSingle}}
+\index{rbusValue\_SetSingle@{rbusValue\_SetSingle}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_SetSingle()}{rbusValue\_SetSingle()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga4c2d7c1f245ad5ae5000c99217755425} 
+void rbus\+Value\+\_\+\+Set\+Single (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{float}]{f32}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga2e72baea30f6dfb4e8962beb0ab6886e}\index{RbusValue@{RbusValue}!rbusValue\_SetString@{rbusValue\_SetString}}
+\index{rbusValue\_SetString@{rbusValue\_SetString}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_SetString()}{rbusValue\_SetString()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga2e72baea30f6dfb4e8962beb0ab6886e} 
+void rbus\+Value\+\_\+\+Set\+String (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{s}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga141186b17c50c96623785c1a3f2963ac}\index{RbusValue@{RbusValue}!rbusValue\_SetTime@{rbusValue\_SetTime}}
+\index{rbusValue\_SetTime@{rbusValue\_SetTime}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_SetTime()}{rbusValue\_SetTime()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga141186b17c50c96623785c1a3f2963ac} 
+void rbus\+Value\+\_\+\+Set\+Time (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{\doxymbox{\hyperlink{group__rbus_value_ga2009eccbb6b430aef0ebcbf6165d1382}{rbus\+Date\+Time\+\_\+t}} const \texorpdfstring{$\ast$}{*}}]{tv}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gaf60fde12c1384a368f44aff91ec1bf30}\index{RbusValue@{RbusValue}!rbusValue\_SetUInt16@{rbusValue\_SetUInt16}}
+\index{rbusValue\_SetUInt16@{rbusValue\_SetUInt16}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_SetUInt16()}{rbusValue\_SetUInt16()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gaf60fde12c1384a368f44aff91ec1bf30} 
+void rbus\+Value\+\_\+\+Set\+UInt16 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{uint16\+\_\+t}]{u16}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gaa4a95f93f5c18cc0b43b0e3300497e6c}\index{RbusValue@{RbusValue}!rbusValue\_SetUInt32@{rbusValue\_SetUInt32}}
+\index{rbusValue\_SetUInt32@{rbusValue\_SetUInt32}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_SetUInt32()}{rbusValue\_SetUInt32()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gaa4a95f93f5c18cc0b43b0e3300497e6c} 
+void rbus\+Value\+\_\+\+Set\+UInt32 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{uint32\+\_\+t}]{u32}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga795c0d19375180b6c42ab7b53cacf9a7}\index{RbusValue@{RbusValue}!rbusValue\_SetUInt64@{rbusValue\_SetUInt64}}
+\index{rbusValue\_SetUInt64@{rbusValue\_SetUInt64}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_SetUInt64()}{rbusValue\_SetUInt64()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga795c0d19375180b6c42ab7b53cacf9a7} 
+void rbus\+Value\+\_\+\+Set\+UInt64 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{uint64\+\_\+t}]{u64}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga7c8db98d8934fe64963e5b04ff36d7ba}\index{RbusValue@{RbusValue}!rbusValue\_SetUInt8@{rbusValue\_SetUInt8}}
+\index{rbusValue\_SetUInt8@{rbusValue\_SetUInt8}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_SetUInt8()}{rbusValue\_SetUInt8()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga7c8db98d8934fe64963e5b04ff36d7ba} 
+void rbus\+Value\+\_\+\+Set\+UInt8 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{v}{, }\item[{uint8\+\_\+t}]{u8}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_gac71131df88af37b3e7d1d2c404782049}\index{RbusValue@{RbusValue}!rbusValue\_Swap@{rbusValue\_Swap}}
+\index{rbusValue\_Swap@{rbusValue\_Swap}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_Swap()}{rbusValue\_Swap()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gac71131df88af37b3e7d1d2c404782049} 
+void rbus\+Value\+\_\+\+Swap (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{v1}{, }\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{v2}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_value_ga9ad1d32f8e65a0e3d54bc2c04d32871e}\index{RbusValue@{RbusValue}!rbusValue\_ToDebugString@{rbusValue\_ToDebugString}}
+\index{rbusValue\_ToDebugString@{rbusValue\_ToDebugString}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_ToDebugString()}{rbusValue\_ToDebugString()}}
+{\footnotesize\ttfamily \label{group__rbus_value_ga9ad1d32f8e65a0e3d54bc2c04d32871e} 
+char \texorpdfstring{$\ast$}{*} rbus\+Value\+\_\+\+To\+Debug\+String (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{buf}{, }\item[{size\+\_\+t}]{buflen}{}\end{DoxyParamCaption})}
+
+
+
+Returns a null terminated string representing the type and data of the value. ~\newline
+ Parameters buf and buflen are optional and allow the caller to pass in a buffer to write the string to. If parameter buf is NULL, this method will allocate a buffer to write the string to and the caller should call free to deallocate the buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & the value to convert to a string \\
+\hline
+{\em buf} & optional buffer to write the string to \\
+\hline
+{\em buflen} & the length of buf if buf was supplied, otherwise ignored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A null-\/terminated string. The caller must call free on this if parameter buf was NULL. 
+\end{DoxyReturn}
+\Hypertarget{group__rbus_value_gaf0e4d552ef438f0036446bc57b853a4c}\index{RbusValue@{RbusValue}!rbusValue\_ToString@{rbusValue\_ToString}}
+\index{rbusValue\_ToString@{rbusValue\_ToString}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_ToString()}{rbusValue\_ToString()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gaf0e4d552ef438f0036446bc57b853a4c} 
+char \texorpdfstring{$\ast$}{*} rbus\+Value\+\_\+\+To\+String (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{buf}{, }\item[{size\+\_\+t}]{buflen}{}\end{DoxyParamCaption})}
+
+
+
+Returns a null terminated string representing the data of the value. ~\newline
+ Parameters buf and buflen are optional and allow the caller to pass in a buffer to write the string to. If parameter buf is NULL, this method will allocate a buffer to write the string to and the caller should call free to deallocate the buffer. For Date\+Time datatype, below ISO-\/8601 formats as per TR-\/069\+\_\+\+Amendment-\/6 will be used for printing. YYYY-\/\+MM-\/\+DDThh:mm:ssZ YYYY-\/\+MM-\/\+DDThh:mm:ss+00:00 YYYY-\/\+MM-\/\+DDThh:mm:ss-\/00:00. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & the value to convert to a string \\
+\hline
+{\em buf} & optional buffer to write the string to \\
+\hline
+{\em buflen} & the length of buf if buf was supplied, otherwise ignored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A null-\/terminated string. The caller must call free on this if parameter buf was NULL. 
+\end{DoxyReturn}
+\Hypertarget{group__rbus_value_gaa1ef48e246e36b26ba6e2e85ce7ab5a0}\index{RbusValue@{RbusValue}!rbusValue\_UnMarshallRBUStoTM@{rbusValue\_UnMarshallRBUStoTM}}
+\index{rbusValue\_UnMarshallRBUStoTM@{rbusValue\_UnMarshallRBUStoTM}!RbusValue@{RbusValue}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_UnMarshallRBUStoTM()}{rbusValue\_UnMarshallRBUStoTM()}}
+{\footnotesize\ttfamily \label{group__rbus_value_gaa1ef48e246e36b26ba6e2e85ce7ab5a0} 
+void rbus\+Value\+\_\+\+Un\+Marshall\+RBUSto\+TM (\begin{DoxyParamCaption}\item[{struct tm \texorpdfstring{$\ast$}{*}}]{outvalue}{, }\item[{const \doxymbox{\hyperlink{group__rbus_value_ga2009eccbb6b430aef0ebcbf6165d1382}{rbus\+Date\+Time\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{invalue}{}\end{DoxyParamCaption})}
+
+
+
+Convert an explicit length time structure to a local "{}struct tm"{}, which allows 64/\+32 bit platform message interchange. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em invalue} & An incoming explicit length time structure \\
+\hline
+{\em outvalue} & An outgoing struct tm \\
+\hline
+\end{DoxyParams}

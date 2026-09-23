@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="structrbus_event_raw_data__t" kind="struct" language="C++" prot="public">
+    <compoundname>rbusEventRawData_t</compoundname>
+    <includes refid="rbus_8h" local="no">rbus.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structrbus_event_raw_data__t_1ab581f690c19e1c768614ada28348bfe0" prot="public" static="no" mutable="no">
+        <type>char const  *</type>
+        <definition>char const* rbusEventRawData_t::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>rbusEventRawData_t::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fully qualified event name </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="236" column="20" bodyfile="include/rbus.h" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrbus_event_raw_data__t_1aad6f57115800906459b9b52ae1c9f459" prot="public" static="no" mutable="no">
+        <type>const void *</type>
+        <definition>const void* rbusEventRawData_t::rawData</definition>
+        <argsstring></argsstring>
+        <name>rawData</name>
+        <qualifiedname>rbusEventRawData_t::rawData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The raw data for the event </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="237" column="20" bodyfile="include/rbus.h" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrbus_event_raw_data__t_1a84c34efd426161120462ebb7597641d5" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int rbusEventRawData_t::rawDataLen</definition>
+        <argsstring></argsstring>
+        <name>rawDataLen</name>
+        <qualifiedname>rbusEventRawData_t::rawDataLen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The raw data length </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="238" column="21" bodyfile="include/rbus.h" bodystart="238" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/rbus.h" line="234" column="1" bodyfile="include/rbus.h" bodystart="235" bodyend="239"/>
+    <listofallmembers>
+      <member refid="structrbus_event_raw_data__t_1ab581f690c19e1c768614ada28348bfe0" prot="public" virt="non-virtual"><scope>rbusEventRawData_t</scope><name>name</name></member>
+      <member refid="structrbus_event_raw_data__t_1aad6f57115800906459b9b52ae1c9f459" prot="public" virt="non-virtual"><scope>rbusEventRawData_t</scope><name>rawData</name></member>
+      <member refid="structrbus_event_raw_data__t_1a84c34efd426161120462ebb7597641d5" prot="public" virt="non-virtual"><scope>rbusEventRawData_t</scope><name>rawDataLen</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

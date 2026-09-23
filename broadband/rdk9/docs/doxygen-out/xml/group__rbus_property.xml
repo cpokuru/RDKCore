@@ -1,0 +1,2577 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="group__rbus_property" kind="group">
+    <compoundname>rbusProperty</compoundname>
+    <title>RbusProperty</title>
+    <sectiondef kind="user-defined">
+      <header>rbusProperty_Init[Type]</header>
+      <description><para>These function allocate and initialize a property to a value with a specific type and data. This automatically retains ownership of the property. It&apos;s the caller&apos;s responsibility to release ownership by calling rbusProperty_Release once it&apos;s done with it.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional name to assign the property. The name is dublicated/copied. <linebreak/>
+ If NULL is passed the property&apos;s name will be NULL. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type specific data to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The new property </para>
+</simplesect>
+</para>
+</description>
+      <memberdef kind="function" id="group__rbus_property_1ga55def6ffebbcba8d3b3791b3bd0fcbc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_InitBoolean</definition>
+        <argsstring>(char const *name, bool b)</argsstring>
+        <name>rbusProperty_InitBoolean</name>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="78" column="16" declfile="include/rbus_property.h" declline="78" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga27f6de1b1aedd15a465ef7097c8ba38e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_InitChar</definition>
+        <argsstring>(char const *name, char c)</argsstring>
+        <name>rbusProperty_InitChar</name>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="79" column="16" declfile="include/rbus_property.h" declline="79" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga0bbfb4ae877615b7aeff18c49c8f2c2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_InitByte</definition>
+        <argsstring>(char const *name, unsigned char u)</argsstring>
+        <name>rbusProperty_InitByte</name>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="80" column="16" declfile="include/rbus_property.h" declline="80" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga1cb1457fee33a2c07dd43c746afff52a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_InitInt8</definition>
+        <argsstring>(char const *name, int8_t i8)</argsstring>
+        <name>rbusProperty_InitInt8</name>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>i8</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="81" column="16" declfile="include/rbus_property.h" declline="81" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga80b00c62ad97ca7b24c0e859b0fda261" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_InitUInt8</definition>
+        <argsstring>(char const *name, uint8_t u8)</argsstring>
+        <name>rbusProperty_InitUInt8</name>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>u8</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="82" column="16" declfile="include/rbus_property.h" declline="82" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga1349925f10340da4bffd66359eea10f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_InitInt16</definition>
+        <argsstring>(char const *name, int16_t i16)</argsstring>
+        <name>rbusProperty_InitInt16</name>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>i16</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="83" column="16" declfile="include/rbus_property.h" declline="83" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga890ebc85ef0e143f3fbfd61e92e2539a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_InitUInt16</definition>
+        <argsstring>(char const *name, uint16_t u16)</argsstring>
+        <name>rbusProperty_InitUInt16</name>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>u16</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="84" column="16" declfile="include/rbus_property.h" declline="84" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gac2102c03621300456f5d794013637976" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_InitInt32</definition>
+        <argsstring>(char const *name, int32_t i32)</argsstring>
+        <name>rbusProperty_InitInt32</name>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>i32</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="85" column="16" declfile="include/rbus_property.h" declline="85" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gaf4651167b88be3d76f1c6ee41eaa77f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_InitUInt32</definition>
+        <argsstring>(char const *name, uint32_t u32)</argsstring>
+        <name>rbusProperty_InitUInt32</name>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>u32</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="86" column="16" declfile="include/rbus_property.h" declline="86" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga7f8793e70771909d99cd598a637fe63c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_InitInt64</definition>
+        <argsstring>(char const *name, int64_t i64)</argsstring>
+        <name>rbusProperty_InitInt64</name>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>i64</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="87" column="16" declfile="include/rbus_property.h" declline="87" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga904823036b745b4b88722063a5709fba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_InitUInt64</definition>
+        <argsstring>(char const *name, uint64_t u64)</argsstring>
+        <name>rbusProperty_InitUInt64</name>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>u64</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="88" column="16" declfile="include/rbus_property.h" declline="88" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga10c88343ad75d9e9a8bc13c6d322e461" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_InitSingle</definition>
+        <argsstring>(char const *name, float f32)</argsstring>
+        <name>rbusProperty_InitSingle</name>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>f32</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="89" column="16" declfile="include/rbus_property.h" declline="89" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga0a6fba6849d69b033ecf48af3165f460" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_InitDouble</definition>
+        <argsstring>(char const *name, double f64)</argsstring>
+        <name>rbusProperty_InitDouble</name>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>f64</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="90" column="16" declfile="include/rbus_property.h" declline="90" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gac36b19b876cfdb360efa801499497c97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_InitTime</definition>
+        <argsstring>(char const *name, rbusDateTime_t const *tv)</argsstring>
+        <name>rbusProperty_InitTime</name>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__rbus_value_1ga2009eccbb6b430aef0ebcbf6165d1382" kindref="member">rbusDateTime_t</ref> const *</type>
+          <declname>tv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="91" column="16" declfile="include/rbus_property.h" declline="91" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gaaa5b6b49c67ce804e608961279cb4408" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_InitString</definition>
+        <argsstring>(char const *name, char const *s)</argsstring>
+        <name>rbusProperty_InitString</name>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="92" column="16" declfile="include/rbus_property.h" declline="92" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga536829cce7af7afb5f4f1233afa288e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_InitBytes</definition>
+        <argsstring>(char const *name, uint8_t const *bytes, int len)</argsstring>
+        <name>rbusProperty_InitBytes</name>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>uint8_t const *</type>
+          <declname>bytes</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="93" column="16" declfile="include/rbus_property.h" declline="93" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga3dd00d65e63cf1a2a5c349ba23bd853e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_InitProperty</definition>
+        <argsstring>(char const *name, struct _rbusProperty *property)</argsstring>
+        <name>rbusProperty_InitProperty</name>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>struct _rbusProperty *</type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="94" column="16" declfile="include/rbus_property.h" declline="94" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gadd952001e326596bca6cfac2ca293c0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_InitObject</definition>
+        <argsstring>(char const *name, struct _rbusObject *object)</argsstring>
+        <name>rbusProperty_InitObject</name>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>struct _rbusObject *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="95" column="16" declfile="include/rbus_property.h" declline="95" declcolumn="16"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>rbusProperty_Get[Type]</header>
+      <description><para>These functions get the value of a property to a specific type and data.</para>
+<para><simplesect kind="return"><para>The type specific data </para>
+</simplesect>
+</para>
+</description>
+      <memberdef kind="function" id="group__rbus_property_1ga76c6f61a8e7a8e053a3b3b5da8716080" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool rbusProperty_GetBoolean</definition>
+        <argsstring>(rbusProperty_t property)</argsstring>
+        <name>rbusProperty_GetBoolean</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="159" column="6" declfile="include/rbus_property.h" declline="159" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gaac9e9f460fd82ba67b68115e3475c84e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char rbusProperty_GetChar</definition>
+        <argsstring>(rbusProperty_t property)</argsstring>
+        <name>rbusProperty_GetChar</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="160" column="6" declfile="include/rbus_property.h" declline="160" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga7020f92df4ad1c45e0fdf6182af44307" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char rbusProperty_GetByte</definition>
+        <argsstring>(rbusProperty_t property)</argsstring>
+        <name>rbusProperty_GetByte</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="161" column="15" declfile="include/rbus_property.h" declline="161" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga0a1392e03d91b0b35d76e83d5de3ce56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t rbusProperty_GetInt8</definition>
+        <argsstring>(rbusProperty_t property)</argsstring>
+        <name>rbusProperty_GetInt8</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="162" column="8" declfile="include/rbus_property.h" declline="162" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gabb189b591bae11551558c5de2663a60d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t rbusProperty_GetUInt8</definition>
+        <argsstring>(rbusProperty_t property)</argsstring>
+        <name>rbusProperty_GetUInt8</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="163" column="9" declfile="include/rbus_property.h" declline="163" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga603a30f2c9b87a828a45a4b735d94230" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int16_t</type>
+        <definition>int16_t rbusProperty_GetInt16</definition>
+        <argsstring>(rbusProperty_t property)</argsstring>
+        <name>rbusProperty_GetInt16</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="164" column="9" declfile="include/rbus_property.h" declline="164" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gabdbb34f25c1ca2c0499d21364e31e92e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t rbusProperty_GetUInt16</definition>
+        <argsstring>(rbusProperty_t property)</argsstring>
+        <name>rbusProperty_GetUInt16</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="165" column="10" declfile="include/rbus_property.h" declline="165" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga5e4d35b5b8fd58ff2f1e4f4ca605f251" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t rbusProperty_GetInt32</definition>
+        <argsstring>(rbusProperty_t property)</argsstring>
+        <name>rbusProperty_GetInt32</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="166" column="9" declfile="include/rbus_property.h" declline="166" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gaff94e73465c74d23c7493b1ead109161" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t rbusProperty_GetUInt32</definition>
+        <argsstring>(rbusProperty_t property)</argsstring>
+        <name>rbusProperty_GetUInt32</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="167" column="10" declfile="include/rbus_property.h" declline="167" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gaeaaaa3b0eb55782bbbeaba57d34f4ca0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>int64_t rbusProperty_GetInt64</definition>
+        <argsstring>(rbusProperty_t property)</argsstring>
+        <name>rbusProperty_GetInt64</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="168" column="9" declfile="include/rbus_property.h" declline="168" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gac4b0432318c8872659525bfc2ae0f506" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t rbusProperty_GetUInt64</definition>
+        <argsstring>(rbusProperty_t property)</argsstring>
+        <name>rbusProperty_GetUInt64</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="169" column="10" declfile="include/rbus_property.h" declline="169" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga1ee9195fe035586e8360f9ae8eae99a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float rbusProperty_GetSingle</definition>
+        <argsstring>(rbusProperty_t property)</argsstring>
+        <name>rbusProperty_GetSingle</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="170" column="7" declfile="include/rbus_property.h" declline="170" declcolumn="7"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga5e0e99f1a2ee4dda8b4293a635276b35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double rbusProperty_GetDouble</definition>
+        <argsstring>(rbusProperty_t property)</argsstring>
+        <name>rbusProperty_GetDouble</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="171" column="8" declfile="include/rbus_property.h" declline="171" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gad588eaeb6733318ef9ef55a875156340" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_value_1ga2009eccbb6b430aef0ebcbf6165d1382" kindref="member">rbusDateTime_t</ref> const *</type>
+        <definition>rbusDateTime_t const  * rbusProperty_GetTime</definition>
+        <argsstring>(rbusProperty_t property)</argsstring>
+        <name>rbusProperty_GetTime</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="172" column="22" declfile="include/rbus_property.h" declline="172" declcolumn="22"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga0d5741ce6f0aded80d00331642c339d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char const *</type>
+        <definition>char const  * rbusProperty_GetString</definition>
+        <argsstring>(rbusProperty_t property, int *len)</argsstring>
+        <name>rbusProperty_GetString</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="173" column="12" declfile="include/rbus_property.h" declline="173" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga9c6b6982edfb3cf48d3080cb55ae1e1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t const *</type>
+        <definition>uint8_t const  * rbusProperty_GetBytes</definition>
+        <argsstring>(rbusProperty_t property, int *len)</argsstring>
+        <name>rbusProperty_GetBytes</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="174" column="15" declfile="include/rbus_property.h" declline="174" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga5a3a51fbd3374b548307c9372a6916de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct _rbusProperty *</type>
+        <definition>struct _rbusProperty * rbusProperty_GetProperty</definition>
+        <argsstring>(rbusProperty_t property)</argsstring>
+        <name>rbusProperty_GetProperty</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="175" column="21" declfile="include/rbus_property.h" declline="175" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga4c6536ce6eec4bb6e0e0485ace1b5986" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct _rbusObject *</type>
+        <definition>struct _rbusObject * rbusProperty_GetObject</definition>
+        <argsstring>(rbusProperty_t property)</argsstring>
+        <name>rbusProperty_GetObject</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="176" column="19" declfile="include/rbus_property.h" declline="176" declcolumn="19"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>rbusProperty_Get[Type]Ex</header>
+      <description><para>These functions check that the type being requested matches the value&apos;s actual type, and returns the data if it does. If the type does not match, an error is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A property containing the value to get data from. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type specific data to return </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>error code as defined by <ref refid="group__rbus_value_1ga161d6cea4485877b304950784de3fbea" kindref="member">rbusValueError_t</ref>. Possible errors are: RBUS_VALUE_ERROR_TYPE </para>
+</simplesect>
+</para>
+</description>
+      <memberdef kind="function" id="group__rbus_property_1ga08d444bf6649ea70f0d0a17a1ad9e752" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_value_1ga161d6cea4485877b304950784de3fbea" kindref="member">rbusValueError_t</ref></type>
+        <definition>rbusValueError_t rbusProperty_GetBooleanEx</definition>
+        <argsstring>(rbusProperty_t property, bool *b)</argsstring>
+        <name>rbusProperty_GetBooleanEx</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="188" column="18" declfile="include/rbus_property.h" declline="188" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga518b58df3898e643be86d182acb9c478" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_value_1ga161d6cea4485877b304950784de3fbea" kindref="member">rbusValueError_t</ref></type>
+        <definition>rbusValueError_t rbusProperty_GetCharEx</definition>
+        <argsstring>(rbusProperty_t property, char *c)</argsstring>
+        <name>rbusProperty_GetCharEx</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="189" column="18" declfile="include/rbus_property.h" declline="189" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga16d5241fe7a6cc71bf34fd45d60f501b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_value_1ga161d6cea4485877b304950784de3fbea" kindref="member">rbusValueError_t</ref></type>
+        <definition>rbusValueError_t rbusProperty_GetByteEx</definition>
+        <argsstring>(rbusProperty_t property, unsigned char *u)</argsstring>
+        <name>rbusProperty_GetByteEx</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="190" column="18" declfile="include/rbus_property.h" declline="190" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga90fb6de7996b186cf3e7adfe802e7b89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_value_1ga161d6cea4485877b304950784de3fbea" kindref="member">rbusValueError_t</ref></type>
+        <definition>rbusValueError_t rbusProperty_GetInt8Ex</definition>
+        <argsstring>(rbusProperty_t property, int8_t *i8)</argsstring>
+        <name>rbusProperty_GetInt8Ex</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>int8_t *</type>
+          <declname>i8</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="191" column="18" declfile="include/rbus_property.h" declline="191" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gafbc381eedd7a47df3c638e1aab444be6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_value_1ga161d6cea4485877b304950784de3fbea" kindref="member">rbusValueError_t</ref></type>
+        <definition>rbusValueError_t rbusProperty_GetUInt8Ex</definition>
+        <argsstring>(rbusProperty_t property, uint8_t *u8)</argsstring>
+        <name>rbusProperty_GetUInt8Ex</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>u8</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="192" column="18" declfile="include/rbus_property.h" declline="192" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga663774ea7c44e6b9740ef9462f57de91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_value_1ga161d6cea4485877b304950784de3fbea" kindref="member">rbusValueError_t</ref></type>
+        <definition>rbusValueError_t rbusProperty_GetInt16Ex</definition>
+        <argsstring>(rbusProperty_t property, int16_t *i16)</argsstring>
+        <name>rbusProperty_GetInt16Ex</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>int16_t *</type>
+          <declname>i16</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="193" column="18" declfile="include/rbus_property.h" declline="193" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga12c14ce610d70e63f01693de94914f23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_value_1ga161d6cea4485877b304950784de3fbea" kindref="member">rbusValueError_t</ref></type>
+        <definition>rbusValueError_t rbusProperty_GetUInt16Ex</definition>
+        <argsstring>(rbusProperty_t property, uint16_t *u16)</argsstring>
+        <name>rbusProperty_GetUInt16Ex</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>u16</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="194" column="18" declfile="include/rbus_property.h" declline="194" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gadcfc7ce41017473008f7bf8b9abf9145" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_value_1ga161d6cea4485877b304950784de3fbea" kindref="member">rbusValueError_t</ref></type>
+        <definition>rbusValueError_t rbusProperty_GetInt32Ex</definition>
+        <argsstring>(rbusProperty_t property, int32_t *i32)</argsstring>
+        <name>rbusProperty_GetInt32Ex</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>int32_t *</type>
+          <declname>i32</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="195" column="18" declfile="include/rbus_property.h" declline="195" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga96740504e2bffe60bff2037102a45e9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_value_1ga161d6cea4485877b304950784de3fbea" kindref="member">rbusValueError_t</ref></type>
+        <definition>rbusValueError_t rbusProperty_GetUInt32Ex</definition>
+        <argsstring>(rbusProperty_t property, uint32_t *u32)</argsstring>
+        <name>rbusProperty_GetUInt32Ex</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>u32</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="196" column="18" declfile="include/rbus_property.h" declline="196" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga412a3fd9eeba6a9bfaf64f8bcac9866c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_value_1ga161d6cea4485877b304950784de3fbea" kindref="member">rbusValueError_t</ref></type>
+        <definition>rbusValueError_t rbusProperty_GetInt64Ex</definition>
+        <argsstring>(rbusProperty_t property, int64_t *i64)</argsstring>
+        <name>rbusProperty_GetInt64Ex</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>int64_t *</type>
+          <declname>i64</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="197" column="18" declfile="include/rbus_property.h" declline="197" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga3b6b97ebc3aceed80b616eeab485d141" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_value_1ga161d6cea4485877b304950784de3fbea" kindref="member">rbusValueError_t</ref></type>
+        <definition>rbusValueError_t rbusProperty_GetUInt64Ex</definition>
+        <argsstring>(rbusProperty_t property, uint64_t *u64)</argsstring>
+        <name>rbusProperty_GetUInt64Ex</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>uint64_t *</type>
+          <declname>u64</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="198" column="18" declfile="include/rbus_property.h" declline="198" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga16e2514c267f53d11df48b0b73f3080c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_value_1ga161d6cea4485877b304950784de3fbea" kindref="member">rbusValueError_t</ref></type>
+        <definition>rbusValueError_t rbusProperty_GetSingleEx</definition>
+        <argsstring>(rbusProperty_t property, float *f32)</argsstring>
+        <name>rbusProperty_GetSingleEx</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>f32</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="199" column="18" declfile="include/rbus_property.h" declline="199" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga76227981d54431b406ae8888667ec2c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_value_1ga161d6cea4485877b304950784de3fbea" kindref="member">rbusValueError_t</ref></type>
+        <definition>rbusValueError_t rbusProperty_GetDoubleEx</definition>
+        <argsstring>(rbusProperty_t property, double *f64)</argsstring>
+        <name>rbusProperty_GetDoubleEx</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>f64</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="200" column="18" declfile="include/rbus_property.h" declline="200" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga6f6b89a48e1151ac106be0ded1d97090" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_value_1ga161d6cea4485877b304950784de3fbea" kindref="member">rbusValueError_t</ref></type>
+        <definition>rbusValueError_t rbusProperty_GetTimeEx</definition>
+        <argsstring>(rbusProperty_t property, rbusDateTime_t const **tv)</argsstring>
+        <name>rbusProperty_GetTimeEx</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type><ref refid="group__rbus_value_1ga2009eccbb6b430aef0ebcbf6165d1382" kindref="member">rbusDateTime_t</ref> const **</type>
+          <declname>tv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="201" column="18" declfile="include/rbus_property.h" declline="201" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga24eb5b394f15ff806e23a166c5fa2ae5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_value_1ga161d6cea4485877b304950784de3fbea" kindref="member">rbusValueError_t</ref></type>
+        <definition>rbusValueError_t rbusProperty_GetStringEx</definition>
+        <argsstring>(rbusProperty_t property, char const **s, int *len)</argsstring>
+        <name>rbusProperty_GetStringEx</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>char const **</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="202" column="18" declfile="include/rbus_property.h" declline="202" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gac1f641dd01555acceca4d09a910462ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_value_1ga161d6cea4485877b304950784de3fbea" kindref="member">rbusValueError_t</ref></type>
+        <definition>rbusValueError_t rbusProperty_GetBytesEx</definition>
+        <argsstring>(rbusProperty_t property, uint8_t const **bytes, int *len)</argsstring>
+        <name>rbusProperty_GetBytesEx</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>uint8_t const **</type>
+          <declname>bytes</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="203" column="18" declfile="include/rbus_property.h" declline="203" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gad475c16947ff7775347841e084afecc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_value_1ga161d6cea4485877b304950784de3fbea" kindref="member">rbusValueError_t</ref></type>
+        <definition>rbusValueError_t rbusProperty_GetPropertyEx</definition>
+        <argsstring>(rbusProperty_t property, struct _rbusProperty **prop)</argsstring>
+        <name>rbusProperty_GetPropertyEx</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>struct _rbusProperty **</type>
+          <declname>prop</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="204" column="18" declfile="include/rbus_property.h" declline="204" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gad9ca0e71996c8d7b672c7b1893f6f42f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_value_1ga161d6cea4485877b304950784de3fbea" kindref="member">rbusValueError_t</ref></type>
+        <definition>rbusValueError_t rbusProperty_GetObjectEx</definition>
+        <argsstring>(rbusProperty_t property, struct _rbusObject **obj)</argsstring>
+        <name>rbusProperty_GetObjectEx</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>struct _rbusObject **</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="205" column="18" declfile="include/rbus_property.h" declline="205" declcolumn="18"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>rbusProperty_Set[Type]</header>
+      <description><para>These functions set the value of a property to a specific type and data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>property</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A property. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type specific data to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+</description>
+      <memberdef kind="function" id="group__rbus_property_1ga1586a379c6c032f4f82d0aa72a3d6358" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusProperty_SetBoolean</definition>
+        <argsstring>(rbusProperty_t property, bool b)</argsstring>
+        <name>rbusProperty_SetBoolean</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="214" column="6" declfile="include/rbus_property.h" declline="214" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga21c91ee0b53ac622d0797d141eb5912d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusProperty_SetChar</definition>
+        <argsstring>(rbusProperty_t property, char c)</argsstring>
+        <name>rbusProperty_SetChar</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="215" column="6" declfile="include/rbus_property.h" declline="215" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gab352c22cc8de2efb921c38c14c507197" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusProperty_SetByte</definition>
+        <argsstring>(rbusProperty_t property, unsigned char u)</argsstring>
+        <name>rbusProperty_SetByte</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="216" column="6" declfile="include/rbus_property.h" declline="216" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga05cd386284a5397b857fae152af11d3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusProperty_SetInt8</definition>
+        <argsstring>(rbusProperty_t property, int8_t i8)</argsstring>
+        <name>rbusProperty_SetInt8</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>i8</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="217" column="6" declfile="include/rbus_property.h" declline="217" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga68dc4a2dd1039e342797ae1a9bed35b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusProperty_SetUInt8</definition>
+        <argsstring>(rbusProperty_t property, uint8_t u8)</argsstring>
+        <name>rbusProperty_SetUInt8</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>u8</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="218" column="6" declfile="include/rbus_property.h" declline="218" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga01fce7f46a6484fb2a4282cc32b1ee15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusProperty_SetInt16</definition>
+        <argsstring>(rbusProperty_t property, int16_t i16)</argsstring>
+        <name>rbusProperty_SetInt16</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>i16</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="219" column="6" declfile="include/rbus_property.h" declline="219" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gaa6775ef3d700877ca0673b845c198bb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusProperty_SetUInt16</definition>
+        <argsstring>(rbusProperty_t property, uint16_t u16)</argsstring>
+        <name>rbusProperty_SetUInt16</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>u16</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="220" column="6" declfile="include/rbus_property.h" declline="220" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga056cb673109d2b5996651f183f50171a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusProperty_SetInt32</definition>
+        <argsstring>(rbusProperty_t property, int32_t i32)</argsstring>
+        <name>rbusProperty_SetInt32</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>i32</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="221" column="6" declfile="include/rbus_property.h" declline="221" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gad307ad7c78367e34629a2ddc8e97ab2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusProperty_SetUInt32</definition>
+        <argsstring>(rbusProperty_t property, uint32_t u32)</argsstring>
+        <name>rbusProperty_SetUInt32</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>u32</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="222" column="6" declfile="include/rbus_property.h" declline="222" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gac2c52bf0ffdd373058ee4f74f590d2a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusProperty_SetInt64</definition>
+        <argsstring>(rbusProperty_t property, int64_t i64)</argsstring>
+        <name>rbusProperty_SetInt64</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>i64</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="223" column="6" declfile="include/rbus_property.h" declline="223" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gae9a293e533595f58b63ac395013a2930" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusProperty_SetUInt64</definition>
+        <argsstring>(rbusProperty_t property, uint64_t u64)</argsstring>
+        <name>rbusProperty_SetUInt64</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>u64</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="224" column="6" declfile="include/rbus_property.h" declline="224" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gaa8aa44331479d94c5c06f4a5da4337dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusProperty_SetSingle</definition>
+        <argsstring>(rbusProperty_t property, float f32)</argsstring>
+        <name>rbusProperty_SetSingle</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>f32</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="225" column="6" declfile="include/rbus_property.h" declline="225" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga6634368af79632682644e72f869d4fca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusProperty_SetDouble</definition>
+        <argsstring>(rbusProperty_t property, double f64)</argsstring>
+        <name>rbusProperty_SetDouble</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>f64</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="226" column="6" declfile="include/rbus_property.h" declline="226" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gae0af5e1004bf2319ff5e0b6efd8d7c7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusProperty_SetTime</definition>
+        <argsstring>(rbusProperty_t property, rbusDateTime_t const *tv)</argsstring>
+        <name>rbusProperty_SetTime</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type><ref refid="group__rbus_value_1ga2009eccbb6b430aef0ebcbf6165d1382" kindref="member">rbusDateTime_t</ref> const *</type>
+          <declname>tv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="227" column="6" declfile="include/rbus_property.h" declline="227" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gae90c7ffbf8ab617108f36434f3513ff3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusProperty_SetString</definition>
+        <argsstring>(rbusProperty_t property, char const *s)</argsstring>
+        <name>rbusProperty_SetString</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="228" column="6" declfile="include/rbus_property.h" declline="228" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga189af6a1ef9e369b8dca49d60e75207f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusProperty_SetBytes</definition>
+        <argsstring>(rbusProperty_t property, uint8_t const *bytes, int len)</argsstring>
+        <name>rbusProperty_SetBytes</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>uint8_t const *</type>
+          <declname>bytes</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="229" column="6" declfile="include/rbus_property.h" declline="229" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga0192214b91b7129d94a748187ddbdba4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusProperty_SetProperty</definition>
+        <argsstring>(rbusProperty_t property, struct _rbusProperty *p)</argsstring>
+        <name>rbusProperty_SetProperty</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>struct _rbusProperty *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="230" column="6" declfile="include/rbus_property.h" declline="230" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gad19db589d7e9ed51888e2c7b01f87e4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusProperty_SetObject</definition>
+        <argsstring>(rbusProperty_t property, struct _rbusObject *o)</argsstring>
+        <name>rbusProperty_SetObject</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>struct _rbusObject *</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="231" column="6" declfile="include/rbus_property.h" declline="231" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <header>rbusProperty_Append[Type]</header>
+      <description><para>These function allocate and initialize a new property with a value initialized with a specific type and data and appends this new property to the property param if the property param is not NULL. <linebreak/>
+ This automatically retains ownership of the new property. If the property param was NULL, it is the responsibility of the caller to call rbusProperty_Release to release it. If the propery param was not NULL, the new property will be automatically released when the first property in the list being appended to is release.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>property</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional property to append a new property to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional name to assign the new property. The name is dublicated/copied. <linebreak/>
+ If NULL is passed the property&apos;s name will be NULL. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type specific data to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The new property. If the property param was NULL, the called must release this. </para>
+</simplesect>
+</para>
+</description>
+      <memberdef kind="function" id="group__rbus_property_1ga41c1ba699b8c00877330466df27b5f10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_AppendBoolean</definition>
+        <argsstring>(rbusProperty_t property, char const *name, bool b)</argsstring>
+        <name>rbusProperty_AppendBoolean</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="252" column="16" declfile="include/rbus_property.h" declline="252" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gaadd84f2a6a1f898618dc9145d039e34d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_AppendChar</definition>
+        <argsstring>(rbusProperty_t property, char const *name, char c)</argsstring>
+        <name>rbusProperty_AppendChar</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="253" column="16" declfile="include/rbus_property.h" declline="253" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gaf5be953c95d806de9a2ccbd396fbc838" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_AppendByte</definition>
+        <argsstring>(rbusProperty_t property, char const *name, unsigned char u)</argsstring>
+        <name>rbusProperty_AppendByte</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="254" column="16" declfile="include/rbus_property.h" declline="254" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga3517db9ecb4108ec0fca55e28e16ba93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_AppendInt8</definition>
+        <argsstring>(rbusProperty_t property, char const *name, int8_t i8)</argsstring>
+        <name>rbusProperty_AppendInt8</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>i8</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="255" column="16" declfile="include/rbus_property.h" declline="255" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga4e34c4e9bab84a409e58205bec9036e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_AppendUInt8</definition>
+        <argsstring>(rbusProperty_t property, char const *name, uint8_t u8)</argsstring>
+        <name>rbusProperty_AppendUInt8</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>u8</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="256" column="16" declfile="include/rbus_property.h" declline="256" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga4b2fecb5cc329727fd5e355d314bc696" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_AppendInt16</definition>
+        <argsstring>(rbusProperty_t property, char const *name, int16_t i16)</argsstring>
+        <name>rbusProperty_AppendInt16</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>i16</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="257" column="16" declfile="include/rbus_property.h" declline="257" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gafda088272fd49710af7279e01f70777c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_AppendUInt16</definition>
+        <argsstring>(rbusProperty_t property, char const *name, uint16_t u16)</argsstring>
+        <name>rbusProperty_AppendUInt16</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>u16</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="258" column="16" declfile="include/rbus_property.h" declline="258" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga4b3dd1dd59fa7d2fb9fe268f11dfea38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_AppendInt32</definition>
+        <argsstring>(rbusProperty_t property, char const *name, int32_t i32)</argsstring>
+        <name>rbusProperty_AppendInt32</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>i32</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="259" column="16" declfile="include/rbus_property.h" declline="259" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga45a07f2e2ba8a107a02223318e587910" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_AppendUInt32</definition>
+        <argsstring>(rbusProperty_t property, char const *name, uint32_t u32)</argsstring>
+        <name>rbusProperty_AppendUInt32</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>u32</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="260" column="16" declfile="include/rbus_property.h" declline="260" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga28b7d23a550854ae4ae36ff275ce39a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_AppendInt64</definition>
+        <argsstring>(rbusProperty_t property, char const *name, int64_t i64)</argsstring>
+        <name>rbusProperty_AppendInt64</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>i64</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="261" column="16" declfile="include/rbus_property.h" declline="261" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gad58983b3de32fde9e03c4e31b6ab9d5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_AppendUInt64</definition>
+        <argsstring>(rbusProperty_t property, char const *name, uint64_t u64)</argsstring>
+        <name>rbusProperty_AppendUInt64</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>u64</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="262" column="16" declfile="include/rbus_property.h" declline="262" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gaccab070196094c0e1040e5cb41441dc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_AppendSingle</definition>
+        <argsstring>(rbusProperty_t property, char const *name, float f32)</argsstring>
+        <name>rbusProperty_AppendSingle</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>f32</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="263" column="16" declfile="include/rbus_property.h" declline="263" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga4b30f7f04fe936d156aa5a4ce174b29f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_AppendDouble</definition>
+        <argsstring>(rbusProperty_t property, char const *name, double f64)</argsstring>
+        <name>rbusProperty_AppendDouble</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>f64</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="264" column="16" declfile="include/rbus_property.h" declline="264" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga0290d9d8b19ddd2764d86395d776b532" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_AppendTime</definition>
+        <argsstring>(rbusProperty_t property, char const *name, rbusDateTime_t const *tv)</argsstring>
+        <name>rbusProperty_AppendTime</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__rbus_value_1ga2009eccbb6b430aef0ebcbf6165d1382" kindref="member">rbusDateTime_t</ref> const *</type>
+          <declname>tv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="265" column="16" declfile="include/rbus_property.h" declline="265" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gae0bcdb8095eae0dba139fb3be45895bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_AppendString</definition>
+        <argsstring>(rbusProperty_t property, char const *name, char const *s)</argsstring>
+        <name>rbusProperty_AppendString</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="266" column="16" declfile="include/rbus_property.h" declline="266" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga394cd0e2520b6e7d57e5c67fd779586b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_AppendBytes</definition>
+        <argsstring>(rbusProperty_t property, char const *name, uint8_t const *bytes, int len)</argsstring>
+        <name>rbusProperty_AppendBytes</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>uint8_t const *</type>
+          <declname>bytes</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="267" column="16" declfile="include/rbus_property.h" declline="267" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gabd5dcbfad679d053f43447b63e92129c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_AppendProperty</definition>
+        <argsstring>(rbusProperty_t property, char const *name, struct _rbusProperty *p)</argsstring>
+        <name>rbusProperty_AppendProperty</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>struct _rbusProperty *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="268" column="16" declfile="include/rbus_property.h" declline="268" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga502648dc903d814eb2a826291aeb7777" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_AppendObject</definition>
+        <argsstring>(rbusProperty_t property, char const *name, struct _rbusObject *o)</argsstring>
+        <name>rbusProperty_AppendObject</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>struct _rbusObject *</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="269" column="16" declfile="include/rbus_property.h" declline="269" declcolumn="16"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" prot="public" static="no">
+        <type>struct _rbusProperty *</type>
+        <definition>typedef struct _rbusProperty* rbusProperty_t</definition>
+        <argsstring></argsstring>
+        <name>rbusProperty_t</name>
+        <briefdescription>
+<para>A handle to an rbus property. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="49" column="29" bodyfile="include/rbus_property.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" prot="public" static="no">
+        <type>struct _rbusProperty *</type>
+        <definition>typedef struct _rbusProperty* rbusProperty_t</definition>
+        <argsstring></argsstring>
+        <name>rbusProperty_t</name>
+        <briefdescription>
+<para>A handle to an rbus property. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_value.h" line="125" column="29" bodyfile="include/rbus_value.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group__rbus_property_1gadcdffec3eda31a6830f670a0b62fd014" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_Init</definition>
+        <argsstring>(rbusProperty_t *pproperty, char const *name, rbusValue_t value)</argsstring>
+        <name>rbusProperty_Init</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref> *</type>
+          <declname>pproperty</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__rbus_value_1ga3433391cb2f7a4e2a85608ac9476fff6" kindref="member">rbusValue_t</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Allocate and initialize a property. This automatically retains ownership of the property. It&apos;s the caller&apos;s responsibility to release ownership by calling rbusProperty_Release once it&apos;s done with it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pproperty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional reference to an address where the new property will be assigned. The caller is responsible for releasing the property with rbusProperty_Release </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional name to assign the property. The name is dublicated/copied. <linebreak/>
+ If NULL is passed the property&apos;s name will be NULL. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional value to assign the property. The property will retain ownership of the value. If the value is NULL, the property&apos;s value will be NULL. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The new property </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="64" column="16" declfile="include/rbus_property.h" declline="64" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga1cf5abf920543c82ebcb82ef809edf66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusProperty_Retain</definition>
+        <argsstring>(rbusProperty_t property)</argsstring>
+        <name>rbusProperty_Retain</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+<para>Take shared ownership of the property. This allows a property to have multiple owners. The first owner obtains ownership with rbusProperty_Init. Additional owners can be assigned afterwards with rbusProperty_Retain. <linebreak/>
+ Each owner must call rbusProperty_Release once done using the property. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>property</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the property to retain </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="105" column="6" declfile="include/rbus_property.h" declline="105" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga00d4d9c772e0ef874e52ef61af16b6f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusProperty_Release</definition>
+        <argsstring>(rbusProperty_t property)</argsstring>
+        <name>rbusProperty_Release</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+<para>Release ownership of the property. This must be called when done using a property that was retained with either rbusProperty_Init or rbusProperty_Retain. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>property</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the property to release </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="112" column="6" declfile="include/rbus_property.h" declline="112" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga60009360957d047e3959c101a7640efa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusProperty_Releases</definition>
+        <argsstring>(int count,...)</argsstring>
+        <name>rbusProperty_Releases</name>
+        <param>
+          <type>int</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="114" column="6" declfile="include/rbus_property.h" declline="114" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga71c6f393b486f0d20baa1aa93e22747c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rbusProperty_Compare</definition>
+        <argsstring>(rbusProperty_t property1, rbusProperty_t property2)</argsstring>
+        <name>rbusProperty_Compare</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property1</declname>
+        </param>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property2</declname>
+        </param>
+        <briefdescription>
+<para>Compare two properties for equality. They are equal if both their names and values are equal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>property1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the first property to compare </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>property2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the second property to compare </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The compare result where 0 is equal and non-zero if not equal. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="122" column="5" declfile="include/rbus_property.h" declline="122" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga75040fc78efb3cd288512197a8177651" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char const *</type>
+        <definition>char const  * rbusProperty_GetName</definition>
+        <argsstring>(rbusProperty_t property)</argsstring>
+        <name>rbusProperty_GetName</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+<para>Get the name of a property. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>property</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A property. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The name of the property. To avoid copies, this is a reference to the underlying name. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="129" column="12" declfile="include/rbus_property.h" declline="129" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga9099f4bc85279ccddde666fabc6a4afa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusProperty_SetName</definition>
+        <argsstring>(rbusProperty_t property, char const *name)</argsstring>
+        <name>rbusProperty_SetName</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Set the name of a property. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>property</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A property. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name to set which will be duplicated/copied </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="136" column="6" declfile="include/rbus_property.h" declline="136" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga2e063ae2504977b96959ff940f87f70e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_value_1ga3433391cb2f7a4e2a85608ac9476fff6" kindref="member">rbusValue_t</ref></type>
+        <definition>rbusValue_t rbusProperty_GetValue</definition>
+        <argsstring>(rbusProperty_t property)</argsstring>
+        <name>rbusProperty_GetValue</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+<para>Get the value of a property. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>property</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A property. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value of the property. If the caller intends to store this value, it should take ownership by calling rbusValue_Retain and then when its done with it, call rbusValue_Release. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="145" column="13" declfile="include/rbus_property.h" declline="145" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga312f5bbb6d90890ec1c0b860ad5debb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusProperty_SetValue</definition>
+        <argsstring>(rbusProperty_t property, rbusValue_t value)</argsstring>
+        <name>rbusProperty_SetValue</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type><ref refid="group__rbus_value_1ga3433391cb2f7a4e2a85608ac9476fff6" kindref="member">rbusValue_t</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Set the value of a property. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>property</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A property. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value to set. The property will retain ownership of the value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="152" column="6" declfile="include/rbus_property.h" declline="152" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gaabf28cd9a9999ddc6a5f72cd16824092" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+        <definition>rbusProperty_t rbusProperty_GetNext</definition>
+        <argsstring>(rbusProperty_t property)</argsstring>
+        <name>rbusProperty_GetNext</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+<para>Get the next property from the list. Properties can be linked together into a list. Given a property in that list, the next property in the list can be obtained with this method. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>property</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A property. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The next property in the list. If the caller intends to store this property, it should take ownership by calling rbusProperty_Retain and then when its done with it, call rbusProperty_Release. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="280" column="16" declfile="include/rbus_property.h" declline="280" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1ga8f22108cc59430fbb8cd2a56fabe9f1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusProperty_SetNext</definition>
+        <argsstring>(rbusProperty_t property, rbusProperty_t next)</argsstring>
+        <name>rbusProperty_SetNext</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>next</declname>
+        </param>
+        <briefdescription>
+<para>Set the next property in the list. Properties can be linked together into a list. Given a property in that list, the next property in the list can be set with this method. If next had been previously set, then ownership of the former next property is released. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>property</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A property. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>next</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A property to be set as the next in the list. <linebreak/>
+ next can be a list itself, in which case the list is Nexted. next can be NULL, in which case the list is terminated. setting NULL is also a way to clear the list. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="292" column="6" declfile="include/rbus_property.h" declline="292" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gafaff258258436912999ceb6796eb9eac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusProperty_Append</definition>
+        <argsstring>(rbusProperty_t property, rbusProperty_t back)</argsstring>
+        <name>rbusProperty_Append</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>back</declname>
+        </param>
+        <briefdescription>
+<para>Append a property to the end of a property list. <linebreak/>
+ Ownership of the property being appended will be retained. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>property</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A property. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>back</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A property to append to the end of the list. If back is NULL, then no action is taken. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="301" column="6" declfile="include/rbus_property.h" declline="301" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gab30d8192c145067c5855612c230baa10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t rbusProperty_Count</definition>
+        <argsstring>(rbusProperty_t property)</argsstring>
+        <name>rbusProperty_Count</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+<para>Return the number or properties in the list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>property</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A property (the first in list). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of properties in the list. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="310" column="10" declfile="include/rbus_property.h" declline="310" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="group__rbus_property_1gaf6e07441ed906e702da7720c4a1864de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusProperty_fwrite</definition>
+        <argsstring>(rbusProperty_t prop, int depth, FILE *fout)</argsstring>
+        <name>rbusProperty_fwrite</name>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>prop</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>depth</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>fout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="312" column="6" declfile="include/rbus_property.h" declline="312" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="group__rbus_property_1gace64fccea680780de3a2a528024cb27f" prot="public" static="no">
+        <name>rbusProperty_PushBack</name>
+        <param><defname>prop</defname></param>
+        <param><defname>back</defname></param>
+        <initializer><ref refid="group__rbus_property_1gafaff258258436912999ceb6796eb9eac" kindref="member">rbusProperty_Append</ref>((prop),(back))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_property.h" line="303" column="9" bodyfile="include/rbus_property.h" bodystart="303" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>An rbus property is a name/value pair. It allows assigning a name (e.g. path) to an rbus value. An <ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref> is a reference counted handle to an rbus property. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This API is not thread-safe. <linebreak/>
+ All instances of types <ref refid="group__rbus_value_1ga3433391cb2f7a4e2a85608ac9476fff6" kindref="member">rbusValue_t</ref>, <ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref>, and <ref refid="group__rbus_object_1ga21587678b0f1f9fb559a9bc9bae8a59c" kindref="member">rbusObject_t</ref> are referenced counted. Instances of these types may have private references to other instances of these types. There are read methods in this api that return references to these private instances. There are write methods in this api that release current references and retain new ones. When this happens any reference held by the user becomes unlinked from the parent instance. The instance will also be destroyed unless the user retains it for themselves. </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

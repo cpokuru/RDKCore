@@ -1,0 +1,78 @@
+\doxysection{Initialization }
+\hypertarget{group___initialization}{}\label{group___initialization}\index{Initialization@{Initialization}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{group___common_ga71193d2a24675a52cc00ca92cef9fdbb}{rbus\+Status\+\_\+t}} \doxymbox{\hyperlink{group___initialization_ga680ec951905b5371ec0f275add675508}{rbus\+\_\+check\+Status}} (void)
+\begin{DoxyCompactList}\small\item\em Components use this API to check whether the rbus is enabled in this device/\+platform Used by: Components that uses rbus to register events, tables and parameters. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___initialization_gacf19c7e46ff9c2353892f5918310b264}{rbus\+\_\+open}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} \texorpdfstring{$\ast$}{*}handle, char const \texorpdfstring{$\ast$}{*}component\+Name)
+\begin{DoxyCompactList}\small\item\em Open a bus connection for a software component. If multiple components share a software process, the first component that calls this API will establishes a new socket connection to the bus broker. All calls to this API will receive a dedicated bus handle for that component. If a component calls this API more than once, any previous bus\+Handle and all previous data element registrations will be canceled. ~\newline
+Note: This API supports a single component per software process and also supports multiple components that share a software process. In the case of multiple components that share a software process, each component must call this API to open a bus connection. Only a single socket connection is opened per software process but each component within that process receives a separate bus\+Handle. ~\newline
+Used by: All RBus components to begin a connection with the bus. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} \doxymbox{\hyperlink{group___initialization_ga9ccb6de1c606f5ac59dbc3a5a2ad0dd0}{rbus\+\_\+close}} (\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} handle)
+\begin{DoxyCompactList}\small\item\em Removes a logical bus connection from a component to the bus. ~\newline
+Note: In the case of multiple components that share a software process, the socket connection remains up until the last component in that software process closes its bus connection. ~\newline
+Used by: All RBus components (multiple components may share a software process). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\label{group___initialization_doc-func-members}
+\Hypertarget{group___initialization_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{group___initialization_ga680ec951905b5371ec0f275add675508}\index{Initialization@{Initialization}!rbus\_checkStatus@{rbus\_checkStatus}}
+\index{rbus\_checkStatus@{rbus\_checkStatus}!Initialization@{Initialization}}
+\doxysubsubsection{\texorpdfstring{rbus\_checkStatus()}{rbus\_checkStatus()}}
+{\footnotesize\ttfamily \label{group___initialization_ga680ec951905b5371ec0f275add675508} 
+\doxymbox{\hyperlink{group___common_ga71193d2a24675a52cc00ca92cef9fdbb}{rbus\+Status\+\_\+t}} rbus\+\_\+check\+Status (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Components use this API to check whether the rbus is enabled in this device/\+platform Used by: Components that uses rbus to register events, tables and parameters. 
+
+\begin{DoxyReturn}{Returns}
+RBus bus/\+daemon status 
+\end{DoxyReturn}
+\Hypertarget{group___initialization_ga9ccb6de1c606f5ac59dbc3a5a2ad0dd0}\index{Initialization@{Initialization}!rbus\_close@{rbus\_close}}
+\index{rbus\_close@{rbus\_close}!Initialization@{Initialization}}
+\doxysubsubsection{\texorpdfstring{rbus\_close()}{rbus\_close()}}
+{\footnotesize\ttfamily \label{group___initialization_ga9ccb6de1c606f5ac59dbc3a5a2ad0dd0} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+\_\+close (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}}}]{handle}{}\end{DoxyParamCaption})}
+
+
+
+Removes a logical bus connection from a component to the bus. ~\newline
+Note: In the case of multiple components that share a software process, the socket connection remains up until the last component in that software process closes its bus connection. ~\newline
+Used by: All RBus components (multiple components may share a software process). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+BUS\+\_\+\+ERROR: Indicates there is some bus error. Try later. 
+\end{DoxyReturn}
+\Hypertarget{group___initialization_gacf19c7e46ff9c2353892f5918310b264}\index{Initialization@{Initialization}!rbus\_open@{rbus\_open}}
+\index{rbus\_open@{rbus\_open}!Initialization@{Initialization}}
+\doxysubsubsection{\texorpdfstring{rbus\_open()}{rbus\_open()}}
+{\footnotesize\ttfamily \label{group___initialization_gacf19c7e46ff9c2353892f5918310b264} 
+\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}} rbus\+\_\+open (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{handle}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{component\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Open a bus connection for a software component. If multiple components share a software process, the first component that calls this API will establishes a new socket connection to the bus broker. All calls to this API will receive a dedicated bus handle for that component. If a component calls this API more than once, any previous bus\+Handle and all previous data element registrations will be canceled. ~\newline
+Note: This API supports a single component per software process and also supports multiple components that share a software process. In the case of multiple components that share a software process, each component must call this API to open a bus connection. Only a single socket connection is opened per software process but each component within that process receives a separate bus\+Handle. ~\newline
+Used by: All RBus components to begin a connection with the bus. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Bus Handle \\
+\hline
+{\em component\+Name} & the name of the component initializing onto the bus \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RBus error code as defined by \doxylink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbus\+Error\+\_\+t}. Possible values are: RBUS\+\_\+\+ERROR\+\_\+\+BUS\+\_\+\+ERROR: Indicates there is some bus error. Try later. 
+\end{DoxyReturn}

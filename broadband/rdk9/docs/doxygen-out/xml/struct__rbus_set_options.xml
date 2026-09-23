@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="struct__rbus_set_options" kind="struct" language="C++" prot="public">
+    <compoundname>_rbusSetOptions</compoundname>
+    <includes refid="rbus_8h" local="no">rbus.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__rbus_set_options_1a22a2a78889208a55322dbda9db0271da" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool _rbusSetOptions::commit</definition>
+        <argsstring></argsstring>
+        <name>commit</name>
+        <qualifiedname>_rbusSetOptions::commit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Commit flag indicating which set operation is the last set operation in a particular session. Set to true to for the final set of a session. Set to false to for all other sets of a session, which indicates that the set operation should be remembered until the final set occurs. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="148" column="10" bodyfile="include/rbus.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__rbus_set_options_1ae3e988869e6d6d6181fe7895b897ecd0" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t _rbusSetOptions::sessionId</definition>
+        <argsstring></argsstring>
+        <name>sessionId</name>
+        <qualifiedname>_rbusSetOptions::sessionId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Session id. One or more parameter can be set together over a session. The session ID binds all set operations. A value of 0 indicates this is not a session based operation. A non-zero value indicates that the value should be &quot;remembered&quot; temporarily. Only when the &quot;commit&quot; parameter is &quot;true&quot;, should all remembered parameters in this session be set together. Call rbus_createSession to generate a session id. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="154" column="14" bodyfile="include/rbus.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/rbus.h" line="146" column="1" bodyfile="include/rbus.h" bodystart="147" bodyend="160"/>
+    <listofallmembers>
+      <member refid="struct__rbus_set_options_1a22a2a78889208a55322dbda9db0271da" prot="public" virt="non-virtual"><scope>_rbusSetOptions</scope><name>commit</name></member>
+      <member refid="struct__rbus_set_options_1ae3e988869e6d6d6181fe7895b897ecd0" prot="public" virt="non-virtual"><scope>_rbusSetOptions</scope><name>sessionId</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

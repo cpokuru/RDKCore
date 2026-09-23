@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
+    <compoundname>include</compoundname>
+    <innerfile refid="rbus_8h">rbus.h</innerfile>
+    <innerfile refid="rbus__buffer_8h">rbus_buffer.h</innerfile>
+    <innerfile refid="rbus__filter_8h">rbus_filter.h</innerfile>
+    <innerfile refid="rbus__object_8h">rbus_object.h</innerfile>
+    <innerfile refid="rbus__property_8h">rbus_property.h</innerfile>
+    <innerfile refid="rbus__value_8h">rbus_value.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="struct__rbus_date_time" kind="struct" language="C++" prot="public">
+    <compoundname>_rbusDateTime</compoundname>
+    <includes refid="rbus__value_8h" local="no">rbus_value.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__rbus_date_time_1a03ba84ad096d0b3222369a0ca140e2b5" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structtm32" kindref="compound">tm32</ref></type>
+        <definition>struct tm32 _rbusDateTime::m_time</definition>
+        <argsstring></argsstring>
+        <name>m_time</name>
+        <qualifiedname>_rbusDateTime::m_time</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_value.h" line="106" column="15" bodyfile="include/rbus_value.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__rbus_date_time_1a174e711159be4dcb9265ca3992675498" prot="public" static="no" mutable="no">
+        <type><ref refid="group__rbus_value_1ga33e095dfad8e8ee1507a06fd80f0efed" kindref="member">rbusTimeZone_t</ref></type>
+        <definition>rbusTimeZone_t _rbusDateTime::m_tz</definition>
+        <argsstring></argsstring>
+        <name>m_tz</name>
+        <qualifiedname>_rbusDateTime::m_tz</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_value.h" line="107" column="21" bodyfile="include/rbus_value.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>_rbusDateTime</label>
+        <link refid="struct__rbus_date_time"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_time</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_tz</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>_rbusTimeZone</label>
+        <link refid="struct__rbus_time_zone"/>
+      </node>
+      <node id="2">
+        <label>tm32</label>
+        <link refid="structtm32"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/rbus_value.h" line="105" column="1" bodyfile="include/rbus_value.h" bodystart="105" bodyend="108"/>
+    <listofallmembers>
+      <member refid="struct__rbus_date_time_1a03ba84ad096d0b3222369a0ca140e2b5" prot="public" virt="non-virtual"><scope>_rbusDateTime</scope><name>m_time</name></member>
+      <member refid="struct__rbus_date_time_1a174e711159be4dcb9265ca3992675498" prot="public" virt="non-virtual"><scope>_rbusDateTime</scope><name>m_tz</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

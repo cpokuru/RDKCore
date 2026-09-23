@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="struct__rbus_timeout_values" kind="struct" language="C++" prot="public">
+    <compoundname>_rbusTimeoutValues</compoundname>
+    <includes refid="rbus_8h" local="no">rbus.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__rbus_timeout_values_1a7acde79caec6ad1d4341f4b19aada8c7" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t _rbusTimeoutValues::setTimeout</definition>
+        <argsstring></argsstring>
+        <name>setTimeout</name>
+        <qualifiedname>_rbusTimeoutValues::setTimeout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="2014" column="14" bodyfile="include/rbus.h" bodystart="2014" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__rbus_timeout_values_1acbece545cbbf7e5ae500cb68a158ad6e" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t _rbusTimeoutValues::getTimeout</definition>
+        <argsstring></argsstring>
+        <name>getTimeout</name>
+        <qualifiedname>_rbusTimeoutValues::getTimeout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="2015" column="14" bodyfile="include/rbus.h" bodystart="2015" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__rbus_timeout_values_1a452a491b52de7027c5661689889c2b9a" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t _rbusTimeoutValues::setMultiTimeout</definition>
+        <argsstring></argsstring>
+        <name>setMultiTimeout</name>
+        <qualifiedname>_rbusTimeoutValues::setMultiTimeout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="2016" column="14" bodyfile="include/rbus.h" bodystart="2016" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__rbus_timeout_values_1a1e639c1cabebb900da4651ad41e9df2e" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t _rbusTimeoutValues::getMultiTimeout</definition>
+        <argsstring></argsstring>
+        <name>getMultiTimeout</name>
+        <qualifiedname>_rbusTimeoutValues::getMultiTimeout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="2017" column="14" bodyfile="include/rbus.h" bodystart="2017" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__rbus_timeout_values_1a8587c13bdd10288d27f9665d6112f736" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t _rbusTimeoutValues::subscribeTimeout</definition>
+        <argsstring></argsstring>
+        <name>subscribeTimeout</name>
+        <qualifiedname>_rbusTimeoutValues::subscribeTimeout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="2018" column="14" bodyfile="include/rbus.h" bodystart="2018" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/rbus.h" line="2012" column="1" bodyfile="include/rbus.h" bodystart="2013" bodyend="2019"/>
+    <listofallmembers>
+      <member refid="struct__rbus_timeout_values_1a1e639c1cabebb900da4651ad41e9df2e" prot="public" virt="non-virtual"><scope>_rbusTimeoutValues</scope><name>getMultiTimeout</name></member>
+      <member refid="struct__rbus_timeout_values_1acbece545cbbf7e5ae500cb68a158ad6e" prot="public" virt="non-virtual"><scope>_rbusTimeoutValues</scope><name>getTimeout</name></member>
+      <member refid="struct__rbus_timeout_values_1a452a491b52de7027c5661689889c2b9a" prot="public" virt="non-virtual"><scope>_rbusTimeoutValues</scope><name>setMultiTimeout</name></member>
+      <member refid="struct__rbus_timeout_values_1a7acde79caec6ad1d4341f4b19aada8c7" prot="public" virt="non-virtual"><scope>_rbusTimeoutValues</scope><name>setTimeout</name></member>
+      <member refid="struct__rbus_timeout_values_1a8587c13bdd10288d27f9665d6112f736" prot="public" virt="non-virtual"><scope>_rbusTimeoutValues</scope><name>subscribeTimeout</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

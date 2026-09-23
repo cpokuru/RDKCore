@@ -1,0 +1,733 @@
+\doxysection{Rbus\+Object }
+\hypertarget{group__rbus_object}{}\label{group__rbus_object}\index{RbusObject@{RbusObject}}
+
+
+An rbus object is a named collection of properties.  
+
+
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \doxymbox{\hyperlink{group__rbus_object_ga27af987ea3c616f1c1f6c2f011019339}{\+\_\+rbus\+Object\+Type}} \doxymbox{\hyperlink{group__rbus_object_gabc6f4cfde967f080ebc2fbecff14480d}{rbus\+Object\+Type\+\_\+t}}
+\item 
+typedef struct \+\_\+rbus\+Object \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em A handle to an rbus object. \end{DoxyCompactList}\item 
+typedef struct \+\_\+rbus\+Object \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em A handle to an rbus object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{group__rbus_object_ga27af987ea3c616f1c1f6c2f011019339}{\+\_\+rbus\+Object\+Type}} \{ \doxymbox{\hyperlink{group__rbus_object_gga27af987ea3c616f1c1f6c2f011019339a0face842ccbd0730582778e9292d7bed}{RBUS\+\_\+\+OBJECT\+\_\+\+SINGLE\+\_\+\+INSTANCE}}
+, \doxymbox{\hyperlink{group__rbus_object_gga27af987ea3c616f1c1f6c2f011019339ae212d271c26362cb1cfa99cb7d373940}{RBUS\+\_\+\+OBJECT\+\_\+\+MULTI\+\_\+\+INSTANCE}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} \doxymbox{\hyperlink{group__rbus_object_ga96ec85b5e3ecee6caf1e8e8c638d7e55}{rbus\+Object\+\_\+\+Init}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}pobject, char const \texorpdfstring{$\ast$}{*}name)
+\begin{DoxyCompactList}\small\item\em Allocate, initialize, and take ownershipt of an object. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__rbus_object_ga6977a6fdb2c0a1b20fc5058229f6984e}{rbus\+Object\+\_\+\+Init\+Multi\+Instance}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}pobject, char const \texorpdfstring{$\ast$}{*}name)
+\item 
+void \doxymbox{\hyperlink{group__rbus_object_ga6c9b8be81794457a3e636be89f0fbcc4}{rbus\+Object\+\_\+\+Retain}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object)
+\begin{DoxyCompactList}\small\item\em Take shared ownership of the object. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__rbus_object_ga41dc9a569083b1daddc172fd146cfaa3}{rbus\+Object\+\_\+\+Release}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object)
+\begin{DoxyCompactList}\small\item\em Release ownership of the object. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__rbus_object_ga1fa233097b240c835e0673edfde35789}{rbus\+Object\+\_\+\+Releases}} (int count,...)
+\item 
+int \doxymbox{\hyperlink{group__rbus_object_ga838c23a7a8fbbb8b71b7fa1b8f14bce8}{rbus\+Object\+\_\+\+Compare}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object1, \doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object2, bool recursive)
+\item 
+char const \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__rbus_object_gac5a7b0c5fb443cd44b6c5da5eb6a9881}{rbus\+Object\+\_\+\+Get\+Name}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object)
+\begin{DoxyCompactList}\small\item\em Get the name of a object. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__rbus_object_ga0c8555a437c5c457fb13e895e146bf86}{rbus\+Object\+\_\+\+Set\+Name}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name)
+\begin{DoxyCompactList}\small\item\em Set the name of a object. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group__rbus_property_ga3cbb720004e64c4728a5e8ba3d8ecf6f}{rbus\+Property\+\_\+t}} \doxymbox{\hyperlink{group__rbus_object_ga50cd522763dfc404544a025fae244451}{rbus\+Object\+\_\+\+Get\+Properties}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object)
+\begin{DoxyCompactList}\small\item\em Get the property list of an object. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__rbus_object_gaaace8f3750c1628f33ee77c64a656886}{rbus\+Object\+\_\+\+Set\+Properties}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, \doxymbox{\hyperlink{group__rbus_property_ga3cbb720004e64c4728a5e8ba3d8ecf6f}{rbus\+Property\+\_\+t}} properties)
+\begin{DoxyCompactList}\small\item\em Set the property list of an object. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group__rbus_property_ga3cbb720004e64c4728a5e8ba3d8ecf6f}{rbus\+Property\+\_\+t}} \doxymbox{\hyperlink{group__rbus_object_ga4ca508027cec4a1c2c4b2908e4f8c6e4}{rbus\+Object\+\_\+\+Get\+Property}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name)
+\begin{DoxyCompactList}\small\item\em Get a property by name from an object. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__rbus_object_gac880941a7bfd86e83690ebecc076c4ca}{rbus\+Object\+\_\+\+Set\+Property}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, \doxymbox{\hyperlink{group__rbus_property_ga3cbb720004e64c4728a5e8ba3d8ecf6f}{rbus\+Property\+\_\+t}} property)
+\begin{DoxyCompactList}\small\item\em Set a property on an object. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \doxymbox{\hyperlink{group__rbus_object_gacca436f5933c0aada009e5fc84ca2cf2}{rbus\+Object\+\_\+\+Get\+Value}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name)
+\begin{DoxyCompactList}\small\item\em Get the value of a property by name from an object. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \doxymbox{\hyperlink{group__rbus_object_ga8e80c7435b5af4cb36bc8cd68a5444e8}{rbus\+Object\+\_\+\+Get\+Property\+Value}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name)
+\item 
+void \doxymbox{\hyperlink{group__rbus_object_gaa6ac1e1cdd1bca3bdc856a25100b1389}{rbus\+Object\+\_\+\+Set\+Value}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, \doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value)
+\begin{DoxyCompactList}\small\item\em Set the value of a property by name on an object. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{group__rbus_object_ga22320cc619d478d292a57e4243eab56a}{rbus\+Object\+\_\+\+Set\+Property\+Value}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, \doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value)
+\item 
+\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} \doxymbox{\hyperlink{group__rbus_object_gacf9656737e083027b9b7ca0f01849a8d}{rbus\+Object\+\_\+\+Get\+Parent}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object)
+\item 
+void \doxymbox{\hyperlink{group__rbus_object_gacac90952ab71089f25edab5f9101cc8c}{rbus\+Object\+\_\+\+Set\+Parent}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, \doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} parent)
+\item 
+\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} \doxymbox{\hyperlink{group__rbus_object_gaa6873ba5a939a8c8870e0d1fdeab963c}{rbus\+Object\+\_\+\+Get\+Children}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object)
+\item 
+void \doxymbox{\hyperlink{group__rbus_object_ga1438e6f2a2b580ac1f61daca37b05355}{rbus\+Object\+\_\+\+Set\+Children}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, \doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} children)
+\item 
+\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} \doxymbox{\hyperlink{group__rbus_object_ga9f73dad4a00860f4b428556f771ea48f}{rbus\+Object\+\_\+\+Get\+Next}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object)
+\item 
+void \doxymbox{\hyperlink{group__rbus_object_ga4eacbba3735999eee2dbe5e75982fc93}{rbus\+Object\+\_\+\+Set\+Next}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, \doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} next)
+\item 
+\doxymbox{\hyperlink{group__rbus_object_gabc6f4cfde967f080ebc2fbecff14480d}{rbus\+Object\+Type\+\_\+t}} \doxymbox{\hyperlink{group__rbus_object_ga158dbe9ac9cacf744e72754386754df8}{rbus\+Object\+\_\+\+Get\+Type}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object)
+\item 
+void \doxymbox{\hyperlink{group__rbus_object_gad7b3d84b29f74b0bbd91b3e49364fdbe}{rbus\+Object\+\_\+fwrite}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} obj, int depth, FILE \texorpdfstring{$\ast$}{*}fout)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{rbus\+Object\+\_\+\+Get\+Value\+[Type]}
+These functions get the type specific value of a property by name on an object.
+
+In order to prevent crashes, if the property name doesn\textquotesingle{}t exist in the object, a warning will be logged and a default empty data will be returned. 
+\begin{DoxyParams}{Parameters}
+{\em object} & An object. \\
+\hline
+{\em name} & the name of the property inside the object to set the value to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the type specific data 
+\end{DoxyReturn}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_object_ga0be7d0c60f16a3453361aeffa6fa6610}{rbus\+Object\+\_\+\+Get\+Property\+Boolean}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, bool \texorpdfstring{$\ast$}{*}b)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_object_ga8572e2c624f10687df587a819d8d10d0}{rbus\+Object\+\_\+\+Get\+Property\+Int8}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, int8\+\_\+t \texorpdfstring{$\ast$}{*}i8)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_object_gae979e306edfd72e6eed2d170a067b15b}{rbus\+Object\+\_\+\+Get\+Property\+UInt8}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, uint8\+\_\+t \texorpdfstring{$\ast$}{*}u8)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_object_ga2d89ef94afe50e9ac657e8d45e4e3324}{rbus\+Object\+\_\+\+Get\+Property\+Int16}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, int16\+\_\+t \texorpdfstring{$\ast$}{*}i16)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_object_ga3a56fb4fa7e5af12cb881efe4efa539c}{rbus\+Object\+\_\+\+Get\+Property\+UInt16}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, uint16\+\_\+t \texorpdfstring{$\ast$}{*}u16)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_object_ga12bd3a2a82c2c8ee660caedaaf471888}{rbus\+Object\+\_\+\+Get\+Property\+Int32}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, int32\+\_\+t \texorpdfstring{$\ast$}{*}i32)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_object_gae2cbf919df2a5458573e83a44cd76e98}{rbus\+Object\+\_\+\+Get\+Property\+UInt32}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, uint32\+\_\+t \texorpdfstring{$\ast$}{*}u32)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_object_gacf7a5b87b115c32a40e4944f8a0f6bcb}{rbus\+Object\+\_\+\+Get\+Property\+Int64}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, int64\+\_\+t \texorpdfstring{$\ast$}{*}i64)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_object_ga00b8cfdf8376a1124e9cbf9b7388d2a6}{rbus\+Object\+\_\+\+Get\+Property\+UInt64}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, uint64\+\_\+t \texorpdfstring{$\ast$}{*}u64)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_object_gaa123fa784b529bd43986f2695e3cdfdf}{rbus\+Object\+\_\+\+Get\+Property\+Single}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, float \texorpdfstring{$\ast$}{*}f32)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_object_ga4cb92de8427ef3fc35dce70b78d5bc88}{rbus\+Object\+\_\+\+Get\+Property\+Double}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, double \texorpdfstring{$\ast$}{*}f64)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_object_ga8332abdef31ddf24e0c26513cbf3f4aa}{rbus\+Object\+\_\+\+Get\+Property\+Time}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, \doxymbox{\hyperlink{group__rbus_value_ga2009eccbb6b430aef0ebcbf6165d1382}{rbus\+Date\+Time\+\_\+t}} const \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}tv)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_object_gac020ef8fe8febcb40154243b2587197d}{rbus\+Object\+\_\+\+Get\+Property\+String}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, char const \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}s, int \texorpdfstring{$\ast$}{*}len)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_object_ga48c842118bf44e61fef7073b3e63aa9f}{rbus\+Object\+\_\+\+Get\+Property\+Bytes}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, uint8\+\_\+t const \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}bytes, int \texorpdfstring{$\ast$}{*}len)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_object_gafd4c631c917907155199a011370f07b2}{rbus\+Object\+\_\+\+Get\+Property\+Property}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, struct \+\_\+rbus\+Property \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}p)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_object_ga7707f4077f85e24b80160d3ff2bcb479}{rbus\+Object\+\_\+\+Get\+Property\+Object}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, struct \+\_\+rbus\+Object \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}o)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_object_ga141423c7e5c3c46856d0e29badac14b0}{rbus\+Object\+\_\+\+Get\+Property\+Char}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, char \texorpdfstring{$\ast$}{*}c)
+\item 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} \doxymbox{\hyperlink{group__rbus_object_ga817d9ecde784382bfbe9e33c614cc486}{rbus\+Object\+\_\+\+Get\+Property\+Byte}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, unsigned char \texorpdfstring{$\ast$}{*}c)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{rbus\+Object\+\_\+\+Set\+Value\+[Type]}
+These functions set the value of a property by name on an object, where the value is internally initialized with the corresponding type and data.
+
+If a property with the same name does not exist, a new property is created. Ownership of any previous property/\+value will be released. 
+\begin{DoxyParams}{Parameters}
+{\em object} & An object. \\
+\hline
+{\em name} & the name of the property inside the object to set the value to \\
+\hline
+{\em value} & the type specific data to set on the object\textquotesingle{}s property \\
+\hline
+\end{DoxyParams}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{group__rbus_object_ga34ebb4d09b388596ac9a256e68d80893}{rbus\+Object\+\_\+\+Set\+Property\+Boolean}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, bool b)
+\item 
+void \doxymbox{\hyperlink{group__rbus_object_ga1444b20f964dddda5c42981fdd717fc7}{rbus\+Object\+\_\+\+Set\+Property\+Int8}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, int8\+\_\+t i8)
+\item 
+void \doxymbox{\hyperlink{group__rbus_object_ga47cd55c56f2639dc0909564038bed482}{rbus\+Object\+\_\+\+Set\+Property\+UInt8}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, uint8\+\_\+t u8)
+\item 
+void \doxymbox{\hyperlink{group__rbus_object_ga25e2b3147d6a053397d78b1c69eda6c9}{rbus\+Object\+\_\+\+Set\+Property\+Int16}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, int16\+\_\+t i16)
+\item 
+void \doxymbox{\hyperlink{group__rbus_object_gabd9eca08b760ed6ad3fdc504b57591da}{rbus\+Object\+\_\+\+Set\+Property\+UInt16}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, uint16\+\_\+t u16)
+\item 
+void \doxymbox{\hyperlink{group__rbus_object_ga9e37e7cf1b7c325b9d98306b223a6656}{rbus\+Object\+\_\+\+Set\+Property\+Int32}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, int32\+\_\+t i32)
+\item 
+void \doxymbox{\hyperlink{group__rbus_object_ga338f916750fd4901299423a8b479d979}{rbus\+Object\+\_\+\+Set\+Property\+UInt32}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, uint32\+\_\+t u32)
+\item 
+void \doxymbox{\hyperlink{group__rbus_object_ga219e87f15e5ce7b2dff00af5d90fef99}{rbus\+Object\+\_\+\+Set\+Property\+Int64}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, int64\+\_\+t i64)
+\item 
+void \doxymbox{\hyperlink{group__rbus_object_gae277f9c84ae6f20ac177f48436321ef4}{rbus\+Object\+\_\+\+Set\+Property\+UInt64}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, uint64\+\_\+t u64)
+\item 
+void \doxymbox{\hyperlink{group__rbus_object_ga25d351e0296be46e590f22bb6cf944af}{rbus\+Object\+\_\+\+Set\+Property\+Single}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, float f32)
+\item 
+void \doxymbox{\hyperlink{group__rbus_object_ga40118a849cfe496560b31b962210291a}{rbus\+Object\+\_\+\+Set\+Property\+Double}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, double f64)
+\item 
+void \doxymbox{\hyperlink{group__rbus_object_ga506fed495b40ff1708966c7b1341ed38}{rbus\+Object\+\_\+\+Set\+Property\+Time}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, \doxymbox{\hyperlink{group__rbus_value_ga2009eccbb6b430aef0ebcbf6165d1382}{rbus\+Date\+Time\+\_\+t}} const \texorpdfstring{$\ast$}{*}tv)
+\item 
+void \doxymbox{\hyperlink{group__rbus_object_ga58fc9c79567f9815080ce933799daba5}{rbus\+Object\+\_\+\+Set\+Property\+String}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, char const \texorpdfstring{$\ast$}{*}s)
+\item 
+void \doxymbox{\hyperlink{group__rbus_object_ga554cc1b2de7a15ae283fd044e1a6a3e3}{rbus\+Object\+\_\+\+Set\+Property\+Bytes}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, uint8\+\_\+t const \texorpdfstring{$\ast$}{*}bytes, int len)
+\item 
+void \doxymbox{\hyperlink{group__rbus_object_ga608ce8b73730451167167af3c16c5516}{rbus\+Object\+\_\+\+Set\+Property\+Property}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, struct \+\_\+rbus\+Property \texorpdfstring{$\ast$}{*}p)
+\item 
+void \doxymbox{\hyperlink{group__rbus_object_gafe40ac75e0b40287194c9b321ea07177}{rbus\+Object\+\_\+\+Set\+Property\+Object}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, struct \+\_\+rbus\+Object \texorpdfstring{$\ast$}{*}o)
+\item 
+void \doxymbox{\hyperlink{group__rbus_object_gadd07bba6e0a51db9ef69b50290b84fe1}{rbus\+Object\+\_\+\+Set\+Property\+Char}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, char c)
+\item 
+void \doxymbox{\hyperlink{group__rbus_object_gaf29f9d864c03eda0d7950eab6611e93f}{rbus\+Object\+\_\+\+Set\+Property\+Byte}} (\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} object, char const \texorpdfstring{$\ast$}{*}name, unsigned char c)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An rbus object is a named collection of properties. 
+
+An \doxylink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t} is a reference counted handle to an rbus object. ~\newline
+
+
+This API is not thread-\/safe. ~\newline
+ All instances of types \doxylink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}, \doxylink{group__rbus_property_ga3cbb720004e64c4728a5e8ba3d8ecf6f}{rbus\+Property\+\_\+t}, and \doxylink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t} are referenced counted. Instances of these types may have private references to other instances of these types. There are read methods in this api that return references to these private instances. There are write methods in this api that release current references and retain new ones. When this happens any reference held by the user becomes unlinked from the parent instance. The instance will also be destroyed unless the user retains it for themselves. 
+
+\label{group__rbus_object_doc-typedef-members}
+\Hypertarget{group__rbus_object_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}\index{RbusObject@{RbusObject}!rbusObject\_t@{rbusObject\_t}}
+\index{rbusObject\_t@{rbusObject\_t}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_t}{rbusObject\_t}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c} 
+typedef struct \+\_\+rbus\+Object\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}
+
+
+
+A handle to an rbus object. 
+
+\Hypertarget{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}\index{RbusObject@{RbusObject}!rbusObject\_t@{rbusObject\_t}}
+\index{rbusObject\_t@{rbusObject\_t}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_t}{rbusObject\_t}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c} 
+typedef struct \+\_\+rbus\+Object\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}
+
+
+
+A handle to an rbus object. 
+
+\Hypertarget{group__rbus_object_gabc6f4cfde967f080ebc2fbecff14480d}\index{RbusObject@{RbusObject}!rbusObjectType\_t@{rbusObjectType\_t}}
+\index{rbusObjectType\_t@{rbusObjectType\_t}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObjectType\_t}{rbusObjectType\_t}}
+{\footnotesize\ttfamily \label{group__rbus_object_gabc6f4cfde967f080ebc2fbecff14480d} 
+typedef enum \doxymbox{\hyperlink{group__rbus_object_ga27af987ea3c616f1c1f6c2f011019339}{\+\_\+rbus\+Object\+Type}} \doxymbox{\hyperlink{group__rbus_object_gabc6f4cfde967f080ebc2fbecff14480d}{rbus\+Object\+Type\+\_\+t}}}
+
+
+
+\label{group__rbus_object_doc-enum-members}
+\Hypertarget{group__rbus_object_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{group__rbus_object_ga27af987ea3c616f1c1f6c2f011019339}\index{RbusObject@{RbusObject}!\_rbusObjectType@{\_rbusObjectType}}
+\index{\_rbusObjectType@{\_rbusObjectType}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{\_rbusObjectType}{\_rbusObjectType}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga27af987ea3c616f1c1f6c2f011019339} 
+enum \doxymbox{\hyperlink{group__rbus_object_ga27af987ea3c616f1c1f6c2f011019339}{\+\_\+rbus\+Object\+Type}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_OBJECT\_SINGLE\_INSTANCE@{RBUS\_OBJECT\_SINGLE\_INSTANCE}!RbusObject@{RbusObject}}
+\index{RbusObject@{RbusObject}!RBUS\_OBJECT\_SINGLE\_INSTANCE@{RBUS\_OBJECT\_SINGLE\_INSTANCE}}
+}\Hypertarget{group__rbus_object_gga27af987ea3c616f1c1f6c2f011019339a0face842ccbd0730582778e9292d7bed}\label{group__rbus_object_gga27af987ea3c616f1c1f6c2f011019339a0face842ccbd0730582778e9292d7bed} 
+RBUS\+\_\+\+OBJECT\+\_\+\+SINGLE\+\_\+\+INSTANCE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RBUS\_OBJECT\_MULTI\_INSTANCE@{RBUS\_OBJECT\_MULTI\_INSTANCE}!RbusObject@{RbusObject}}
+\index{RbusObject@{RbusObject}!RBUS\_OBJECT\_MULTI\_INSTANCE@{RBUS\_OBJECT\_MULTI\_INSTANCE}}
+}\Hypertarget{group__rbus_object_gga27af987ea3c616f1c1f6c2f011019339ae212d271c26362cb1cfa99cb7d373940}\label{group__rbus_object_gga27af987ea3c616f1c1f6c2f011019339ae212d271c26362cb1cfa99cb7d373940} 
+RBUS\+\_\+\+OBJECT\+\_\+\+MULTI\+\_\+\+INSTANCE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{group__rbus_object_doc-func-members}
+\Hypertarget{group__rbus_object_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{group__rbus_object_ga838c23a7a8fbbb8b71b7fa1b8f14bce8}\index{RbusObject@{RbusObject}!rbusObject\_Compare@{rbusObject\_Compare}}
+\index{rbusObject\_Compare@{rbusObject\_Compare}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_Compare()}{rbusObject\_Compare()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga838c23a7a8fbbb8b71b7fa1b8f14bce8} 
+int rbus\+Object\+\_\+\+Compare (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object1}{, }\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object2}{, }\item[{bool}]{recursive}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_gad7b3d84b29f74b0bbd91b3e49364fdbe}\index{RbusObject@{RbusObject}!rbusObject\_fwrite@{rbusObject\_fwrite}}
+\index{rbusObject\_fwrite@{rbusObject\_fwrite}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_fwrite()}{rbusObject\_fwrite()}}
+{\footnotesize\ttfamily \label{group__rbus_object_gad7b3d84b29f74b0bbd91b3e49364fdbe} 
+void rbus\+Object\+\_\+fwrite (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{obj}{, }\item[{int}]{depth}{, }\item[{FILE \texorpdfstring{$\ast$}{*}}]{fout}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_gaa6873ba5a939a8c8870e0d1fdeab963c}\index{RbusObject@{RbusObject}!rbusObject\_GetChildren@{rbusObject\_GetChildren}}
+\index{rbusObject\_GetChildren@{rbusObject\_GetChildren}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_GetChildren()}{rbusObject\_GetChildren()}}
+{\footnotesize\ttfamily \label{group__rbus_object_gaa6873ba5a939a8c8870e0d1fdeab963c} 
+\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} rbus\+Object\+\_\+\+Get\+Children (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_gac5a7b0c5fb443cd44b6c5da5eb6a9881}\index{RbusObject@{RbusObject}!rbusObject\_GetName@{rbusObject\_GetName}}
+\index{rbusObject\_GetName@{rbusObject\_GetName}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_GetName()}{rbusObject\_GetName()}}
+{\footnotesize\ttfamily \label{group__rbus_object_gac5a7b0c5fb443cd44b6c5da5eb6a9881} 
+char const  \texorpdfstring{$\ast$}{*} rbus\+Object\+\_\+\+Get\+Name (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{}\end{DoxyParamCaption})}
+
+
+
+Get the name of a object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & An object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The name of the object. To avoid copies, this is a reference to the underlying name. 
+\end{DoxyReturn}
+\Hypertarget{group__rbus_object_ga9f73dad4a00860f4b428556f771ea48f}\index{RbusObject@{RbusObject}!rbusObject\_GetNext@{rbusObject\_GetNext}}
+\index{rbusObject\_GetNext@{rbusObject\_GetNext}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_GetNext()}{rbusObject\_GetNext()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga9f73dad4a00860f4b428556f771ea48f} 
+\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} rbus\+Object\+\_\+\+Get\+Next (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_gacf9656737e083027b9b7ca0f01849a8d}\index{RbusObject@{RbusObject}!rbusObject\_GetParent@{rbusObject\_GetParent}}
+\index{rbusObject\_GetParent@{rbusObject\_GetParent}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_GetParent()}{rbusObject\_GetParent()}}
+{\footnotesize\ttfamily \label{group__rbus_object_gacf9656737e083027b9b7ca0f01849a8d} 
+\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} rbus\+Object\+\_\+\+Get\+Parent (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga50cd522763dfc404544a025fae244451}\index{RbusObject@{RbusObject}!rbusObject\_GetProperties@{rbusObject\_GetProperties}}
+\index{rbusObject\_GetProperties@{rbusObject\_GetProperties}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_GetProperties()}{rbusObject\_GetProperties()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga50cd522763dfc404544a025fae244451} 
+\doxymbox{\hyperlink{group__rbus_property_ga3cbb720004e64c4728a5e8ba3d8ecf6f}{rbus\+Property\+\_\+t}} rbus\+Object\+\_\+\+Get\+Properties (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{}\end{DoxyParamCaption})}
+
+
+
+Get the property list of an object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & An object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The property list of the object. 
+\end{DoxyReturn}
+\Hypertarget{group__rbus_object_ga4ca508027cec4a1c2c4b2908e4f8c6e4}\index{RbusObject@{RbusObject}!rbusObject\_GetProperty@{rbusObject\_GetProperty}}
+\index{rbusObject\_GetProperty@{rbusObject\_GetProperty}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_GetProperty()}{rbusObject\_GetProperty()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga4ca508027cec4a1c2c4b2908e4f8c6e4} 
+\doxymbox{\hyperlink{group__rbus_property_ga3cbb720004e64c4728a5e8ba3d8ecf6f}{rbus\+Property\+\_\+t}} rbus\+Object\+\_\+\+Get\+Property (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Get a property by name from an object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & An object. \\
+\hline
+{\em name} & The name of the property to get. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The property matching the name, or NULL if no match found. 
+\end{DoxyReturn}
+\Hypertarget{group__rbus_object_ga0be7d0c60f16a3453361aeffa6fa6610}\index{RbusObject@{RbusObject}!rbusObject\_GetPropertyBoolean@{rbusObject\_GetPropertyBoolean}}
+\index{rbusObject\_GetPropertyBoolean@{rbusObject\_GetPropertyBoolean}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_GetPropertyBoolean()}{rbusObject\_GetPropertyBoolean()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga0be7d0c60f16a3453361aeffa6fa6610} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Object\+\_\+\+Get\+Property\+Boolean (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{bool \texorpdfstring{$\ast$}{*}}]{b}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga817d9ecde784382bfbe9e33c614cc486}\index{RbusObject@{RbusObject}!rbusObject\_GetPropertyByte@{rbusObject\_GetPropertyByte}}
+\index{rbusObject\_GetPropertyByte@{rbusObject\_GetPropertyByte}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_GetPropertyByte()}{rbusObject\_GetPropertyByte()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga817d9ecde784382bfbe9e33c614cc486} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Object\+\_\+\+Get\+Property\+Byte (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{c}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga48c842118bf44e61fef7073b3e63aa9f}\index{RbusObject@{RbusObject}!rbusObject\_GetPropertyBytes@{rbusObject\_GetPropertyBytes}}
+\index{rbusObject\_GetPropertyBytes@{rbusObject\_GetPropertyBytes}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_GetPropertyBytes()}{rbusObject\_GetPropertyBytes()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga48c842118bf44e61fef7073b3e63aa9f} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Object\+\_\+\+Get\+Property\+Bytes (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{uint8\+\_\+t const \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{bytes}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{len}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga141423c7e5c3c46856d0e29badac14b0}\index{RbusObject@{RbusObject}!rbusObject\_GetPropertyChar@{rbusObject\_GetPropertyChar}}
+\index{rbusObject\_GetPropertyChar@{rbusObject\_GetPropertyChar}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_GetPropertyChar()}{rbusObject\_GetPropertyChar()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga141423c7e5c3c46856d0e29badac14b0} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Object\+\_\+\+Get\+Property\+Char (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{c}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga4cb92de8427ef3fc35dce70b78d5bc88}\index{RbusObject@{RbusObject}!rbusObject\_GetPropertyDouble@{rbusObject\_GetPropertyDouble}}
+\index{rbusObject\_GetPropertyDouble@{rbusObject\_GetPropertyDouble}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_GetPropertyDouble()}{rbusObject\_GetPropertyDouble()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga4cb92de8427ef3fc35dce70b78d5bc88} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Object\+\_\+\+Get\+Property\+Double (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{f64}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga2d89ef94afe50e9ac657e8d45e4e3324}\index{RbusObject@{RbusObject}!rbusObject\_GetPropertyInt16@{rbusObject\_GetPropertyInt16}}
+\index{rbusObject\_GetPropertyInt16@{rbusObject\_GetPropertyInt16}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_GetPropertyInt16()}{rbusObject\_GetPropertyInt16()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga2d89ef94afe50e9ac657e8d45e4e3324} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Object\+\_\+\+Get\+Property\+Int16 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{i16}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga12bd3a2a82c2c8ee660caedaaf471888}\index{RbusObject@{RbusObject}!rbusObject\_GetPropertyInt32@{rbusObject\_GetPropertyInt32}}
+\index{rbusObject\_GetPropertyInt32@{rbusObject\_GetPropertyInt32}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_GetPropertyInt32()}{rbusObject\_GetPropertyInt32()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga12bd3a2a82c2c8ee660caedaaf471888} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Object\+\_\+\+Get\+Property\+Int32 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{int32\+\_\+t \texorpdfstring{$\ast$}{*}}]{i32}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_gacf7a5b87b115c32a40e4944f8a0f6bcb}\index{RbusObject@{RbusObject}!rbusObject\_GetPropertyInt64@{rbusObject\_GetPropertyInt64}}
+\index{rbusObject\_GetPropertyInt64@{rbusObject\_GetPropertyInt64}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_GetPropertyInt64()}{rbusObject\_GetPropertyInt64()}}
+{\footnotesize\ttfamily \label{group__rbus_object_gacf7a5b87b115c32a40e4944f8a0f6bcb} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Object\+\_\+\+Get\+Property\+Int64 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{int64\+\_\+t \texorpdfstring{$\ast$}{*}}]{i64}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga8572e2c624f10687df587a819d8d10d0}\index{RbusObject@{RbusObject}!rbusObject\_GetPropertyInt8@{rbusObject\_GetPropertyInt8}}
+\index{rbusObject\_GetPropertyInt8@{rbusObject\_GetPropertyInt8}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_GetPropertyInt8()}{rbusObject\_GetPropertyInt8()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga8572e2c624f10687df587a819d8d10d0} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Object\+\_\+\+Get\+Property\+Int8 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{int8\+\_\+t \texorpdfstring{$\ast$}{*}}]{i8}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga7707f4077f85e24b80160d3ff2bcb479}\index{RbusObject@{RbusObject}!rbusObject\_GetPropertyObject@{rbusObject\_GetPropertyObject}}
+\index{rbusObject\_GetPropertyObject@{rbusObject\_GetPropertyObject}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_GetPropertyObject()}{rbusObject\_GetPropertyObject()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga7707f4077f85e24b80160d3ff2bcb479} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Object\+\_\+\+Get\+Property\+Object (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{struct \+\_\+rbus\+Object \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{o}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_gafd4c631c917907155199a011370f07b2}\index{RbusObject@{RbusObject}!rbusObject\_GetPropertyProperty@{rbusObject\_GetPropertyProperty}}
+\index{rbusObject\_GetPropertyProperty@{rbusObject\_GetPropertyProperty}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_GetPropertyProperty()}{rbusObject\_GetPropertyProperty()}}
+{\footnotesize\ttfamily \label{group__rbus_object_gafd4c631c917907155199a011370f07b2} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Object\+\_\+\+Get\+Property\+Property (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{struct \+\_\+rbus\+Property \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_gaa123fa784b529bd43986f2695e3cdfdf}\index{RbusObject@{RbusObject}!rbusObject\_GetPropertySingle@{rbusObject\_GetPropertySingle}}
+\index{rbusObject\_GetPropertySingle@{rbusObject\_GetPropertySingle}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_GetPropertySingle()}{rbusObject\_GetPropertySingle()}}
+{\footnotesize\ttfamily \label{group__rbus_object_gaa123fa784b529bd43986f2695e3cdfdf} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Object\+\_\+\+Get\+Property\+Single (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{float \texorpdfstring{$\ast$}{*}}]{f32}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_gac020ef8fe8febcb40154243b2587197d}\index{RbusObject@{RbusObject}!rbusObject\_GetPropertyString@{rbusObject\_GetPropertyString}}
+\index{rbusObject\_GetPropertyString@{rbusObject\_GetPropertyString}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_GetPropertyString()}{rbusObject\_GetPropertyString()}}
+{\footnotesize\ttfamily \label{group__rbus_object_gac020ef8fe8febcb40154243b2587197d} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Object\+\_\+\+Get\+Property\+String (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{char const \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{s}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{len}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga8332abdef31ddf24e0c26513cbf3f4aa}\index{RbusObject@{RbusObject}!rbusObject\_GetPropertyTime@{rbusObject\_GetPropertyTime}}
+\index{rbusObject\_GetPropertyTime@{rbusObject\_GetPropertyTime}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_GetPropertyTime()}{rbusObject\_GetPropertyTime()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga8332abdef31ddf24e0c26513cbf3f4aa} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Object\+\_\+\+Get\+Property\+Time (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{\doxymbox{\hyperlink{group__rbus_value_ga2009eccbb6b430aef0ebcbf6165d1382}{rbus\+Date\+Time\+\_\+t}} const \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{tv}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga3a56fb4fa7e5af12cb881efe4efa539c}\index{RbusObject@{RbusObject}!rbusObject\_GetPropertyUInt16@{rbusObject\_GetPropertyUInt16}}
+\index{rbusObject\_GetPropertyUInt16@{rbusObject\_GetPropertyUInt16}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_GetPropertyUInt16()}{rbusObject\_GetPropertyUInt16()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga3a56fb4fa7e5af12cb881efe4efa539c} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Object\+\_\+\+Get\+Property\+UInt16 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{u16}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_gae2cbf919df2a5458573e83a44cd76e98}\index{RbusObject@{RbusObject}!rbusObject\_GetPropertyUInt32@{rbusObject\_GetPropertyUInt32}}
+\index{rbusObject\_GetPropertyUInt32@{rbusObject\_GetPropertyUInt32}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_GetPropertyUInt32()}{rbusObject\_GetPropertyUInt32()}}
+{\footnotesize\ttfamily \label{group__rbus_object_gae2cbf919df2a5458573e83a44cd76e98} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Object\+\_\+\+Get\+Property\+UInt32 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{u32}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga00b8cfdf8376a1124e9cbf9b7388d2a6}\index{RbusObject@{RbusObject}!rbusObject\_GetPropertyUInt64@{rbusObject\_GetPropertyUInt64}}
+\index{rbusObject\_GetPropertyUInt64@{rbusObject\_GetPropertyUInt64}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_GetPropertyUInt64()}{rbusObject\_GetPropertyUInt64()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga00b8cfdf8376a1124e9cbf9b7388d2a6} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Object\+\_\+\+Get\+Property\+UInt64 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{uint64\+\_\+t \texorpdfstring{$\ast$}{*}}]{u64}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_gae979e306edfd72e6eed2d170a067b15b}\index{RbusObject@{RbusObject}!rbusObject\_GetPropertyUInt8@{rbusObject\_GetPropertyUInt8}}
+\index{rbusObject\_GetPropertyUInt8@{rbusObject\_GetPropertyUInt8}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_GetPropertyUInt8()}{rbusObject\_GetPropertyUInt8()}}
+{\footnotesize\ttfamily \label{group__rbus_object_gae979e306edfd72e6eed2d170a067b15b} 
+\doxymbox{\hyperlink{group__rbus_value_ga161d6cea4485877b304950784de3fbea}{rbus\+Value\+Error\+\_\+t}} rbus\+Object\+\_\+\+Get\+Property\+UInt8 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{u8}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga8e80c7435b5af4cb36bc8cd68a5444e8}\index{RbusObject@{RbusObject}!rbusObject\_GetPropertyValue@{rbusObject\_GetPropertyValue}}
+\index{rbusObject\_GetPropertyValue@{rbusObject\_GetPropertyValue}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_GetPropertyValue()}{rbusObject\_GetPropertyValue()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga8e80c7435b5af4cb36bc8cd68a5444e8} 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} rbus\+Object\+\_\+\+Get\+Property\+Value (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga158dbe9ac9cacf744e72754386754df8}\index{RbusObject@{RbusObject}!rbusObject\_GetType@{rbusObject\_GetType}}
+\index{rbusObject\_GetType@{rbusObject\_GetType}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_GetType()}{rbusObject\_GetType()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga158dbe9ac9cacf744e72754386754df8} 
+\doxymbox{\hyperlink{group__rbus_object_gabc6f4cfde967f080ebc2fbecff14480d}{rbus\+Object\+Type\+\_\+t}} rbus\+Object\+\_\+\+Get\+Type (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_gacca436f5933c0aada009e5fc84ca2cf2}\index{RbusObject@{RbusObject}!rbusObject\_GetValue@{rbusObject\_GetValue}}
+\index{rbusObject\_GetValue@{rbusObject\_GetValue}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_GetValue()}{rbusObject\_GetValue()}}
+{\footnotesize\ttfamily \label{group__rbus_object_gacca436f5933c0aada009e5fc84ca2cf2} 
+\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} rbus\+Object\+\_\+\+Get\+Value (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Get the value of a property by name from an object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & An object. \\
+\hline
+{\em name} & The name of the property to get the value of. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the property matching the name, or NULL if no match found. 
+\end{DoxyReturn}
+\Hypertarget{group__rbus_object_ga96ec85b5e3ecee6caf1e8e8c638d7e55}\index{RbusObject@{RbusObject}!rbusObject\_Init@{rbusObject\_Init}}
+\index{rbusObject\_Init@{rbusObject\_Init}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_Init()}{rbusObject\_Init()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga96ec85b5e3ecee6caf1e8e8c638d7e55} 
+\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} rbus\+Object\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Allocate, initialize, and take ownershipt of an object. 
+
+This automatically retains ownership of the object. It\textquotesingle{}s the caller\textquotesingle{}s responsibility to release ownership by calling rbus\+Object\+\_\+\+Release once it\textquotesingle{}s done with it. 
+\begin{DoxyParams}{Parameters}
+{\em pobject} & reference to an address where the new object will be assigned. The caller is responsible for releasing the object with rbus\+Object\+\_\+\+Release \\
+\hline
+{\em name} & optional name to assign the object. The name is dublicated/\+copied. ~\newline
+ If NULL is passed the object\textquotesingle{}s name will be NULL. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__rbus_object_ga6977a6fdb2c0a1b20fc5058229f6984e}\index{RbusObject@{RbusObject}!rbusObject\_InitMultiInstance@{rbusObject\_InitMultiInstance}}
+\index{rbusObject\_InitMultiInstance@{rbusObject\_InitMultiInstance}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_InitMultiInstance()}{rbusObject\_InitMultiInstance()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga6977a6fdb2c0a1b20fc5058229f6984e} 
+void rbus\+Object\+\_\+\+Init\+Multi\+Instance (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{pobject}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga41dc9a569083b1daddc172fd146cfaa3}\index{RbusObject@{RbusObject}!rbusObject\_Release@{rbusObject\_Release}}
+\index{rbusObject\_Release@{rbusObject\_Release}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_Release()}{rbusObject\_Release()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga41dc9a569083b1daddc172fd146cfaa3} 
+void rbus\+Object\+\_\+\+Release (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{}\end{DoxyParamCaption})}
+
+
+
+Release ownership of the object. 
+
+This must be called when done using a object that was retained with either rbus\+Object\+\_\+\+Init or rbus\+Object\+\_\+\+Retain. 
+\begin{DoxyParams}{Parameters}
+{\em object} & the object to release \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__rbus_object_ga1fa233097b240c835e0673edfde35789}\index{RbusObject@{RbusObject}!rbusObject\_Releases@{rbusObject\_Releases}}
+\index{rbusObject\_Releases@{rbusObject\_Releases}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_Releases()}{rbusObject\_Releases()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga1fa233097b240c835e0673edfde35789} 
+void rbus\+Object\+\_\+\+Releases (\begin{DoxyParamCaption}\item[{int}]{count}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga6c9b8be81794457a3e636be89f0fbcc4}\index{RbusObject@{RbusObject}!rbusObject\_Retain@{rbusObject\_Retain}}
+\index{rbusObject\_Retain@{rbusObject\_Retain}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_Retain()}{rbusObject\_Retain()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga6c9b8be81794457a3e636be89f0fbcc4} 
+void rbus\+Object\+\_\+\+Retain (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{}\end{DoxyParamCaption})}
+
+
+
+Take shared ownership of the object. 
+
+This allows an object to have multiple owners. The first owner obtains ownership with rbus\+Object\+\_\+\+Init. Additional owners can be assigned afterwards with rbus\+Object\+\_\+\+Retain. Each owner must call rbus\+Object\+\_\+\+Release once done using the object. 
+\begin{DoxyParams}{Parameters}
+{\em object} & the object to retain \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__rbus_object_ga1438e6f2a2b580ac1f61daca37b05355}\index{RbusObject@{RbusObject}!rbusObject\_SetChildren@{rbusObject\_SetChildren}}
+\index{rbusObject\_SetChildren@{rbusObject\_SetChildren}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_SetChildren()}{rbusObject\_SetChildren()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga1438e6f2a2b580ac1f61daca37b05355} 
+void rbus\+Object\+\_\+\+Set\+Children (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{children}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga0c8555a437c5c457fb13e895e146bf86}\index{RbusObject@{RbusObject}!rbusObject\_SetName@{rbusObject\_SetName}}
+\index{rbusObject\_SetName@{rbusObject\_SetName}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_SetName()}{rbusObject\_SetName()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga0c8555a437c5c457fb13e895e146bf86} 
+void rbus\+Object\+\_\+\+Set\+Name (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Set the name of a object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & An object. \\
+\hline
+{\em name} & the name to set which will be duplicated/\+copied \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__rbus_object_ga4eacbba3735999eee2dbe5e75982fc93}\index{RbusObject@{RbusObject}!rbusObject\_SetNext@{rbusObject\_SetNext}}
+\index{rbusObject\_SetNext@{rbusObject\_SetNext}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_SetNext()}{rbusObject\_SetNext()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga4eacbba3735999eee2dbe5e75982fc93} 
+void rbus\+Object\+\_\+\+Set\+Next (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{next}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_gacac90952ab71089f25edab5f9101cc8c}\index{RbusObject@{RbusObject}!rbusObject\_SetParent@{rbusObject\_SetParent}}
+\index{rbusObject\_SetParent@{rbusObject\_SetParent}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_SetParent()}{rbusObject\_SetParent()}}
+{\footnotesize\ttfamily \label{group__rbus_object_gacac90952ab71089f25edab5f9101cc8c} 
+void rbus\+Object\+\_\+\+Set\+Parent (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{parent}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_gaaace8f3750c1628f33ee77c64a656886}\index{RbusObject@{RbusObject}!rbusObject\_SetProperties@{rbusObject\_SetProperties}}
+\index{rbusObject\_SetProperties@{rbusObject\_SetProperties}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_SetProperties()}{rbusObject\_SetProperties()}}
+{\footnotesize\ttfamily \label{group__rbus_object_gaaace8f3750c1628f33ee77c64a656886} 
+void rbus\+Object\+\_\+\+Set\+Properties (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{\doxymbox{\hyperlink{group__rbus_property_ga3cbb720004e64c4728a5e8ba3d8ecf6f}{rbus\+Property\+\_\+t}}}]{properties}{}\end{DoxyParamCaption})}
+
+
+
+Set the property list of an object. 
+
+If a property list already exists on the object, then ownership of all properties in that list is released. 
+\begin{DoxyParams}{Parameters}
+{\em object} & An object. \\
+\hline
+{\em properties} & A property list to set on the object. Any existing propery list is released. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__rbus_object_gac880941a7bfd86e83690ebecc076c4ca}\index{RbusObject@{RbusObject}!rbusObject\_SetProperty@{rbusObject\_SetProperty}}
+\index{rbusObject\_SetProperty@{rbusObject\_SetProperty}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_SetProperty()}{rbusObject\_SetProperty()}}
+{\footnotesize\ttfamily \label{group__rbus_object_gac880941a7bfd86e83690ebecc076c4ca} 
+void rbus\+Object\+\_\+\+Set\+Property (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{\doxymbox{\hyperlink{group__rbus_property_ga3cbb720004e64c4728a5e8ba3d8ecf6f}{rbus\+Property\+\_\+t}}}]{property}{}\end{DoxyParamCaption})}
+
+
+
+Set a property on an object. 
+
+If a property with the same name already exists, its ownership released. 
+\begin{DoxyParams}{Parameters}
+{\em object} & An object. \\
+\hline
+{\em property} & A property to set on the object. The caller should set the name on this property before calling this method. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__rbus_object_ga34ebb4d09b388596ac9a256e68d80893}\index{RbusObject@{RbusObject}!rbusObject\_SetPropertyBoolean@{rbusObject\_SetPropertyBoolean}}
+\index{rbusObject\_SetPropertyBoolean@{rbusObject\_SetPropertyBoolean}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_SetPropertyBoolean()}{rbusObject\_SetPropertyBoolean()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga34ebb4d09b388596ac9a256e68d80893} 
+void rbus\+Object\+\_\+\+Set\+Property\+Boolean (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{bool}]{b}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_gaf29f9d864c03eda0d7950eab6611e93f}\index{RbusObject@{RbusObject}!rbusObject\_SetPropertyByte@{rbusObject\_SetPropertyByte}}
+\index{rbusObject\_SetPropertyByte@{rbusObject\_SetPropertyByte}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_SetPropertyByte()}{rbusObject\_SetPropertyByte()}}
+{\footnotesize\ttfamily \label{group__rbus_object_gaf29f9d864c03eda0d7950eab6611e93f} 
+void rbus\+Object\+\_\+\+Set\+Property\+Byte (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{unsigned char}]{c}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga554cc1b2de7a15ae283fd044e1a6a3e3}\index{RbusObject@{RbusObject}!rbusObject\_SetPropertyBytes@{rbusObject\_SetPropertyBytes}}
+\index{rbusObject\_SetPropertyBytes@{rbusObject\_SetPropertyBytes}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_SetPropertyBytes()}{rbusObject\_SetPropertyBytes()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga554cc1b2de7a15ae283fd044e1a6a3e3} 
+void rbus\+Object\+\_\+\+Set\+Property\+Bytes (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{uint8\+\_\+t const \texorpdfstring{$\ast$}{*}}]{bytes}{, }\item[{int}]{len}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_gadd07bba6e0a51db9ef69b50290b84fe1}\index{RbusObject@{RbusObject}!rbusObject\_SetPropertyChar@{rbusObject\_SetPropertyChar}}
+\index{rbusObject\_SetPropertyChar@{rbusObject\_SetPropertyChar}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_SetPropertyChar()}{rbusObject\_SetPropertyChar()}}
+{\footnotesize\ttfamily \label{group__rbus_object_gadd07bba6e0a51db9ef69b50290b84fe1} 
+void rbus\+Object\+\_\+\+Set\+Property\+Char (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{char}]{c}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga40118a849cfe496560b31b962210291a}\index{RbusObject@{RbusObject}!rbusObject\_SetPropertyDouble@{rbusObject\_SetPropertyDouble}}
+\index{rbusObject\_SetPropertyDouble@{rbusObject\_SetPropertyDouble}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_SetPropertyDouble()}{rbusObject\_SetPropertyDouble()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga40118a849cfe496560b31b962210291a} 
+void rbus\+Object\+\_\+\+Set\+Property\+Double (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{double}]{f64}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga25e2b3147d6a053397d78b1c69eda6c9}\index{RbusObject@{RbusObject}!rbusObject\_SetPropertyInt16@{rbusObject\_SetPropertyInt16}}
+\index{rbusObject\_SetPropertyInt16@{rbusObject\_SetPropertyInt16}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_SetPropertyInt16()}{rbusObject\_SetPropertyInt16()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga25e2b3147d6a053397d78b1c69eda6c9} 
+void rbus\+Object\+\_\+\+Set\+Property\+Int16 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{int16\+\_\+t}]{i16}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga9e37e7cf1b7c325b9d98306b223a6656}\index{RbusObject@{RbusObject}!rbusObject\_SetPropertyInt32@{rbusObject\_SetPropertyInt32}}
+\index{rbusObject\_SetPropertyInt32@{rbusObject\_SetPropertyInt32}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_SetPropertyInt32()}{rbusObject\_SetPropertyInt32()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga9e37e7cf1b7c325b9d98306b223a6656} 
+void rbus\+Object\+\_\+\+Set\+Property\+Int32 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{int32\+\_\+t}]{i32}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga219e87f15e5ce7b2dff00af5d90fef99}\index{RbusObject@{RbusObject}!rbusObject\_SetPropertyInt64@{rbusObject\_SetPropertyInt64}}
+\index{rbusObject\_SetPropertyInt64@{rbusObject\_SetPropertyInt64}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_SetPropertyInt64()}{rbusObject\_SetPropertyInt64()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga219e87f15e5ce7b2dff00af5d90fef99} 
+void rbus\+Object\+\_\+\+Set\+Property\+Int64 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{int64\+\_\+t}]{i64}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga1444b20f964dddda5c42981fdd717fc7}\index{RbusObject@{RbusObject}!rbusObject\_SetPropertyInt8@{rbusObject\_SetPropertyInt8}}
+\index{rbusObject\_SetPropertyInt8@{rbusObject\_SetPropertyInt8}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_SetPropertyInt8()}{rbusObject\_SetPropertyInt8()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga1444b20f964dddda5c42981fdd717fc7} 
+void rbus\+Object\+\_\+\+Set\+Property\+Int8 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{int8\+\_\+t}]{i8}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_gafe40ac75e0b40287194c9b321ea07177}\index{RbusObject@{RbusObject}!rbusObject\_SetPropertyObject@{rbusObject\_SetPropertyObject}}
+\index{rbusObject\_SetPropertyObject@{rbusObject\_SetPropertyObject}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_SetPropertyObject()}{rbusObject\_SetPropertyObject()}}
+{\footnotesize\ttfamily \label{group__rbus_object_gafe40ac75e0b40287194c9b321ea07177} 
+void rbus\+Object\+\_\+\+Set\+Property\+Object (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{struct \+\_\+rbus\+Object \texorpdfstring{$\ast$}{*}}]{o}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga608ce8b73730451167167af3c16c5516}\index{RbusObject@{RbusObject}!rbusObject\_SetPropertyProperty@{rbusObject\_SetPropertyProperty}}
+\index{rbusObject\_SetPropertyProperty@{rbusObject\_SetPropertyProperty}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_SetPropertyProperty()}{rbusObject\_SetPropertyProperty()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga608ce8b73730451167167af3c16c5516} 
+void rbus\+Object\+\_\+\+Set\+Property\+Property (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{struct \+\_\+rbus\+Property \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga25d351e0296be46e590f22bb6cf944af}\index{RbusObject@{RbusObject}!rbusObject\_SetPropertySingle@{rbusObject\_SetPropertySingle}}
+\index{rbusObject\_SetPropertySingle@{rbusObject\_SetPropertySingle}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_SetPropertySingle()}{rbusObject\_SetPropertySingle()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga25d351e0296be46e590f22bb6cf944af} 
+void rbus\+Object\+\_\+\+Set\+Property\+Single (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{float}]{f32}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga58fc9c79567f9815080ce933799daba5}\index{RbusObject@{RbusObject}!rbusObject\_SetPropertyString@{rbusObject\_SetPropertyString}}
+\index{rbusObject\_SetPropertyString@{rbusObject\_SetPropertyString}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_SetPropertyString()}{rbusObject\_SetPropertyString()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga58fc9c79567f9815080ce933799daba5} 
+void rbus\+Object\+\_\+\+Set\+Property\+String (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{s}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga506fed495b40ff1708966c7b1341ed38}\index{RbusObject@{RbusObject}!rbusObject\_SetPropertyTime@{rbusObject\_SetPropertyTime}}
+\index{rbusObject\_SetPropertyTime@{rbusObject\_SetPropertyTime}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_SetPropertyTime()}{rbusObject\_SetPropertyTime()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga506fed495b40ff1708966c7b1341ed38} 
+void rbus\+Object\+\_\+\+Set\+Property\+Time (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{\doxymbox{\hyperlink{group__rbus_value_ga2009eccbb6b430aef0ebcbf6165d1382}{rbus\+Date\+Time\+\_\+t}} const \texorpdfstring{$\ast$}{*}}]{tv}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_gabd9eca08b760ed6ad3fdc504b57591da}\index{RbusObject@{RbusObject}!rbusObject\_SetPropertyUInt16@{rbusObject\_SetPropertyUInt16}}
+\index{rbusObject\_SetPropertyUInt16@{rbusObject\_SetPropertyUInt16}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_SetPropertyUInt16()}{rbusObject\_SetPropertyUInt16()}}
+{\footnotesize\ttfamily \label{group__rbus_object_gabd9eca08b760ed6ad3fdc504b57591da} 
+void rbus\+Object\+\_\+\+Set\+Property\+UInt16 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{uint16\+\_\+t}]{u16}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga338f916750fd4901299423a8b479d979}\index{RbusObject@{RbusObject}!rbusObject\_SetPropertyUInt32@{rbusObject\_SetPropertyUInt32}}
+\index{rbusObject\_SetPropertyUInt32@{rbusObject\_SetPropertyUInt32}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_SetPropertyUInt32()}{rbusObject\_SetPropertyUInt32()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga338f916750fd4901299423a8b479d979} 
+void rbus\+Object\+\_\+\+Set\+Property\+UInt32 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{uint32\+\_\+t}]{u32}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_gae277f9c84ae6f20ac177f48436321ef4}\index{RbusObject@{RbusObject}!rbusObject\_SetPropertyUInt64@{rbusObject\_SetPropertyUInt64}}
+\index{rbusObject\_SetPropertyUInt64@{rbusObject\_SetPropertyUInt64}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_SetPropertyUInt64()}{rbusObject\_SetPropertyUInt64()}}
+{\footnotesize\ttfamily \label{group__rbus_object_gae277f9c84ae6f20ac177f48436321ef4} 
+void rbus\+Object\+\_\+\+Set\+Property\+UInt64 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{uint64\+\_\+t}]{u64}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga47cd55c56f2639dc0909564038bed482}\index{RbusObject@{RbusObject}!rbusObject\_SetPropertyUInt8@{rbusObject\_SetPropertyUInt8}}
+\index{rbusObject\_SetPropertyUInt8@{rbusObject\_SetPropertyUInt8}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_SetPropertyUInt8()}{rbusObject\_SetPropertyUInt8()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga47cd55c56f2639dc0909564038bed482} 
+void rbus\+Object\+\_\+\+Set\+Property\+UInt8 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{uint8\+\_\+t}]{u8}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_ga22320cc619d478d292a57e4243eab56a}\index{RbusObject@{RbusObject}!rbusObject\_SetPropertyValue@{rbusObject\_SetPropertyValue}}
+\index{rbusObject\_SetPropertyValue@{rbusObject\_SetPropertyValue}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_SetPropertyValue()}{rbusObject\_SetPropertyValue()}}
+{\footnotesize\ttfamily \label{group__rbus_object_ga22320cc619d478d292a57e4243eab56a} 
+void rbus\+Object\+\_\+\+Set\+Property\+Value (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__rbus_object_gaa6ac1e1cdd1bca3bdc856a25100b1389}\index{RbusObject@{RbusObject}!rbusObject\_SetValue@{rbusObject\_SetValue}}
+\index{rbusObject\_SetValue@{rbusObject\_SetValue}!RbusObject@{RbusObject}}
+\doxysubsubsection{\texorpdfstring{rbusObject\_SetValue()}{rbusObject\_SetValue()}}
+{\footnotesize\ttfamily \label{group__rbus_object_gaa6ac1e1cdd1bca3bdc856a25100b1389} 
+void rbus\+Object\+\_\+\+Set\+Value (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbus\+Object\+\_\+t}}}]{object}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Set the value of a property by name on an object. 
+
+If a property with the same name does not exist, a new property is created. Ownership of any previous property/\+value will be released. 
+\begin{DoxyParams}{Parameters}
+{\em object} & An object. \\
+\hline
+{\em name} & the name of the property inside the object to set the value to \\
+\hline
+{\em value} & a value to set on the object\textquotesingle{}s property \\
+\hline
+\end{DoxyParams}

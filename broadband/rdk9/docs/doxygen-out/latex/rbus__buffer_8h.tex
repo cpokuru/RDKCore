@@ -1,0 +1,400 @@
+\doxysection{include/\+rbus\+\_\+buffer.h File Reference}
+\hypertarget{rbus__buffer_8h}{}\label{rbus__buffer_8h}\index{include/rbus\_buffer.h@{include/rbus\_buffer.h}}
+{\ttfamily \+\#include "{}rbus.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct__rbus_buffer}{\+\_\+rbus\+Buffer}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \doxymbox{\hyperlink{struct__rbus_buffer}{\+\_\+rbus\+Buffer}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char const \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{rbus__buffer_8h_a962b5956904758680829fe03f9fe0654}{rbus\+Value\+Type\+\_\+\+To\+Debug\+String}} (\doxymbox{\hyperlink{group__rbus_value_ga7405acfdc3b4162ff9a9c711b834aba8}{rbus\+Value\+Type\+\_\+t}} type)
+\item 
+uint8\+\_\+t const \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{rbus__buffer_8h_a13be9557f9fde82dab8efc0de61eb273}{rbus\+Value\+\_\+\+GetV}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} v)
+\item 
+uint32\+\_\+t \doxymbox{\hyperlink{rbus__buffer_8h_aaa49e747e314edb65602abd8ddd6765a}{rbus\+Value\+\_\+\+GetL}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} v)
+\item 
+void \doxymbox{\hyperlink{rbus__buffer_8h_a78db1074a8948cbec699ba255c96c343}{rbus\+Value\+\_\+\+Set\+TLV}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} v, \doxymbox{\hyperlink{group__rbus_value_ga7405acfdc3b4162ff9a9c711b834aba8}{rbus\+Value\+Type\+\_\+t}} type, uint32\+\_\+t length, void const \texorpdfstring{$\ast$}{*}value)
+\item 
+int \doxymbox{\hyperlink{rbus__buffer_8h_ac038c8b6cfa71dccaab6b65dc9c7205a}{rbus\+Value\+\_\+\+Decode}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \texorpdfstring{$\ast$}{*}value, \doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const buff)
+\item 
+void \doxymbox{\hyperlink{rbus__buffer_8h_a5dd0f3fbe53223ea9ffcbc398985bf7c}{rbus\+Value\+\_\+\+Encode}} (\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} value, \doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} buff)
+\item 
+void \doxymbox{\hyperlink{rbus__buffer_8h_ae2e542ef6f0e6f2ff3d4df2c0a88bdc9}{rbus\+Filter\+\_\+\+Encode}} (\doxymbox{\hyperlink{group__rbus_filter_ga03ad5f80346294826fffde5c271dd22e}{rbus\+Filter\+\_\+t}} filter, \doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} buff)
+\item 
+int \doxymbox{\hyperlink{rbus__buffer_8h_a8b09617c465ce97686b136f6d6f6cefc}{rbus\+Filter\+\_\+\+Decode}} (\doxymbox{\hyperlink{group__rbus_filter_ga03ad5f80346294826fffde5c271dd22e}{rbus\+Filter\+\_\+t}} \texorpdfstring{$\ast$}{*}filter, \doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const buff)
+\item 
+void \doxymbox{\hyperlink{rbus__buffer_8h_af2c250388bcce10bd72454468e691b2d}{rbus\+Buffer\+\_\+\+Create}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} \texorpdfstring{$\ast$}{*}buff)
+\item 
+void \doxymbox{\hyperlink{rbus__buffer_8h_a049b2083eac6dffe33d96e464be20d2f}{rbus\+Buffer\+\_\+\+Destroy}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} buff)
+\item 
+void \doxymbox{\hyperlink{rbus__buffer_8h_a5b19b15dd78580d3e52378dccb6cb869}{rbus\+Buffer\+\_\+\+Reserve}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} buff, int len)
+\item 
+void \doxymbox{\hyperlink{rbus__buffer_8h_aded4aa881610a2a860887541b5c19f8a}{rbus\+Buffer\+\_\+\+Write}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} buff, void const \texorpdfstring{$\ast$}{*}data, int len)
+\item 
+void \doxymbox{\hyperlink{rbus__buffer_8h_a0bad8efae11a8d04c71ce4cd70599e62}{rbus\+Buffer\+\_\+\+Write\+Type\+Length\+Value}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} buff, \doxymbox{\hyperlink{group__rbus_value_ga7405acfdc3b4162ff9a9c711b834aba8}{rbus\+Value\+Type\+\_\+t}} type, uint16\+\_\+t length, void const \texorpdfstring{$\ast$}{*}value)
+\item 
+void \doxymbox{\hyperlink{rbus__buffer_8h_aa9f42b5d2e627fda3b8ca76d80060cb1}{rbus\+Buffer\+\_\+\+Write\+Boolean\+TLV}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} buff, bool b)
+\item 
+void \doxymbox{\hyperlink{rbus__buffer_8h_a073807884c065286f412bed2cd50c57b}{rbus\+Buffer\+\_\+\+Write\+Char\+TLV}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} buff, char c)
+\item 
+void \doxymbox{\hyperlink{rbus__buffer_8h_a01c72ece9a473317016643e6974988c9}{rbus\+Buffer\+\_\+\+Write\+Byte\+TLV}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} buff, unsigned char u)
+\item 
+void \doxymbox{\hyperlink{rbus__buffer_8h_ad6ccc5f35e6966eee8d268dd7ef0a0e9}{rbus\+Buffer\+\_\+\+Write\+Int8\+TLV}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} buff, int8\+\_\+t i8)
+\item 
+void \doxymbox{\hyperlink{rbus__buffer_8h_ae23cfd438bd96c6c989a998c26b3134c}{rbus\+Buffer\+\_\+\+Write\+UInt8\+TLV}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} buff, uint8\+\_\+t u8)
+\item 
+void \doxymbox{\hyperlink{rbus__buffer_8h_a7ec783d47be947ec9f588044ef603ea2}{rbus\+Buffer\+\_\+\+Write\+Int16\+TLV}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} buff, int16\+\_\+t i16)
+\item 
+void \doxymbox{\hyperlink{rbus__buffer_8h_a1ded2af4cecb71000abd49c17b88f269}{rbus\+Buffer\+\_\+\+Write\+UInt16\+TLV}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} buff, uint16\+\_\+t u16)
+\item 
+void \doxymbox{\hyperlink{rbus__buffer_8h_aa11b7f6c88b9fcfe087e36bdcdbea572}{rbus\+Buffer\+\_\+\+Write\+Int32\+TLV}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} buff, int32\+\_\+t i32)
+\item 
+void \doxymbox{\hyperlink{rbus__buffer_8h_a236d245722b727616901ddbb0e570f36}{rbus\+Buffer\+\_\+\+Write\+UInt32\+TLV}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} buff, uint32\+\_\+t u32)
+\item 
+void \doxymbox{\hyperlink{rbus__buffer_8h_a2afb53ca18dd419d01ac578783562fe0}{rbus\+Buffer\+\_\+\+Write\+Int64\+TLV}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} buff, int64\+\_\+t i64)
+\item 
+void \doxymbox{\hyperlink{rbus__buffer_8h_a56134c1b5ce5f09cfb50fde65b4fa1f9}{rbus\+Buffer\+\_\+\+Write\+UInt64\+TLV}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} buff, uint64\+\_\+t u64)
+\item 
+void \doxymbox{\hyperlink{rbus__buffer_8h_a51fd4875fcfb45017613a6de189def05}{rbus\+Buffer\+\_\+\+Write\+Single\+TLV}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} buff, float f32)
+\item 
+void \doxymbox{\hyperlink{rbus__buffer_8h_a536888d760ad6cbd0c5fe795d09f7a9b}{rbus\+Buffer\+\_\+\+Write\+Double\+TLV}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} buff, double f64)
+\item 
+void \doxymbox{\hyperlink{rbus__buffer_8h_a6e37edaf993e58feb74635104b7004e9}{rbus\+Buffer\+\_\+\+Write\+String\+TLV}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} buff, char const \texorpdfstring{$\ast$}{*}s, int len)
+\item 
+void \doxymbox{\hyperlink{rbus__buffer_8h_ae0daaadfadb3b09ac922bc2f389f2b5a}{rbus\+Buffer\+\_\+\+Write\+Date\+Time\+TLV}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} buff, \doxymbox{\hyperlink{group__rbus_value_ga2009eccbb6b430aef0ebcbf6165d1382}{rbus\+Date\+Time\+\_\+t}} const \texorpdfstring{$\ast$}{*}tv)
+\item 
+void \doxymbox{\hyperlink{rbus__buffer_8h_a298889933c1b3072a29dcdf0761e6a15}{rbus\+Buffer\+\_\+\+Write\+Bytes\+TLV}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} buff, uint8\+\_\+t \texorpdfstring{$\ast$}{*}bytes, int len)
+\item 
+int \doxymbox{\hyperlink{rbus__buffer_8h_aed233f2f67d2611bdadde8da3ec507ad}{rbus\+Buffer\+\_\+\+Read}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const buff, void \texorpdfstring{$\ast$}{*}data, int len)
+\item 
+int \doxymbox{\hyperlink{rbus__buffer_8h_a4d9906d547d5d5b2074ca5f613515bb2}{rbus\+Buffer\+\_\+\+Read\+Boolean}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const buff, bool \texorpdfstring{$\ast$}{*}b)
+\item 
+int \doxymbox{\hyperlink{rbus__buffer_8h_a123de1190229cc9d23f5b4b5b2e7b24a}{rbus\+Buffer\+\_\+\+Read\+Char}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const buff, char \texorpdfstring{$\ast$}{*}c)
+\item 
+int \doxymbox{\hyperlink{rbus__buffer_8h_a930cb1214bc3f0d4958daae0b7905985}{rbus\+Buffer\+\_\+\+Read\+Byte}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const buff, unsigned char \texorpdfstring{$\ast$}{*}u)
+\item 
+int \doxymbox{\hyperlink{rbus__buffer_8h_acaea53731301466e316ee6c6cd4d8da1}{rbus\+Buffer\+\_\+\+Read\+Int8}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const buff, int8\+\_\+t \texorpdfstring{$\ast$}{*}i8)
+\item 
+int \doxymbox{\hyperlink{rbus__buffer_8h_a01bf5209aa95d810f6edbe544259f066}{rbus\+Buffer\+\_\+\+Read\+UInt8}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const buff, uint8\+\_\+t \texorpdfstring{$\ast$}{*}u8)
+\item 
+int \doxymbox{\hyperlink{rbus__buffer_8h_ae162835f44764792b274078d9ee2bb54}{rbus\+Buffer\+\_\+\+Read\+Int16}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const buff, int16\+\_\+t \texorpdfstring{$\ast$}{*}i16)
+\item 
+int \doxymbox{\hyperlink{rbus__buffer_8h_ac7e6f6e86534d1dd7a192a0b53f1b881}{rbus\+Buffer\+\_\+\+Read\+UInt16}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const buff, uint16\+\_\+t \texorpdfstring{$\ast$}{*}u16)
+\item 
+int \doxymbox{\hyperlink{rbus__buffer_8h_ad9b254e06172a92ecd9c2070c3e6e680}{rbus\+Buffer\+\_\+\+Read\+Int32}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const buff, int32\+\_\+t \texorpdfstring{$\ast$}{*}i32)
+\item 
+int \doxymbox{\hyperlink{rbus__buffer_8h_a98e6b5ec8f9f034225d05cff0d8caefb}{rbus\+Buffer\+\_\+\+Read\+UInt32}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const buff, uint32\+\_\+t \texorpdfstring{$\ast$}{*}u32)
+\item 
+int \doxymbox{\hyperlink{rbus__buffer_8h_ae58fe43aa8e07656af93634ca66b6b11}{rbus\+Buffer\+\_\+\+Read\+Int64}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const buff, int64\+\_\+t \texorpdfstring{$\ast$}{*}i64)
+\item 
+int \doxymbox{\hyperlink{rbus__buffer_8h_ad202427c45e4a80c56f808442bc755db}{rbus\+Buffer\+\_\+\+Read\+UInt64}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const buff, uint64\+\_\+t \texorpdfstring{$\ast$}{*}u64)
+\item 
+int \doxymbox{\hyperlink{rbus__buffer_8h_a9fb51186fb06d53e2344edc06047493c}{rbus\+Buffer\+\_\+\+Read\+Single}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const buff, float \texorpdfstring{$\ast$}{*}f32)
+\item 
+int \doxymbox{\hyperlink{rbus__buffer_8h_a1d6e718b081bb9ef247496bb0319bbc8}{rbus\+Buffer\+\_\+\+Read\+Double}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const buff, double \texorpdfstring{$\ast$}{*}f64)
+\item 
+int \doxymbox{\hyperlink{rbus__buffer_8h_a8e1ec4cc4827028c440c1fcc05978c71}{rbus\+Buffer\+\_\+\+Read\+String}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const buff, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}s, int \texorpdfstring{$\ast$}{*}len)
+\item 
+int \doxymbox{\hyperlink{rbus__buffer_8h_a79fd9f644f548f9322c2359d162798ea}{rbus\+Buffer\+\_\+\+Read\+Date\+Time}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const buff, \doxymbox{\hyperlink{group__rbus_value_ga2009eccbb6b430aef0ebcbf6165d1382}{rbus\+Date\+Time\+\_\+t}} \texorpdfstring{$\ast$}{*}tv)
+\item 
+int \doxymbox{\hyperlink{rbus__buffer_8h_a0068bd2281799f5456e86626c1e998e0}{rbus\+Buffer\+\_\+\+Read\+Bytes}} (\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const buff, uint8\+\_\+t \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}bytes, int \texorpdfstring{$\ast$}{*}len)
+\end{DoxyCompactItemize}
+
+
+\label{rbus__buffer_8h_doc-typedef-members}
+\Hypertarget{rbus__buffer_8h_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_t@{rbusBuffer\_t}}
+\index{rbusBuffer\_t@{rbusBuffer\_t}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_t}{rbusBuffer\_t}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127} 
+typedef struct \doxymbox{\hyperlink{struct__rbus_buffer}{\+\_\+rbus\+Buffer}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}}}
+
+
+
+\label{rbus__buffer_8h_doc-func-members}
+\Hypertarget{rbus__buffer_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{rbus__buffer_8h_af2c250388bcce10bd72454468e691b2d}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_Create@{rbusBuffer\_Create}}
+\index{rbusBuffer\_Create@{rbusBuffer\_Create}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_Create()}{rbusBuffer\_Create()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_af2c250388bcce10bd72454468e691b2d} 
+void rbus\+Buffer\+\_\+\+Create (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{buff}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a049b2083eac6dffe33d96e464be20d2f}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_Destroy@{rbusBuffer\_Destroy}}
+\index{rbusBuffer\_Destroy@{rbusBuffer\_Destroy}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_Destroy()}{rbusBuffer\_Destroy()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a049b2083eac6dffe33d96e464be20d2f} 
+void rbus\+Buffer\+\_\+\+Destroy (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}}}]{buff}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_aed233f2f67d2611bdadde8da3ec507ad}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_Read@{rbusBuffer\_Read}}
+\index{rbusBuffer\_Read@{rbusBuffer\_Read}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_Read()}{rbusBuffer\_Read()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_aed233f2f67d2611bdadde8da3ec507ad} 
+int rbus\+Buffer\+\_\+\+Read (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const}]{buff}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{int}]{len}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a4d9906d547d5d5b2074ca5f613515bb2}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_ReadBoolean@{rbusBuffer\_ReadBoolean}}
+\index{rbusBuffer\_ReadBoolean@{rbusBuffer\_ReadBoolean}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_ReadBoolean()}{rbusBuffer\_ReadBoolean()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a4d9906d547d5d5b2074ca5f613515bb2} 
+int rbus\+Buffer\+\_\+\+Read\+Boolean (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const}]{buff}{, }\item[{bool \texorpdfstring{$\ast$}{*}}]{b}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a930cb1214bc3f0d4958daae0b7905985}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_ReadByte@{rbusBuffer\_ReadByte}}
+\index{rbusBuffer\_ReadByte@{rbusBuffer\_ReadByte}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_ReadByte()}{rbusBuffer\_ReadByte()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a930cb1214bc3f0d4958daae0b7905985} 
+int rbus\+Buffer\+\_\+\+Read\+Byte (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const}]{buff}{, }\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{u}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a0068bd2281799f5456e86626c1e998e0}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_ReadBytes@{rbusBuffer\_ReadBytes}}
+\index{rbusBuffer\_ReadBytes@{rbusBuffer\_ReadBytes}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_ReadBytes()}{rbusBuffer\_ReadBytes()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a0068bd2281799f5456e86626c1e998e0} 
+int rbus\+Buffer\+\_\+\+Read\+Bytes (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const}]{buff}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{bytes}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{len}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a123de1190229cc9d23f5b4b5b2e7b24a}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_ReadChar@{rbusBuffer\_ReadChar}}
+\index{rbusBuffer\_ReadChar@{rbusBuffer\_ReadChar}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_ReadChar()}{rbusBuffer\_ReadChar()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a123de1190229cc9d23f5b4b5b2e7b24a} 
+int rbus\+Buffer\+\_\+\+Read\+Char (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const}]{buff}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{c}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a79fd9f644f548f9322c2359d162798ea}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_ReadDateTime@{rbusBuffer\_ReadDateTime}}
+\index{rbusBuffer\_ReadDateTime@{rbusBuffer\_ReadDateTime}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_ReadDateTime()}{rbusBuffer\_ReadDateTime()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a79fd9f644f548f9322c2359d162798ea} 
+int rbus\+Buffer\+\_\+\+Read\+Date\+Time (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const}]{buff}{, }\item[{\doxymbox{\hyperlink{group__rbus_value_ga2009eccbb6b430aef0ebcbf6165d1382}{rbus\+Date\+Time\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{tv}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a1d6e718b081bb9ef247496bb0319bbc8}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_ReadDouble@{rbusBuffer\_ReadDouble}}
+\index{rbusBuffer\_ReadDouble@{rbusBuffer\_ReadDouble}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_ReadDouble()}{rbusBuffer\_ReadDouble()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a1d6e718b081bb9ef247496bb0319bbc8} 
+int rbus\+Buffer\+\_\+\+Read\+Double (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const}]{buff}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{f64}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_ae162835f44764792b274078d9ee2bb54}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_ReadInt16@{rbusBuffer\_ReadInt16}}
+\index{rbusBuffer\_ReadInt16@{rbusBuffer\_ReadInt16}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_ReadInt16()}{rbusBuffer\_ReadInt16()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_ae162835f44764792b274078d9ee2bb54} 
+int rbus\+Buffer\+\_\+\+Read\+Int16 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const}]{buff}{, }\item[{int16\+\_\+t \texorpdfstring{$\ast$}{*}}]{i16}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_ad9b254e06172a92ecd9c2070c3e6e680}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_ReadInt32@{rbusBuffer\_ReadInt32}}
+\index{rbusBuffer\_ReadInt32@{rbusBuffer\_ReadInt32}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_ReadInt32()}{rbusBuffer\_ReadInt32()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_ad9b254e06172a92ecd9c2070c3e6e680} 
+int rbus\+Buffer\+\_\+\+Read\+Int32 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const}]{buff}{, }\item[{int32\+\_\+t \texorpdfstring{$\ast$}{*}}]{i32}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_ae58fe43aa8e07656af93634ca66b6b11}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_ReadInt64@{rbusBuffer\_ReadInt64}}
+\index{rbusBuffer\_ReadInt64@{rbusBuffer\_ReadInt64}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_ReadInt64()}{rbusBuffer\_ReadInt64()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_ae58fe43aa8e07656af93634ca66b6b11} 
+int rbus\+Buffer\+\_\+\+Read\+Int64 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const}]{buff}{, }\item[{int64\+\_\+t \texorpdfstring{$\ast$}{*}}]{i64}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_acaea53731301466e316ee6c6cd4d8da1}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_ReadInt8@{rbusBuffer\_ReadInt8}}
+\index{rbusBuffer\_ReadInt8@{rbusBuffer\_ReadInt8}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_ReadInt8()}{rbusBuffer\_ReadInt8()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_acaea53731301466e316ee6c6cd4d8da1} 
+int rbus\+Buffer\+\_\+\+Read\+Int8 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const}]{buff}{, }\item[{int8\+\_\+t \texorpdfstring{$\ast$}{*}}]{i8}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a9fb51186fb06d53e2344edc06047493c}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_ReadSingle@{rbusBuffer\_ReadSingle}}
+\index{rbusBuffer\_ReadSingle@{rbusBuffer\_ReadSingle}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_ReadSingle()}{rbusBuffer\_ReadSingle()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a9fb51186fb06d53e2344edc06047493c} 
+int rbus\+Buffer\+\_\+\+Read\+Single (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const}]{buff}{, }\item[{float \texorpdfstring{$\ast$}{*}}]{f32}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a8e1ec4cc4827028c440c1fcc05978c71}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_ReadString@{rbusBuffer\_ReadString}}
+\index{rbusBuffer\_ReadString@{rbusBuffer\_ReadString}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_ReadString()}{rbusBuffer\_ReadString()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a8e1ec4cc4827028c440c1fcc05978c71} 
+int rbus\+Buffer\+\_\+\+Read\+String (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const}]{buff}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{s}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{len}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_ac7e6f6e86534d1dd7a192a0b53f1b881}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_ReadUInt16@{rbusBuffer\_ReadUInt16}}
+\index{rbusBuffer\_ReadUInt16@{rbusBuffer\_ReadUInt16}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_ReadUInt16()}{rbusBuffer\_ReadUInt16()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_ac7e6f6e86534d1dd7a192a0b53f1b881} 
+int rbus\+Buffer\+\_\+\+Read\+UInt16 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const}]{buff}{, }\item[{uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{u16}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a98e6b5ec8f9f034225d05cff0d8caefb}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_ReadUInt32@{rbusBuffer\_ReadUInt32}}
+\index{rbusBuffer\_ReadUInt32@{rbusBuffer\_ReadUInt32}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_ReadUInt32()}{rbusBuffer\_ReadUInt32()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a98e6b5ec8f9f034225d05cff0d8caefb} 
+int rbus\+Buffer\+\_\+\+Read\+UInt32 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const}]{buff}{, }\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{u32}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_ad202427c45e4a80c56f808442bc755db}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_ReadUInt64@{rbusBuffer\_ReadUInt64}}
+\index{rbusBuffer\_ReadUInt64@{rbusBuffer\_ReadUInt64}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_ReadUInt64()}{rbusBuffer\_ReadUInt64()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_ad202427c45e4a80c56f808442bc755db} 
+int rbus\+Buffer\+\_\+\+Read\+UInt64 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const}]{buff}{, }\item[{uint64\+\_\+t \texorpdfstring{$\ast$}{*}}]{u64}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a01bf5209aa95d810f6edbe544259f066}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_ReadUInt8@{rbusBuffer\_ReadUInt8}}
+\index{rbusBuffer\_ReadUInt8@{rbusBuffer\_ReadUInt8}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_ReadUInt8()}{rbusBuffer\_ReadUInt8()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a01bf5209aa95d810f6edbe544259f066} 
+int rbus\+Buffer\+\_\+\+Read\+UInt8 (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const}]{buff}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{u8}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a5b19b15dd78580d3e52378dccb6cb869}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_Reserve@{rbusBuffer\_Reserve}}
+\index{rbusBuffer\_Reserve@{rbusBuffer\_Reserve}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_Reserve()}{rbusBuffer\_Reserve()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a5b19b15dd78580d3e52378dccb6cb869} 
+void rbus\+Buffer\+\_\+\+Reserve (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}}}]{buff}{, }\item[{int}]{len}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_aded4aa881610a2a860887541b5c19f8a}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_Write@{rbusBuffer\_Write}}
+\index{rbusBuffer\_Write@{rbusBuffer\_Write}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_Write()}{rbusBuffer\_Write()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_aded4aa881610a2a860887541b5c19f8a} 
+void rbus\+Buffer\+\_\+\+Write (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}}}]{buff}{, }\item[{void const \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{int}]{len}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_aa9f42b5d2e627fda3b8ca76d80060cb1}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_WriteBooleanTLV@{rbusBuffer\_WriteBooleanTLV}}
+\index{rbusBuffer\_WriteBooleanTLV@{rbusBuffer\_WriteBooleanTLV}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_WriteBooleanTLV()}{rbusBuffer\_WriteBooleanTLV()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_aa9f42b5d2e627fda3b8ca76d80060cb1} 
+void rbus\+Buffer\+\_\+\+Write\+Boolean\+TLV (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}}}]{buff}{, }\item[{bool}]{b}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a298889933c1b3072a29dcdf0761e6a15}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_WriteBytesTLV@{rbusBuffer\_WriteBytesTLV}}
+\index{rbusBuffer\_WriteBytesTLV@{rbusBuffer\_WriteBytesTLV}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_WriteBytesTLV()}{rbusBuffer\_WriteBytesTLV()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a298889933c1b3072a29dcdf0761e6a15} 
+void rbus\+Buffer\+\_\+\+Write\+Bytes\+TLV (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}}}]{buff}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{bytes}{, }\item[{int}]{len}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a01c72ece9a473317016643e6974988c9}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_WriteByteTLV@{rbusBuffer\_WriteByteTLV}}
+\index{rbusBuffer\_WriteByteTLV@{rbusBuffer\_WriteByteTLV}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_WriteByteTLV()}{rbusBuffer\_WriteByteTLV()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a01c72ece9a473317016643e6974988c9} 
+void rbus\+Buffer\+\_\+\+Write\+Byte\+TLV (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}}}]{buff}{, }\item[{unsigned char}]{u}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a073807884c065286f412bed2cd50c57b}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_WriteCharTLV@{rbusBuffer\_WriteCharTLV}}
+\index{rbusBuffer\_WriteCharTLV@{rbusBuffer\_WriteCharTLV}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_WriteCharTLV()}{rbusBuffer\_WriteCharTLV()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a073807884c065286f412bed2cd50c57b} 
+void rbus\+Buffer\+\_\+\+Write\+Char\+TLV (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}}}]{buff}{, }\item[{char}]{c}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_ae0daaadfadb3b09ac922bc2f389f2b5a}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_WriteDateTimeTLV@{rbusBuffer\_WriteDateTimeTLV}}
+\index{rbusBuffer\_WriteDateTimeTLV@{rbusBuffer\_WriteDateTimeTLV}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_WriteDateTimeTLV()}{rbusBuffer\_WriteDateTimeTLV()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_ae0daaadfadb3b09ac922bc2f389f2b5a} 
+void rbus\+Buffer\+\_\+\+Write\+Date\+Time\+TLV (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}}}]{buff}{, }\item[{\doxymbox{\hyperlink{group__rbus_value_ga2009eccbb6b430aef0ebcbf6165d1382}{rbus\+Date\+Time\+\_\+t}} const \texorpdfstring{$\ast$}{*}}]{tv}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a536888d760ad6cbd0c5fe795d09f7a9b}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_WriteDoubleTLV@{rbusBuffer\_WriteDoubleTLV}}
+\index{rbusBuffer\_WriteDoubleTLV@{rbusBuffer\_WriteDoubleTLV}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_WriteDoubleTLV()}{rbusBuffer\_WriteDoubleTLV()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a536888d760ad6cbd0c5fe795d09f7a9b} 
+void rbus\+Buffer\+\_\+\+Write\+Double\+TLV (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}}}]{buff}{, }\item[{double}]{f64}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a7ec783d47be947ec9f588044ef603ea2}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_WriteInt16TLV@{rbusBuffer\_WriteInt16TLV}}
+\index{rbusBuffer\_WriteInt16TLV@{rbusBuffer\_WriteInt16TLV}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_WriteInt16TLV()}{rbusBuffer\_WriteInt16TLV()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a7ec783d47be947ec9f588044ef603ea2} 
+void rbus\+Buffer\+\_\+\+Write\+Int16\+TLV (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}}}]{buff}{, }\item[{int16\+\_\+t}]{i16}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_aa11b7f6c88b9fcfe087e36bdcdbea572}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_WriteInt32TLV@{rbusBuffer\_WriteInt32TLV}}
+\index{rbusBuffer\_WriteInt32TLV@{rbusBuffer\_WriteInt32TLV}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_WriteInt32TLV()}{rbusBuffer\_WriteInt32TLV()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_aa11b7f6c88b9fcfe087e36bdcdbea572} 
+void rbus\+Buffer\+\_\+\+Write\+Int32\+TLV (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}}}]{buff}{, }\item[{int32\+\_\+t}]{i32}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a2afb53ca18dd419d01ac578783562fe0}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_WriteInt64TLV@{rbusBuffer\_WriteInt64TLV}}
+\index{rbusBuffer\_WriteInt64TLV@{rbusBuffer\_WriteInt64TLV}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_WriteInt64TLV()}{rbusBuffer\_WriteInt64TLV()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a2afb53ca18dd419d01ac578783562fe0} 
+void rbus\+Buffer\+\_\+\+Write\+Int64\+TLV (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}}}]{buff}{, }\item[{int64\+\_\+t}]{i64}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_ad6ccc5f35e6966eee8d268dd7ef0a0e9}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_WriteInt8TLV@{rbusBuffer\_WriteInt8TLV}}
+\index{rbusBuffer\_WriteInt8TLV@{rbusBuffer\_WriteInt8TLV}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_WriteInt8TLV()}{rbusBuffer\_WriteInt8TLV()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_ad6ccc5f35e6966eee8d268dd7ef0a0e9} 
+void rbus\+Buffer\+\_\+\+Write\+Int8\+TLV (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}}}]{buff}{, }\item[{int8\+\_\+t}]{i8}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a51fd4875fcfb45017613a6de189def05}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_WriteSingleTLV@{rbusBuffer\_WriteSingleTLV}}
+\index{rbusBuffer\_WriteSingleTLV@{rbusBuffer\_WriteSingleTLV}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_WriteSingleTLV()}{rbusBuffer\_WriteSingleTLV()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a51fd4875fcfb45017613a6de189def05} 
+void rbus\+Buffer\+\_\+\+Write\+Single\+TLV (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}}}]{buff}{, }\item[{float}]{f32}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a6e37edaf993e58feb74635104b7004e9}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_WriteStringTLV@{rbusBuffer\_WriteStringTLV}}
+\index{rbusBuffer\_WriteStringTLV@{rbusBuffer\_WriteStringTLV}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_WriteStringTLV()}{rbusBuffer\_WriteStringTLV()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a6e37edaf993e58feb74635104b7004e9} 
+void rbus\+Buffer\+\_\+\+Write\+String\+TLV (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}}}]{buff}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{int}]{len}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a0bad8efae11a8d04c71ce4cd70599e62}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_WriteTypeLengthValue@{rbusBuffer\_WriteTypeLengthValue}}
+\index{rbusBuffer\_WriteTypeLengthValue@{rbusBuffer\_WriteTypeLengthValue}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_WriteTypeLengthValue()}{rbusBuffer\_WriteTypeLengthValue()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a0bad8efae11a8d04c71ce4cd70599e62} 
+void rbus\+Buffer\+\_\+\+Write\+Type\+Length\+Value (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}}}]{buff}{, }\item[{\doxymbox{\hyperlink{group__rbus_value_ga7405acfdc3b4162ff9a9c711b834aba8}{rbus\+Value\+Type\+\_\+t}}}]{type}{, }\item[{uint16\+\_\+t}]{length}{, }\item[{void const \texorpdfstring{$\ast$}{*}}]{value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a1ded2af4cecb71000abd49c17b88f269}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_WriteUInt16TLV@{rbusBuffer\_WriteUInt16TLV}}
+\index{rbusBuffer\_WriteUInt16TLV@{rbusBuffer\_WriteUInt16TLV}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_WriteUInt16TLV()}{rbusBuffer\_WriteUInt16TLV()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a1ded2af4cecb71000abd49c17b88f269} 
+void rbus\+Buffer\+\_\+\+Write\+UInt16\+TLV (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}}}]{buff}{, }\item[{uint16\+\_\+t}]{u16}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a236d245722b727616901ddbb0e570f36}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_WriteUInt32TLV@{rbusBuffer\_WriteUInt32TLV}}
+\index{rbusBuffer\_WriteUInt32TLV@{rbusBuffer\_WriteUInt32TLV}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_WriteUInt32TLV()}{rbusBuffer\_WriteUInt32TLV()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a236d245722b727616901ddbb0e570f36} 
+void rbus\+Buffer\+\_\+\+Write\+UInt32\+TLV (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}}}]{buff}{, }\item[{uint32\+\_\+t}]{u32}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a56134c1b5ce5f09cfb50fde65b4fa1f9}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_WriteUInt64TLV@{rbusBuffer\_WriteUInt64TLV}}
+\index{rbusBuffer\_WriteUInt64TLV@{rbusBuffer\_WriteUInt64TLV}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_WriteUInt64TLV()}{rbusBuffer\_WriteUInt64TLV()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a56134c1b5ce5f09cfb50fde65b4fa1f9} 
+void rbus\+Buffer\+\_\+\+Write\+UInt64\+TLV (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}}}]{buff}{, }\item[{uint64\+\_\+t}]{u64}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_ae23cfd438bd96c6c989a998c26b3134c}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusBuffer\_WriteUInt8TLV@{rbusBuffer\_WriteUInt8TLV}}
+\index{rbusBuffer\_WriteUInt8TLV@{rbusBuffer\_WriteUInt8TLV}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusBuffer\_WriteUInt8TLV()}{rbusBuffer\_WriteUInt8TLV()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_ae23cfd438bd96c6c989a998c26b3134c} 
+void rbus\+Buffer\+\_\+\+Write\+UInt8\+TLV (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}}}]{buff}{, }\item[{uint8\+\_\+t}]{u8}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a8b09617c465ce97686b136f6d6f6cefc}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusFilter\_Decode@{rbusFilter\_Decode}}
+\index{rbusFilter\_Decode@{rbusFilter\_Decode}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusFilter\_Decode()}{rbusFilter\_Decode()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a8b09617c465ce97686b136f6d6f6cefc} 
+int rbus\+Filter\+\_\+\+Decode (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_filter_ga03ad5f80346294826fffde5c271dd22e}{rbus\+Filter\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{filter}{, }\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const}]{buff}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_ae2e542ef6f0e6f2ff3d4df2c0a88bdc9}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusFilter\_Encode@{rbusFilter\_Encode}}
+\index{rbusFilter\_Encode@{rbusFilter\_Encode}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusFilter\_Encode()}{rbusFilter\_Encode()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_ae2e542ef6f0e6f2ff3d4df2c0a88bdc9} 
+void rbus\+Filter\+\_\+\+Encode (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_filter_ga03ad5f80346294826fffde5c271dd22e}{rbus\+Filter\+\_\+t}}}]{filter}{, }\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}}}]{buff}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_ac038c8b6cfa71dccaab6b65dc9c7205a}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusValue\_Decode@{rbusValue\_Decode}}
+\index{rbusValue\_Decode@{rbusValue\_Decode}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_Decode()}{rbusValue\_Decode()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_ac038c8b6cfa71dccaab6b65dc9c7205a} 
+int rbus\+Value\+\_\+\+Decode (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{value}{, }\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}} const}]{buff}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a5dd0f3fbe53223ea9ffcbc398985bf7c}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusValue\_Encode@{rbusValue\_Encode}}
+\index{rbusValue\_Encode@{rbusValue\_Encode}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_Encode()}{rbusValue\_Encode()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a5dd0f3fbe53223ea9ffcbc398985bf7c} 
+void rbus\+Value\+\_\+\+Encode (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{value}{, }\item[{\doxymbox{\hyperlink{rbus__buffer_8h_aa198149a4bd9d6e703962a3c3fad0127}{rbus\+Buffer\+\_\+t}}}]{buff}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_aaa49e747e314edb65602abd8ddd6765a}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusValue\_GetL@{rbusValue\_GetL}}
+\index{rbusValue\_GetL@{rbusValue\_GetL}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetL()}{rbusValue\_GetL()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_aaa49e747e314edb65602abd8ddd6765a} 
+uint32\+\_\+t rbus\+Value\+\_\+\+GetL (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{v}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a13be9557f9fde82dab8efc0de61eb273}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusValue\_GetV@{rbusValue\_GetV}}
+\index{rbusValue\_GetV@{rbusValue\_GetV}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_GetV()}{rbusValue\_GetV()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a13be9557f9fde82dab8efc0de61eb273} 
+uint8\+\_\+t const  \texorpdfstring{$\ast$}{*} rbus\+Value\+\_\+\+GetV (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{v}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a78db1074a8948cbec699ba255c96c343}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusValue\_SetTLV@{rbusValue\_SetTLV}}
+\index{rbusValue\_SetTLV@{rbusValue\_SetTLV}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusValue\_SetTLV()}{rbusValue\_SetTLV()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a78db1074a8948cbec699ba255c96c343} 
+void rbus\+Value\+\_\+\+Set\+TLV (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbus\+Value\+\_\+t}}}]{v}{, }\item[{\doxymbox{\hyperlink{group__rbus_value_ga7405acfdc3b4162ff9a9c711b834aba8}{rbus\+Value\+Type\+\_\+t}}}]{type}{, }\item[{uint32\+\_\+t}]{length}{, }\item[{void const \texorpdfstring{$\ast$}{*}}]{value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rbus__buffer_8h_a962b5956904758680829fe03f9fe0654}\index{rbus\_buffer.h@{rbus\_buffer.h}!rbusValueType\_ToDebugString@{rbusValueType\_ToDebugString}}
+\index{rbusValueType\_ToDebugString@{rbusValueType\_ToDebugString}!rbus\_buffer.h@{rbus\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{rbusValueType\_ToDebugString()}{rbusValueType\_ToDebugString()}}
+{\footnotesize\ttfamily \label{rbus__buffer_8h_a962b5956904758680829fe03f9fe0654} 
+char const  \texorpdfstring{$\ast$}{*} rbus\+Value\+Type\+\_\+\+To\+Debug\+String (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__rbus_value_ga7405acfdc3b4162ff9a9c711b834aba8}{rbus\+Value\+Type\+\_\+t}}}]{type}{}\end{DoxyParamCaption})}
+

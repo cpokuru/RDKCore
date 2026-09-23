@@ -1,0 +1,655 @@
+\doxysection{rbus.\+h}
+\hypertarget{rbus_8h_source}{}\label{rbus_8h_source}\index{include/rbus.h@{include/rbus.h}}
+\doxymbox{\hyperlink{rbus_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ If\ not\ stated\ otherwise\ in\ this\ file\ or\ this\ component's\ Licenses.txt\ file}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ the\ following\ copyright\ and\ licenses\ apply:}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ Copyright\ 2016\ RDK\ Management}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ Licensed\ under\ the\ Apache\ License,\ Version\ 2.0\ (the\ "{}License"{});}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ you\ may\ not\ use\ this\ file\ except\ in\ compliance\ with\ the\ License.}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ You\ may\ obtain\ a\ copy\ of\ the\ License\ at}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ Unless\ required\ by\ applicable\ law\ or\ agreed\ to\ in\ writing,\ software}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ distributed\ under\ the\ License\ is\ distributed\ on\ an\ "{}AS\ IS"{}\ BASIS,}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ WITHOUT\ WARRANTIES\ OR\ CONDITIONS\ OF\ ANY\ KIND,\ either\ express\ or\ implied.}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ See\ the\ License\ for\ the\ specific\ language\ governing\ permissions\ and}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ limitations\ under\ the\ License.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#ifndef\ RBUS\_H}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ RBUS\_H}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{rbus__value_8h}{rbus\_value.h}}"{}}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{rbus__property_8h}{rbus\_property.h}}"{}}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{rbus__object_8h}{rbus\_object.h}}"{}}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{rbus__filter_8h}{rbus\_filter.h}}"{}}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00084\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00090\ \textcolor{keyword}{struct\ }\_rbusHandle;}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00093\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\_rbusHandle*\ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#define\ RBUS\_MAX\_NAME\_LENGTH\ 256}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#define\ RBUS\_MAX\_NAME\_DEPTH\ 16}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00102\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{group___common_ga5db8b0d14b831805c31bbf454b7a935a}{\_rbusError}}}
+\DoxyCodeLine{00103\ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{comment}{//Generic\ error\ codes}}
+\DoxyCodeLine{00105\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aaba78b39ff2a89c19cc9ecd770b0cff4f}{RBUS\_ERROR\_SUCCESS}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0,\ \ \ \ }
+\DoxyCodeLine{00106\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa9ebae7acef31009e2da835821d25a3ec}{RBUS\_ERROR\_BUS\_ERROR}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 1,\ \ \ \ }
+\DoxyCodeLine{00107\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa9a1547d7a456c5a71f40dca3dc933ecd}{RBUS\_ERROR\_INVALID\_INPUT}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00108\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aaaabc3cdfb97e47fcbde52848dc5f021f}{RBUS\_ERROR\_NOT\_INITIALIZED}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00109\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aad8875a435b4194eff4cd3bafa8c3862c}{RBUS\_ERROR\_OUT\_OF\_RESOURCES}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00110\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa73fa6a352bc465672bb6dfd2b0271ead}{RBUS\_ERROR\_DESTINATION\_NOT\_FOUND}},\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00111\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aacc9db1e50b8109fa8c91744d52000638}{RBUS\_ERROR\_DESTINATION\_NOT\_REACHABLE}},\ \ \ \ \ \ \ }
+\DoxyCodeLine{00112\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa0df954487735ea77e61d8f6c23fd3e92}{RBUS\_ERROR\_DESTINATION\_RESPONSE\_FAILURE}},\ \ \ \ }
+\DoxyCodeLine{00113\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa8b7c928dc06009a14410628532d596df}{RBUS\_ERROR\_INVALID\_RESPONSE\_FROM\_DESTINATION}},}
+\DoxyCodeLine{00114\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aad7664e052e24bb56a42686f0468d99ce}{RBUS\_ERROR\_INVALID\_OPERATION}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00115\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aaca5c22a12e1749596eb2fdf6cb7a26fa}{RBUS\_ERROR\_INVALID\_EVENT}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00116\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa23c754e53e8196dce65d95ee826a2c98}{RBUS\_ERROR\_INVALID\_HANDLE}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00117\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa32c60b973204fe6388d6cab12aae4e94}{RBUS\_ERROR\_SESSION\_ALREADY\_EXIST}},\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00118\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa2ebcac8cb80181718ea1c13e745a37a0}{RBUS\_ERROR\_COMPONENT\_NAME\_DUPLICATE}},\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00119\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa8b8b10b50cf0208abbbf9193524f6724}{RBUS\_ERROR\_ELEMENT\_NAME\_DUPLICATE}},\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00120\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa384ed573fc57710f2706ac0d7ca64097}{RBUS\_ERROR\_ELEMENT\_NAME\_MISSING}},\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00121\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa9c7233f8915859c4548e5c50e1024463}{RBUS\_ERROR\_COMPONENT\_DOES\_NOT\_EXIST}},\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00122\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa76eff23270a64075adf86e2cc63849fa}{RBUS\_ERROR\_ELEMENT\_DOES\_NOT\_EXIST}},\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00123\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aab95268db5752e57383de180c77d78fc9}{RBUS\_ERROR\_ACCESS\_NOT\_ALLOWED}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00124\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aad4464c897ddb28dcd2aff03f9039291a}{RBUS\_ERROR\_INVALID\_CONTEXT}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00125\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aab4d44c7302674778282781128274393b}{RBUS\_ERROR\_TIMEOUT}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00126\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa9db57791261df9863366b7b495bcd751}{RBUS\_ERROR\_ASYNC\_RESPONSE}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00127\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aab35998b6f42b6d7bb83150c8e3e56baa}{RBUS\_ERROR\_INVALID\_METHOD}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00128\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa3f44e9516a76968b9abce5b503cc6431}{RBUS\_ERROR\_NOSUBSCRIBERS}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00129\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aaab28f322a7dc1597c0e12d97267f8752}{RBUS\_ERROR\_SUBSCRIPTION\_ALREADY\_EXIST}},\ \ \ \ \ \ }
+\DoxyCodeLine{00130\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa80b7261d6fb49a21a9544e2141c86734}{RBUS\_ERROR\_INVALID\_NAMESPACE}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00131\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aaf0e652a9d9b9c55ee8a2c3dc984501a7}{RBUS\_ERROR\_DIRECT\_CON\_NOT\_EXIST}},\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00132\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aac4125cfdc40b04fdee894b6be3993379}{RBUS\_ERROR\_NOT\_WRITABLE}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00133\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa4ee4d733b46a54909111ad96f299b4b0}{RBUS\_ERROR\_NOT\_READABLE}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00134\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa8c5f052671250be982fd245e4c69509c}{RBUS\_ERROR\_INVALID\_PARAMETER\_TYPE}},\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00135\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga5db8b0d14b831805c31bbf454b7a935aa8d8839f0a6640ddd0c926247b249e9a6}{RBUS\_ERROR\_INVALID\_PARAMETER\_VALUE}}\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00136\ \}\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}};}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}\ *\ \doxymbox{\hyperlink{group___common_ga8af15938b1656c306a21688b315a8d0a}{rbusError\_ToString}}(\doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ e);}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00146\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct__rbus_set_options}{\_rbusSetOptions}}}
+\DoxyCodeLine{00147\ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct__rbus_set_options_a22a2a78889208a55322dbda9db0271da}{commit}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00154\ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{struct__rbus_set_options_ae3e988869e6d6d6181fe7895b897ecd0}{sessionId}};\ \ \ \ \ }
+\DoxyCodeLine{00160\ \}\ \doxymbox{\hyperlink{structrbus_set_options__t}{rbusSetOptions\_t}};}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00166\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct__rbus_get_handler_options}{\_rbusGetHandlerOptions}}}
+\DoxyCodeLine{00167\ \{}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{void}*\ \doxymbox{\hyperlink{struct__rbus_get_handler_options_a3599824e9fcb3c4b1882006b793e4f18}{context}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ \doxymbox{\hyperlink{struct__rbus_get_handler_options_a7e2bf780d734159ab0cb8d9280f3678d}{requestingComponent}};\ \ \ \ }
+\DoxyCodeLine{00170\ \}\ \doxymbox{\hyperlink{structrbus_get_handler_options__t}{rbusGetHandlerOptions\_t}};}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00176\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct__rbus_set_handler_options}{\_rbusSetHandlerOptions}}}
+\DoxyCodeLine{00177\ \{}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{struct__rbus_set_handler_options_abd5a690fec5b07e1a2d1b3f2cad63d0f}{commit}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00184\ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{struct__rbus_set_handler_options_a955e177bee4e43325c08719be2de9fd6}{sessionId}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ \doxymbox{\hyperlink{struct__rbus_set_handler_options_a225d451d7d2e3adfe049ddae4d7f428b}{requestingComponent}};\ \ \ \ }
+\DoxyCodeLine{00191\ \}\ \doxymbox{\hyperlink{structrbus_set_handler_options__t}{rbusSetHandlerOptions\_t}};}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \textcolor{keyword}{struct\ }\_rbusMethodAsyncHandle;}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00196\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\_rbusMethodAsyncHandle*\ \doxymbox{\hyperlink{group___common_gaece2a4d09e44f67df52ebf1efe63e793}{rbusMethodAsyncHandle\_t}};}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00202\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00203\ \{}
+\DoxyCodeLine{00204\ \ \ \ \ \doxymbox{\hyperlink{group___events_gga0aa4feac1e56279c9d61e90771534785a106483a07da50a7f580933ea53ea0290}{RBUS\_EVENT\_ACTION\_SUBSCRIBE}}\ =\ 0,}
+\DoxyCodeLine{00205\ \ \ \ \ \doxymbox{\hyperlink{group___events_gga0aa4feac1e56279c9d61e90771534785ac825c61e11602ba29c81aebff8bdedde}{RBUS\_EVENT\_ACTION\_UNSUBSCRIBE}}}
+\DoxyCodeLine{00206\ \}\ \doxymbox{\hyperlink{group___events_ga0aa4feac1e56279c9d61e90771534785}{rbusEventSubAction\_t}};}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00212\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00213\ \{}
+\DoxyCodeLine{00214\ \ \ \ \ \doxymbox{\hyperlink{group___events_gga8572487d31c269212da91488e8eb33b9af4fcd18da8c8186f6a731f551557f1d0}{RBUS\_EVENT\_OBJECT\_CREATED}},\ \ \ }
+\DoxyCodeLine{00215\ \ \ \ \ \doxymbox{\hyperlink{group___events_gga8572487d31c269212da91488e8eb33b9ade6bf62371a6ee6c9d5b3eb7d12f9419}{RBUS\_EVENT\_OBJECT\_DELETED}},\ \ \ }
+\DoxyCodeLine{00216\ \ \ \ \ \doxymbox{\hyperlink{group___events_gga8572487d31c269212da91488e8eb33b9a433ddaf617d8570b2afd8a46dcabeefe}{RBUS\_EVENT\_VALUE\_CHANGED}},\ \ \ \ }
+\DoxyCodeLine{00217\ \ \ \ \ \doxymbox{\hyperlink{group___events_gga8572487d31c269212da91488e8eb33b9a8864f6f4a367453b8fc5b6c71fae4399}{RBUS\_EVENT\_GENERAL}},\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00218\ \ \ \ \ \doxymbox{\hyperlink{group___events_gga8572487d31c269212da91488e8eb33b9a7924fd04efc3a9946b6c3d0fa3423f71}{RBUS\_EVENT\_INITIAL\_VALUE}},\ \ \ \ }
+\DoxyCodeLine{00219\ \ \ \ \ \doxymbox{\hyperlink{group___events_gga8572487d31c269212da91488e8eb33b9a7c87c82dd764272760bd73c350400931}{RBUS\_EVENT\_INTERVAL}},\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00220\ \ \ \ \ \doxymbox{\hyperlink{group___events_gga8572487d31c269212da91488e8eb33b9a4a8f3752c84a8d02195732f1a9c8b322}{RBUS\_EVENT\_DURATION\_COMPLETE}}\ }
+\DoxyCodeLine{00221\ \}\ \doxymbox{\hyperlink{group___events_ga8572487d31c269212da91488e8eb33b9}{rbusEventType\_t}};}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00227\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00228\ \{}
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ \ \ \ \ \doxymbox{\hyperlink{structrbus_event__t_a96e8854d0d994eec447da0f169fa0d93}{name}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00230\ \ \ \ \ \doxymbox{\hyperlink{group___events_ga8572487d31c269212da91488e8eb33b9}{rbusEventType\_t}}\ \doxymbox{\hyperlink{structrbus_event__t_a4da17905709c1ab4857446297438c13c}{type}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00231\ \ \ \ \ \doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbusObject\_t}}\ \ \ \ \doxymbox{\hyperlink{structrbus_event__t_a1c836179f4b913b4b990e5238e8ae8ee}{data}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00232\ \}\ \doxymbox{\hyperlink{structrbus_event__t}{rbusEvent\_t}};}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00235\ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ \ \ \ \ \doxymbox{\hyperlink{structrbus_event_raw_data__t_ab581f690c19e1c768614ada28348bfe0}{name}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00237\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \ \ \ \ \doxymbox{\hyperlink{structrbus_event_raw_data__t_aad6f57115800906459b9b52ae1c9f459}{rawData}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \ \ \ \doxymbox{\hyperlink{structrbus_event_raw_data__t_a84c34efd426161120462ebb7597641d5}{rawDataLen}};\ \ \ }
+\DoxyCodeLine{00239\ \}\ \doxymbox{\hyperlink{structrbus_event_raw_data__t}{rbusEventRawData\_t}};}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00241\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct__rbus_event_subscription}{\_rbusEventSubscription}}\ \doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbusEventSubscription\_t}};}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00257\ \textcolor{keyword}{typedef}\ void\ (*\doxymbox{\hyperlink{group___events_ga8c91c27fc5c9f944d4e82f6f97c7c6e6}{rbusSubscribeAsyncRespHandler\_t}})(}
+\DoxyCodeLine{00258\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ \doxymbox{\hyperlink{struct__rbus_event_subscription_a63e09bbea5d562727645c5a287b19077}{handle}},\ }
+\DoxyCodeLine{00259\ \ \ \ \ \doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbusEventSubscription\_t}}*\ subscription,}
+\DoxyCodeLine{00260\ \ \ \ \ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ error);}
+\DoxyCodeLine{00261\ }
+\DoxyCodeLine{00275\ \textcolor{keyword}{typedef}\ void\ (*\doxymbox{\hyperlink{group___events_gaf0a4f17d9440f3216fc6f06eda8b81bf}{rbusEventHandler\_t}})(}
+\DoxyCodeLine{00276\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct__rbus_event_subscription_a63e09bbea5d562727645c5a287b19077}{handle}},}
+\DoxyCodeLine{00277\ \ \ \ \ \doxymbox{\hyperlink{structrbus_event__t}{rbusEvent\_t}}\ \textcolor{keyword}{const}*\ \ \ \ \ \ \ \ \ \ eventData,}
+\DoxyCodeLine{00278\ \ \ \ \ \doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbusEventSubscription\_t}}*\ \ \ \ subscription}
+\DoxyCodeLine{00279\ );}
+\DoxyCodeLine{00280\ }
+\DoxyCodeLine{00281\ \textcolor{keyword}{typedef}\ void\ (*\doxymbox{\hyperlink{group___events_ga1e28c9d30371c7fda325fe856281a712}{rbusEventHandlerRawData\_t}})(}
+\DoxyCodeLine{00282\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct__rbus_event_subscription_a63e09bbea5d562727645c5a287b19077}{handle}},}
+\DoxyCodeLine{00283\ \ \ \ \ \doxymbox{\hyperlink{structrbus_event_raw_data__t}{rbusEventRawData\_t}}\ \textcolor{keyword}{const}*\ \ \ \ eventData,}
+\DoxyCodeLine{00284\ \ \ \ \ \doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbusEventSubscription\_t}}*\ \ \ \ subscription}
+\DoxyCodeLine{00285\ );}
+\DoxyCodeLine{00286\ }
+\DoxyCodeLine{00288\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct__rbus_event_subscription}{\_rbusEventSubscription}}}
+\DoxyCodeLine{00289\ \{}
+\DoxyCodeLine{00290\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct__rbus_event_subscription_aa5f81da5ad5176915ed1d1b40b7ffe5d}{eventName}};\ \ }
+\DoxyCodeLine{00291\ \ \ \ \ \doxymbox{\hyperlink{group__rbus_filter_ga03ad5f80346294826fffde5c271dd22e}{rbusFilter\_t}}\ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct__rbus_event_subscription_ad975aaaadb953b18585f96660374f3b6}{filter}};\ \ \ \ \ }
+\DoxyCodeLine{00294\ \ \ \ \ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct__rbus_event_subscription_ab984e9c7c70a32dbb064f29e6c140cd9}{interval}};\ \ \ }
+\DoxyCodeLine{00298\ \ \ \ \ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct__rbus_event_subscription_af0542981da073930ab7d5441ccfa3585}{duration}};\ \ \ }
+\DoxyCodeLine{00304\ \ \ \ \ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct__rbus_event_subscription_ac7ef6bb6c1a7053cd2915d1e42c673a6}{handler}};\ \ \ \ }
+\DoxyCodeLine{00305\ \ \ \ \ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct__rbus_event_subscription_ab8739843ed4fbac99eee7419bd29df64}{userData}};\ \ \ }
+\DoxyCodeLine{00306\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct__rbus_event_subscription_a63e09bbea5d562727645c5a287b19077}{handle}};\ \ \ \ \ }
+\DoxyCodeLine{00307\ \ \ \ \ \doxymbox{\hyperlink{group___events_ga8c91c27fc5c9f944d4e82f6f97c7c6e6}{rbusSubscribeAsyncRespHandler\_t}}\ \doxymbox{\hyperlink{struct__rbus_event_subscription_a7945cd09582ac9f11d23fbfc50ad70d0}{asyncHandler}};}
+\DoxyCodeLine{00308\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct__rbus_event_subscription_a4896288c353bbfb5b61289d27a1ab8c4}{publishOnSubscribe}};}
+\DoxyCodeLine{00309\ \}\ \doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbusEventSubscription\_t}};}
+\DoxyCodeLine{00310\ }
+\DoxyCodeLine{00312\ }
+\DoxyCodeLine{00316\ }
+\DoxyCodeLine{00318\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct__rbus_row_name}{\_rbusRowName}}}
+\DoxyCodeLine{00319\ \{}
+\DoxyCodeLine{00320\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ \doxymbox{\hyperlink{struct__rbus_row_name_a3a062ed07dcd2eb5fad7ae751a9c8260}{name}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00321\ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{struct__rbus_row_name_afd65925daaf22dd812eef145e998b97f}{instNum}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00322\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ \doxymbox{\hyperlink{struct__rbus_row_name_ac2eb23bed9f231684460f6298d0b342e}{alias}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00323\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct__rbus_row_name}{\_rbusRowName}}*\ \doxymbox{\hyperlink{struct__rbus_row_name_aaf367486965f5131db3b637c25873382}{next}};\ \ }
+\DoxyCodeLine{00324\ \}\ \doxymbox{\hyperlink{group___tables_ga7961456a63f83cb0b82cb712ef21fde4}{rbusRowName\_t}};}
+\DoxyCodeLine{00325\ }
+\DoxyCodeLine{00327\ }
+\DoxyCodeLine{00342\ \textcolor{keyword}{typedef}\ void\ (*\doxymbox{\hyperlink{group___methods_ga43bf44c6acbf3bf8a90be2e2621d1612}{rbusMethodAsyncRespHandler\_t}})(}
+\DoxyCodeLine{00343\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,\ }
+\DoxyCodeLine{00344\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ methodName,\ }
+\DoxyCodeLine{00345\ \ \ \ \ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ error,}
+\DoxyCodeLine{00346\ \ \ \ \ \doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbusObject\_t}}\ params}
+\DoxyCodeLine{00347\ );}
+\DoxyCodeLine{00348\ }
+\DoxyCodeLine{00352\ }
+\DoxyCodeLine{00354\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ }
+\DoxyCodeLine{00355\ \{}
+\DoxyCodeLine{00356\ \ \ \ \ \doxymbox{\hyperlink{group___providers_gga4b24d155a070a1d73e0a1f3b00195aceaecda73fecc321492fcc9ddf33d0baa2e}{RBUS\_ELEMENT\_TYPE\_PROPERTY}}\ =\ 1,\ \ \ \ \ }
+\DoxyCodeLine{00361\ \ \ \ \ \doxymbox{\hyperlink{group___providers_gga4b24d155a070a1d73e0a1f3b00195acea3a47f7e829cba15e8f5fe82f33ed377b}{RBUS\_ELEMENT\_TYPE\_TABLE}},\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00364\ \ \ \ \ \doxymbox{\hyperlink{group___providers_gga4b24d155a070a1d73e0a1f3b00195acea24c7c9ca3dde7b4a661a8ea565d15e91}{RBUS\_ELEMENT\_TYPE\_EVENT}},\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00367\ \ \ \ \ \doxymbox{\hyperlink{group___providers_gga4b24d155a070a1d73e0a1f3b00195acea9171cee62cfa142748b9b10a3dcb7e69}{RBUS\_ELEMENT\_TYPE\_METHOD}}\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00369\ \}\ \doxymbox{\hyperlink{group___providers_ga4b24d155a070a1d73e0a1f3b00195ace}{rbusElementType\_t}};}
+\DoxyCodeLine{00370\ }
+\DoxyCodeLine{00388\ \textcolor{keyword}{typedef}\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ (*\doxymbox{\hyperlink{group___providers_ga8183a9f8eb04494909d260d9c563538b}{rbusGetHandler\_t}})(}
+\DoxyCodeLine{00389\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,\ }
+\DoxyCodeLine{00390\ \ \ \ \ \doxymbox{\hyperlink{group__rbus_property_ga3cbb720004e64c4728a5e8ba3d8ecf6f}{rbusProperty\_t}}\ property,}
+\DoxyCodeLine{00391\ \ \ \ \ \doxymbox{\hyperlink{structrbus_get_handler_options__t}{rbusGetHandlerOptions\_t}}*\ options}
+\DoxyCodeLine{00392\ );}
+\DoxyCodeLine{00393\ }
+\DoxyCodeLine{00412\ \textcolor{keyword}{typedef}\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ (*\doxymbox{\hyperlink{group___providers_gad83da8f5d21226d482ca822d57401d77}{rbusSetHandler\_t}})(}
+\DoxyCodeLine{00413\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,\ }
+\DoxyCodeLine{00414\ \ \ \ \ \doxymbox{\hyperlink{group__rbus_property_ga3cbb720004e64c4728a5e8ba3d8ecf6f}{rbusProperty\_t}}\ property,\ }
+\DoxyCodeLine{00415\ \ \ \ \ \doxymbox{\hyperlink{structrbus_set_handler_options__t}{rbusSetHandlerOptions\_t}}*\ options}
+\DoxyCodeLine{00416\ );}
+\DoxyCodeLine{00417\ }
+\DoxyCodeLine{00437\ \textcolor{keyword}{typedef}\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ (*\doxymbox{\hyperlink{group___providers_gaf8bd07fc7f695a02b93a9aab467e032b}{rbusTableAddRowHandler\_t}})(}
+\DoxyCodeLine{00438\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{00439\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ tableName,}
+\DoxyCodeLine{00440\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ aliasName,}
+\DoxyCodeLine{00441\ \ \ \ \ uint32\_t*\ \doxymbox{\hyperlink{struct__rbus_row_name_afd65925daaf22dd812eef145e998b97f}{instNum}});}
+\DoxyCodeLine{00442\ }
+\DoxyCodeLine{00456\ \textcolor{keyword}{typedef}\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ (*\doxymbox{\hyperlink{group___providers_ga2acce3313e6c4131647874c51411c668}{rbusTableRemoveRowHandler\_t}})(}
+\DoxyCodeLine{00457\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{00458\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ rowName);}
+\DoxyCodeLine{00459\ }
+\DoxyCodeLine{00482\ \textcolor{keyword}{typedef}\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ (*\doxymbox{\hyperlink{group___providers_gace673660999b800a3f21a239b5a40f8d}{rbusMethodHandler\_t}})(}
+\DoxyCodeLine{00483\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,\ }
+\DoxyCodeLine{00484\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ methodName,\ }
+\DoxyCodeLine{00485\ \ \ \ \ \doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbusObject\_t}}\ inParams,}
+\DoxyCodeLine{00486\ \ \ \ \ \doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbusObject\_t}}\ outParams,}
+\DoxyCodeLine{00487\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaece2a4d09e44f67df52ebf1efe63e793}{rbusMethodAsyncHandle\_t}}\ asyncHandle);}
+\DoxyCodeLine{00488\ }
+\DoxyCodeLine{00529\ \textcolor{keyword}{typedef}\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ (*\ \doxymbox{\hyperlink{group___providers_ga845118048502243dac351969766ce2e9}{rbusEventSubHandler\_t}})(}
+\DoxyCodeLine{00530\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{00531\ \ \ \ \ \doxymbox{\hyperlink{group___events_ga0aa4feac1e56279c9d61e90771534785}{rbusEventSubAction\_t}}\ action,}
+\DoxyCodeLine{00532\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ eventName,}
+\DoxyCodeLine{00533\ \ \ \ \ \doxymbox{\hyperlink{group__rbus_filter_ga03ad5f80346294826fffde5c271dd22e}{rbusFilter\_t}}\ filter,}
+\DoxyCodeLine{00534\ \ \ \ \ int32\_t\ interval,}
+\DoxyCodeLine{00535\ \ \ \ \ \textcolor{keywordtype}{bool}*\ autoPublish}
+\DoxyCodeLine{00536\ );}
+\DoxyCodeLine{00537\ }
+\DoxyCodeLine{00550\ \textcolor{keyword}{typedef}\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ (*\doxymbox{\hyperlink{group___providers_ga509ea174d80c816237fcdf4cb3f321ce}{rbusTableSyncHandler\_t}})(}
+\DoxyCodeLine{00551\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{00552\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ tableName}
+\DoxyCodeLine{00553\ );}
+\DoxyCodeLine{00554\ }
+\DoxyCodeLine{00574\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structrbus_element_callback_table__t}{rbusElementCallbackTable\_t}}}
+\DoxyCodeLine{00575\ \{}
+\DoxyCodeLine{00576\ \ \ \ \ \doxymbox{\hyperlink{group___providers_ga8183a9f8eb04494909d260d9c563538b}{rbusGetHandler\_t}}\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structrbus_element_callback_table__t_a6d018a2e250df956765c699ec17808b3}{getHandler}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00579\ \ \ \ \ \doxymbox{\hyperlink{group___providers_gad83da8f5d21226d482ca822d57401d77}{rbusSetHandler\_t}}\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structrbus_element_callback_table__t_a8aaaffa54dbc327d9c34d4e8aa2795e1}{setHandler}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00582\ \ \ \ \ \doxymbox{\hyperlink{group___providers_gaf8bd07fc7f695a02b93a9aab467e032b}{rbusTableAddRowHandler\_t}}\ \doxymbox{\hyperlink{structrbus_element_callback_table__t_a73898c477bc0c400a293e9e0fb27b048}{tableAddRowHandler}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00584\ \ \ \ \ \doxymbox{\hyperlink{group___providers_ga2acce3313e6c4131647874c51411c668}{rbusTableRemoveRowHandler\_t}}\ \doxymbox{\hyperlink{structrbus_element_callback_table__t_abfd7052973bfdccd3c097ea333c016f6}{tableRemoveRowHandler}};\ \ }
+\DoxyCodeLine{00586\ \ \ \ \ \doxymbox{\hyperlink{group___providers_ga845118048502243dac351969766ce2e9}{rbusEventSubHandler\_t}}\ \ \ \ \doxymbox{\hyperlink{structrbus_element_callback_table__t_ae51023cd4ad9d8914e97af080c9b9f9c}{eventSubHandler}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00590\ \ \ \ \ \doxymbox{\hyperlink{group___providers_gace673660999b800a3f21a239b5a40f8d}{rbusMethodHandler\_t}}\ \ \ \ \ \ \doxymbox{\hyperlink{structrbus_element_callback_table__t_aa40df3586833f88c3add37fc89756e0c}{methodHandler}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00591\ \ \ \ \ \doxymbox{\hyperlink{group___providers_ga509ea174d80c816237fcdf4cb3f321ce}{rbusTableSyncHandler\_t}}\ \ \ \doxymbox{\hyperlink{structrbus_element_callback_table__t_aff02b938ff3fe3c3394a31c331f54b0c}{tableSyncHandler}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00592\ \}\ \doxymbox{\hyperlink{structrbus_element_callback_table__t}{rbusElementCallbackTable\_t}};}
+\DoxyCodeLine{00593\ }
+\DoxyCodeLine{00598\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structrbus_callback_table__t}{rbusCallbackTable\_t}}}
+\DoxyCodeLine{00599\ \{}
+\DoxyCodeLine{00600\ \ \ \ \ \doxymbox{\hyperlink{group___providers_ga8183a9f8eb04494909d260d9c563538b}{rbusGetHandler\_t}}\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structrbus_callback_table__t_ab3cf894da334aeaa472ad5ad67e35262}{getHandler}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00603\ \ \ \ \ \doxymbox{\hyperlink{group___providers_gad83da8f5d21226d482ca822d57401d77}{rbusSetHandler\_t}}\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structrbus_callback_table__t_ae9a40014621cb192f765eeb4888b4efa}{setHandler}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00606\ \ \ \ \ \doxymbox{\hyperlink{group___providers_gaf8bd07fc7f695a02b93a9aab467e032b}{rbusTableAddRowHandler\_t}}\ \doxymbox{\hyperlink{structrbus_callback_table__t_a5de4202e9023e60ce48c3df8c62f2706}{tableAddRowHandler}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00608\ \ \ \ \ \doxymbox{\hyperlink{group___providers_ga2acce3313e6c4131647874c51411c668}{rbusTableRemoveRowHandler\_t}}\ \doxymbox{\hyperlink{structrbus_callback_table__t_a571e575a123e2e314d5b6ae9f6e7ec52}{tableRemoveRowHandler}};\ \ }
+\DoxyCodeLine{00610\ \ \ \ \ \doxymbox{\hyperlink{group___providers_ga845118048502243dac351969766ce2e9}{rbusEventSubHandler\_t}}\ \ \ \ \doxymbox{\hyperlink{structrbus_callback_table__t_a79eef1b3ea001e79dea4f191aaf345f2}{eventSubHandler}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00614\ \ \ \ \ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structrbus_callback_table__t_a1de47810e60feda77ffa7a0d945c919f}{methodHandler}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00617\ \}\ \doxymbox{\hyperlink{structrbus_callback_table__t}{rbusCallbackTable\_t}};}
+\DoxyCodeLine{00618\ }
+\DoxyCodeLine{00621\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00622\ \{}
+\DoxyCodeLine{00623\ \ \ \ \ \textcolor{keywordtype}{char}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structrbus_data_element__t_ad5396131cb6120760b63fa888d1478eb}{name}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00624\ \ \ \ \ \doxymbox{\hyperlink{group___providers_ga4b24d155a070a1d73e0a1f3b00195ace}{rbusElementType\_t}}\ \ \ \ \ \ \ \doxymbox{\hyperlink{structrbus_data_element__t_a3d5387db4049b27e4003fbf3881477a8}{type}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00625\ \ \ \ \ \doxymbox{\hyperlink{structrbus_callback_table__t}{rbusCallbackTable\_t}}\ \ \ \ \ \doxymbox{\hyperlink{structrbus_data_element__t_ad0f4959205636345fdd1f1eb0163a51c}{cbTable}};\ \ \ \ }
+\DoxyCodeLine{00627\ \}\doxymbox{\hyperlink{structrbus_data_element__t}{rbusDataElement\_t}};}
+\DoxyCodeLine{00628\ }
+\DoxyCodeLine{00630\ }
+\DoxyCodeLine{00635\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00636\ \{}
+\DoxyCodeLine{00637\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga71193d2a24675a52cc00ca92cef9fdbbae87f091d3824f9d3d054a1fbe2d6a300}{RBUS\_ENABLED}}\ =\ 0,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00638\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga71193d2a24675a52cc00ca92cef9fdbbad2cade803b5c812d555768e018934655}{RBUS\_ENABLE\_PENDING}},\ \ \ \ }
+\DoxyCodeLine{00639\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga71193d2a24675a52cc00ca92cef9fdbba80cb72be317f8f3f9c885a5770f90b89}{RBUS\_DISABLE\_PENDING}},\ \ \ }
+\DoxyCodeLine{00640\ \ \ \ \ \doxymbox{\hyperlink{group___common_gga71193d2a24675a52cc00ca92cef9fdbbac85ff6b879da585a336e423d702614cd}{RBUS\_DISABLED}}\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00641\ \}\ \doxymbox{\hyperlink{group___common_ga71193d2a24675a52cc00ca92cef9fdbb}{rbusStatus\_t}};}
+\DoxyCodeLine{00642\ }
+\DoxyCodeLine{00643\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00644\ \{}
+\DoxyCodeLine{00645\ \ \ \doxymbox{\hyperlink{group___common_gga575fb21e48c1ee799d86568ddff009afab4b1b0143cfd6f6b298faff4f8af9153}{RBUS\_LOG\_DEBUG}}\ =\ 0,}
+\DoxyCodeLine{00646\ \ \ \doxymbox{\hyperlink{group___common_gga575fb21e48c1ee799d86568ddff009afafac938bb2282863c3e8940ef210f775c}{RBUS\_LOG\_INFO}}\ \ =\ 1,}
+\DoxyCodeLine{00647\ \ \ \doxymbox{\hyperlink{group___common_gga575fb21e48c1ee799d86568ddff009afab520257584a977a99040496f38250791}{RBUS\_LOG\_WARN}}\ \ =\ 2,}
+\DoxyCodeLine{00648\ \ \ \doxymbox{\hyperlink{group___common_gga575fb21e48c1ee799d86568ddff009afadeb4c90ed0ac3f8028972ee34d121916}{RBUS\_LOG\_ERROR}}\ =\ 3,}
+\DoxyCodeLine{00649\ \ \ \doxymbox{\hyperlink{group___common_gga575fb21e48c1ee799d86568ddff009afa75d9aa0c2847a3b3aecc3216a777fea4}{RBUS\_LOG\_FATAL}}\ =\ 4}
+\DoxyCodeLine{00650\ \}\ \doxymbox{\hyperlink{group___common_ga575fb21e48c1ee799d86568ddff009af}{rbusLogLevel\_t}};}
+\DoxyCodeLine{00651\ }
+\DoxyCodeLine{00652\ \textcolor{keyword}{typedef}\ \doxymbox{\hyperlink{group___common_ga575fb21e48c1ee799d86568ddff009af}{rbusLogLevel\_t}}\ \doxymbox{\hyperlink{group___common_ga464c8091f6ed7aff0cfcc104e2087d9b}{rbusLogLevel}};}
+\DoxyCodeLine{00653\ }
+\DoxyCodeLine{00671\ \textcolor{keyword}{typedef}\ void\ (*\doxymbox{\hyperlink{group___common_ga2da9e884770cf882767389178e705252}{rbusLogHandler}})(}
+\DoxyCodeLine{00672\ \ \ \ \ \doxymbox{\hyperlink{group___common_ga575fb21e48c1ee799d86568ddff009af}{rbusLogLevel\_t}}\ level,}
+\DoxyCodeLine{00673\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ file,}
+\DoxyCodeLine{00674\ \ \ \ \ \textcolor{keywordtype}{int}\ line,}
+\DoxyCodeLine{00675\ \ \ \ \ \textcolor{keywordtype}{int}\ threadId,}
+\DoxyCodeLine{00676\ \ \ \ \ \textcolor{keywordtype}{char}*\ message);}
+\DoxyCodeLine{00677\ }
+\DoxyCodeLine{00679\ }
+\DoxyCodeLine{00683\ }
+\DoxyCodeLine{00684\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00685\ \{}
+\DoxyCodeLine{00686\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group___consumer_ggac11e3760580881d7c086f4a00c9451deafb76479ff2213b61df5de554709eb40f}{RBUS\_ACCESS\_GET}}\ =\ 1,}
+\DoxyCodeLine{00687\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group___consumer_ggac11e3760580881d7c086f4a00c9451dea2a84ab590a6ab4342ccd5a39f5cb71ff}{RBUS\_ACCESS\_SET}}\ =\ 2,}
+\DoxyCodeLine{00688\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group___consumer_ggac11e3760580881d7c086f4a00c9451dea890dc874ff3845cee39c592c26944023}{RBUS\_ACCESS\_ADDROW}}\ =\ 4,}
+\DoxyCodeLine{00689\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group___consumer_ggac11e3760580881d7c086f4a00c9451deac21ef5955d65dd7117a8d73ad51110a9}{RBUS\_ACCESS\_REMOVEROW}}\ =\ 8,}
+\DoxyCodeLine{00690\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group___consumer_ggac11e3760580881d7c086f4a00c9451dea2b79f0545f396edde232a4bd95bdba50}{RBUS\_ACCESS\_SUBSCRIBE}}\ =\ 16,}
+\DoxyCodeLine{00691\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group___consumer_ggac11e3760580881d7c086f4a00c9451dea6e43b3421459813fe2351616a0d59778}{RBUS\_ACCESS\_INVOKE}}\ =\ 32}
+\DoxyCodeLine{00692\ \}\ \doxymbox{\hyperlink{group___consumer_gac11e3760580881d7c086f4a00c9451de}{rbusAccess\_t}};}
+\DoxyCodeLine{00693\ }
+\DoxyCodeLine{00694\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct__rbus_element_info}{\_rbusElementInfo}}}
+\DoxyCodeLine{00695\ \{}
+\DoxyCodeLine{00696\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ \doxymbox{\hyperlink{struct__rbus_element_info_adb165e09b70a26f1f92b829c82ed53f9}{name}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00697\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ \doxymbox{\hyperlink{struct__rbus_element_info_a4c5123a378421255264c6d60c3fe39dc}{component}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00698\ \ \ \ \ \doxymbox{\hyperlink{group___providers_ga4b24d155a070a1d73e0a1f3b00195ace}{rbusElementType\_t}}\ \doxymbox{\hyperlink{struct__rbus_element_info_a397fc5aceb58692517284414fd4c85b9}{type}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00699\ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{struct__rbus_element_info_a88147c98190b6fbd3a1ef8ef7c72ab5a}{access}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00700\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct__rbus_element_info}{\_rbusElementInfo}}*\ \doxymbox{\hyperlink{struct__rbus_element_info_ae31564a78bf297a37797b20d3608950e}{next}};\ \ \ \ \ \ }
+\DoxyCodeLine{00701\ \}\ \doxymbox{\hyperlink{group___consumer_ga24c9c4e69cdd245d80fd806d4527ee4a}{rbusElementInfo\_t}};}
+\DoxyCodeLine{00702\ }
+\DoxyCodeLine{00705\ }
+\DoxyCodeLine{00709\ }
+\DoxyCodeLine{00718\ \doxymbox{\hyperlink{group___common_ga71193d2a24675a52cc00ca92cef9fdbb}{rbusStatus\_t}}\ \doxymbox{\hyperlink{group___initialization_ga680ec951905b5371ec0f275add675508}{rbus\_checkStatus}}(}
+\DoxyCodeLine{00719\ \ \ \ \ \textcolor{keywordtype}{void});}
+\DoxyCodeLine{00720\ }
+\DoxyCodeLine{00743\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___initialization_gacf19c7e46ff9c2353892f5918310b264}{rbus\_open}}(}
+\DoxyCodeLine{00744\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}*\ handle,\ }
+\DoxyCodeLine{00745\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ componentName);}
+\DoxyCodeLine{00746\ }
+\DoxyCodeLine{00759\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___initialization_ga9ccb6de1c606f5ac59dbc3a5a2ad0dd0}{rbus\_close}}(}
+\DoxyCodeLine{00760\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle);}
+\DoxyCodeLine{00762\ }
+\DoxyCodeLine{00779\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{rbus_8h_a9a7725e1cdf4aff20989f5cce9d73073}{rbusHandle\_SetTraceContextFromString}}(}
+\DoxyCodeLine{00780\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ \ rbus,}
+\DoxyCodeLine{00781\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ \ \ traceParent,}
+\DoxyCodeLine{00782\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ \ \ traceState);}
+\DoxyCodeLine{00783\ }
+\DoxyCodeLine{00784\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{rbus_8h_a500824d01d135b79dc9d15dbc2bf8cba}{rbusHandle\_ClearTraceContext}}(}
+\DoxyCodeLine{00785\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ \ rbus);}
+\DoxyCodeLine{00786\ }
+\DoxyCodeLine{00797\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{rbus_8h_a2546efb4d32e1b102d2d597a49a69b6d}{rbusHandle\_GetTraceContextAsString}}(}
+\DoxyCodeLine{00798\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ \ rbus,}
+\DoxyCodeLine{00799\ \ \ \ \ \textcolor{keywordtype}{char}*\ \ \ \ \ \ \ \ \ traceParent,}
+\DoxyCodeLine{00800\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ traceParentLength,}
+\DoxyCodeLine{00801\ \ \ \ \ \textcolor{keywordtype}{char}*\ \ \ \ \ \ \ \ \ traceState,}
+\DoxyCodeLine{00802\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ traceStateLength);}
+\DoxyCodeLine{00803\ }
+\DoxyCodeLine{00827\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___discovery_gaf954e8a2c6b8c83af41a4f4aef5a9c3b}{rbus\_discoverComponentName}}(}
+\DoxyCodeLine{00828\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{00829\ \ \ \ \ \textcolor{keywordtype}{int}\ numElements,}
+\DoxyCodeLine{00830\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}**\ elementNames,}
+\DoxyCodeLine{00831\ \ \ \ \ \textcolor{keywordtype}{int}\ *numComponents,}
+\DoxyCodeLine{00832\ \ \ \ \ \textcolor{keywordtype}{char}\ ***componentName);}
+\DoxyCodeLine{00833\ }
+\DoxyCodeLine{00856\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___discovery_gab25f5c66820a76026a0806515aeb2792}{rbus\_discoverComponentDataElements}}(}
+\DoxyCodeLine{00857\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{00858\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ \doxymbox{\hyperlink{struct__rbus_element_info_adb165e09b70a26f1f92b829c82ed53f9}{name}},}
+\DoxyCodeLine{00859\ \ \ \ \ \textcolor{keywordtype}{bool}\ nextLevel,}
+\DoxyCodeLine{00860\ \ \ \ \ \textcolor{keywordtype}{int}\ *numElements,}
+\DoxyCodeLine{00861\ \ \ \ \ \textcolor{keywordtype}{char}***\ elementNames);}
+\DoxyCodeLine{00862\ }
+\DoxyCodeLine{00864\ }
+\DoxyCodeLine{00868\ }
+\DoxyCodeLine{00886\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___providers_ga58d4e15c31e566321fcbf96e4b4deace}{rbus\_regDataElements}}(}
+\DoxyCodeLine{00887\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{00888\ \ \ \ \ \textcolor{keywordtype}{int}\ numDataElements,}
+\DoxyCodeLine{00889\ \ \ \ \ \doxymbox{\hyperlink{structrbus_data_element__t}{rbusDataElement\_t}}\ *elements);}
+\DoxyCodeLine{00890\ }
+\DoxyCodeLine{00907\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___providers_ga91dfd7fea098f4e6b500344133ade0a2}{rbus\_unregDataElements}}\ (}
+\DoxyCodeLine{00908\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{00909\ \ \ \ \ \textcolor{keywordtype}{int}\ numDataElements,}
+\DoxyCodeLine{00910\ \ \ \ \ \doxymbox{\hyperlink{structrbus_data_element__t}{rbusDataElement\_t}}\ *elements);}
+\DoxyCodeLine{00911\ }
+\DoxyCodeLine{00913\ }
+\DoxyCodeLine{00917\ }
+\DoxyCodeLine{00934\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_ga4784460070e869774b9ed69d1b309571}{rbus\_get}}(}
+\DoxyCodeLine{00935\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,\ }
+\DoxyCodeLine{00936\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ \doxymbox{\hyperlink{struct__rbus_element_info_adb165e09b70a26f1f92b829c82ed53f9}{name}},}
+\DoxyCodeLine{00937\ \ \ \ \ \doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbusValue\_t}}*\ value);}
+\DoxyCodeLine{00938\ }
+\DoxyCodeLine{00990\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_gad83602486f8d318f53f41546647076c6}{rbus\_getExt}}(}
+\DoxyCodeLine{00991\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{00992\ \ \ \ \ \textcolor{keywordtype}{int}\ paramCount,}
+\DoxyCodeLine{00993\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}**\ paramNames,}
+\DoxyCodeLine{00994\ \ \ \ \ \textcolor{keywordtype}{int}\ *numProps,}
+\DoxyCodeLine{00995\ \ \ \ \ \doxymbox{\hyperlink{group__rbus_property_ga3cbb720004e64c4728a5e8ba3d8ecf6f}{rbusProperty\_t}}*\ properties);}
+\DoxyCodeLine{00996\ }
+\DoxyCodeLine{01010\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_ga0a36da6ad09e2d90da6484acf6304b4d}{rbus\_getBoolean}}(}
+\DoxyCodeLine{01011\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{01012\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ paramName,}
+\DoxyCodeLine{01013\ \ \ \ \ \textcolor{keywordtype}{bool}*\ paramVal);}
+\DoxyCodeLine{01014\ }
+\DoxyCodeLine{01028\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_gadd90b4781c53e8e70cf2700493471649}{rbus\_getInt}}(}
+\DoxyCodeLine{01029\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{01030\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ paramName,}
+\DoxyCodeLine{01031\ \ \ \ \ \textcolor{keywordtype}{int}*\ paramVal);}
+\DoxyCodeLine{01032\ }
+\DoxyCodeLine{01047\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_ga57e80644c25398c293de5e38a32792aa}{rbus\_getUint}}(}
+\DoxyCodeLine{01048\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{01049\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ paramName,}
+\DoxyCodeLine{01050\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}*\ paramVal);}
+\DoxyCodeLine{01051\ }
+\DoxyCodeLine{01066\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_ga098336853b08dbb112d5a73db42ace4e}{rbus\_getStr}}\ (}
+\DoxyCodeLine{01067\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{01068\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ paramName,}
+\DoxyCodeLine{01069\ \ \ \ \ \textcolor{keywordtype}{char}**\ paramVal);}
+\DoxyCodeLine{01070\ }
+\DoxyCodeLine{01090\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_ga69f715cea76a0ea395c416a0a0bbe19b}{rbus\_set}}(}
+\DoxyCodeLine{01091\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{01092\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ \doxymbox{\hyperlink{struct__rbus_element_info_adb165e09b70a26f1f92b829c82ed53f9}{name}},}
+\DoxyCodeLine{01093\ \ \ \ \ \doxymbox{\hyperlink{group__rbus_value_ga3433391cb2f7a4e2a85608ac9476fff6}{rbusValue\_t}}\ value,}
+\DoxyCodeLine{01094\ \ \ \ \ \doxymbox{\hyperlink{structrbus_set_options__t}{rbusSetOptions\_t}}*\ opts);}
+\DoxyCodeLine{01095\ }
+\DoxyCodeLine{01096\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_ga586fb2942d0b05d0f24dfd473472cdd2}{rbus\_setCommit}}(}
+\DoxyCodeLine{01097\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{01098\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ \doxymbox{\hyperlink{struct__rbus_element_info_adb165e09b70a26f1f92b829c82ed53f9}{name}},}
+\DoxyCodeLine{01099\ \ \ \ \ \doxymbox{\hyperlink{structrbus_set_options__t}{rbusSetOptions\_t}}*\ opts);}
+\DoxyCodeLine{01100\ }
+\DoxyCodeLine{01123\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_gaa96eac6a85b77e37b6e8c1d6df6db5c6}{rbus\_setMulti}}(}
+\DoxyCodeLine{01124\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{01125\ \ \ \ \ \textcolor{keywordtype}{int}\ numProps,}
+\DoxyCodeLine{01126\ \ \ \ \ \doxymbox{\hyperlink{group__rbus_property_ga3cbb720004e64c4728a5e8ba3d8ecf6f}{rbusProperty\_t}}\ properties,}
+\DoxyCodeLine{01127\ \ \ \ \ \doxymbox{\hyperlink{structrbus_set_options__t}{rbusSetOptions\_t}}*\ opts);}
+\DoxyCodeLine{01128\ }
+\DoxyCodeLine{01160\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_gaec64999a2acfd1579f143beb0bfe262e}{rbus\_setMultiExt}}(}
+\DoxyCodeLine{01161\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{01162\ \ \ \ \ uint32\_t\ numProps,}
+\DoxyCodeLine{01163\ \ \ \ \ \doxymbox{\hyperlink{group__rbus_property_ga3cbb720004e64c4728a5e8ba3d8ecf6f}{rbusProperty\_t}}\ properties,}
+\DoxyCodeLine{01164\ \ \ \ \ \doxymbox{\hyperlink{structrbus_set_options__t}{rbusSetOptions\_t}}*\ opts,}
+\DoxyCodeLine{01165\ \ \ \ \ uint32\_t\ timeout,}
+\DoxyCodeLine{01166\ \ \ \ \ \textcolor{keywordtype}{char}**\ failedParameterName);}
+\DoxyCodeLine{01167\ }
+\DoxyCodeLine{01182\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_ga7444bf14c9a527140224de4c8bb0c51e}{rbus\_setBoolean}}(}
+\DoxyCodeLine{01183\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{01184\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ paramName,}
+\DoxyCodeLine{01185\ \ \ \ \ \textcolor{keywordtype}{bool}\ paramVal);}
+\DoxyCodeLine{01186\ }
+\DoxyCodeLine{01201\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_gaa8cec0ffe802cd2522f069682759d3c6}{rbus\_setInt}}(}
+\DoxyCodeLine{01202\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,\ }
+\DoxyCodeLine{01203\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ paramName,\ }
+\DoxyCodeLine{01204\ \ \ \ \ \textcolor{keywordtype}{int}\ paramVal);}
+\DoxyCodeLine{01205\ }
+\DoxyCodeLine{01221\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_gad05911a08098d00b5c4910766e6c235f}{rbus\_setUInt}}(}
+\DoxyCodeLine{01222\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{01223\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ paramName,}
+\DoxyCodeLine{01224\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ paramVal);}
+\DoxyCodeLine{01225\ }
+\DoxyCodeLine{01240\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_ga12f13fac8dc16728cbd064ae65b5887d}{rbus\_setStr}}(}
+\DoxyCodeLine{01241\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{01242\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ paramName,}
+\DoxyCodeLine{01243\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ paramVal);}
+\DoxyCodeLine{01244\ }
+\DoxyCodeLine{01267\ }
+\DoxyCodeLine{01268\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_ga9ec84149b182b69ca3b61a415ded52d9}{rbusTable\_addRow}}(}
+\DoxyCodeLine{01269\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{01270\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ tableName,}
+\DoxyCodeLine{01271\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ aliasName,}
+\DoxyCodeLine{01272\ \ \ \ \ uint32\_t*\ instNum);}
+\DoxyCodeLine{01273\ }
+\DoxyCodeLine{01289\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_gac435ca7a91197e0e144034c044528b2e}{rbusTable\_removeRow}}(}
+\DoxyCodeLine{01290\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{01291\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ rowName);\ }
+\DoxyCodeLine{01292\ }
+\DoxyCodeLine{01308\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_ga5cff99f0d675b5636d8ac7882308b7c1}{rbusTable\_getRowNames}}(}
+\DoxyCodeLine{01309\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{01310\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ tableName,}
+\DoxyCodeLine{01311\ \ \ \ \ \doxymbox{\hyperlink{group___tables_ga7961456a63f83cb0b82cb712ef21fde4}{rbusRowName\_t}}**\ rowNames);}
+\DoxyCodeLine{01312\ }
+\DoxyCodeLine{01326\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_gab04298bf2b87426984e580e8ff8191f0}{rbusTable\_freeRowNames}}(}
+\DoxyCodeLine{01327\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,\ }
+\DoxyCodeLine{01328\ \ \ \ \ \doxymbox{\hyperlink{group___tables_ga7961456a63f83cb0b82cb712ef21fde4}{rbusRowName\_t}}*\ rows);}
+\DoxyCodeLine{01329\ }
+\DoxyCodeLine{01350\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_ga959a5929fc0cbfad9d0faa2fa251e1c2}{rbusElementInfo\_get}}(}
+\DoxyCodeLine{01351\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{01352\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ elemName,}
+\DoxyCodeLine{01353\ \ \ \ \ \textcolor{keywordtype}{int}\ depth,}
+\DoxyCodeLine{01354\ \ \ \ \ \doxymbox{\hyperlink{group___consumer_ga24c9c4e69cdd245d80fd806d4527ee4a}{rbusElementInfo\_t}}**\ elemInfo);}
+\DoxyCodeLine{01355\ }
+\DoxyCodeLine{01368\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_gae93dc65f7795e56be214b930bfa72f12}{rbusElementInfo\_free}}(}
+\DoxyCodeLine{01369\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,\ }
+\DoxyCodeLine{01370\ \ \ \ \ \doxymbox{\hyperlink{group___consumer_ga24c9c4e69cdd245d80fd806d4527ee4a}{rbusElementInfo\_t}}*\ elemInfo);}
+\DoxyCodeLine{01371\ }
+\DoxyCodeLine{01373\ }
+\DoxyCodeLine{01377\ }
+\DoxyCodeLine{01398\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___providers_ga299310a0ae625b51b688f5062f486f9e}{rbusTable\_registerRow}}(}
+\DoxyCodeLine{01399\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{01400\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ tableName,}
+\DoxyCodeLine{01401\ \ \ \ \ uint32\_t\ instNum,}
+\DoxyCodeLine{01402\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ aliasName);}
+\DoxyCodeLine{01403\ }
+\DoxyCodeLine{01420\ }
+\DoxyCodeLine{01421\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___providers_ga0df49f35236940e6c567fe692aa45379}{rbusTable\_unregisterRow}}(}
+\DoxyCodeLine{01422\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{01423\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ rowName);}
+\DoxyCodeLine{01424\ }
+\DoxyCodeLine{01426\ }
+\DoxyCodeLine{01430\ }
+\DoxyCodeLine{01445\ \textcolor{keywordtype}{bool}\ \ \doxymbox{\hyperlink{group___events_ga6a5e6fdca2de593b7526ec819040fbe0}{rbusEvent\_IsSubscriptionExist}}(}
+\DoxyCodeLine{01446\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ \ \ \ \ \ \ \ handle,}
+\DoxyCodeLine{01447\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ \ \ \ \ \ \ \ \ eventName,}
+\DoxyCodeLine{01448\ \ \ \ \ \doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbusEventSubscription\_t}}*\ \ \ \ subscription);}
+\DoxyCodeLine{01449\ }
+\DoxyCodeLine{01480\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \ \doxymbox{\hyperlink{group___events_gab5889c0424ae3e4efb9208de22b92835}{rbusEvent\_Subscribe}}(}
+\DoxyCodeLine{01481\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ \ \ \ \ \ \ \ handle,}
+\DoxyCodeLine{01482\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ \ \ \ \ \ \ \ \ eventName,}
+\DoxyCodeLine{01483\ \ \ \ \ \doxymbox{\hyperlink{group___events_gaf0a4f17d9440f3216fc6f06eda8b81bf}{rbusEventHandler\_t}}\ \ handler,}
+\DoxyCodeLine{01484\ \ \ \ \ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ userData,}
+\DoxyCodeLine{01485\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timeout);}
+\DoxyCodeLine{01486\ }
+\DoxyCodeLine{01510\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \ \doxymbox{\hyperlink{group___events_ga2ef91bf25813c3d3e482bffbef2866ed}{rbusEvent\_SubscribeRawData}}(}
+\DoxyCodeLine{01511\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ \ \ \ \ \ \ \ handle,}
+\DoxyCodeLine{01512\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ \ \ \ \ \ \ \ \ eventName,}
+\DoxyCodeLine{01513\ \ \ \ \ \doxymbox{\hyperlink{group___events_gaf0a4f17d9440f3216fc6f06eda8b81bf}{rbusEventHandler\_t}}\ \ handler,}
+\DoxyCodeLine{01514\ \ \ \ \ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ userData,}
+\DoxyCodeLine{01515\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timeout);}
+\DoxyCodeLine{01516\ }
+\DoxyCodeLine{01551\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \ \doxymbox{\hyperlink{group___events_gab3cf21821b5289220c08d8fd62189edb}{rbusEvent\_SubscribeAsync}}(}
+\DoxyCodeLine{01552\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ handle,}
+\DoxyCodeLine{01553\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ eventName,}
+\DoxyCodeLine{01554\ \ \ \ \ \doxymbox{\hyperlink{group___events_gaf0a4f17d9440f3216fc6f06eda8b81bf}{rbusEventHandler\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ handler,}
+\DoxyCodeLine{01555\ \ \ \ \ \doxymbox{\hyperlink{group___events_ga8c91c27fc5c9f944d4e82f6f97c7c6e6}{rbusSubscribeAsyncRespHandler\_t}}\ subscribeHandler,}
+\DoxyCodeLine{01556\ \ \ \ \ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ userData,}
+\DoxyCodeLine{01557\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timeout);}
+\DoxyCodeLine{01558\ }
+\DoxyCodeLine{01573\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___events_gaf218030e960675a9652366fe22d5b1df}{rbusEvent\_Unsubscribe}}(}
+\DoxyCodeLine{01574\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ \ \ \ \ \ \ \ handle,}
+\DoxyCodeLine{01575\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ \ \ \ \ \ \ \ \ eventName);}
+\DoxyCodeLine{01576\ }
+\DoxyCodeLine{01592\ }
+\DoxyCodeLine{01593\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___events_ga0dfc895c048da0f94ebfcd9eba84eae7}{rbusEvent\_UnsubscribeRawData}}(}
+\DoxyCodeLine{01594\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ \ \ \ \ \ \ \ handle,}
+\DoxyCodeLine{01595\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ \ \ \ \ \ \ \ \ eventName);}
+\DoxyCodeLine{01596\ }
+\DoxyCodeLine{01620\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___events_ga247738028c08f160b79e2d4239537ebe}{rbusEvent\_SubscribeEx}}(}
+\DoxyCodeLine{01621\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ handle,}
+\DoxyCodeLine{01622\ \ \ \ \ \doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbusEventSubscription\_t}}*\ \ subscription,}
+\DoxyCodeLine{01623\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ numSubscriptions,}
+\DoxyCodeLine{01624\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timeout);}
+\DoxyCodeLine{01625\ }
+\DoxyCodeLine{01650\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___events_gaec8a3850598cdf124442651908dd6d18}{rbusEvent\_SubscribeExRawData}}(}
+\DoxyCodeLine{01651\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ handle,}
+\DoxyCodeLine{01652\ \ \ \ \ \doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbusEventSubscription\_t}}*\ \ subscription,}
+\DoxyCodeLine{01653\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ numSubscriptions,}
+\DoxyCodeLine{01654\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timeout);}
+\DoxyCodeLine{01655\ }
+\DoxyCodeLine{01684\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___events_ga5660e5ab4c6b04015c63fe9baf71ac24}{rbusEvent\_SubscribeExAsync}}(}
+\DoxyCodeLine{01685\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ handle,}
+\DoxyCodeLine{01686\ \ \ \ \ \doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbusEventSubscription\_t}}*\ \ \ \ \ \ \ \ subscription,}
+\DoxyCodeLine{01687\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ numSubscriptions,}
+\DoxyCodeLine{01688\ \ \ \ \ \doxymbox{\hyperlink{group___events_ga8c91c27fc5c9f944d4e82f6f97c7c6e6}{rbusSubscribeAsyncRespHandler\_t}}\ subscribeHandler,}
+\DoxyCodeLine{01689\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timeout);}
+\DoxyCodeLine{01690\ }
+\DoxyCodeLine{01709\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___events_gab7ef1ebf1eb77546d8ebe10d743e8d09}{rbusEvent\_UnsubscribeEx}}(}
+\DoxyCodeLine{01710\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{01711\ \ \ \ \ \doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbusEventSubscription\_t}}*\ subscriptions,}
+\DoxyCodeLine{01712\ \ \ \ \ \textcolor{keywordtype}{int}\ numSubscriptions);}
+\DoxyCodeLine{01713\ }
+\DoxyCodeLine{01733\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___events_gaf3337c7615b9f96501d743de350f7bb1}{rbusEvent\_UnsubscribeExRawData}}(}
+\DoxyCodeLine{01734\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ handle,}
+\DoxyCodeLine{01735\ \ \ \ \ \doxymbox{\hyperlink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbusEventSubscription\_t}}*\ \ \ \ subscription,}
+\DoxyCodeLine{01736\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ numSubscriptions);}
+\DoxyCodeLine{01737\ }
+\DoxyCodeLine{01739\ }
+\DoxyCodeLine{01743\ }
+\DoxyCodeLine{01759\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \ \doxymbox{\hyperlink{group___events_gac29791ff3418ef6cd6e24aff209a6f8a}{rbusEvent\_Publish}}(}
+\DoxyCodeLine{01760\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{01761\ \ \ \ \ \doxymbox{\hyperlink{structrbus_event__t}{rbusEvent\_t}}*\ eventData);}
+\DoxyCodeLine{01762\ }
+\DoxyCodeLine{01779\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \ \doxymbox{\hyperlink{group___providers_gaf5fb7bd4640ccc9aa7c93c07ee0d4b67}{rbusEvent\_PublishRawData}}(}
+\DoxyCodeLine{01780\ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ \ \ \ \ \ \ \ \ \ handle,}
+\DoxyCodeLine{01781\ \ \ \doxymbox{\hyperlink{structrbus_event_raw_data__t}{rbusEventRawData\_t}}*\ \ \ \ eventData);}
+\DoxyCodeLine{01782\ }
+\DoxyCodeLine{01784\ }
+\DoxyCodeLine{01788\ }
+\DoxyCodeLine{01813\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___methods_gae99cd8c0cc243dbca8f74e6d29134917}{rbusMethod\_Invoke}}(}
+\DoxyCodeLine{01814\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,\ }
+\DoxyCodeLine{01815\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ methodName,\ }
+\DoxyCodeLine{01816\ \ \ \ \ \doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbusObject\_t}}\ inParams,\ }
+\DoxyCodeLine{01817\ \ \ \ \ \doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbusObject\_t}}*\ outParams);}
+\DoxyCodeLine{01818\ }
+\DoxyCodeLine{01840\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_ga9b13bb2bd22f73c972efb5a0dd1d659c}{rbusMethod\_InvokeAsync}}(}
+\DoxyCodeLine{01841\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,\ }
+\DoxyCodeLine{01842\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ methodName,\ }
+\DoxyCodeLine{01843\ \ \ \ \ \doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbusObject\_t}}\ inParams,\ }
+\DoxyCodeLine{01844\ \ \ \ \ \doxymbox{\hyperlink{group___methods_ga43bf44c6acbf3bf8a90be2e2621d1612}{rbusMethodAsyncRespHandler\_t}}\ callback,\ }
+\DoxyCodeLine{01845\ \ \ \ \ \textcolor{keywordtype}{int}\ timeout);}
+\DoxyCodeLine{01846\ }
+\DoxyCodeLine{01848\ }
+\DoxyCodeLine{01852\ }
+\DoxyCodeLine{01870\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___methods_ga2895ce55085f01a5eff36e04dc118f0d}{rbusMethod\_SendAsyncResponse}}(}
+\DoxyCodeLine{01871\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaece2a4d09e44f67df52ebf1efe63e793}{rbusMethodAsyncHandle\_t}}\ asyncHandle,}
+\DoxyCodeLine{01872\ \ \ \ \ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ error,}
+\DoxyCodeLine{01873\ \ \ \ \ \doxymbox{\hyperlink{group__rbus_object_ga21587678b0f1f9fb559a9bc9bae8a59c}{rbusObject\_t}}\ outParams);}
+\DoxyCodeLine{01874\ }
+\DoxyCodeLine{01876\ }
+\DoxyCodeLine{01880\ }
+\DoxyCodeLine{01895\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___events_ga06d8f8b2d571102c2c025b28ffbd3dd6}{rbus\_createSession}}(}
+\DoxyCodeLine{01896\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{01897\ \ \ \ \ uint32\_t\ *pSessionId);}
+\DoxyCodeLine{01898\ }
+\DoxyCodeLine{01912\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_ga1532bd543ad9e86683b6df7f000733a4}{rbus\_getCurrentSession}}(}
+\DoxyCodeLine{01913\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{01914\ \ \ \ \ uint32\_t\ *pSessionId);}
+\DoxyCodeLine{01915\ }
+\DoxyCodeLine{01929\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_ga67a89787b1fb79de3b7605499d2bccb1}{rbus\_closeSession}}(}
+\DoxyCodeLine{01930\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{01931\ \ \ \ \ uint32\_t\ sessionId);}
+\DoxyCodeLine{01932\ }
+\DoxyCodeLine{01943\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_ga027c931bcb02271719f0773fef67058f}{rbus\_registerLogHandler}}(}
+\DoxyCodeLine{01944\ \ \ \ \ \doxymbox{\hyperlink{group___common_ga2da9e884770cf882767389178e705252}{rbusLogHandler}}\ logHandler);}
+\DoxyCodeLine{01945\ }
+\DoxyCodeLine{01956\ }
+\DoxyCodeLine{01957\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_gaab4241ff7e106815e7cfaffb7c08af63}{rbus\_setLogLevel}}(\doxymbox{\hyperlink{group___common_ga575fb21e48c1ee799d86568ddff009af}{rbusLogLevel\_t}}\ level);}
+\DoxyCodeLine{01958\ }
+\DoxyCodeLine{01979\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_ga413ba5cd92734c0454d72a2477b99182}{rbus\_openDirect}}(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,\ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}*\ myDirectHandle,\ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ parameterName);}
+\DoxyCodeLine{01980\ }
+\DoxyCodeLine{01991\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_ga3a57cd3f015fe0d652bb46d88f195317}{rbus\_closeDirect}}(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle);}
+\DoxyCodeLine{01992\ }
+\DoxyCodeLine{02007\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_ga49889d2770a3a0604da821b3442b4d17}{rbus\_registerDynamicTableSyncHandler}}(}
+\DoxyCodeLine{02008\ \ \ \ \ \doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,}
+\DoxyCodeLine{02009\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}*\ tableName,}
+\DoxyCodeLine{02010\ \ \ \ \ \doxymbox{\hyperlink{group___providers_ga509ea174d80c816237fcdf4cb3f321ce}{rbusTableSyncHandler\_t}}\ syncHandler);}
+\DoxyCodeLine{02011\ }
+\DoxyCodeLine{02012\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct__rbus_timeout_values}{\_rbusTimeoutValues}}}
+\DoxyCodeLine{02013\ \{}
+\DoxyCodeLine{02014\ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{struct__rbus_timeout_values_a7acde79caec6ad1d4341f4b19aada8c7}{setTimeout}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ default\ timeout\ in\ miliseconds\ for\ SET\ API*/}}
+\DoxyCodeLine{02015\ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{struct__rbus_timeout_values_acbece545cbbf7e5ae500cb68a158ad6e}{getTimeout}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ default\ timeout\ in\ miliseconds\ for\ GET\ API*/}}
+\DoxyCodeLine{02016\ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{struct__rbus_timeout_values_a452a491b52de7027c5661689889c2b9a}{setMultiTimeout}};\ \ \ \ \textcolor{comment}{/*\ default\ timeout\ in\ miliseconds\ for\ SET\ Multi\ API*/}}
+\DoxyCodeLine{02017\ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{struct__rbus_timeout_values_a1e639c1cabebb900da4651ad41e9df2e}{getMultiTimeout}};\ \ \ \ \textcolor{comment}{/*\ default\ timeout\ in\ miliseconds\ for\ Wildcard\ Query\ GET\ API*/}}
+\DoxyCodeLine{02018\ \ \ \ \ uint32\_t\ \doxymbox{\hyperlink{struct__rbus_timeout_values_a8587c13bdd10288d27f9665d6112f736}{subscribeTimeout}};\ \ \ \textcolor{comment}{/*\ default\ timeout\ in\ miliseconds\ for\ Subscribe\ operation*/}}
+\DoxyCodeLine{02019\ \}\doxymbox{\hyperlink{group___consumers_ga8dd3d14ae30f63ccad0a6a377d13361a}{rbusTimeoutValues\_t}};}
+\DoxyCodeLine{02020\ }
+\DoxyCodeLine{02033\ }
+\DoxyCodeLine{02034\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_gadd9ef292a4a12a4a21ad84e3cd88ecf0}{rbusHandle\_ConfigTimeoutValues}}(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,\ \doxymbox{\hyperlink{group___consumers_ga8dd3d14ae30f63ccad0a6a377d13361a}{rbusTimeoutValues\_t}}\ timeoutValues);}
+\DoxyCodeLine{02035\ }
+\DoxyCodeLine{02044\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_ga898ceb12f6376025672c33b8ba82b34a}{rbusHandle\_ConfigSetTimeout}}(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,\ uint32\_t\ timeout);}
+\DoxyCodeLine{02045\ }
+\DoxyCodeLine{02054\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_gae2a58da3b8f2d33b761788abbe628cd9}{rbusHandle\_ConfigGetTimeout}}(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,\ uint32\_t\ timeout);}
+\DoxyCodeLine{02055\ }
+\DoxyCodeLine{02064\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_ga9fa2f1b83c5c5e2022eaa6e19e48d244}{rbusHandle\_ConfigGetMultiTimeout}}(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,\ uint32\_t\ timeout);}
+\DoxyCodeLine{02065\ }
+\DoxyCodeLine{02074\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_ga2026b681044493b88954ca0ff386fb77}{rbusHandle\_ConfigSetMultiTimeout}}(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,\ uint32\_t\ timeout);}
+\DoxyCodeLine{02075\ }
+\DoxyCodeLine{02084\ \doxymbox{\hyperlink{group___common_ga8fc1f9c96c061b20db5e56188296c8ef}{rbusError\_t}}\ \doxymbox{\hyperlink{group___consumers_ga00d9098a0baa68fb39bff300678911dd}{rbusHandle\_ConfigSubscribeTimeout}}(\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbusHandle\_t}}\ handle,\ uint32\_t\ timeout);}
+\DoxyCodeLine{02086\ }
+\DoxyCodeLine{02087\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{02088\ \}}
+\DoxyCodeLine{02089\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{02090\ }
+\DoxyCodeLine{02091\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{02092\ }
+
+\end{DoxyCode}

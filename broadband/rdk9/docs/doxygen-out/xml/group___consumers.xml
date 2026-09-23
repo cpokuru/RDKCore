@@ -1,0 +1,1345 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="group___consumers" kind="group">
+    <compoundname>Consumers</compoundname>
+    <title>Consumers</title>
+    <innerclass refid="struct__rbus_timeout_values" prot="public">_rbusTimeoutValues</innerclass>
+    <innerclass refid="structrbus_set_options__t" prot="public">rbusSetOptions_t</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___consumers_1ga8dd3d14ae30f63ccad0a6a377d13361a" prot="public" static="no">
+        <type>struct <ref refid="struct__rbus_timeout_values" kindref="compound">_rbusTimeoutValues</ref></type>
+        <definition>typedef struct _rbusTimeoutValues rbusTimeoutValues_t</definition>
+        <argsstring></argsstring>
+        <name>rbusTimeoutValues_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="2019" column="20"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group___consumers_1ga4784460070e869774b9ed69d1b309571" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbus_get</definition>
+        <argsstring>(rbusHandle_t handle, char const *name, rbusValue_t *value)</argsstring>
+        <name>rbus_get</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__rbus_value_1ga3433391cb2f7a4e2a85608ac9476fff6" kindref="member">rbusValue_t</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="934" column="13" declfile="include/rbus.h" declline="934" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1gad83602486f8d318f53f41546647076c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbus_getExt</definition>
+        <argsstring>(rbusHandle_t handle, int paramCount, char const **paramNames, int *numProps, rbusProperty_t *properties)</argsstring>
+        <name>rbus_getExt</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>paramCount</declname>
+        </param>
+        <param>
+          <type>char const **</type>
+          <declname>paramNames</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>numProps</declname>
+        </param>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref> *</type>
+          <declname>properties</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="990" column="13" declfile="include/rbus.h" declline="990" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1ga0a36da6ad09e2d90da6484acf6304b4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbus_getBoolean</definition>
+        <argsstring>(rbusHandle_t handle, char const *paramName, bool *paramVal)</argsstring>
+        <name>rbus_getBoolean</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>paramName</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>paramVal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1010" column="13" declfile="include/rbus.h" declline="1010" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1gadd90b4781c53e8e70cf2700493471649" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbus_getInt</definition>
+        <argsstring>(rbusHandle_t handle, char const *paramName, int *paramVal)</argsstring>
+        <name>rbus_getInt</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>paramName</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>paramVal</declname>
+        </param>
+        <briefdescription>
+<para>A component uses this to perform an integer get operation. <linebreak/>
+Used by: All components that need to get an integer parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>paramName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the integer parameter </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>paramVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the integer parameter </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. Possible values are: RBUS_ERROR_ACCESS_NOT_ALLOWED: Access to the requested parameter is not permitted </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1028" column="13" declfile="include/rbus.h" declline="1028" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1ga57e80644c25398c293de5e38a32792aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbus_getUint</definition>
+        <argsstring>(rbusHandle_t handle, char const *paramName, unsigned int *paramVal)</argsstring>
+        <name>rbus_getUint</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>paramName</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>paramVal</declname>
+        </param>
+        <briefdescription>
+<para>A component uses this to perform a get operation on an unsigned int parameter. <linebreak/>
+Used by: All components that need to get an unsigned integer parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>paramName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the unsigned integer parameter </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>paramVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the unsigned integer parameter </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. Possible values are: RBUS_ERROR_ACCESS_NOT_ALLOWED: Access to requested parameter is not permitted. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1047" column="13" declfile="include/rbus.h" declline="1047" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1ga098336853b08dbb112d5a73db42ace4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbus_getStr</definition>
+        <argsstring>(rbusHandle_t handle, char const *paramName, char **paramVal)</argsstring>
+        <name>rbus_getStr</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>paramName</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>paramVal</declname>
+        </param>
+        <briefdescription>
+<para>A component uses this to perform a get operation on a string parameter. <linebreak/>
+Used by: All components that need to get a string parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>paramName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the string parameter </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>paramVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the string parameter which the caller must free </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. Possible values are: RBUS_ERROR_ACCESS_NOT_ALLOWED: Access to requested parameter is not permitted. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1066" column="13" declfile="include/rbus.h" declline="1066" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1ga69f715cea76a0ea395c416a0a0bbe19b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbus_set</definition>
+        <argsstring>(rbusHandle_t handle, char const *name, rbusValue_t value, rbusSetOptions_t *opts)</argsstring>
+        <name>rbus_set</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__rbus_value_1ga3433391cb2f7a4e2a85608ac9476fff6" kindref="member">rbusValue_t</ref></type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type><ref refid="structrbus_set_options__t" kindref="compound">rbusSetOptions_t</ref> *</type>
+          <declname>opts</declname>
+        </param>
+        <briefdescription>
+<para>A component uses this to perform a set operation for a single explicit parameter and has the option to used delayed (coordinated) commit commands. <linebreak/>
+Used by: All components that need to set an individual parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the parameter to set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to set the parameter to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>opts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Extra options such as session info. Set NULL if not needed, in which case a session is not used and the set is commited immediately. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. Possible values are: RBUS_ERROR_ACCESS_NOT_ALLOWED: Access to requested parameter is not permitted </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1090" column="13" declfile="include/rbus.h" declline="1090" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1ga586fb2942d0b05d0f24dfd473472cdd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbus_setCommit</definition>
+        <argsstring>(rbusHandle_t handle, char const *name, rbusSetOptions_t *opts)</argsstring>
+        <name>rbus_setCommit</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="structrbus_set_options__t" kindref="compound">rbusSetOptions_t</ref> *</type>
+          <declname>opts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1096" column="13" declfile="include/rbus.h" declline="1096" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1gaa96eac6a85b77e37b6e8c1d6df6db5c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbus_setMulti</definition>
+        <argsstring>(rbusHandle_t handle, int numProps, rbusProperty_t properties, rbusSetOptions_t *opts)</argsstring>
+        <name>rbus_setMulti</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numProps</declname>
+        </param>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>properties</declname>
+        </param>
+        <param>
+          <type><ref refid="structrbus_set_options__t" kindref="compound">rbusSetOptions_t</ref> *</type>
+          <declname>opts</declname>
+        </param>
+        <briefdescription>
+<para>A component uses this to perform a set operation for multiple parameters at once. <linebreak/>
+Used by: All components that need to set multiple parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numProps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number (count) of parameters </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>properties</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The list of properties to set the parameters to. For each parameter, a property should be created which contains the parameter&apos;s name and the respective value to set that parameter to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>opts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Extra options such as session info. Set NULL if not needed, in which case a session is not used and the set is commited immediately. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. Possible values are: RBUS_ERROR_ACCESS_NOT_ALLOWED: Access to requested parameter is not permitted. RBUS_ERROR_DESTINATION_NOT_REACHABLE: Destination element was not reachable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1123" column="13" declfile="include/rbus.h" declline="1123" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1gaec64999a2acfd1579f143beb0bfe262e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbus_setMultiExt</definition>
+        <argsstring>(rbusHandle_t handle, uint32_t numProps, rbusProperty_t properties, rbusSetOptions_t *opts, uint32_t timeout, char **failedParameterName)</argsstring>
+        <name>rbus_setMultiExt</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>numProps</declname>
+        </param>
+        <param>
+          <type><ref refid="group__rbus_property_1ga3cbb720004e64c4728a5e8ba3d8ecf6f" kindref="member">rbusProperty_t</ref></type>
+          <declname>properties</declname>
+        </param>
+        <param>
+          <type><ref refid="structrbus_set_options__t" kindref="compound">rbusSetOptions_t</ref> *</type>
+          <declname>opts</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>timeout</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>failedParameterName</declname>
+        </param>
+        <briefdescription>
+<para>A component uses this to perform a set operation for multiple parameters at once. This method identifies the provider component of each parameter, groups them and makes the SET call <linebreak/>
+per provider component. The given order is NOT maintained. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This API ensures rolling back of all the property to previous value upon failure to set any single parameter in the given list. Used by: All components that need to set multiple parameters</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numProps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number (count) of parameters </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>properties</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The list of dml properties to set to. For each parameter, a property should be created which contains the parameter&apos;s name and the respective value to set that parameter to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>opts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Extra options such as session info. Set NULL if not needed, in which case a session is not used and the set is commited immediately. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timeout in milliseconds to be used for each SET per provider; Set to 0 to use the default value (15s). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>failedParameterName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output parameter that represents the failed property. On success, it will returning NULL. Caller responsible to free() this. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. Possible values are: RBUS_ERROR_INVALID_INPUT: Given inputs are not correct. RBUS_ERROR_ACCESS_NOT_ALLOWED: Access to requested parameter is not permitted. RBUS_ERROR_DESTINATION_NOT_REACHABLE: Destination element was not reachable. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1160" column="13" declfile="include/rbus.h" declline="1160" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1ga7444bf14c9a527140224de4c8bb0c51e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbus_setBoolean</definition>
+        <argsstring>(rbusHandle_t handle, char const *paramName, bool paramVal)</argsstring>
+        <name>rbus_setBoolean</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>paramName</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>paramVal</declname>
+        </param>
+        <briefdescription>
+<para>A component uses this to perform a simple set operation on a boolean parameter and commit the operation. <linebreak/>
+Used by: All components that need to set a boolean parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>paramName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the string parameter </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>paramVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to set the boolean parameter to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. Possible values are: RBUS_ERROR_ACCESS_NOT_ALLOWED: Access to requested parameter is not permitted. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1182" column="13" declfile="include/rbus.h" declline="1182" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1gaa8cec0ffe802cd2522f069682759d3c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbus_setInt</definition>
+        <argsstring>(rbusHandle_t handle, char const *paramName, int paramVal)</argsstring>
+        <name>rbus_setInt</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>paramName</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>paramVal</declname>
+        </param>
+        <briefdescription>
+<para>A component uses this to perform a simple set operation on an integer parameter and commit the operation. <linebreak/>
+Used by: All components that need to set an integer and commit the change. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>paramName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the integer parameter </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>paramVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to set the integer parameter to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. Possible values are: RBUS_ERROR_ACCESS_NOT_ALLOWED: Access to requested parameter is not permitted </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1201" column="13" declfile="include/rbus.h" declline="1201" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1gad05911a08098d00b5c4910766e6c235f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbus_setUInt</definition>
+        <argsstring>(rbusHandle_t handle, char const *paramName, unsigned int paramVal)</argsstring>
+        <name>rbus_setUInt</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>paramName</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>paramVal</declname>
+        </param>
+        <briefdescription>
+<para>A component uses this to perform a simple set operation on an unsigned integer parameter and commit the operation. <linebreak/>
+Used by: All components that need to set an unsigned integer and commit the change. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>paramName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the unsigned integer parameter </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>paramVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to set the unsigned integer parameter to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. Possible values are: RBUS_ERROR_ACCESS_NOT_ALLOWED: Access to requested parameter is not permitted. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1221" column="13" declfile="include/rbus.h" declline="1221" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1ga12f13fac8dc16728cbd064ae65b5887d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbus_setStr</definition>
+        <argsstring>(rbusHandle_t handle, char const *paramName, char const *paramVal)</argsstring>
+        <name>rbus_setStr</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>paramName</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>paramVal</declname>
+        </param>
+        <briefdescription>
+<para>A component uses this to perform a simple set operation on a string parameter and commit the operation. <linebreak/>
+Used by: All components that need to set a string parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>paramName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the string parameter </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>paramVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to set the string parameter to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. Possible values are: RBUS_ERROR_ACCESS_NOT_ALLOWED: Access to requested parameter is not permitted. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1240" column="13" declfile="include/rbus.h" declline="1240" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1ga9ec84149b182b69ca3b61a415ded52d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbusTable_addRow</definition>
+        <argsstring>(rbusHandle_t handle, char const *tableName, char const *aliasName, uint32_t *instNum)</argsstring>
+        <name>rbusTable_addRow</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>tableName</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>aliasName</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>instNum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1268" column="13" declfile="include/rbus.h" declline="1268" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1gac435ca7a91197e0e144034c044528b2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbusTable_removeRow</definition>
+        <argsstring>(rbusHandle_t handle, char const *rowName)</argsstring>
+        <name>rbusTable_removeRow</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>rowName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1289" column="13" declfile="include/rbus.h" declline="1289" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1ga5cff99f0d675b5636d8ac7882308b7c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbusTable_getRowNames</definition>
+        <argsstring>(rbusHandle_t handle, char const *tableName, rbusRowName_t **rowNames)</argsstring>
+        <name>rbusTable_getRowNames</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>tableName</declname>
+        </param>
+        <param>
+          <type><ref refid="group___tables_1ga7961456a63f83cb0b82cb712ef21fde4" kindref="member">rbusRowName_t</ref> **</type>
+          <declname>rowNames</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1308" column="13" declfile="include/rbus.h" declline="1308" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1gab04298bf2b87426984e580e8ff8191f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbusTable_freeRowNames</definition>
+        <argsstring>(rbusHandle_t handle, rbusRowName_t *rows)</argsstring>
+        <name>rbusTable_freeRowNames</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type><ref refid="group___tables_1ga7961456a63f83cb0b82cb712ef21fde4" kindref="member">rbusRowName_t</ref> *</type>
+          <declname>rows</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1326" column="13" declfile="include/rbus.h" declline="1326" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1ga959a5929fc0cbfad9d0faa2fa251e1c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbusElementInfo_get</definition>
+        <argsstring>(rbusHandle_t handle, char const *elemName, int depth, rbusElementInfo_t **elemInfo)</argsstring>
+        <name>rbusElementInfo_get</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>elemName</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>depth</declname>
+        </param>
+        <param>
+          <type><ref refid="group___consumer_1ga24c9c4e69cdd245d80fd806d4527ee4a" kindref="member">rbusElementInfo_t</ref> **</type>
+          <declname>elemInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1350" column="13" declfile="include/rbus.h" declline="1350" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1gae93dc65f7795e56be214b930bfa72f12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbusElementInfo_free</definition>
+        <argsstring>(rbusHandle_t handle, rbusElementInfo_t *elemInfo)</argsstring>
+        <name>rbusElementInfo_free</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type><ref refid="group___consumer_1ga24c9c4e69cdd245d80fd806d4527ee4a" kindref="member">rbusElementInfo_t</ref> *</type>
+          <declname>elemInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1368" column="13" declfile="include/rbus.h" declline="1368" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1ga9b13bb2bd22f73c972efb5a0dd1d659c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbusMethod_InvokeAsync</definition>
+        <argsstring>(rbusHandle_t handle, char const *methodName, rbusObject_t inParams, rbusMethodAsyncRespHandler_t callback, int timeout)</argsstring>
+        <name>rbusMethod_InvokeAsync</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>methodName</declname>
+        </param>
+        <param>
+          <type><ref refid="group__rbus_object_1ga21587678b0f1f9fb559a9bc9bae8a59c" kindref="member">rbusObject_t</ref></type>
+          <declname>inParams</declname>
+        </param>
+        <param>
+          <type><ref refid="group___methods_1ga43bf44c6acbf3bf8a90be2e2621d1612" kindref="member">rbusMethodAsyncRespHandler_t</ref></type>
+          <declname>callback</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1840" column="13" declfile="include/rbus.h" declline="1840" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1ga1532bd543ad9e86683b6df7f000733a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbus_getCurrentSession</definition>
+        <argsstring>(rbusHandle_t handle, uint32_t *pSessionId)</argsstring>
+        <name>rbus_getCurrentSession</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>pSessionId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1912" column="13" declfile="include/rbus.h" declline="1912" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1ga67a89787b1fb79de3b7605499d2bccb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbus_closeSession</definition>
+        <argsstring>(rbusHandle_t handle, uint32_t sessionId)</argsstring>
+        <name>rbus_closeSession</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>sessionId</declname>
+        </param>
+        <briefdescription>
+<para>Components use this API to close the current session that was used to set 1 or more parameters and action on table like add/remove rows. <linebreak/>
+Used by: Components that used the session for Set Param &amp; Update Tables. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sessionId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unique session Identifier that is currently in use </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. Possible values are: RBUS_ERROR_BUS_ERROR; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1929" column="13" declfile="include/rbus.h" declline="1929" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1ga027c931bcb02271719f0773fef67058f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbus_registerLogHandler</definition>
+        <argsstring>(rbusLogHandler logHandler)</argsstring>
+        <name>rbus_registerLogHandler</name>
+        <param>
+          <type><ref refid="group___common_1ga2da9e884770cf882767389178e705252" kindref="member">rbusLogHandler</ref></type>
+          <declname>logHandler</declname>
+        </param>
+        <briefdescription>
+<para>A callback handler to get the log messages to application context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Used by: Component that wants to handle the logs in its own way must register a callback handler to get the log messages.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>logHandler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>handler function pointer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1943" column="13" declfile="include/rbus.h" declline="1943" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1gaab4241ff7e106815e7cfaffb7c08af63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbus_setLogLevel</definition>
+        <argsstring>(rbusLogLevel_t level)</argsstring>
+        <name>rbus_setLogLevel</name>
+        <param>
+          <type><ref refid="group___common_1ga575fb21e48c1ee799d86568ddff009af" kindref="member">rbusLogLevel_t</ref></type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+<para>Component use this API to set the log level to be printed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Used by: Component that wants to use default logging of RBUS instead of overriding the logging, can set the log level by this.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>level</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Log level </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1957" column="13" declfile="include/rbus.h" declline="1957" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1ga413ba5cd92734c0454d72a2477b99182" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbus_openDirect</definition>
+        <argsstring>(rbusHandle_t handle, rbusHandle_t *myDirectHandle, char const *parameterName)</argsstring>
+        <name>rbus_openDirect</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref> *</type>
+          <declname>myDirectHandle</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>parameterName</declname>
+        </param>
+        <briefdescription>
+<para>Component use this API to open direct connection to the provider. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Rbus supports a mode that optimizes performance for very frequent, high data rate transfers or rbus operations that need extremely low latency. This is known as rbus_direct mode. While this mode improves performance, reduces CPU usage and improves latency, it also uses more memory and resources compared with normal rbus operation. Rbus_direct mode should only be used where it&apos;s needed and avoided where its not needed. Developers should use normal rbus operation modes unless there are special circumstances that require rbus_direct mode. Developers should NOT use rbus_direct mode for all operations. For more information on rbus_direct see the instructions for <ref refid="group___consumers_1ga413ba5cd92734c0454d72a2477b99182" kindref="member">rbus_openDirect()</ref> in <ref refid="rbus_8h" kindref="compound">rbus.h</ref>.</para>
+<para>Used by: Component that wants to use private connection to provider and avoid RBUS Daemon.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current active rbus handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>myDirectHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Direct handle that is created </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parameterName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Direct connection for the given parameter </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1979" column="13" declfile="include/rbus.h" declline="1979" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1ga3a57cd3f015fe0d652bb46d88f195317" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbus_closeDirect</definition>
+        <argsstring>(rbusHandle_t handle)</argsstring>
+        <name>rbus_closeDirect</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+          <defname>myDirectHandle</defname>
+        </param>
+        <briefdescription>
+<para>Component use this API to close existing direct connection to the provider for the given DML. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Used by: Component that is no more need the direct connection and wants to switch to RBUS Daemon</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>myDirectHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Direct handle that is created </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="1991" column="13" declfile="include/rbus.h" declline="1991" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1ga49889d2770a3a0604da821b3442b4d17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbus_registerDynamicTableSyncHandler</definition>
+        <argsstring>(rbusHandle_t handle, char const *tableName, rbusTableSyncHandler_t syncHandler)</argsstring>
+        <name>rbus_registerDynamicTableSyncHandler</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>tableName</declname>
+        </param>
+        <param>
+          <type><ref refid="group___providers_1ga509ea174d80c816237fcdf4cb3f321ce" kindref="member">rbusTableSyncHandler_t</ref></type>
+          <declname>syncHandler</declname>
+        </param>
+        <briefdescription>
+<para>Register tableSyncHandler for table element with dynamic rows. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Used by: Component that wants to register tableSyncHandler that will register/unregister rows of dynamic table.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tableName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of a table (e.g. &quot;Device.IP.Interface.&quot;) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>syncHandler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dymanic table sync callback </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="2007" column="13" declfile="include/rbus.h" declline="2007" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1gadd9ef292a4a12a4a21ad84e3cd88ecf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbusHandle_ConfigTimeoutValues</definition>
+        <argsstring>(rbusHandle_t handle, rbusTimeoutValues_t timeoutValues)</argsstring>
+        <name>rbusHandle_ConfigTimeoutValues</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type><ref refid="group___consumers_1ga8dd3d14ae30f63ccad0a6a377d13361a" kindref="member">rbusTimeoutValues_t</ref></type>
+          <declname>timeoutValues</declname>
+        </param>
+        <briefdescription>
+<para>Configure timeout values for each rbus_handle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Used by: Component wants to configure its own timeout values per rbus_handle.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>timeoutValues</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timeout values in miliseconds for SET, GET operations. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="2034" column="13" declfile="include/rbus.h" declline="2034" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1ga898ceb12f6376025672c33b8ba82b34a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbusHandle_ConfigSetTimeout</definition>
+        <argsstring>(rbusHandle_t handle, uint32_t timeout)</argsstring>
+        <name>rbusHandle_ConfigSetTimeout</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="2044" column="13" declfile="include/rbus.h" declline="2044" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1gae2a58da3b8f2d33b761788abbe628cd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbusHandle_ConfigGetTimeout</definition>
+        <argsstring>(rbusHandle_t handle, uint32_t timeout)</argsstring>
+        <name>rbusHandle_ConfigGetTimeout</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="2054" column="13" declfile="include/rbus.h" declline="2054" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1ga9fa2f1b83c5c5e2022eaa6e19e48d244" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbusHandle_ConfigGetMultiTimeout</definition>
+        <argsstring>(rbusHandle_t handle, uint32_t timeout)</argsstring>
+        <name>rbusHandle_ConfigGetMultiTimeout</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="2064" column="13" declfile="include/rbus.h" declline="2064" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1ga2026b681044493b88954ca0ff386fb77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbusHandle_ConfigSetMultiTimeout</definition>
+        <argsstring>(rbusHandle_t handle, uint32_t timeout)</argsstring>
+        <name>rbusHandle_ConfigSetMultiTimeout</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="2074" column="13" declfile="include/rbus.h" declline="2074" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___consumers_1ga00d9098a0baa68fb39bff300678911dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbusHandle_ConfigSubscribeTimeout</definition>
+        <argsstring>(rbusHandle_t handle, uint32_t timeout)</argsstring>
+        <name>rbusHandle_ConfigSubscribeTimeout</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="2084" column="13" declfile="include/rbus.h" declline="2084" declcolumn="13"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

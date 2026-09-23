@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="group___initialization" kind="group">
+    <compoundname>Initialization</compoundname>
+    <title>Initialization</title>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="group___initialization_1ga680ec951905b5371ec0f275add675508" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga71193d2a24675a52cc00ca92cef9fdbb" kindref="member">rbusStatus_t</ref></type>
+        <definition>rbusStatus_t rbus_checkStatus</definition>
+        <argsstring>(void)</argsstring>
+        <name>rbus_checkStatus</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Components use this API to check whether the rbus is enabled in this device/platform Used by: Components that uses rbus to register events, tables and parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>RBus bus/daemon status </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="718" column="14" declfile="include/rbus.h" declline="718" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group___initialization_1gacf19c7e46ff9c2353892f5918310b264" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbus_open</definition>
+        <argsstring>(rbusHandle_t *handle, char const *componentName)</argsstring>
+        <name>rbus_open</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref> *</type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>componentName</declname>
+        </param>
+        <briefdescription>
+<para>Open a bus connection for a software component. If multiple components share a software process, the first component that calls this API will establishes a new socket connection to the bus broker. All calls to this API will receive a dedicated bus handle for that component. If a component calls this API more than once, any previous busHandle and all previous data element registrations will be canceled. <linebreak/>
+Note: This API supports a single component per software process and also supports multiple components that share a software process. In the case of multiple components that share a software process, each component must call this API to open a bus connection. Only a single socket connection is opened per software process but each component within that process receives a separate busHandle. <linebreak/>
+Used by: All RBus components to begin a connection with the bus. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>componentName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the component initializing onto the bus </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. Possible values are: RBUS_ERROR_BUS_ERROR: Indicates there is some bus error. Try later. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="743" column="13" declfile="include/rbus.h" declline="743" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="group___initialization_1ga9ccb6de1c606f5ac59dbc3a5a2ad0dd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref></type>
+        <definition>rbusError_t rbus_close</definition>
+        <argsstring>(rbusHandle_t handle)</argsstring>
+        <name>rbus_close</name>
+        <param>
+          <type><ref refid="group___common_1gaaed81eae245cefcc40d7b82d136364af" kindref="member">rbusHandle_t</ref></type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+<para>Removes a logical bus connection from a component to the bus. <linebreak/>
+Note: In the case of multiple components that share a software process, the socket connection remains up until the last component in that software process closes its bus connection. <linebreak/>
+Used by: All RBus components (multiple components may share a software process). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bus Handle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>RBus error code as defined by <ref refid="group___common_1ga8fc1f9c96c061b20db5e56188296c8ef" kindref="member">rbusError_t</ref>. Possible values are: RBUS_ERROR_BUS_ERROR: Indicates there is some bus error. Try later. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus.h" line="759" column="13" declfile="include/rbus.h" declline="759" declcolumn="13"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

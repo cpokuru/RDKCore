@@ -1,0 +1,1189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="rbus__buffer_8h" kind="file" language="C++">
+    <compoundname>rbus_buffer.h</compoundname>
+    <includes refid="rbus_8h" local="yes">rbus.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>rbus.h</label>
+        <link refid="rbus_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/rbus_buffer.h</label>
+        <link refid="rbus__buffer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>rbus_filter.h</label>
+        <link refid="rbus__filter_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>rbus_object.h</label>
+        <link refid="rbus__object_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>rbus_property.h</label>
+        <link refid="rbus__property_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>rbus_value.h</label>
+        <link refid="rbus__value_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>stddef.h</label>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+      </node>
+      <node id="7">
+        <label>stdio.h</label>
+      </node>
+      <node id="8">
+        <label>sys/time.h</label>
+      </node>
+      <node id="9">
+        <label>time.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="struct__rbus_buffer" prot="public">_rbusBuffer</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" prot="public" static="no">
+        <type>struct <ref refid="struct__rbus_buffer" kindref="compound">_rbusBuffer</ref> *</type>
+        <definition>typedef struct _rbusBuffer * rbusBuffer_t</definition>
+        <argsstring></argsstring>
+        <name>rbusBuffer_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="36" column="15"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="rbus__buffer_8h_1a962b5956904758680829fe03f9fe0654" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char const *</type>
+        <definition>char const  * rbusValueType_ToDebugString</definition>
+        <argsstring>(rbusValueType_t type)</argsstring>
+        <name>rbusValueType_ToDebugString</name>
+        <param>
+          <type><ref refid="group__rbus_value_1ga7405acfdc3b4162ff9a9c711b834aba8" kindref="member">rbusValueType_t</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="38" column="12" declfile="include/rbus_buffer.h" declline="38" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a13be9557f9fde82dab8efc0de61eb273" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t const *</type>
+        <definition>uint8_t const  * rbusValue_GetV</definition>
+        <argsstring>(rbusValue_t v)</argsstring>
+        <name>rbusValue_GetV</name>
+        <param>
+          <type><ref refid="group__rbus_value_1ga3433391cb2f7a4e2a85608ac9476fff6" kindref="member">rbusValue_t</ref></type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="41" column="15" declfile="include/rbus_buffer.h" declline="41" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1aaa49e747e314edb65602abd8ddd6765a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t rbusValue_GetL</definition>
+        <argsstring>(rbusValue_t v)</argsstring>
+        <name>rbusValue_GetL</name>
+        <param>
+          <type><ref refid="group__rbus_value_1ga3433391cb2f7a4e2a85608ac9476fff6" kindref="member">rbusValue_t</ref></type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="42" column="10" declfile="include/rbus_buffer.h" declline="42" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a78db1074a8948cbec699ba255c96c343" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusValue_SetTLV</definition>
+        <argsstring>(rbusValue_t v, rbusValueType_t type, uint32_t length, void const *value)</argsstring>
+        <name>rbusValue_SetTLV</name>
+        <param>
+          <type><ref refid="group__rbus_value_1ga3433391cb2f7a4e2a85608ac9476fff6" kindref="member">rbusValue_t</ref></type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type><ref refid="group__rbus_value_1ga7405acfdc3b4162ff9a9c711b834aba8" kindref="member">rbusValueType_t</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>void const *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="43" column="6" declfile="include/rbus_buffer.h" declline="43" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1ac038c8b6cfa71dccaab6b65dc9c7205a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rbusValue_Decode</definition>
+        <argsstring>(rbusValue_t *value, rbusBuffer_t const buff)</argsstring>
+        <name>rbusValue_Decode</name>
+        <param>
+          <type><ref refid="group__rbus_value_1ga3433391cb2f7a4e2a85608ac9476fff6" kindref="member">rbusValue_t</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref> const</type>
+          <declname>buff</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="50" column="5" declfile="include/rbus_buffer.h" declline="50" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a5dd0f3fbe53223ea9ffcbc398985bf7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusValue_Encode</definition>
+        <argsstring>(rbusValue_t value, rbusBuffer_t buff)</argsstring>
+        <name>rbusValue_Encode</name>
+        <param>
+          <type><ref refid="group__rbus_value_1ga3433391cb2f7a4e2a85608ac9476fff6" kindref="member">rbusValue_t</ref></type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref></type>
+          <declname>buff</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="51" column="6" declfile="include/rbus_buffer.h" declline="51" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1ae2e542ef6f0e6f2ff3d4df2c0a88bdc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusFilter_Encode</definition>
+        <argsstring>(rbusFilter_t filter, rbusBuffer_t buff)</argsstring>
+        <name>rbusFilter_Encode</name>
+        <param>
+          <type><ref refid="group__rbus_filter_1ga03ad5f80346294826fffde5c271dd22e" kindref="member">rbusFilter_t</ref></type>
+          <declname>filter</declname>
+        </param>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref></type>
+          <declname>buff</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="53" column="6" declfile="include/rbus_buffer.h" declline="53" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a8b09617c465ce97686b136f6d6f6cefc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rbusFilter_Decode</definition>
+        <argsstring>(rbusFilter_t *filter, rbusBuffer_t const buff)</argsstring>
+        <name>rbusFilter_Decode</name>
+        <param>
+          <type><ref refid="group__rbus_filter_1ga03ad5f80346294826fffde5c271dd22e" kindref="member">rbusFilter_t</ref> *</type>
+          <declname>filter</declname>
+        </param>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref> const</type>
+          <declname>buff</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="54" column="5" declfile="include/rbus_buffer.h" declline="54" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1af2c250388bcce10bd72454468e691b2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusBuffer_Create</definition>
+        <argsstring>(rbusBuffer_t *buff)</argsstring>
+        <name>rbusBuffer_Create</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref> *</type>
+          <declname>buff</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="56" column="6" declfile="include/rbus_buffer.h" declline="56" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a049b2083eac6dffe33d96e464be20d2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusBuffer_Destroy</definition>
+        <argsstring>(rbusBuffer_t buff)</argsstring>
+        <name>rbusBuffer_Destroy</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref></type>
+          <declname>buff</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="57" column="6" declfile="include/rbus_buffer.h" declline="57" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a5b19b15dd78580d3e52378dccb6cb869" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusBuffer_Reserve</definition>
+        <argsstring>(rbusBuffer_t buff, int len)</argsstring>
+        <name>rbusBuffer_Reserve</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref></type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="58" column="6" declfile="include/rbus_buffer.h" declline="58" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1aded4aa881610a2a860887541b5c19f8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusBuffer_Write</definition>
+        <argsstring>(rbusBuffer_t buff, void const *data, int len)</argsstring>
+        <name>rbusBuffer_Write</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref></type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>void const *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="59" column="6" declfile="include/rbus_buffer.h" declline="59" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a0bad8efae11a8d04c71ce4cd70599e62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusBuffer_WriteTypeLengthValue</definition>
+        <argsstring>(rbusBuffer_t buff, rbusValueType_t type, uint16_t length, void const *value)</argsstring>
+        <name>rbusBuffer_WriteTypeLengthValue</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref></type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type><ref refid="group__rbus_value_1ga7405acfdc3b4162ff9a9c711b834aba8" kindref="member">rbusValueType_t</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>void const *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="60" column="6" declfile="include/rbus_buffer.h" declline="60" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1aa9f42b5d2e627fda3b8ca76d80060cb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusBuffer_WriteBooleanTLV</definition>
+        <argsstring>(rbusBuffer_t buff, bool b)</argsstring>
+        <name>rbusBuffer_WriteBooleanTLV</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref></type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="61" column="6" declfile="include/rbus_buffer.h" declline="61" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a073807884c065286f412bed2cd50c57b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusBuffer_WriteCharTLV</definition>
+        <argsstring>(rbusBuffer_t buff, char c)</argsstring>
+        <name>rbusBuffer_WriteCharTLV</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref></type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="62" column="6" declfile="include/rbus_buffer.h" declline="62" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a01c72ece9a473317016643e6974988c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusBuffer_WriteByteTLV</definition>
+        <argsstring>(rbusBuffer_t buff, unsigned char u)</argsstring>
+        <name>rbusBuffer_WriteByteTLV</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref></type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="63" column="6" declfile="include/rbus_buffer.h" declline="63" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1ad6ccc5f35e6966eee8d268dd7ef0a0e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusBuffer_WriteInt8TLV</definition>
+        <argsstring>(rbusBuffer_t buff, int8_t i8)</argsstring>
+        <name>rbusBuffer_WriteInt8TLV</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref></type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>i8</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="64" column="6" declfile="include/rbus_buffer.h" declline="64" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1ae23cfd438bd96c6c989a998c26b3134c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusBuffer_WriteUInt8TLV</definition>
+        <argsstring>(rbusBuffer_t buff, uint8_t u8)</argsstring>
+        <name>rbusBuffer_WriteUInt8TLV</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref></type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>u8</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="65" column="6" declfile="include/rbus_buffer.h" declline="65" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a7ec783d47be947ec9f588044ef603ea2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusBuffer_WriteInt16TLV</definition>
+        <argsstring>(rbusBuffer_t buff, int16_t i16)</argsstring>
+        <name>rbusBuffer_WriteInt16TLV</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref></type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>i16</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="66" column="6" declfile="include/rbus_buffer.h" declline="66" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a1ded2af4cecb71000abd49c17b88f269" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusBuffer_WriteUInt16TLV</definition>
+        <argsstring>(rbusBuffer_t buff, uint16_t u16)</argsstring>
+        <name>rbusBuffer_WriteUInt16TLV</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref></type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>u16</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="67" column="6" declfile="include/rbus_buffer.h" declline="67" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1aa11b7f6c88b9fcfe087e36bdcdbea572" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusBuffer_WriteInt32TLV</definition>
+        <argsstring>(rbusBuffer_t buff, int32_t i32)</argsstring>
+        <name>rbusBuffer_WriteInt32TLV</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref></type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>i32</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="68" column="6" declfile="include/rbus_buffer.h" declline="68" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a236d245722b727616901ddbb0e570f36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusBuffer_WriteUInt32TLV</definition>
+        <argsstring>(rbusBuffer_t buff, uint32_t u32)</argsstring>
+        <name>rbusBuffer_WriteUInt32TLV</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref></type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>u32</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="69" column="6" declfile="include/rbus_buffer.h" declline="69" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a2afb53ca18dd419d01ac578783562fe0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusBuffer_WriteInt64TLV</definition>
+        <argsstring>(rbusBuffer_t buff, int64_t i64)</argsstring>
+        <name>rbusBuffer_WriteInt64TLV</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref></type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>i64</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="70" column="6" declfile="include/rbus_buffer.h" declline="70" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a56134c1b5ce5f09cfb50fde65b4fa1f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusBuffer_WriteUInt64TLV</definition>
+        <argsstring>(rbusBuffer_t buff, uint64_t u64)</argsstring>
+        <name>rbusBuffer_WriteUInt64TLV</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref></type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>u64</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="71" column="6" declfile="include/rbus_buffer.h" declline="71" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a51fd4875fcfb45017613a6de189def05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusBuffer_WriteSingleTLV</definition>
+        <argsstring>(rbusBuffer_t buff, float f32)</argsstring>
+        <name>rbusBuffer_WriteSingleTLV</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref></type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>f32</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="72" column="6" declfile="include/rbus_buffer.h" declline="72" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a536888d760ad6cbd0c5fe795d09f7a9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusBuffer_WriteDoubleTLV</definition>
+        <argsstring>(rbusBuffer_t buff, double f64)</argsstring>
+        <name>rbusBuffer_WriteDoubleTLV</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref></type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>f64</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="73" column="6" declfile="include/rbus_buffer.h" declline="73" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a6e37edaf993e58feb74635104b7004e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusBuffer_WriteStringTLV</definition>
+        <argsstring>(rbusBuffer_t buff, char const *s, int len)</argsstring>
+        <name>rbusBuffer_WriteStringTLV</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref></type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>char const *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="74" column="6" declfile="include/rbus_buffer.h" declline="74" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1ae0daaadfadb3b09ac922bc2f389f2b5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusBuffer_WriteDateTimeTLV</definition>
+        <argsstring>(rbusBuffer_t buff, rbusDateTime_t const *tv)</argsstring>
+        <name>rbusBuffer_WriteDateTimeTLV</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref></type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type><ref refid="group__rbus_value_1ga2009eccbb6b430aef0ebcbf6165d1382" kindref="member">rbusDateTime_t</ref> const *</type>
+          <declname>tv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="75" column="6" declfile="include/rbus_buffer.h" declline="75" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a298889933c1b3072a29dcdf0761e6a15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rbusBuffer_WriteBytesTLV</definition>
+        <argsstring>(rbusBuffer_t buff, uint8_t *bytes, int len)</argsstring>
+        <name>rbusBuffer_WriteBytesTLV</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref></type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>bytes</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="76" column="6" declfile="include/rbus_buffer.h" declline="76" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1aed233f2f67d2611bdadde8da3ec507ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rbusBuffer_Read</definition>
+        <argsstring>(rbusBuffer_t const buff, void *data, int len)</argsstring>
+        <name>rbusBuffer_Read</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref> const</type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="78" column="5" declfile="include/rbus_buffer.h" declline="78" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a4d9906d547d5d5b2074ca5f613515bb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rbusBuffer_ReadBoolean</definition>
+        <argsstring>(rbusBuffer_t const buff, bool *b)</argsstring>
+        <name>rbusBuffer_ReadBoolean</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref> const</type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="79" column="5" declfile="include/rbus_buffer.h" declline="79" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a123de1190229cc9d23f5b4b5b2e7b24a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rbusBuffer_ReadChar</definition>
+        <argsstring>(rbusBuffer_t const buff, char *c)</argsstring>
+        <name>rbusBuffer_ReadChar</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref> const</type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="80" column="5" declfile="include/rbus_buffer.h" declline="80" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a930cb1214bc3f0d4958daae0b7905985" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rbusBuffer_ReadByte</definition>
+        <argsstring>(rbusBuffer_t const buff, unsigned char *u)</argsstring>
+        <name>rbusBuffer_ReadByte</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref> const</type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="81" column="5" declfile="include/rbus_buffer.h" declline="81" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1acaea53731301466e316ee6c6cd4d8da1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rbusBuffer_ReadInt8</definition>
+        <argsstring>(rbusBuffer_t const buff, int8_t *i8)</argsstring>
+        <name>rbusBuffer_ReadInt8</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref> const</type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>int8_t *</type>
+          <declname>i8</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="82" column="5" declfile="include/rbus_buffer.h" declline="82" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a01bf5209aa95d810f6edbe544259f066" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rbusBuffer_ReadUInt8</definition>
+        <argsstring>(rbusBuffer_t const buff, uint8_t *u8)</argsstring>
+        <name>rbusBuffer_ReadUInt8</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref> const</type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>u8</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="83" column="5" declfile="include/rbus_buffer.h" declline="83" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1ae162835f44764792b274078d9ee2bb54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rbusBuffer_ReadInt16</definition>
+        <argsstring>(rbusBuffer_t const buff, int16_t *i16)</argsstring>
+        <name>rbusBuffer_ReadInt16</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref> const</type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>int16_t *</type>
+          <declname>i16</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="84" column="5" declfile="include/rbus_buffer.h" declline="84" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1ac7e6f6e86534d1dd7a192a0b53f1b881" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rbusBuffer_ReadUInt16</definition>
+        <argsstring>(rbusBuffer_t const buff, uint16_t *u16)</argsstring>
+        <name>rbusBuffer_ReadUInt16</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref> const</type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>u16</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="85" column="5" declfile="include/rbus_buffer.h" declline="85" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1ad9b254e06172a92ecd9c2070c3e6e680" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rbusBuffer_ReadInt32</definition>
+        <argsstring>(rbusBuffer_t const buff, int32_t *i32)</argsstring>
+        <name>rbusBuffer_ReadInt32</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref> const</type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>int32_t *</type>
+          <declname>i32</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="86" column="5" declfile="include/rbus_buffer.h" declline="86" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a98e6b5ec8f9f034225d05cff0d8caefb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rbusBuffer_ReadUInt32</definition>
+        <argsstring>(rbusBuffer_t const buff, uint32_t *u32)</argsstring>
+        <name>rbusBuffer_ReadUInt32</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref> const</type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>u32</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="87" column="5" declfile="include/rbus_buffer.h" declline="87" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1ae58fe43aa8e07656af93634ca66b6b11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rbusBuffer_ReadInt64</definition>
+        <argsstring>(rbusBuffer_t const buff, int64_t *i64)</argsstring>
+        <name>rbusBuffer_ReadInt64</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref> const</type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>int64_t *</type>
+          <declname>i64</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="88" column="5" declfile="include/rbus_buffer.h" declline="88" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1ad202427c45e4a80c56f808442bc755db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rbusBuffer_ReadUInt64</definition>
+        <argsstring>(rbusBuffer_t const buff, uint64_t *u64)</argsstring>
+        <name>rbusBuffer_ReadUInt64</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref> const</type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>uint64_t *</type>
+          <declname>u64</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="89" column="5" declfile="include/rbus_buffer.h" declline="89" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a9fb51186fb06d53e2344edc06047493c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rbusBuffer_ReadSingle</definition>
+        <argsstring>(rbusBuffer_t const buff, float *f32)</argsstring>
+        <name>rbusBuffer_ReadSingle</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref> const</type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>f32</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="90" column="5" declfile="include/rbus_buffer.h" declline="90" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a1d6e718b081bb9ef247496bb0319bbc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rbusBuffer_ReadDouble</definition>
+        <argsstring>(rbusBuffer_t const buff, double *f64)</argsstring>
+        <name>rbusBuffer_ReadDouble</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref> const</type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>f64</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="91" column="5" declfile="include/rbus_buffer.h" declline="91" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a8e1ec4cc4827028c440c1fcc05978c71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rbusBuffer_ReadString</definition>
+        <argsstring>(rbusBuffer_t const buff, char **s, int *len)</argsstring>
+        <name>rbusBuffer_ReadString</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref> const</type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="92" column="5" declfile="include/rbus_buffer.h" declline="92" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a79fd9f644f548f9322c2359d162798ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rbusBuffer_ReadDateTime</definition>
+        <argsstring>(rbusBuffer_t const buff, rbusDateTime_t *tv)</argsstring>
+        <name>rbusBuffer_ReadDateTime</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref> const</type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type><ref refid="group__rbus_value_1ga2009eccbb6b430aef0ebcbf6165d1382" kindref="member">rbusDateTime_t</ref> *</type>
+          <declname>tv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="93" column="5" declfile="include/rbus_buffer.h" declline="93" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="rbus__buffer_8h_1a0068bd2281799f5456e86626c1e998e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int rbusBuffer_ReadBytes</definition>
+        <argsstring>(rbusBuffer_t const buff, uint8_t **bytes, int *len)</argsstring>
+        <name>rbusBuffer_ReadBytes</name>
+        <param>
+          <type><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref> const</type>
+          <declname>buff</declname>
+        </param>
+        <param>
+          <type>uint8_t **</type>
+          <declname>bytes</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/rbus_buffer.h" line="94" column="5" declfile="include/rbus_buffer.h" declline="94" declcolumn="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>If<sp/>not<sp/>stated<sp/>otherwise<sp/>in<sp/>this<sp/>file<sp/>or<sp/>this<sp/>component&apos;s<sp/>Licenses.txt<sp/>file</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>copyright<sp/>and<sp/>licenses<sp/>apply:</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2016<sp/>RDK<sp/>Management</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>RBUS_BUFFER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RBUS_BUFFER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rbus_8h" kindref="compound">rbus.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="struct__rbus_buffer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__rbus_buffer" kindref="compound">_rbusBuffer</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31" refid="struct__rbus_buffer_1a26e1906dec4b0e5f57fbe4c8feea9322" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__rbus_buffer_1a26e1906dec4b0e5f57fbe4c8feea9322" kindref="member">lenAlloc</ref>;</highlight></codeline>
+<codeline lineno="32" refid="struct__rbus_buffer_1a18e123ac392ccc596f7ef94ea56114b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__rbus_buffer_1a18e123ac392ccc596f7ef94ea56114b5" kindref="member">posWrite</ref>;</highlight></codeline>
+<codeline lineno="33" refid="struct__rbus_buffer_1ad5c2d56bc520388f3cfd6839ace0e21b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__rbus_buffer_1ad5c2d56bc520388f3cfd6839ace0e21b" kindref="member">posRead</ref>;</highlight></codeline>
+<codeline lineno="34" refid="struct__rbus_buffer_1acd554248fe0d0dc547466b946773cd88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__rbus_buffer_1acd554248fe0d0dc547466b946773cd88" kindref="member">data</ref>;</highlight></codeline>
+<codeline lineno="35" refid="struct__rbus_buffer_1a5853fd1992551c6918916ad829eeb479" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__rbus_buffer_1a5853fd1992551c6918916ad829eeb479" kindref="member">block1</ref>[64];</highlight></codeline>
+<codeline lineno="36" refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" refkind="member"><highlight class="normal">}<sp/>*<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="rbus__buffer_8h_1a962b5956904758680829fe03f9fe0654" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><ref refid="rbus__buffer_8h_1a962b5956904758680829fe03f9fe0654" kindref="member">rbusValueType_ToDebugString</ref>(<ref refid="group__rbus_value_1ga7405acfdc3b4162ff9a9c711b834aba8" kindref="member">rbusValueType_t</ref><sp/>type);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">/*GetV,GetL,SetTLV<sp/>are<sp/>temporary<sp/>until<sp/>we<sp/>are<sp/>able<sp/>to<sp/>switch<sp/>to<sp/>Decode/Encode*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="rbus__buffer_8h_1a13be9557f9fde82dab8efc0de61eb273" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/><ref refid="rbus__buffer_8h_1a13be9557f9fde82dab8efc0de61eb273" kindref="member">rbusValue_GetV</ref>(<ref refid="group__rbus_value_1ga3433391cb2f7a4e2a85608ac9476fff6" kindref="member">rbusValue_t</ref><sp/>v);</highlight></codeline>
+<codeline lineno="42" refid="rbus__buffer_8h_1aaa49e747e314edb65602abd8ddd6765a" refkind="member"><highlight class="normal">uint32_t<sp/><ref refid="rbus__buffer_8h_1aaa49e747e314edb65602abd8ddd6765a" kindref="member">rbusValue_GetL</ref>(<ref refid="group__rbus_value_1ga3433391cb2f7a4e2a85608ac9476fff6" kindref="member">rbusValue_t</ref><sp/>v);</highlight></codeline>
+<codeline lineno="43" refid="rbus__buffer_8h_1a78db1074a8948cbec699ba255c96c343" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1a78db1074a8948cbec699ba255c96c343" kindref="member">rbusValue_SetTLV</ref>(<ref refid="group__rbus_value_1ga3433391cb2f7a4e2a85608ac9476fff6" kindref="member">rbusValue_t</ref><sp/>v,<sp/><ref refid="group__rbus_value_1ga7405acfdc3b4162ff9a9c711b834aba8" kindref="member">rbusValueType_t</ref><sp/>type,<sp/>uint32_t<sp/>length,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>value);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">/*Decode/Encode<sp/>can<sp/>be<sp/>used<sp/>once<sp/>we<sp/>disable<sp/>message<sp/>pack<sp/>and<sp/>change<sp/>ccsp</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/><sp/><sp/><sp/>Currently<sp/>we<sp/>push/pop<sp/>name,<sp/>type,<sp/>value<sp/>separately<sp/>with<sp/>rtMessage.</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/><sp/><sp/><sp/>This<sp/>will<sp/>change<sp/>where<sp/>we<sp/>pass<sp/>the<sp/>rbusBuffer_t<sp/>raw<sp/>binary<sp/>to<sp/>the<sp/>socket</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/><sp/><sp/><sp/>and<sp/>that<sp/>will<sp/>require<sp/>changes<sp/>in<sp/>ccsp_base_api/message_bus<sp/>I<sp/>imagine</highlight></codeline>
+<codeline lineno="49"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="rbus__buffer_8h_1ac038c8b6cfa71dccaab6b65dc9c7205a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1ac038c8b6cfa71dccaab6b65dc9c7205a" kindref="member">rbusValue_Decode</ref>(<ref refid="group__rbus_value_1ga3433391cb2f7a4e2a85608ac9476fff6" kindref="member">rbusValue_t</ref>*<sp/>value,<sp/><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>buff);</highlight></codeline>
+<codeline lineno="51" refid="rbus__buffer_8h_1a5dd0f3fbe53223ea9ffcbc398985bf7c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1a5dd0f3fbe53223ea9ffcbc398985bf7c" kindref="member">rbusValue_Encode</ref>(<ref refid="group__rbus_value_1ga3433391cb2f7a4e2a85608ac9476fff6" kindref="member">rbusValue_t</ref><sp/>value,<sp/><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/>buff);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="rbus__buffer_8h_1ae2e542ef6f0e6f2ff3d4df2c0a88bdc9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1ae2e542ef6f0e6f2ff3d4df2c0a88bdc9" kindref="member">rbusFilter_Encode</ref>(<ref refid="group__rbus_filter_1ga03ad5f80346294826fffde5c271dd22e" kindref="member">rbusFilter_t</ref><sp/>filter,<sp/><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/>buff);</highlight></codeline>
+<codeline lineno="54" refid="rbus__buffer_8h_1a8b09617c465ce97686b136f6d6f6cefc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1a8b09617c465ce97686b136f6d6f6cefc" kindref="member">rbusFilter_Decode</ref>(<ref refid="group__rbus_filter_1ga03ad5f80346294826fffde5c271dd22e" kindref="member">rbusFilter_t</ref>*<sp/>filter,<sp/><ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>buff);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="rbus__buffer_8h_1af2c250388bcce10bd72454468e691b2d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1af2c250388bcce10bd72454468e691b2d" kindref="member">rbusBuffer_Create</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref>*<sp/>buff);</highlight></codeline>
+<codeline lineno="57" refid="rbus__buffer_8h_1a049b2083eac6dffe33d96e464be20d2f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1a049b2083eac6dffe33d96e464be20d2f" kindref="member">rbusBuffer_Destroy</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/>buff);</highlight></codeline>
+<codeline lineno="58" refid="rbus__buffer_8h_1a5b19b15dd78580d3e52378dccb6cb869" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1a5b19b15dd78580d3e52378dccb6cb869" kindref="member">rbusBuffer_Reserve</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/>buff,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="59" refid="rbus__buffer_8h_1aded4aa881610a2a860887541b5c19f8a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1aded4aa881610a2a860887541b5c19f8a" kindref="member">rbusBuffer_Write</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/>buff,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>data,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="60" refid="rbus__buffer_8h_1a0bad8efae11a8d04c71ce4cd70599e62" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1a0bad8efae11a8d04c71ce4cd70599e62" kindref="member">rbusBuffer_WriteTypeLengthValue</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/>buff,<sp/><ref refid="group__rbus_value_1ga7405acfdc3b4162ff9a9c711b834aba8" kindref="member">rbusValueType_t</ref><sp/>type,<sp/>uint16_t<sp/>length,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>value);</highlight></codeline>
+<codeline lineno="61" refid="rbus__buffer_8h_1aa9f42b5d2e627fda3b8ca76d80060cb1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1aa9f42b5d2e627fda3b8ca76d80060cb1" kindref="member">rbusBuffer_WriteBooleanTLV</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/>buff,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>b);</highlight></codeline>
+<codeline lineno="62" refid="rbus__buffer_8h_1a073807884c065286f412bed2cd50c57b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1a073807884c065286f412bed2cd50c57b" kindref="member">rbusBuffer_WriteCharTLV</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/>buff,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>c);</highlight></codeline>
+<codeline lineno="63" refid="rbus__buffer_8h_1a01c72ece9a473317016643e6974988c9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1a01c72ece9a473317016643e6974988c9" kindref="member">rbusBuffer_WriteByteTLV</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/>buff,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>u);</highlight></codeline>
+<codeline lineno="64" refid="rbus__buffer_8h_1ad6ccc5f35e6966eee8d268dd7ef0a0e9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1ad6ccc5f35e6966eee8d268dd7ef0a0e9" kindref="member">rbusBuffer_WriteInt8TLV</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/>buff,<sp/>int8_t<sp/>i8);</highlight></codeline>
+<codeline lineno="65" refid="rbus__buffer_8h_1ae23cfd438bd96c6c989a998c26b3134c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1ae23cfd438bd96c6c989a998c26b3134c" kindref="member">rbusBuffer_WriteUInt8TLV</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/>buff,<sp/>uint8_t<sp/>u8);</highlight></codeline>
+<codeline lineno="66" refid="rbus__buffer_8h_1a7ec783d47be947ec9f588044ef603ea2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1a7ec783d47be947ec9f588044ef603ea2" kindref="member">rbusBuffer_WriteInt16TLV</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/>buff,<sp/>int16_t<sp/>i16);</highlight></codeline>
+<codeline lineno="67" refid="rbus__buffer_8h_1a1ded2af4cecb71000abd49c17b88f269" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1a1ded2af4cecb71000abd49c17b88f269" kindref="member">rbusBuffer_WriteUInt16TLV</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/>buff,<sp/>uint16_t<sp/>u16);</highlight></codeline>
+<codeline lineno="68" refid="rbus__buffer_8h_1aa11b7f6c88b9fcfe087e36bdcdbea572" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1aa11b7f6c88b9fcfe087e36bdcdbea572" kindref="member">rbusBuffer_WriteInt32TLV</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/>buff,<sp/>int32_t<sp/>i32);</highlight></codeline>
+<codeline lineno="69" refid="rbus__buffer_8h_1a236d245722b727616901ddbb0e570f36" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1a236d245722b727616901ddbb0e570f36" kindref="member">rbusBuffer_WriteUInt32TLV</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/>buff,<sp/>uint32_t<sp/>u32);</highlight></codeline>
+<codeline lineno="70" refid="rbus__buffer_8h_1a2afb53ca18dd419d01ac578783562fe0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1a2afb53ca18dd419d01ac578783562fe0" kindref="member">rbusBuffer_WriteInt64TLV</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/>buff,<sp/>int64_t<sp/>i64);</highlight></codeline>
+<codeline lineno="71" refid="rbus__buffer_8h_1a56134c1b5ce5f09cfb50fde65b4fa1f9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1a56134c1b5ce5f09cfb50fde65b4fa1f9" kindref="member">rbusBuffer_WriteUInt64TLV</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/>buff,<sp/>uint64_t<sp/>u64);</highlight></codeline>
+<codeline lineno="72" refid="rbus__buffer_8h_1a51fd4875fcfb45017613a6de189def05" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1a51fd4875fcfb45017613a6de189def05" kindref="member">rbusBuffer_WriteSingleTLV</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/>buff,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>f32);</highlight></codeline>
+<codeline lineno="73" refid="rbus__buffer_8h_1a536888d760ad6cbd0c5fe795d09f7a9b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1a536888d760ad6cbd0c5fe795d09f7a9b" kindref="member">rbusBuffer_WriteDoubleTLV</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/>buff,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>f64);</highlight></codeline>
+<codeline lineno="74" refid="rbus__buffer_8h_1a6e37edaf993e58feb74635104b7004e9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1a6e37edaf993e58feb74635104b7004e9" kindref="member">rbusBuffer_WriteStringTLV</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/>buff,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>s,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="75" refid="rbus__buffer_8h_1ae0daaadfadb3b09ac922bc2f389f2b5a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1ae0daaadfadb3b09ac922bc2f389f2b5a" kindref="member">rbusBuffer_WriteDateTimeTLV</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/>buff,<sp/><ref refid="group__rbus_value_1ga2009eccbb6b430aef0ebcbf6165d1382" kindref="member">rbusDateTime_t</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">*<sp/>tv);</highlight></codeline>
+<codeline lineno="76" refid="rbus__buffer_8h_1a298889933c1b3072a29dcdf0761e6a15" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1a298889933c1b3072a29dcdf0761e6a15" kindref="member">rbusBuffer_WriteBytesTLV</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/>buff,<sp/>uint8_t*<sp/>bytes,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">/*The<sp/>Read<sp/>functions<sp/>return<sp/>0<sp/>on<sp/>success<sp/>or<sp/>-1<sp/>on<sp/>failure<sp/>(reading<sp/>that<sp/>would<sp/>result<sp/>in<sp/>memory<sp/>overrun)*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="rbus__buffer_8h_1aed233f2f67d2611bdadde8da3ec507ad" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1aed233f2f67d2611bdadde8da3ec507ad" kindref="member">rbusBuffer_Read</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>buff,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>data,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="79" refid="rbus__buffer_8h_1a4d9906d547d5d5b2074ca5f613515bb2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1a4d9906d547d5d5b2074ca5f613515bb2" kindref="member">rbusBuffer_ReadBoolean</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>buff,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>b);</highlight></codeline>
+<codeline lineno="80" refid="rbus__buffer_8h_1a123de1190229cc9d23f5b4b5b2e7b24a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1a123de1190229cc9d23f5b4b5b2e7b24a" kindref="member">rbusBuffer_ReadChar</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>buff,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>c);</highlight></codeline>
+<codeline lineno="81" refid="rbus__buffer_8h_1a930cb1214bc3f0d4958daae0b7905985" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1a930cb1214bc3f0d4958daae0b7905985" kindref="member">rbusBuffer_ReadByte</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>buff,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>u);</highlight></codeline>
+<codeline lineno="82" refid="rbus__buffer_8h_1acaea53731301466e316ee6c6cd4d8da1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1acaea53731301466e316ee6c6cd4d8da1" kindref="member">rbusBuffer_ReadInt8</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>buff,<sp/>int8_t*<sp/>i8);</highlight></codeline>
+<codeline lineno="83" refid="rbus__buffer_8h_1a01bf5209aa95d810f6edbe544259f066" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1a01bf5209aa95d810f6edbe544259f066" kindref="member">rbusBuffer_ReadUInt8</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>buff,<sp/>uint8_t*<sp/>u8);</highlight></codeline>
+<codeline lineno="84" refid="rbus__buffer_8h_1ae162835f44764792b274078d9ee2bb54" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1ae162835f44764792b274078d9ee2bb54" kindref="member">rbusBuffer_ReadInt16</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>buff,<sp/>int16_t*<sp/>i16);</highlight></codeline>
+<codeline lineno="85" refid="rbus__buffer_8h_1ac7e6f6e86534d1dd7a192a0b53f1b881" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1ac7e6f6e86534d1dd7a192a0b53f1b881" kindref="member">rbusBuffer_ReadUInt16</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>buff,<sp/>uint16_t*<sp/>u16);</highlight></codeline>
+<codeline lineno="86" refid="rbus__buffer_8h_1ad9b254e06172a92ecd9c2070c3e6e680" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1ad9b254e06172a92ecd9c2070c3e6e680" kindref="member">rbusBuffer_ReadInt32</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>buff,<sp/>int32_t*<sp/>i32);</highlight></codeline>
+<codeline lineno="87" refid="rbus__buffer_8h_1a98e6b5ec8f9f034225d05cff0d8caefb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1a98e6b5ec8f9f034225d05cff0d8caefb" kindref="member">rbusBuffer_ReadUInt32</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>buff,<sp/>uint32_t*<sp/>u32);</highlight></codeline>
+<codeline lineno="88" refid="rbus__buffer_8h_1ae58fe43aa8e07656af93634ca66b6b11" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1ae58fe43aa8e07656af93634ca66b6b11" kindref="member">rbusBuffer_ReadInt64</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>buff,<sp/>int64_t*<sp/>i64);</highlight></codeline>
+<codeline lineno="89" refid="rbus__buffer_8h_1ad202427c45e4a80c56f808442bc755db" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1ad202427c45e4a80c56f808442bc755db" kindref="member">rbusBuffer_ReadUInt64</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>buff,<sp/>uint64_t*<sp/>u64);</highlight></codeline>
+<codeline lineno="90" refid="rbus__buffer_8h_1a9fb51186fb06d53e2344edc06047493c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1a9fb51186fb06d53e2344edc06047493c" kindref="member">rbusBuffer_ReadSingle</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>buff,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>f32);</highlight></codeline>
+<codeline lineno="91" refid="rbus__buffer_8h_1a1d6e718b081bb9ef247496bb0319bbc8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1a1d6e718b081bb9ef247496bb0319bbc8" kindref="member">rbusBuffer_ReadDouble</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>buff,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>f64);</highlight></codeline>
+<codeline lineno="92" refid="rbus__buffer_8h_1a8e1ec4cc4827028c440c1fcc05978c71" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1a8e1ec4cc4827028c440c1fcc05978c71" kindref="member">rbusBuffer_ReadString</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>buff,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>s,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>len);</highlight><highlight class="comment">/*<sp/>caller<sp/>must<sp/>free<sp/>*s<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="rbus__buffer_8h_1a79fd9f644f548f9322c2359d162798ea" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1a79fd9f644f548f9322c2359d162798ea" kindref="member">rbusBuffer_ReadDateTime</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>buff,<sp/><ref refid="group__rbus_value_1ga2009eccbb6b430aef0ebcbf6165d1382" kindref="member">rbusDateTime_t</ref>*<sp/>tv);</highlight></codeline>
+<codeline lineno="94" refid="rbus__buffer_8h_1a0068bd2281799f5456e86626c1e998e0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="rbus__buffer_8h_1a0068bd2281799f5456e86626c1e998e0" kindref="member">rbusBuffer_ReadBytes</ref>(<ref refid="rbus__buffer_8h_1aa198149a4bd9d6e703962a3c3fad0127" kindref="member">rbusBuffer_t</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>buff,<sp/>uint8_t**<sp/>bytes,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>len);</highlight><highlight class="comment">/*<sp/>caller<sp/>must<sp/>free<sp/>*bytes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/rbus_buffer.h"/>
+  </compounddef>
+</doxygen>

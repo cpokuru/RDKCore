@@ -1,0 +1,29 @@
+\chapter{RDK Bus (RBus) }
+\hypertarget{index}{}\label{index}\index{RDK Bus (RBus)@{RDK Bus (RBus)}}
+RDK Bus (RBus) is a lightweight, fast and efficient bus messaging system. It allows interprocess communication (IPC) and remote procedure call (RPC) between multiple process running on a hardware device. It supports the creation and use of a data model, which is a hierarchical tree of named objects with properties, events, and methods.
+
+From a developer perspective, there are providers and clients. Providers implement the data model which clients consume.
+
+Providers perform these tasks:
+\begin{DoxyItemize}
+\item register properties and implement their get and set operations
+\item register object and implement their get, set, create, and delete operations
+\item register and plublish events
+\item register and implement methods which can be called remotely
+\end{DoxyItemize}
+
+Consumers perform these tasks:
+\begin{DoxyItemize}
+\item get and set property values.
+\item get, set, create, and delete objects.
+\item subscribe and listen to events
+\item invoke remote methods
+\end{DoxyItemize}
+
+A process can be both a provider and a client. A process can implement many properties, objects, events, and remote methods, and also be a client of the same coming from other providers.
+
+All objects, properties, events, and methods are assigned names by the provider. Each name should be unique across a system, otherwise there will be conflicts in the bus routing.
+
+RBus supports the naming convention defined by TR-\/069, where a name has a hierarchical structure like a file directory structure, with each level of the hierarchy separated by a dot (\textquotesingle{}.\textquotesingle{}), and where object instances and denoted using brace(\{\}).
+
+The RBus API is intended, but not limited, to allow the implementation of a TR-\/181 data model. 

@@ -1,0 +1,99 @@
+\doxysection{\+\_\+rbus\+Event\+Subscription Struct Reference}
+\hypertarget{struct__rbus_event_subscription}{}\label{struct__rbus_event_subscription}\index{\_rbusEventSubscription@{\_rbusEventSubscription}}
+
+
+\doxylink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t}  
+
+
+
+
+{\ttfamily \+\#include $<$rbus.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char const  \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct__rbus_event_subscription_aa5f81da5ad5176915ed1d1b40b7ffe5d}{event\+Name}}
+\item 
+\doxymbox{\hyperlink{group__rbus_filter_ga03ad5f80346294826fffde5c271dd22e}{rbus\+Filter\+\_\+t}} \doxymbox{\hyperlink{struct__rbus_event_subscription_ad975aaaadb953b18585f96660374f3b6}{filter}}
+\item 
+uint32\+\_\+t \doxymbox{\hyperlink{struct__rbus_event_subscription_ab984e9c7c70a32dbb064f29e6c140cd9}{interval}}
+\item 
+uint32\+\_\+t \doxymbox{\hyperlink{struct__rbus_event_subscription_af0542981da073930ab7d5441ccfa3585}{duration}}
+\item 
+void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct__rbus_event_subscription_ac7ef6bb6c1a7053cd2915d1e42c673a6}{handler}}
+\item 
+void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct__rbus_event_subscription_ab8739843ed4fbac99eee7419bd29df64}{user\+Data}}
+\item 
+\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} \doxymbox{\hyperlink{struct__rbus_event_subscription_a63e09bbea5d562727645c5a287b19077}{handle}}
+\item 
+\doxymbox{\hyperlink{group___events_ga8c91c27fc5c9f944d4e82f6f97c7c6e6}{rbus\+Subscribe\+Async\+Resp\+Handler\+\_\+t}} \doxymbox{\hyperlink{struct__rbus_event_subscription_a7945cd09582ac9f11d23fbfc50ad70d0}{async\+Handler}}
+\item 
+bool \doxymbox{\hyperlink{struct__rbus_event_subscription_a4896288c353bbfb5b61289d27a1ab8c4}{publish\+On\+Subscribe}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{group___events_gaa057c1d714c08fa0c831a0bb88e08ac9}{rbus\+Event\+Subscription\+\_\+t} 
+
+\label{struct__rbus_event_subscription_doc-variable-members}
+\Hypertarget{struct__rbus_event_subscription_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct__rbus_event_subscription_a7945cd09582ac9f11d23fbfc50ad70d0}\index{\_rbusEventSubscription@{\_rbusEventSubscription}!asyncHandler@{asyncHandler}}
+\index{asyncHandler@{asyncHandler}!\_rbusEventSubscription@{\_rbusEventSubscription}}
+\doxysubsubsection{\texorpdfstring{asyncHandler}{asyncHandler}}
+{\footnotesize\ttfamily \label{struct__rbus_event_subscription_a7945cd09582ac9f11d23fbfc50ad70d0} 
+\doxymbox{\hyperlink{group___events_ga8c91c27fc5c9f944d4e82f6f97c7c6e6}{rbus\+Subscribe\+Async\+Resp\+Handler\+\_\+t}} \+\_\+rbus\+Event\+Subscription::\+async\+Handler}
+
+Private use only: The rbus handle associated with this subscription \Hypertarget{struct__rbus_event_subscription_af0542981da073930ab7d5441ccfa3585}\index{\_rbusEventSubscription@{\_rbusEventSubscription}!duration@{duration}}
+\index{duration@{duration}!\_rbusEventSubscription@{\_rbusEventSubscription}}
+\doxysubsubsection{\texorpdfstring{duration}{duration}}
+{\footnotesize\ttfamily \label{struct__rbus_event_subscription_af0542981da073930ab7d5441ccfa3585} 
+uint32\+\_\+t \+\_\+rbus\+Event\+Subscription::\+duration}
+
+\Hypertarget{struct__rbus_event_subscription_aa5f81da5ad5176915ed1d1b40b7ffe5d}\index{\_rbusEventSubscription@{\_rbusEventSubscription}!eventName@{eventName}}
+\index{eventName@{eventName}!\_rbusEventSubscription@{\_rbusEventSubscription}}
+\doxysubsubsection{\texorpdfstring{eventName}{eventName}}
+{\footnotesize\ttfamily \label{struct__rbus_event_subscription_aa5f81da5ad5176915ed1d1b40b7ffe5d} 
+char const\texorpdfstring{$\ast$}{*} \+\_\+rbus\+Event\+Subscription::\+event\+Name}
+
+\Hypertarget{struct__rbus_event_subscription_ad975aaaadb953b18585f96660374f3b6}\index{\_rbusEventSubscription@{\_rbusEventSubscription}!filter@{filter}}
+\index{filter@{filter}!\_rbusEventSubscription@{\_rbusEventSubscription}}
+\doxysubsubsection{\texorpdfstring{filter}{filter}}
+{\footnotesize\ttfamily \label{struct__rbus_event_subscription_ad975aaaadb953b18585f96660374f3b6} 
+\doxymbox{\hyperlink{group__rbus_filter_ga03ad5f80346294826fffde5c271dd22e}{rbus\+Filter\+\_\+t}} \+\_\+rbus\+Event\+Subscription::\+filter}
+
+Fully qualified event name \Hypertarget{struct__rbus_event_subscription_a63e09bbea5d562727645c5a287b19077}\index{\_rbusEventSubscription@{\_rbusEventSubscription}!handle@{handle}}
+\index{handle@{handle}!\_rbusEventSubscription@{\_rbusEventSubscription}}
+\doxysubsubsection{\texorpdfstring{handle}{handle}}
+{\footnotesize\ttfamily \label{struct__rbus_event_subscription_a63e09bbea5d562727645c5a287b19077} 
+\doxymbox{\hyperlink{group___common_gaaed81eae245cefcc40d7b82d136364af}{rbus\+Handle\+\_\+t}} \+\_\+rbus\+Event\+Subscription::\+handle}
+
+The user\+Data set when subscribing to the event. \Hypertarget{struct__rbus_event_subscription_ac7ef6bb6c1a7053cd2915d1e42c673a6}\index{\_rbusEventSubscription@{\_rbusEventSubscription}!handler@{handler}}
+\index{handler@{handler}!\_rbusEventSubscription@{\_rbusEventSubscription}}
+\doxysubsubsection{\texorpdfstring{handler}{handler}}
+{\footnotesize\ttfamily \label{struct__rbus_event_subscription_ac7ef6bb6c1a7053cd2915d1e42c673a6} 
+void\texorpdfstring{$\ast$}{*} \+\_\+rbus\+Event\+Subscription::\+handler}
+
+Optional maximum duration in seconds until which the subscription should be in effect. Beyond this duration, the event would be unsubscribed automatically. Pass "{}0"{} for indefinite event subscription which requires the rbus\+Event\+\_\+\+Unsubscribe API to be called explicitly. \Hypertarget{struct__rbus_event_subscription_ab984e9c7c70a32dbb064f29e6c140cd9}\index{\_rbusEventSubscription@{\_rbusEventSubscription}!interval@{interval}}
+\index{interval@{interval}!\_rbusEventSubscription@{\_rbusEventSubscription}}
+\doxysubsubsection{\texorpdfstring{interval}{interval}}
+{\footnotesize\ttfamily \label{struct__rbus_event_subscription_ab984e9c7c70a32dbb064f29e6c140cd9} 
+uint32\+\_\+t \+\_\+rbus\+Event\+Subscription::\+interval}
+
+Optional filter that the client would like the sender to apply before sending the event Total interval period after which the event needs to be fired. Should be in multiples of min\+Interval \Hypertarget{struct__rbus_event_subscription_a4896288c353bbfb5b61289d27a1ab8c4}\index{\_rbusEventSubscription@{\_rbusEventSubscription}!publishOnSubscribe@{publishOnSubscribe}}
+\index{publishOnSubscribe@{publishOnSubscribe}!\_rbusEventSubscription@{\_rbusEventSubscription}}
+\doxysubsubsection{\texorpdfstring{publishOnSubscribe}{publishOnSubscribe}}
+{\footnotesize\ttfamily \label{struct__rbus_event_subscription_a4896288c353bbfb5b61289d27a1ab8c4} 
+bool \+\_\+rbus\+Event\+Subscription::\+publish\+On\+Subscribe}
+
+Private use only: The async handler being used for any background subscription retries \Hypertarget{struct__rbus_event_subscription_ab8739843ed4fbac99eee7419bd29df64}\index{\_rbusEventSubscription@{\_rbusEventSubscription}!userData@{userData}}
+\index{userData@{userData}!\_rbusEventSubscription@{\_rbusEventSubscription}}
+\doxysubsubsection{\texorpdfstring{userData}{userData}}
+{\footnotesize\ttfamily \label{struct__rbus_event_subscription_ab8739843ed4fbac99eee7419bd29df64} 
+void\texorpdfstring{$\ast$}{*} \+\_\+rbus\+Event\+Subscription::\+user\+Data}
+
+fixme \doxylink{group___events_gaf0a4f17d9440f3216fc6f06eda8b81bf}{rbus\+Event\+Handler\+\_\+t} internal 
+
+The documentation for this struct was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{rbus_8h}{rbus.\+h}}\end{DoxyCompactItemize}
