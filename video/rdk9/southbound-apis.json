@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0",
+  "status": "Draft: the Southbound API list is evolving and will be published.",
+  "apis": [
+    {
+      "halInterface": "DeepSleep Manager HAL",
+      "version": "develop",
+      "source": "https://github.com/rdkcentral/rdk-halif-deepsleep_manager"
+    },
+    {
+      "halInterface": "Power Manager HAL",
+      "version": "develop",
+      "source": "https://github.com/rdkcentral/rdk-halif-power_manager"
+    },
+    {
+      "halInterface": "Device Settings HAL",
+      "version": "develop",
+      "source": "https://github.com/rdkcentral/rdk-halif-device_settings"
+    },
+    {
+      "halInterface": "HDMI CEC HAL",
+      "version": "develop",
+      "source": "https://github.com/rdkcentral/rdk-halif-hdmi_cec"
+    },
+    {
+      "halInterface": "RMF Audio Capture HAL",
+      "version": "develop",
+      "source": "https://github.com/rdkcentral/rdk-halif-rmf_audio_capture"
+    },
+    {
+      "halInterface": "Control Manager HAL",
+      "version": "develop",
+      "source": "https://github.com/rdkcentral/control"
+    },
+    {
+      "halInterface": "MFRLib HAL",
+      "version": "",
+      "source": ""
+    },
+    {
+      "halInterface": "systemaudioplatform HAL",
+      "version": "",
+      "source": ""
+    },
+    {
+      "halInterface": "Crypto HAL",
+      "version": "",
+      "source": ""
+    },
+    {
+      "halInterface": "Bluetooth HAL",
+      "version": "",
+      "source": ""
+    },
+    {
+      "halInterface": "Sysint HAL",
+      "version": "",
+      "source": ""
+    },
+    {
+      "halInterface": "Westeros SOC HAL",
+      "version": "",
+      "source": ""
+    },
+    {
+      "halInterface": "Graphics & Matrix HAL",
+      "version": "",
+      "source": ""
+    }
+  ]
+}
