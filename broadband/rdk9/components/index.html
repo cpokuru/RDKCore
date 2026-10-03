@@ -527,6 +527,7 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235b6472' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
     background-repeat: no-repeat; background-position: right 10px center;
     cursor: pointer; transition: border-color 0.15s;
+    max-width: 160px; overflow: hidden; text-overflow: ellipsis;
   }
   .comp-filter-bar select:focus { outline: none; border-color: var(--middleware); }
   .comp-count { font-size: 0.84rem; color: var(--muted); margin-left: 2px; }
@@ -534,7 +535,7 @@
 
 <section class="tight-top">
   <p style="color:var(--muted); font-size:0.85rem; margin:0 0 14px;">
-    Schema version: 1.0 &nbsp;|&nbsp; Generated: 2026-10-03T05:29:07Z
+    Schema version: 1.0 &nbsp;|&nbsp; Generated: 2026-10-03T05:33:51Z
   </p>
   <div style="margin-bottom:18px;"><span class="pill" style="background:#fef3c7;color:#92400e">Common Core</span><span class="pill" style="background:#dbeafe;color:#1e40af">Required</span><span class="pill" style="background:#f3f4f6;color:#374151">Optional</span></div>
   

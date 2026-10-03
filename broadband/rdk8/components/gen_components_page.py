@@ -157,6 +157,7 @@ def build_body(data: dict) -> str:
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235b6472' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
     background-repeat: no-repeat; background-position: right 10px center;
     cursor: pointer; transition: border-color 0.15s;
+    max-width: 160px; overflow: hidden; text-overflow: ellipsis;
   }
   .comp-filter-bar select:focus { outline: none; border-color: var(--middleware); }
   .comp-count { font-size: 0.84rem; color: var(--muted); margin-left: 2px; }
