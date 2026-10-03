@@ -95,6 +95,8 @@ def build_body(data: dict) -> str:
     # Unique categories and tier labels for filter dropdowns
     categories  = sorted({c["category"] or "Uncategorized" for c in components})
     tier_labels = sorted({tiers.get(c["tier"], {"label": c["tier"]})["label"] for c in components})
+    # Layer is always Middleware for all RDK-B components
+    layers = ["Middleware"]
 
     rows_html = []
     for c in components:
@@ -111,7 +113,7 @@ def build_body(data: dict) -> str:
         else:
             url_cell = '<span class="muted">—</span>'
         # data-* attrs drive JS filtering; layer is always Middleware
-        rows_html.append(f'''<tr data-name="{esc(c["name"].lower())}" data-category="{esc(c["category"] or "Uncategorized")}" data-type="{esc(tier["label"])}">
+        rows_html.append(f'''<tr data-name="{esc(c["name"].lower())}" data-category="{esc(c["category"] or "Uncategorized")}" data-layer="Middleware" data-type="{esc(tier["label"])}">
           <td>{esc(c["name"])}</td>
           <td><span class="pill" style="background:{cat_style["bg"]};color:{cat_style["fg"]};border-radius:8px;line-height:1.5;">{esc(c["category"] or "Uncategorized")}</span></td>
           <td><span class="pill" style="background:{LAYER_STYLE["bg"]};color:{LAYER_STYLE["fg"]};border-radius:8px;line-height:1.5;">Middleware</span></td>
@@ -120,15 +122,18 @@ def build_body(data: dict) -> str:
         </tr>''')
 
     # Dropdown options
-    cat_options  = '<option value="">All categories</option>' + "".join(
+    cat_options   = '<option value="">All categories</option>' + "".join(
         f'<option value="{esc(c)}">{esc(c)}</option>' for c in categories)
-    type_options = '<option value="">All types</option>' + "".join(
+    layer_options = '<option value="">All layers</option>' + "".join(
+        f'<option value="{esc(l)}">{esc(l)}</option>' for l in layers)
+    type_options  = '<option value="">All types</option>' + "".join(
         f'<option value="{esc(t)}">{esc(t)}</option>' for t in tier_labels)
 
     filter_bar = f"""
   <div class="comp-filter-bar">
     <input id="comp-search" type="text" placeholder="Search components" autocomplete="off">
     <select id="comp-cat">{cat_options}</select>
+    <select id="comp-layer">{layer_options}</select>
     <select id="comp-type">{type_options}</select>
     <span id="comp-count" class="comp-count"></span>
   </div>"""
@@ -162,19 +167,22 @@ def build_body(data: dict) -> str:
 (function () {
   const searchEl = document.getElementById('comp-search');
   const catEl    = document.getElementById('comp-cat');
+  const layerEl  = document.getElementById('comp-layer');
   const typeEl   = document.getElementById('comp-type');
   const countEl  = document.getElementById('comp-count');
   const rows     = Array.from(document.querySelectorAll('#comp-tbody tr'));
 
   function filter() {
-    const q    = searchEl.value.trim().toLowerCase();
-    const cat  = catEl.value;
-    const type = typeEl.value;
+    const q     = searchEl.value.trim().toLowerCase();
+    const cat   = catEl.value;
+    const layer = layerEl.value;
+    const type  = typeEl.value;
     let visible = 0;
     rows.forEach(tr => {
-      const show = (!q    || tr.dataset.name.includes(q))
-                && (!cat  || tr.dataset.category === cat)
-                && (!type || tr.dataset.type === type);
+      const show = (!q     || tr.dataset.name.includes(q))
+                && (!cat   || tr.dataset.category === cat)
+                && (!layer || tr.dataset.layer === layer)
+                && (!type  || tr.dataset.type === type);
       tr.style.display = show ? '' : 'none';
       if (show) visible++;
     });
@@ -183,6 +191,7 @@ def build_body(data: dict) -> str:
 
   searchEl.addEventListener('input', filter);
   catEl.addEventListener('change', filter);
+  layerEl.addEventListener('change', filter);
   typeEl.addEventListener('change', filter);
   filter();
 })();

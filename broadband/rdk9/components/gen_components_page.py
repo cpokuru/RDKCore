@@ -16,10 +16,21 @@
 # limitations under the License.
 
 """Generate components/index.html from ethwan-router-components.json, using
-the same shared site shell (topnav + hero banner) as every other page.
+the same shared site shell (topnav + hero banner) as every other page —
+unlike full-list.html or the other gen_*.py outputs in this folder, this one
+now goes through layout.py's render_page()/render_hero()/render_topnav()
+instead of a standalone hand-authored <style> block.
+
+components/index.html sits one directory below the repo root, so this script
+passes path_prefix="../" to render_page() — that's what makes the logo, nav
+links, and search index fetch resolve correctly from inside components/.
 
 Usage:
     python3 gen_components_page.py --json ethwan-router-components.json --out index.html
+
+Run this whenever ethwan-router-components.json changes (i.e. after
+extract_components.py / build_site.py step 4), so the page stays in sync
+with the .xlsx it's derived from.
 """
 from __future__ import annotations
 
@@ -35,6 +46,9 @@ from layout import render_hero, render_page  # noqa: E402
 
 FULL_DETAILS_URL = "full-list.html"
 
+# Same fixed/rotating palettes as gen_simple_html.py, kept in sync so the
+# type/category pill colors look identical to the rest of the components
+# tooling (full-list.html, any other gen_simple_html.py output).
 TIER_COLORS = {
     "gold":  {"bg": "#fef3c7", "fg": "#92400e"},
     "blue":  {"bg": "#dbeafe", "fg": "#1e40af"},
@@ -51,6 +65,7 @@ CATEGORY_PALETTE = [
     {"bg": "#fce7f3", "fg": "#9d174d"},
     {"bg": "#e5e7eb", "fg": "#374151"},
 ]
+
 
 # Fixed style for the Layer pill (always Middleware for all RDK-B components)
 LAYER_STYLE = {"bg": "#f0fdf4", "fg": "#166534"}
@@ -80,6 +95,8 @@ def build_body(data: dict) -> str:
     # Unique categories and tier labels for filter dropdowns
     categories  = sorted({c["category"] or "Uncategorized" for c in components})
     tier_labels = sorted({tiers.get(c["tier"], {"label": c["tier"]})["label"] for c in components})
+    # Layer is always Middleware for all RDK-B components
+    layers = ["Middleware"]
 
     rows_html = []
     for c in components:
@@ -96,7 +113,7 @@ def build_body(data: dict) -> str:
         else:
             url_cell = '<span class="muted">—</span>'
         # data-* attrs drive JS filtering; layer is always Middleware
-        rows_html.append(f'''<tr data-name="{esc(c["name"].lower())}" data-category="{esc(c["category"] or "Uncategorized")}" data-type="{esc(tier["label"])}">
+        rows_html.append(f'''<tr data-name="{esc(c["name"].lower())}" data-category="{esc(c["category"] or "Uncategorized")}" data-layer="Middleware" data-type="{esc(tier["label"])}">
           <td>{esc(c["name"])}</td>
           <td><span class="pill" style="background:{cat_style["bg"]};color:{cat_style["fg"]};border-radius:8px;line-height:1.5;">{esc(c["category"] or "Uncategorized")}</span></td>
           <td><span class="pill" style="background:{LAYER_STYLE["bg"]};color:{LAYER_STYLE["fg"]};border-radius:8px;line-height:1.5;">Middleware</span></td>
@@ -105,15 +122,18 @@ def build_body(data: dict) -> str:
         </tr>''')
 
     # Dropdown options
-    cat_options  = '<option value="">All categories</option>' + "".join(
+    cat_options   = '<option value="">All categories</option>' + "".join(
         f'<option value="{esc(c)}">{esc(c)}</option>' for c in categories)
-    type_options = '<option value="">All types</option>' + "".join(
+    layer_options = '<option value="">All layers</option>' + "".join(
+        f'<option value="{esc(l)}">{esc(l)}</option>' for l in layers)
+    type_options  = '<option value="">All types</option>' + "".join(
         f'<option value="{esc(t)}">{esc(t)}</option>' for t in tier_labels)
 
     filter_bar = f"""
   <div class="comp-filter-bar">
     <input id="comp-search" type="text" placeholder="Search components" autocomplete="off">
     <select id="comp-cat">{cat_options}</select>
+    <select id="comp-layer">{layer_options}</select>
     <select id="comp-type">{type_options}</select>
     <span id="comp-count" class="comp-count"></span>
   </div>"""
@@ -147,19 +167,22 @@ def build_body(data: dict) -> str:
 (function () {
   const searchEl = document.getElementById('comp-search');
   const catEl    = document.getElementById('comp-cat');
+  const layerEl  = document.getElementById('comp-layer');
   const typeEl   = document.getElementById('comp-type');
   const countEl  = document.getElementById('comp-count');
   const rows     = Array.from(document.querySelectorAll('#comp-tbody tr'));
 
   function filter() {
-    const q    = searchEl.value.trim().toLowerCase();
-    const cat  = catEl.value;
-    const type = typeEl.value;
+    const q     = searchEl.value.trim().toLowerCase();
+    const cat   = catEl.value;
+    const layer = layerEl.value;
+    const type  = typeEl.value;
     let visible = 0;
     rows.forEach(tr => {
-      const show = (!q    || tr.dataset.name.includes(q))
-                && (!cat  || tr.dataset.category === cat)
-                && (!type || tr.dataset.type === type);
+      const show = (!q     || tr.dataset.name.includes(q))
+                && (!cat   || tr.dataset.category === cat)
+                && (!layer || tr.dataset.layer === layer)
+                && (!type  || tr.dataset.type === type);
       tr.style.display = show ? '' : 'none';
       if (show) visible++;
     });
@@ -168,6 +191,7 @@ def build_body(data: dict) -> str:
 
   searchEl.addEventListener('input', filter);
   catEl.addEventListener('change', filter);
+  layerEl.addEventListener('change', filter);
   typeEl.addEventListener('change', filter);
   filter();
 })();
