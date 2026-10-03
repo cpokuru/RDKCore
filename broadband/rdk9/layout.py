@@ -100,7 +100,7 @@ SHARED_CSS = """
     line-height: 1.6; box-sizing: border-box; appearance: none; -webkit-appearance: none;
     padding: 7px 16px; border-radius: 999px; white-space: nowrap; transition: all 0.12s; outline: none;
   }
-  .topnav > nav > a:hover, .nav-group-toggle:hover { background: #4a4f66; color: #fff; }
+  .topnav > nav > a:hover, .topnav > nav > a:hover:not(.active), .nav-group-toggle:hover { background: #4a4f66 !important; color: #fff !important; }
   .topnav > nav > a.active, .nav-group.open .nav-group-toggle, .nav-group-toggle.active {
     background: #38bdf8; color: #04121f; font-weight: 700; box-shadow: none;
   }
@@ -114,6 +114,7 @@ SHARED_CSS = """
     text-decoration: none; white-space: nowrap; border: none; transition: all 0.12s; cursor: pointer;
   }
   .topnav .cta:hover { background: #4a4f66; color: #fff; }
+  .topnav .cta.active { background: #38bdf8; color: #04121f; font-weight: 700; }
 
   /* ---- nav dropdown groups (Standards, North Bound APIs) ---- */
   .nav-group { position: relative; flex: 0 0 auto; }
@@ -634,7 +635,8 @@ def render_topnav(active_id: str, path_prefix: str = "") -> str:
                 # When we ARE the components page, link to self ("."); otherwise
                 # link down into components/ from wherever we are.
                 cta_href = "." if active_id == "components" else path_prefix + COMPONENTS_URL
-                links_html.append(f'<a class="cta" href="{esc(cta_href)}">Core RDK Components ↗</a>')
+                cta_cls = "cta active" if active_id == "components" else "cta"
+                links_html.append(f'<a class="{cta_cls}" href="{esc(cta_href)}">Core RDK Components ↗</a>')
         else:  # "group"
             _, group_id, group_label, children = entry
             child_ids = {c[1] for c in children}

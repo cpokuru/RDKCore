@@ -59,7 +59,7 @@
     line-height: 1.6; box-sizing: border-box; appearance: none; -webkit-appearance: none;
     padding: 7px 16px; border-radius: 999px; white-space: nowrap; transition: all 0.12s; outline: none;
   }
-  .topnav > nav > a:hover, .nav-group-toggle:hover { background: #4a4f66; color: #fff; }
+  .topnav > nav > a:hover, .topnav > nav > a:hover:not(.active), .nav-group-toggle:hover { background: #4a4f66 !important; color: #fff !important; }
   .topnav > nav > a.active, .nav-group.open .nav-group-toggle, .nav-group-toggle.active {
     background: #38bdf8; color: #04121f; font-weight: 700; box-shadow: none;
   }
@@ -73,6 +73,7 @@
     text-decoration: none; white-space: nowrap; border: none; transition: all 0.12s; cursor: pointer;
   }
   .topnav .cta:hover { background: #4a4f66; color: #fff; }
+  .topnav .cta.active { background: #38bdf8; color: #04121f; font-weight: 700; }
 
   /* ---- nav dropdown groups (Standards, North Bound APIs) ---- */
   .nav-group { position: relative; flex: 0 0 auto; }
@@ -438,7 +439,7 @@
     <img src="../RDK-logo.png" alt="RDK-B Core Broadband logo" onerror="this.style.display='none'">
   </div>
   <nav>
-    <a class="" href="../index.html">About Core RDK Broadband</a><a class="cta" href=".">Core RDK Components ↗</a><div class="nav-group ">
+    <a class="" href="../index.html">About Core RDK Broadband</a><a class="cta active" href=".">Core RDK Components ↗</a><div class="nav-group ">
       <button type="button" class="nav-group-toggle ">RDK9 North Bound APIs <span class="caret">&#9662;</span></button>
       <div class="nav-dropdown"><div class="nav-dropdown-inner"><a class="" href="../north-bound-apis.html">RDK9 List of North Bound High Level APIs</a><a class="" href="../north-bound-lowlevel-apis.html">RDK9 List of North Bound Low Level APIs</a></div></div>
     </div><div class="nav-group ">
@@ -520,7 +521,7 @@
 
 <section class="tight-top">
   <p style="color:var(--muted); font-size:0.85rem; margin:0 0 14px;">
-    Schema version: 1.0 &nbsp;|&nbsp; Generated: 2026-10-03T02:22:08Z
+    Schema version: 1.0 &nbsp;|&nbsp; Generated: 2026-10-03T02:28:40Z
   </p>
   <div style="margin-bottom:18px;"><span class="pill" style="background:#fef3c7;color:#92400e">Common Core</span><span class="pill" style="background:#dbeafe;color:#1e40af">Required</span><span class="pill" style="background:#f3f4f6;color:#374151">Optional</span></div>
   
