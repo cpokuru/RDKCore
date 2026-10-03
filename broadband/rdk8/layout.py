@@ -158,7 +158,7 @@ SHARED_CSS = """
   @media (max-width: 1300px) { .hero-visual { flex-basis: 420px; max-width: 420px; } .hero-visual img { max-width: 420px; } }
   @media (max-width: 1000px) { .hero-visual { display: none; } }
 
-  .eyebrow { display: inline-block; font-family: "JetBrains Mono", monospace; font-size: 0.72rem; letter-spacing: 0.09em; text-transform: uppercase; color: #7ec4f2; border: none; background: none; border-radius: 0; padding: 0; margin-bottom: 16px; }
+  .eyebrow { display: inline-block; font-family: "Inter", "Segoe UI", sans-serif; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.10em; text-transform: uppercase; color: #4ab8f5; border: none; background: none; border-radius: 0; padding: 0; margin-bottom: 14px; }
   .hero h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); line-height: 1.06; font-weight: 800; letter-spacing: -0.03em; color: #fff; max-width: 820px; }
   .hero .lede { color: #dce6f5; font-size: 1.08rem; max-width: 640px; margin-top: 16px; }
   .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
