@@ -453,10 +453,10 @@
   }
   .search-row #component-count { font-size: 0.85rem; color: var(--muted); }
   .dml-btn {
-    display: inline-block; padding: 6px 16px; border-radius: 999px; font-size: 0.82rem;
-    font-weight: 600; cursor: pointer; border: none; background: #16305a; color: #fff;
+    display: inline-block; padding: 7px 20px; border-radius: 999px; font-size: 0.88rem;
+    font-weight: 700; cursor: pointer; border: none; background: #e8eef8; color: #2d4eb5;
   }
-  .dml-btn:hover { background: #1e40af; }
+  .dml-btn:hover { background: #d5e0f3; color: #1e3fa0; }
   #dml-panel { margin-top: 20px; }
 
   /* ---- BBF-inspired DML tree styling ---- */
@@ -740,7 +740,7 @@ function renderComponentTable(filterText) {
 function loadDml(name) {
   const { repo, file, branch } = resolveRepoEntry(repoMap[name]);
   const panel = document.getElementById('dml-panel');
-  const url = LOCAL_BASE + repo + '/' + file; // served from docs/hlapis/<repo>/<file>
+  const url = RAW_BASE + repo + '/' + branch + '/' + file;
   panel.innerHTML = `
     <div class="subhead" style="margin-top:0;">${esc(name)} <span class="mono" style="font-weight:400;font-size:0.8rem;color:var(--muted);">// ${esc(repo)}</span></div>
     <p>Loading <code>${esc(url)}</code>…</p>`;

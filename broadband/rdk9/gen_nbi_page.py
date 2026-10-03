@@ -25,7 +25,7 @@ Unlike the other stub pages (gen_stub_pages.py), this one isn't a generic
      the North Bound API surface isn't scoped to one profile, so this list
      isn't either).
   2. Clicking a component with a known DML source fetches
-     https://raw.githubusercontent.com/cpokuru/<repo>/<branch>/<file> and
+     docs/hlapis/<repo>/<file> (local mirror; no network fetch needed) and
      renders it. Which components have a DML source, which repo, which
      branch (defaults to main), and which filename is controlled entirely
      by dml-repos.json — a component's data file doesn't have to be
@@ -56,7 +56,7 @@ SCRIPT = r"""
 <script>
 const COMPONENTS_JSON = 'components/all-components.json';
 const REPO_MAP_JSON = 'dml-repos.json';
-const RAW_BASE = 'https://raw.githubusercontent.com/cpokuru/';
+const LOCAL_BASE = 'docs/hlapis/'; // local mirror — docs/hlapis/<repo>/<file>
 
 function esc(s) {
   const d = document.createElement('div');
@@ -342,10 +342,10 @@ EXTRA_CSS = """
   }
   .search-row #component-count { font-size: 0.85rem; color: var(--muted); }
   .dml-btn {
-    display: inline-block; padding: 6px 16px; border-radius: 999px; font-size: 0.82rem;
-    font-weight: 600; cursor: pointer; border: none; background: #16305a; color: #fff;
+    display: inline-block; padding: 7px 20px; border-radius: 999px; font-size: 0.88rem;
+    font-weight: 700; cursor: pointer; border: none; background: #e8eef8; color: #2d4eb5;
   }
-  .dml-btn:hover { background: #1e40af; }
+  .dml-btn:hover { background: #d5e0f3; color: #1e3fa0; }
   #dml-panel { margin-top: 20px; }
 
   /* ---- BBF-inspired DML tree styling ---- */

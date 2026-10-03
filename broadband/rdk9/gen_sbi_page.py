@@ -52,7 +52,7 @@ from layout import render_hero, render_page
 SCRIPT = r"""
 <script>
 const REPO_MAP_JSON = 'hal-repos.json';
-const RAW_BASE = 'https://raw.githubusercontent.com/cpokuru/';
+const LOCAL_BASE = 'docs/llapis/'; // local mirror — docs/llapis/<repo>/<file>
 
 function esc(s) {
   const d = document.createElement('div');
@@ -194,7 +194,7 @@ function loadHal(name) {
   const repoSlug = typeof raw === 'string' ? raw : raw.repo;
   const { repo, file, branch } = resolveRepoEntry(raw, repoSlug);
   const panel = document.getElementById('hal-panel');
-  const url = RAW_BASE + repo + '/' + branch + '/' + file;
+  const url = LOCAL_BASE + repo + '/' + file; // served from docs/llapis/<repo>/<file>
   panel.innerHTML = `
     <div class="subhead" style="margin-top:0;">${esc(name)} <span class="mono" style="font-weight:400;font-size:0.8rem;color:var(--muted);">// ${esc(repo)}</span></div>
     <p>Loading <code>${esc(url)}</code>…</p>`;
@@ -249,10 +249,10 @@ EXTRA_CSS = """
   }
   .search-row #hal-count { font-size: 0.85rem; color: var(--muted); }
   .dml-btn {
-    display: inline-block; padding: 6px 16px; border-radius: 999px; font-size: 0.82rem;
-    font-weight: 600; cursor: pointer; border: none; background: #16305a; color: #fff;
+    display: inline-block; padding: 7px 20px; border-radius: 999px; font-size: 0.88rem;
+    font-weight: 700; cursor: pointer; border: none; background: #e8eef8; color: #2d4eb5;
   }
-  .dml-btn:hover { background: #1e40af; }
+  .dml-btn:hover { background: #d5e0f3; color: #1e3fa0; }
   #hal-panel { margin-top: 20px; }
 
   /* ---- HAL API card rendering (emit_hal_spec_json.py shape) ---- */

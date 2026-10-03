@@ -249,10 +249,10 @@ EXTRA_CSS = """
   }
   .search-row #hal-count { font-size: 0.85rem; color: var(--muted); }
   .dml-btn {
-    display: inline-block; padding: 6px 16px; border-radius: 999px; font-size: 0.82rem;
-    font-weight: 600; cursor: pointer; border: none; background: #16305a; color: #fff;
+    display: inline-block; padding: 7px 20px; border-radius: 999px; font-size: 0.88rem;
+    font-weight: 700; cursor: pointer; border: none; background: #e8eef8; color: #2d4eb5;
   }
-  .dml-btn:hover { background: #1e40af; }
+  .dml-btn:hover { background: #d5e0f3; color: #1e3fa0; }
   #hal-panel { margin-top: 20px; }
 
   /* ---- HAL API card rendering (emit_hal_spec_json.py shape) ---- */
