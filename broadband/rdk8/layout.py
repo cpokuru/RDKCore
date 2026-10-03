@@ -146,9 +146,9 @@ SHARED_CSS = """
   /* ---- hero ---- */
   .hero {
     background:
-      radial-gradient(ellipse 480px 320px at 12% 10%, rgba(41,182,232,0.22), transparent 60%),
-      radial-gradient(ellipse 420px 320px at 92% 85%, rgba(160,80,220,0.20), transparent 60%),
-      linear-gradient(120deg, #1a3a7a 0%, #2d2080 40%, #4a1a7a 75%, #6b1a5a 100%);
+      radial-gradient(ellipse 480px 320px at 12% 10%, rgba(41,120,232,0.18), transparent 60%),
+      radial-gradient(ellipse 420px 320px at 92% 85%, rgba(100,60,180,0.15), transparent 60%),
+      linear-gradient(120deg, #1a3070 0%, #231c6e 40%, #2e1a62 75%, #3a1a58 100%);
     color: #fff; padding: 68px 44px 52px; position: relative; overflow: hidden;
   }
   .hero-flex { display: flex; align-items: center; gap: 44px; max-width: 1520px; }
