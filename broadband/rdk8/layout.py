@@ -285,7 +285,7 @@ SHARED_CSS = """
   }
   table.def-table th, table.def-table td { text-align: left; padding: 13px 18px; vertical-align: middle; }
   table.def-table thead tr {
-    background: linear-gradient(90deg, #2563eb 0%, #16305a 100%);
+    background: #1a2540;
   }
   table.def-table th {
     font-family: "Inter", "Segoe UI", sans-serif; font-size: 0.74rem; text-transform: uppercase;
@@ -309,11 +309,11 @@ SHARED_CSS = """
   table.def-table td.mono { font-family: "JetBrains Mono", monospace; font-size: 0.84rem; color: var(--muted); font-weight: 400; }
   /* action button inside table cells */
   .def-table .tbl-btn {
-    display: inline-block; padding: 6px 16px; border-radius: 999px; font-size: 0.82rem;
-    font-weight: 600; cursor: pointer; border: none; white-space: nowrap;
-    background: #16305a; color: #fff; text-decoration: none;
+    display: inline-block; padding: 7px 20px; border-radius: 999px; font-size: 0.88rem;
+    font-weight: 700; cursor: pointer; border: none; white-space: nowrap;
+    background: #e8eef8; color: #2d4eb5; text-decoration: none;
   }
-  .def-table .tbl-btn:hover { background: #1e40af; color: #fff; }
+  .def-table .tbl-btn:hover { background: #d5e0f3; color: #1e3fa0; }
   /* category / status pill inside table cells */
   .def-table .tbl-pill {
     display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 0.78rem;
