@@ -159,7 +159,7 @@ SHARED_CSS = """
   @media (max-width: 1000px) { .hero-visual { display: none; } }
 
   .eyebrow { display: inline-block; font-family: "Inter", "Segoe UI", sans-serif; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.10em; text-transform: uppercase; color: #4ab8f5; border: none; background: none; border-radius: 0; padding: 0; margin-bottom: 14px; }
-  .hero h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); line-height: 1.06; font-weight: 800; letter-spacing: -0.03em; color: #fff; max-width: 820px; }
+  .hero h1 { font-size: clamp(2.0rem, 4vw, 3.0rem); line-height: 1.08; font-weight: 800; letter-spacing: -0.02em; color: #fff; max-width: 820px; }
   .hero .lede { color: #dce6f5; font-size: 1.08rem; max-width: 640px; margin-top: 16px; }
   .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
   .badge { display: inline-block; margin: 0 10px 10px 0; font-size: 0.8rem; font-weight: 600; padding: 7px 14px; border-radius: 999px; background: rgba(255,255,255,0.07); color: #dbe4f3; border: 1px solid rgba(255,255,255,0.12); }
