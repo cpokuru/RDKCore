@@ -1,9 +1,11 @@
 """RDKE northbound API list generator."""
 import json
 import re
+from io import BytesIO
 from html import escape
 from build import hero, shell, status_explainer
 from pathlib import Path
+from PIL import Image
 from pypdf import PdfReader
 import pdfplumber
 
@@ -14,10 +16,35 @@ ROOT = Path(__file__).resolve().parent
 API_SPEC_RED = (1.0, 0.92549, 0.92157)
 API_SPEC_GREEN = (0.86275, 1.0, 0.9451)
 
+# These two narrow PDF cells split field names and enum values across individual
+# syllables, so their extracted lines cannot be reconstructed reliably.
+PARAMETER_OVERRIDES = {
+    67: """text - string
+lang - string - BCP 47 - optional
+voice - string - optional
+volume - double - optional
+rate - double - optional
+pitch - double - optional
+pii - bool - optional""",
+    71: """utteranceId - unsigned
+event - enum
+- synthesisStarting
+- playbackStarting
+- paused
+- resumed
+- completed
+- interrupted
+- networkFailed
+- synthesisFailed
+- playbackFailed""",
+}
+
 
 def _dewrap_identifier(value: str) -> str:
     """Join a PDF table cell's hard-wrapped lines back into a single identifier (no inner spaces)."""
     text = "".join(line.strip() for line in str(value or "").splitlines())
+    if text == "mediaRenditionChanged":
+        return text
     # Method cells pair a property getter with its change event, e.g. "name" + "onNameChanged".
     return re.sub(r"(?<!^)(on[A-Z])", r"\n\1", text, count=1)
 
@@ -47,15 +74,27 @@ _MARK_COLUMN_SPLIT_X = 390
 
 def _classify_mark_image(page, image: dict) -> str:
     """Classify a small status icon image as "check" (green) or "cross" (red) by its average color."""
-    bbox = (image["x0"], image["top"], image["x1"], image["bottom"])
-    pixels = page.crop(bbox).to_image(resolution=72).original.convert("RGB")
-    width, height = pixels.size
-    center_x, center_y = width // 2, height // 2
-    samples = [
-        pixels.getpixel((center_x + dx, center_y + dy))
-        for dx in range(-2, 3) for dy in range(-2, 3)
-        if 0 <= center_x + dx < width and 0 <= center_y + dy < height
-    ]
+    try:
+        with Image.open(BytesIO(image["stream"].get_data())).convert("RGB") as pixels:
+            width, height = pixels.size
+            center_x, center_y = width // 2, height // 2
+            samples = [
+                pixels.getpixel((center_x + dx, center_y + dy))
+                for dx in range(-2, 3) for dy in range(-2, 3)
+                if 0 <= center_x + dx < width and 0 <= center_y + dy < height
+            ]
+    except OSError:
+        try:
+            pixels = page.crop((image["x0"], image["top"], image["x1"], image["bottom"])).to_image(resolution=144).original.convert("RGB")
+            width, height = pixels.size
+            center_x, center_y = width // 2, height // 2
+            samples = [
+                pixels.getpixel((center_x + dx, center_y + dy))
+                for dx in range(-4, 5) for dy in range(-4, 5)
+                if 0 <= center_x + dx < width and 0 <= center_y + dy < height
+            ]
+        except (OSError, ValueError):
+            return ""
     red = sum(sample[0] for sample in samples) / len(samples)
     green = sum(sample[1] for sample in samples) / len(samples)
     blue = sum(sample[2] for sample in samples) / len(samples)
@@ -87,6 +126,8 @@ def extract_api_spec_methods(pdf_name: str) -> tuple[list[dict], int]:
     entries: list[dict] = []
     excluded_red = 0
     current: dict | None = None
+    existing_marks = {}
+    existing_marks = {}
     with pdfplumber.open(ROOT / pdf_name) as pdf:
         for page in pdf.pages:
             marks = [
@@ -110,6 +151,9 @@ def extract_api_spec_methods(pdf_name: str) -> tuple[list[dict], int]:
                         bbox = table.rows[row_index].bbox
                         color = _row_highlight(page, bbox)
                         cpp17, js = _row_marks(page, bbox, marks)
+                        saved_cpp17, saved_js = existing_marks.get(int(first), ("", ""))
+                        cpp17 = cpp17 or saved_cpp17
+                        js = js or saved_js
                         current = {"cells": cells, "color": color, "cpp17": cpp17, "js": js}
                         if color == "red":
                             excluded_red += 1
@@ -126,18 +170,19 @@ def extract_api_spec_methods(pdf_name: str) -> tuple[list[dict], int]:
     methods = []
     for entry in entries:
         cells = entry["cells"]
+        method_id = int(cells[0].strip())
         methods.append({
-            "id": int(cells[0].strip()),
+            "id": method_id,
             "component": _dewrap_identifier(cells[1]),
             "name": _dewrap_identifier(cells[2]),
-            "parameters": clean_lines(cells[3]),
+            "parameters": PARAMETER_OVERRIDES.get(method_id, clean_lines(cells[3])),
             "returns": clean_lines(cells[4]),
             "specificErrors": clean_lines(cells[5]),
             "releaseTag": clean_cell(cells[6]),
             "deprecatedReleaseTag": clean_cell(cells[7]),
             "cpp17": entry["cpp17"],
             "js": entry["js"],
-            "description": clean_cell(cells[10]),
+            "description": clean_lines(cells[10]),
         })
     return methods, excluded_red
 
@@ -210,44 +255,175 @@ def _mark_badge(mark: str) -> str:
 
 _FIELD_DECLARATION = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*\s-\s")
 _FIELD_SUBITEM = re.compile(r"^(?:[\[{(\"']|list\b|one\b|true\b|false\b|null\b|\d)", re.IGNORECASE)
+_FIELD_BULLET = re.compile(r"^\s*(?:[-*]|\u2022)\s*(.+)$")
+_LIST_MARKER = re.compile(r"^(?P<indent>\s*)(?P<marker>[-*]|\u2022|\d+\.)\s+(?P<text>.+)$")
+_DESCRIPTION_NUMBERED_ITEM = re.compile(r"^(\d+)\.\s+(.+)$")
+_DESCRIPTION_KEYED_ITEM = re.compile(r"^(.+?)\s-\s(.+)$")
 
 
 def _field_lines(value: str) -> list[str]:
-    lines = [line.strip() for line in str(value or "").splitlines() if line.strip()]
+    lines = [line.rstrip() for line in str(value or "").splitlines() if line.strip()]
     repaired: list[str] = []
-    for line in lines:
-        if repaired and re.match(r"^[A-Za-z]+\s-\s", line) and re.search(r"[A-Za-z]$", repaired[-1]):
-            repaired[-1] += line
+    for raw_line in lines:
+        line = raw_line.strip()
+        previous = repaired[-1] if repaired else ""
+        joined = f"{previous}{line}"
+        if previous.endswith("-"):
+            repaired[-1] = f"{previous} {line}"
+        elif previous and not _FIELD_DECLARATION.match(previous) and (len(previous) >= 8 or any(char.isupper() for char in previous[1:])) and re.match(r"^[A-Za-z_][A-Za-z0-9_]*\s-", joined):
+            repaired[-1] = joined
+        elif previous and not _FIELD_DECLARATION.match(previous) and line.startswith("-") and not _FIELD_BULLET.match(line):
+            repaired[-1] = f"{previous} {line}"
+        elif previous and re.search(r"\b(?:list of|list of (?:one|zero)(?: or)?|one or more|zero or more|or more)$", previous, re.IGNORECASE):
+            repaired[-1] = f"{previous} {line}"
+        elif previous and not _FIELD_DECLARATION.match(line) and line.endswith("-") and re.search(r"-\s[A-Za-z]+$", previous):
+            repaired[-1] = f"{previous}{line}"
         else:
-            repaired.append(line)
+            repaired.append(raw_line if _FIELD_BULLET.match(raw_line) else line)
     return repaired
+
+
+def _list_item(line: str) -> tuple[int, str] | None:
+    """Return a marker's nesting level and text, preserving PDF indentation when present."""
+    marker = _LIST_MARKER.match(line)
+    if not marker:
+        return None
+    indentation = len(marker.group("indent").expandtabs(2))
+    return indentation // 2, marker.group("text")
+
+
+def _render_nested_list(items: list[tuple[int, str]], class_name: str) -> str:
+    """Render marker-delimited items, nesting only when the source indentation increases."""
+    def render(index: int, level: int) -> tuple[str, int]:
+        rendered = []
+        while index < len(items):
+            item_level, text = items[index]
+            if item_level < level:
+                break
+            if item_level > level:
+                nested, index = render(index, item_level)
+                rendered[-1] = rendered[-1][:-5] + nested + "</li>"
+                continue
+            rendered.append(f"<li>{text}</li>")
+            index += 1
+        return f'<ul class="{class_name}">{"".join(rendered)}</ul>', index
+
+    return render(0, items[0][0])[0] if items else ""
 
 
 def _render_field_block(value: str) -> str:
     """Render PDF field declarations as bullets with their value constraints as nested bullets."""
     declarations: list[list[object]] = []
-    for line in _field_lines(value):
+    preamble: list[str] = []
+    lines = _field_lines(value)
+    index = 0
+    while index < len(lines):
+        line = lines[index]
+        bullet = _list_item(line)
         if _FIELD_DECLARATION.match(line):
             declarations.append([line, []])
+        elif bullet and declarations:
+            declarations[-1][1].append(bullet)
+        elif index + 1 < len(lines) and _FIELD_BULLET.match(lines[index + 1]):
+            declarations.append([f"{line} {lines[index + 1]}", []])
+            index += 1
         elif declarations:
-            declaration, details = declarations[-1]
-            if details and not _FIELD_SUBITEM.match(line):
-                details[-1] = f"{details[-1]} {line}"
-            elif _FIELD_SUBITEM.match(line):
-                details.append(line)
+            details = declarations[-1][1]
+            if details:
+                level, text = details[-1]
+                details[-1] = level, f"{text} {line}"
             else:
-                declarations[-1][0] = f"{declaration} {line}"
+                declarations[-1][0] = f"{declarations[-1][0]} {line}"
         else:
-            return f'<span class="api-detail-text">{escape(value or "None")}</span>'
+            preamble.append(line)
+        index += 1
     if not declarations:
         return '<span class="api-detail-text">None</span>'
     rendered = []
     for declaration, details in declarations:
         detail_html = ""
         if details:
-            detail_html = '<ul class="api-detail-sublist">' + "".join(f"<li>{escape(detail)}</li>" for detail in details) + "</ul>"
+            detail_html = _render_nested_list(
+                [(level, escape(text)) for level, text in details], "api-detail-sublist"
+            )
         rendered.append(f"<li>{escape(declaration)}{detail_html}</li>")
-    return '<ul class="api-detail-list">' + "".join(rendered) + "</ul>"
+    intro = f'<span class="api-detail-text">{escape(" ".join(preamble))}</span>' if preamble else ""
+    return intro + '<ul class="api-detail-list">' + "".join(rendered) + "</ul>"
+
+
+def _render_description(value: str) -> str:
+    """Render description paragraphs and categorized lists without PDF line-wrap artifacts."""
+    blocks: list[tuple[str, str, list[tuple[int, str, str]]]] = []
+    paragraph = ""
+    category = ""
+    items: list[tuple[int, str, str]] = []
+
+    def item_parts(line: str) -> tuple[int, str, str] | None:
+        numbered = _DESCRIPTION_NUMBERED_ITEM.match(line)
+        if numbered:
+            return 0, f"{numbered.group(1)}.", numbered.group(2)
+        bullet = _list_item(line)
+        if bullet:
+            level, text = bullet
+            return level, "", text
+        keyed = _DESCRIPTION_KEYED_ITEM.match(line)
+        if keyed:
+            return 0, keyed.group(1), keyed.group(2)
+        return None
+
+    def flush_paragraph() -> None:
+        nonlocal paragraph
+        if paragraph:
+            blocks.append(("paragraph", paragraph, []))
+            paragraph = ""
+
+    def flush_items() -> None:
+        nonlocal category, items
+        if items:
+            blocks.append(("list", category, items))
+            category = ""
+            items = []
+
+    lines = [line.strip() for line in str(value or "").splitlines() if line.strip()]
+    index = 0
+    while index < len(lines):
+        line = lines[index]
+        item = item_parts(line)
+        next_item = item_parts(lines[index + 1]) if index + 1 < len(lines) else None
+        if not item and next_item and not line.endswith((".", "!", "?", ":")):
+            flush_paragraph()
+            flush_items()
+            category = line
+        elif item:
+            flush_paragraph()
+            items.append(item)
+        elif items:
+            level, name, description = items[-1]
+            items[-1] = level, name, f"{description} {line}"
+        else:
+            paragraph = f"{paragraph} {line}".strip()
+            if line.endswith((".", "!", "?", ":")):
+                flush_paragraph()
+        index += 1
+    flush_items()
+    flush_paragraph()
+
+    rendered = []
+    for kind, text, block_items in blocks:
+        if kind == "paragraph":
+            rendered.append(f'<p class="spec-entry-overview">{escape(text)}</p>')
+            continue
+        list_items = [
+            (
+                level,
+                f"<strong>{escape(name)}</strong> - {escape(description)}"
+                if name else escape(description),
+            )
+            for level, name, description in block_items
+        ]
+        heading = f'<h3 class="spec-entry-event-category">{escape(text)}</h3>' if text else ""
+        rendered.append(f'{heading}{_render_nested_list(list_items, "spec-entry-overview api-detail-list")}')
+    return "".join(rendered)
 
 
 def render_northbound_templates(methods: list[dict]) -> str:
@@ -257,7 +433,7 @@ def render_northbound_templates(methods: list[dict]) -> str:
         slug = f"api-{method['id']}"
         meta_pills = [f'<span class="pill">API version {escape(method["releaseTag"])}</span>']
         if method["deprecatedReleaseTag"]:
-            meta_pills.append(f'<span class="pill warn">Deprecated in {escape(method["deprecatedReleaseTag"])}</span>')
+            meta_pills.append(f'<span class="pill warn">To be deprecated (post RDK9): {escape(method["deprecatedReleaseTag"])}</span>')
         templates_html.append(
             f'<template id="tmpl-{slug}"><section class="spec-entry">'
             f'<div class="spec-entry-head"><span class="spec-entry-eyebrow">Module</span><h2>{escape(method["component"])}</h2></div>'
@@ -271,7 +447,7 @@ def render_northbound_templates(methods: list[dict]) -> str:
             f'<div class="api-detail-row"><dt>Returns</dt><dd>{_render_field_block(method["returns"])}</dd></div>'
             f'<div class="api-detail-row"><dt>Specific errors</dt><dd>{_render_field_block(method["specificErrors"])}</dd></div>'
             '</dl>'
-            f'<p class="spec-entry-overview">{escape(method["description"])}</p>'
+            f'{_render_description(method["description"])}'
             '</section></template>'
         )
     return "".join(templates_html)
@@ -305,16 +481,37 @@ def render_reference_section(terms: list[tuple[str, str]], types: list[tuple[str
     )
 
 
+def _render_key_code_table(headers: list[str], rows: list[list[str]], template_prefix: str) -> str:
+    visible_headers = headers[:3] + ["View details"]
+    rows_html = []
+    templates = []
+    for index, values in enumerate(rows):
+        template_id = f"{template_prefix}-{index}"
+        detail_rows = "".join(
+            f"<tr><th>{escape(header)}</th><td>{escape(value)}</td></tr>"
+            for header, value in zip(headers, values)
+        )
+        rows_html.append(
+            "<tr>"
+            + "".join(f"<td>{escape(value)}</td>" for value in values[:3])
+            + f'<td><a class="pill allowed-action spec-modal-trigger" href="#{template_id}" data-modal-target="{template_id}">View details</a></td></tr>'
+        )
+        templates.append(
+            f'<template id="{template_id}"><section class="spec-entry"><div class="spec-entry-head">'
+            f'<span class="spec-entry-eyebrow">Key code details</span><h2>{escape(values[0])}</h2></div>'
+            f'<div class="spec-table-wrap key-code-detail-table"><table class="spec-table"><tbody>{detail_rows}</tbody></table></div>'
+            "</section></template>"
+        )
+    header_html = "".join(f"<th>{escape(header)}</th>" for header in visible_headers)
+    return (
+        f'<div class="key-codes-table"><div class="spec-table-wrap"><table class="spec-table"><thead><tr>{header_html}</tr></thead>'
+        f'<tbody>{"".join(rows_html)}</tbody></table></div></div>{"".join(templates)}'
+    )
+
+
 def build_northbound() -> None:
     pdf_name = "Firebolt 9 API Specifications.pdf"
     methods, excluded_red = extract_api_spec_methods(pdf_name)
-    json_path = ROOT / "northbound-apis.json"
-    json_path.write_text(json.dumps({
-        "schemaVersion": "1.0",
-        "status": "Draft: the Northbound API list is evolving and will be published.",
-        "apis": methods,
-    }, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
-
     modules = sorted({method["component"] for method in methods})
     deprecated_count = sum(1 for method in methods if method["deprecatedReleaseTag"])
     row_data = [
@@ -330,11 +527,11 @@ def build_northbound() -> None:
 
     body = hero(
         "Firebolt 9",
-        "Northbound API Specifications",
+        "Firebolt Core API Specification",
         "Standardized APIs the middleware exposes upward to the application layer, giving apps consistent access to device capabilities via Thunder and Firebolt.",
         status="Draft",
     )
-    notice = '<strong>Note</strong><br>This page contains an evolving list of Northbound API components. The current list is a draft and will continue to be updated.'
+    notice = '<strong>Note</strong><br>This page contains an evolving list of Firebolt Core API components for RDK9.'
     body += (
         '<section class="section">'
         f'<div class="notice" style="margin:0 0 24px">{notice}</div>'
@@ -343,7 +540,7 @@ def build_northbound() -> None:
         f'{"".join(f"<option>{escape(module)}</option>" for module in modules)}</select></div>'
         f'{render_reference_section(extract_interpretation_terms(pdf_name), extract_types(pdf_name), extract_error_values(pdf_name))}'
         '<div class="table-wrap" style="margin-top:24px"><table><thead><tr>'
-        '<th>Module</th><th>Method</th><th>Version</th><th>Deprecated API</th><th>Details</th>'
+        '<th>Module</th><th>Method</th><th>Version</th><th>To be deprecated (post RDK9)</th><th>Details</th>'
         '</tr></thead><tbody id="northbound-rows"></tbody></table></div>'
         '</section>'
         f'{render_northbound_templates(methods)}'
@@ -373,7 +570,7 @@ def build_northbound() -> None:
     )
     body += SPEC_MODAL_SCRIPT
     footer = f'Source file: <a href="{escape(pdf_name)}" target="_blank" rel="noopener">{escape(pdf_name)}</a>'
-    (ROOT / "northbound-apis.html").write_text(shell("Northbound API Specifications | RDKE", "northbound", body, footer), encoding="utf-8")
+    (ROOT / "northbound-apis.html").write_text(shell("Firebolt Core API Specification | RDKE", "northbound", body, footer), encoding="utf-8")
 
     build_app_actions()
     build_intents()
@@ -450,7 +647,6 @@ def render_spec_table(headers: list[str], rows: list[list[str]], code_column: in
         body_rows.append("<tr>" + "".join(cells) + "</tr>")
     wrap_class = "spec-table-wrap nested" if nested else "spec-table-wrap"
     return f'<div class="{wrap_class}"><table class="spec-table"><thead><tr>{header_html}</tr></thead><tbody>{"".join(body_rows)}</tbody></table></div>'
-
 
 def render_spec_toc(groups: list[tuple[str, str]]) -> str:
     groups_html = "".join(
@@ -542,7 +738,7 @@ def build_app_actions() -> None:
 
     format_rows = data_rows(page_tables[0][1])
     action_type_pills = "".join(
-        f'<a class="allowed-action spec-modal-trigger" href="#app-action-{escape(action_type)}" '
+        f'<a class="pill allowed-action spec-modal-trigger" href="#app-action-{escape(action_type)}" '
         f'data-modal-target="app-action-{escape(action_type)}" title="Open {escape(name)}">{escape(action_type)}</a>'
         for name, action_type in action_types
     )
@@ -675,7 +871,7 @@ def build_intents() -> None:
         f'<th>Type</th><th>Mandatory</th><th>Allowed values</th><th>Description</th></tr></thead><tbody>{context_html}</tbody></table></div>'
     )
     action_values = "".join(
-        f'<a class="allowed-action spec-modal-trigger" href="#intent-{escape(action.removesuffix(" action type").lower())}" '
+        f'<a class="pill allowed-action spec-modal-trigger" href="#intent-{escape(action.removesuffix(" action type").lower())}" '
         f'data-modal-target="intent-{escape(action.removesuffix(" action type").lower())}" title="Open {escape(action)}">{escape(action.removesuffix(" action type").lower())}</a>'
         for action in action_types
     )
@@ -925,8 +1121,8 @@ def build_key_codes() -> None:
         cleaned_row[2] = clean_linux_key_codes(row[2])
         (partner_rows if in_partner else standard_rows).append(cleaned_row)
 
-    standard_table = f'<div class="key-codes-table">{render_spec_table(headers, standard_rows)}</div>'
-    partner_table = f'<div class="key-codes-table">{render_spec_table(headers, partner_rows)}</div>'
+    standard_table = _render_key_code_table(headers, standard_rows, "standard-key")
+    partner_table = _render_key_code_table(headers, partner_rows, "partner-key")
 
     body = hero(
         "Firebolt 9",
@@ -941,6 +1137,8 @@ def build_key_codes() -> None:
         f'<p>{escape(partner_intro)}</p>{partner_table}'
         f'<p class="lede" style="margin-top:16px">{escape(closing_note)}</p>'
         '</section>'
+        '<div class="spec-modal" id="spec-modal" aria-hidden="true"><div class="spec-modal-backdrop" data-modal-close></div><div class="spec-modal-dialog" role="dialog" aria-modal="true"><button type="button" class="spec-modal-close" data-modal-close aria-label="Close">&times;</button><div class="spec-modal-body" id="spec-modal-body"></div></div></div>'
+        '<script>(function(){const modal=document.getElementById("spec-modal"),body=document.getElementById("spec-modal-body");if(!modal)return;function closeModal(){modal.classList.remove("open");modal.setAttribute("aria-hidden","true");document.body.style.overflow=""}document.addEventListener("click",event=>{const trigger=event.target.closest(".spec-modal-trigger");if(!trigger)return;event.preventDefault();const template=document.getElementById(trigger.dataset.modalTarget);if(!template)return;body.innerHTML="";body.appendChild(template.content.cloneNode(true));modal.classList.add("open");modal.setAttribute("aria-hidden","false");document.body.style.overflow="hidden"});modal.querySelectorAll("[data-modal-close]").forEach(element=>element.addEventListener("click",closeModal));document.addEventListener("keydown",event=>{if(event.key==="Escape")closeModal()})})()</script>'
         '</section>'
     )
     footer = f'Source file: <a href="{escape(pdf_name)}" target="_blank" rel="noopener">{escape(pdf_name)}</a>'

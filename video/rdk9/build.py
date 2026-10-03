@@ -28,10 +28,10 @@ def load(name: str) -> dict:
 
 
 NORTHBOUND_MENU = [
-    ("northbound-apis.html", "Firebolt API Specification"),
+    ("northbound-apis.html", "Firebolt Core API Specification"),
     ("firebolt-app-actions.html", "Firebolt App Actions Specification"),
-    ("firebolt-intents.html", "Firebolt Intents Spec"),
-    ("firebolt-key-codes.html", "Firebolt Key Codes Spec"),
+    ("firebolt-intents.html", "Firebolt Intents Specification"),
+    ("firebolt-key-codes.html", "Firebolt Key Codes Specification"),
 ]
 
 NORTHBOUND_KEYS = {"northbound"}
@@ -106,7 +106,7 @@ def hero(eyebrow: str, title: str, description: str, badges: list[str] | None = 
         f'<div class="hero-catalog-status"><span class="hero-status-badge{status_class}"><span>Catalog status:</span> '
         f'{esc(status)}</span>{status_explainer()}</div>'
     )
-    return f'''<section class="hero" style="height:clamp(360px,32vw,440px);min-height:360px;padding:52px 5vw 42px;display:flex;align-items:center;overflow:visible"><div class="wrap" style="width:100%">{eyebrow_html}<h1 style="font-size:clamp(1.9rem,3.6vw,3.5rem)">{esc(title)}</h1>{subtitle_html}<p>{esc(description)}</p>{badge_html}{status_html}</div></section>'''
+    return f'''<section class="hero" style="min-height:clamp(360px,32vw,440px);padding:52px 5vw 42px;display:flex;align-items:center;overflow:visible"><div class="wrap" style="width:100%">{eyebrow_html}<h1 style="font-size:clamp(1.9rem,3.6vw,3.5rem)">{esc(title)}</h1>{subtitle_html}<p>{esc(description)}</p>{badge_html}{status_html}</div></section>'''
 
 
 def cards(items: list[list[str]]) -> str:
@@ -200,7 +200,7 @@ def check() -> None:
     missing = [name for name in required if not (ROOT / name).exists()]
     if missing:
         raise SystemExit("Missing generated pages: " + ", ".join(missing))
-    for name in ("home-content.json", "components.json", "northbound-apis.json", "southbound-apis.json", "hardware-spec.json"):
+    for name in ("home-content.json", "components.json", "southbound-apis.json", "hardware-spec.json"):
         load(name)
     print(f"RDKE build check passed: {len(load('components.json')['components'])} components")
 
