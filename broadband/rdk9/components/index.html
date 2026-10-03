@@ -511,31 +511,32 @@
 
 <style>
   .comp-filter-bar {
-    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
-    margin-bottom: 12px;
+    display: flex; align-items: center; gap: 8px;
+    margin-bottom: 12px; width: 100%;
   }
   .comp-filter-bar input {
-    padding: 7px 12px; border: 1px solid var(--border); border-radius: 6px;
-    font-family: inherit; font-size: 0.88rem; width: 160px;
+    flex: 2; min-width: 0;
+    padding: 9px 14px; border: 1px solid var(--border); border-radius: 6px;
+    font-family: inherit; font-size: 0.9rem;
     transition: border-color 0.15s;
   }
   .comp-filter-bar input:focus { outline: none; border-color: var(--middleware); }
   .comp-filter-bar select {
-    padding: 7px 28px 7px 10px; border: 1px solid var(--border); border-radius: 6px;
-    font-family: inherit; font-size: 0.88rem; background: #fff;
+    flex: 1; min-width: 0;
+    padding: 9px 28px 9px 12px; border: 1px solid var(--border); border-radius: 6px;
+    font-family: inherit; font-size: 0.9rem; background: #fff;
     appearance: none; -webkit-appearance: none;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235b6472' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
     background-repeat: no-repeat; background-position: right 10px center;
     cursor: pointer; transition: border-color 0.15s;
-    max-width: 160px; overflow: hidden; text-overflow: ellipsis;
   }
   .comp-filter-bar select:focus { outline: none; border-color: var(--middleware); }
-  .comp-count { font-size: 0.84rem; color: var(--muted); margin-left: 2px; }
+  .comp-count { font-size: 0.84rem; color: var(--muted); white-space: nowrap; margin-left: 4px; }
 </style>
 
 <section class="tight-top">
   <p style="color:var(--muted); font-size:0.85rem; margin:0 0 14px;">
-    Schema version: 1.0 &nbsp;|&nbsp; Generated: 2026-10-03T05:33:51Z
+    Schema version: 1.0 &nbsp;|&nbsp; Generated: 2026-10-03T05:39:35Z
   </p>
   <div style="margin-bottom:18px;"><span class="pill" style="background:#fef3c7;color:#92400e">Common Core</span><span class="pill" style="background:#dbeafe;color:#1e40af">Required</span><span class="pill" style="background:#f3f4f6;color:#374151">Optional</span></div>
   
