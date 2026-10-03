@@ -284,10 +284,13 @@ SHARED_CSS = """
     overflow: hidden; box-shadow: var(--shadow-sm);
   }
   table.def-table th, table.def-table td { text-align: left; padding: 13px 18px; vertical-align: middle; }
+  table.def-table thead tr {
+    background: linear-gradient(90deg, #2563eb 0%, #16305a 100%);
+  }
   table.def-table th {
     font-family: "Inter", "Segoe UI", sans-serif; font-size: 0.74rem; text-transform: uppercase;
     letter-spacing: 0.07em; font-weight: 700; color: #fff;
-    background: linear-gradient(90deg, #2563eb 0%, #16305a 100%);
+    background: transparent;
     border-bottom: none;
   }
   table.def-table th:first-child { border-top-left-radius: 12px; }

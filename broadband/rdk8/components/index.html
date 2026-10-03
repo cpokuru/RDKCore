@@ -243,10 +243,13 @@
     overflow: hidden; box-shadow: var(--shadow-sm);
   }
   table.def-table th, table.def-table td { text-align: left; padding: 13px 18px; vertical-align: middle; }
+  table.def-table thead tr {
+    background: linear-gradient(90deg, #2563eb 0%, #16305a 100%);
+  }
   table.def-table th {
     font-family: "Inter", "Segoe UI", sans-serif; font-size: 0.74rem; text-transform: uppercase;
     letter-spacing: 0.07em; font-weight: 700; color: #fff;
-    background: linear-gradient(90deg, #2563eb 0%, #16305a 100%);
+    background: transparent;
     border-bottom: none;
   }
   table.def-table th:first-child { border-top-left-radius: 12px; }
@@ -531,7 +534,7 @@
 
 <section class="tight-top">
   <p style="color:var(--muted); font-size:0.85rem; margin:0 0 14px;">
-    Schema version: 1.0 &nbsp;|&nbsp; Generated: 2026-10-03T03:54:35Z
+    Schema version: 1.0 &nbsp;|&nbsp; Generated: 2026-10-03T04:03:33Z
   </p>
   <div style="margin-bottom:18px;"><span class="pill" style="background:#fef3c7;color:#92400e">Common Core</span><span class="pill" style="background:#dbeafe;color:#1e40af">Required</span><span class="pill" style="background:#f3f4f6;color:#374151">Optional</span></div>
   
