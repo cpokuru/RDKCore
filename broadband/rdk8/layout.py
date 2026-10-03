@@ -93,28 +93,22 @@ SHARED_CSS = """
      this one pill style so the whole bar reads as one consistent design
      echoing the "Core RDK Components" CTA's blue, instead of a mix of plain
      text and boxes. */
-  .topnav > nav > a, .nav-group-toggle {
-    display: flex; align-items: center; gap: 5px; cursor: pointer;
+  .topnav > nav > a, .topnav > nav > a.cta, .nav-group-toggle {
+    display: inline-flex; align-items: center; gap: 5px; cursor: pointer;
     background: #2a2d3a; border: none;
     font-family: inherit; color: #d1d5e0; text-decoration: none; font-size: 0.82rem; font-weight: 500;
     line-height: 1.6; box-sizing: border-box; appearance: none; -webkit-appearance: none;
-    padding: 7px 16px; border-radius: 999px; white-space: nowrap; transition: all 0.12s; outline: none;
+    padding: 7px 16px; border-radius: 999px; white-space: nowrap; transition: background 0.15s, color 0.15s; outline: none;
   }
-  .topnav > nav > a:hover, .topnav > nav > a:hover:not(.active), .nav-group-toggle:hover { background: #4a4f66 !important; color: #fff !important; }
-  .topnav > nav > a.active, .nav-group.open .nav-group-toggle, .nav-group-toggle.active {
-    background: #38bdf8; color: #04121f; font-weight: 700; box-shadow: none;
+  .topnav > nav > a:hover, .topnav > nav > a.cta:hover, .nav-group-toggle:hover {
+    background: #4a4f66; color: #ffffff;
   }
-  .topnav > nav > a .ext-arrow { font-size: 0.78em; color: #e6ebff; }
-  .topnav > nav > a:focus-visible, .nav-group-toggle:focus-visible {
-    outline: none; box-shadow: 0 0 0 3px rgba(255,255,255,0.55); color: #fff;
+  .topnav > nav > a.active, .topnav > nav > a.cta.active, .nav-group.open .nav-group-toggle, .nav-group-toggle.active {
+    background: #38bdf8; color: #04121f; font-weight: 700;
   }
-  .topnav .cta {
-    flex: 0 0 auto; background: #2a2d3a; color: #d1d5e0;
-    font-size: 0.82rem; font-weight: 500; padding: 7px 16px; border-radius: 999px;
-    text-decoration: none; white-space: nowrap; border: none; transition: all 0.12s; cursor: pointer;
+  .topnav > nav > a:focus-visible, .topnav > nav > a.cta:focus-visible, .nav-group-toggle:focus-visible {
+    outline: 2px solid #38bdf8; outline-offset: 2px;
   }
-  .topnav .cta:hover { background: #4a4f66; color: #fff; }
-  .topnav .cta.active { background: #38bdf8; color: #04121f; font-weight: 700; }
 
   /* ---- nav dropdown groups (Standards, North Bound APIs) ---- */
   .nav-group { position: relative; flex: 0 0 auto; }
