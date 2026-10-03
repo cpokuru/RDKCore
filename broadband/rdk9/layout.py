@@ -515,13 +515,14 @@ def render_hero(eyebrow: str, title: str, lede: str, badges_html: str = "", comp
     pad = "48px 40px 40px" if compact else "64px 40px 48px"
     title_style = ""  # font-size controlled by CSS .hero h1 for all pages
     badges = f'<div class="badge-row">{badges_html}</div>' if badges_html else ""
+    eyebrow_html = f'<span class="eyebrow">{esc(eyebrow)}</span>' if eyebrow else ""
     image_path = HERO_IMAGES.get(visual_key)
     visual = f'<div class="hero-visual"><img src="{esc(image_path)}" alt=""></div>' if image_path else ""
     return f'''
 <div class="hero" style="padding:{pad};">
   <div class="hero-flex">
     <div class="hero-inner">
-      <span class="eyebrow">{esc(eyebrow)}</span>
+      {eyebrow_html}
       <h1{title_style}>{esc(title)}</h1>
       <p class="lede">{esc(lede)}</p>
       {badges}

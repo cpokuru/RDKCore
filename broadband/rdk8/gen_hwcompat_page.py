@@ -42,7 +42,7 @@ def build_page(profiles_dir: Path, repo_root: Path | None = None) -> str:
     del profiles_dir, repo_root
 
     body = render_hero(
-        "Reference Hardware",
+        "",
         "Hardware specifications",
         (
             "Minimum CPU, RAM, flash, and required peripheral hardware per "
