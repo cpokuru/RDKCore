@@ -39,14 +39,14 @@ COMPONENTS_URL = "components/"
 NAV_LINKS = [
     ("link", "about", "About Core RDK Broadband", "index.html", False),
 
-    ("group", "nbi-group", "RDK8 North Bound APIs", [
-        ("link", "nbi", "RDK8 List of North Bound High Level APIs", "north-bound-apis.html", False),
-        ("link", "nbi-lowlevel", "RDK8 List of North Bound Low Level APIs", "north-bound-lowlevel-apis.html", False),
+    ("group", "nbi-group", "RDK9 North Bound APIs", [
+        ("link", "nbi", "RDK9 List of North Bound High Level APIs", "north-bound-apis.html", False),
+        ("link", "nbi-lowlevel", "RDK9 List of North Bound Low Level APIs", "north-bound-lowlevel-apis.html", False),
     ]),
-    ("group", "sbi-group", "RDK8 South Bound APIs", [
-        ("link", "sbi", "RDK8 List of South Bound APIs", "south-bound-apis.html", False),
+    ("group", "sbi-group", "RDK9 South Bound APIs", [
+        ("link", "sbi", "RDK9 List of South Bound APIs", "south-bound-apis.html", False),
     ]),
-    ("link", "hwcompat", "RDK8 Hardware Compatibility", "hardware-compatibility.html", False),
+    ("link", "hwcompat", "RDK9 Hardware Compatibility", "hardware-compatibility.html", False),
     ("link", "components", "Core RDK Components", COMPONENTS_URL, True),
 ]
 
@@ -102,7 +102,7 @@ SHARED_CSS = """
   }
   .topnav > nav > a:hover, .nav-group-toggle:hover { filter: brightness(1.12); }
   .topnav > nav > a.active, .nav-group.open .nav-group-toggle, .nav-group-toggle.active {
-    box-shadow: 0 0 0 2px rgba(255,255,255,0.6) inset; font-weight: 700;
+    background: #38bdf8; color: #fff; font-weight: 700; box-shadow: none;
   }
   .topnav > nav > a .ext-arrow { font-size: 0.78em; color: #e6ebff; }
   .topnav > nav > a:focus-visible, .nav-group-toggle:focus-visible {
