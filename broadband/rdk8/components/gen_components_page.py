@@ -113,11 +113,13 @@ def build_body(data: dict) -> str:
         else:
             url_cell = '<span class="muted">—</span>'
         # data-* attrs drive JS filtering; layer is always Middleware
+        version = esc(c.get("version") or "rdk8")
         rows_html.append(f'''<tr data-name="{esc(c["name"].lower())}" data-category="{esc(c["category"] or "Uncategorized")}" data-layer="Middleware" data-type="{esc(tier["label"])}">
           <td>{esc(c["name"])}</td>
           <td><span class="pill" style="background:{cat_style["bg"]};color:{cat_style["fg"]};border-radius:8px;line-height:1.5;">{esc(c["category"] or "Uncategorized")}</span></td>
           <td><span class="pill" style="background:{LAYER_STYLE["bg"]};color:{LAYER_STYLE["fg"]};border-radius:8px;line-height:1.5;">Middleware</span></td>
           <td><span class="pill" style="background:{tier_style["bg"]};color:{tier_style["fg"]}">{esc(tier["label"])}</span></td>
+          <td><span class="pill" style="background:#f0f9ff;color:#0369a1;border-radius:8px;line-height:1.5;font-family:monospace;font-size:0.82rem;">{version}</span></td>
           <td>{url_cell}</td>
         </tr>''')
 
@@ -212,7 +214,7 @@ def build_body(data: dict) -> str:
   <div style="margin-bottom:18px;">{legend_html}</div>
   {filter_bar}
   <table class="def-table">
-    <thead><tr><th>Name</th><th>Category</th><th>Layer</th><th>Type</th><th>Repositories</th></tr></thead>
+    <thead><tr><th>Name</th><th>Category</th><th>Layer</th><th>Type</th><th>Version</th><th>Repositories</th></tr></thead>
     <tbody id="comp-tbody">{"".join(rows_html)}</tbody>
   </table>
   <p style="margin-top:18px; font-size:0.86rem;">
