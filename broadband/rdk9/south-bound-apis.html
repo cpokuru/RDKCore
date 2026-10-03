@@ -452,6 +452,11 @@
     font-family: inherit; font-size: 0.9rem;
   }
   .search-row #hal-count { font-size: 0.85rem; color: var(--muted); white-space: nowrap; margin-left: 4px; }
+  .ver-pill {
+    display: inline-block; padding: 3px 10px; border-radius: 8px; font-size: 0.82rem;
+    font-family: monospace; background: #f0f9ff; color: #0369a1; line-height: 1.5;
+  }
+  .ver-pill-tbd { background: #f3f4f6; color: #9ca3af; }
   .dml-btn {
     display: inline-block; padding: 7px 20px; border-radius: 999px; font-size: 0.88rem;
     font-weight: 700; cursor: pointer; border: none; background: #e8eef8; color: #2d4eb5;
@@ -617,12 +622,17 @@ let repoMap = {};
 
 function halRowHtml(name) {
   const repoEntry = repoMap[name];
-  const action = repoEntry
+  const isTbd = !repoEntry || repoEntry.repo === 'TBD';
+  const version = isTbd ? 'TBD' : (repoEntry.branch || 'main');
+  const versionPill = isTbd
+    ? `<span class="ver-pill ver-pill-tbd">${esc(version)}</span>`
+    : `<span class="ver-pill">${esc(version)}</span>`;
+  const action = !isTbd
     ? `<button class="dml-btn" data-name="${esc(name)}">View HAL APIs</button>`
     : `<span class="muted" style="font-size:0.85rem;">Not available yet</span>`;
   return `<tr>
     <td>${esc(name)}</td>
-    <td class="mono" style="font-size:0.82rem;color:var(--muted);">${esc(repoEntry ? (repoEntry.repo || repoEntry) : '')}</td>
+    <td>${versionPill}</td>
     <td>${action}</td>
   </tr>`;
 }
@@ -758,7 +768,7 @@ fetch(REPO_MAP_JSON, { cache: 'no-store' })
       <span id="hal-count" class="mono"></span>
     </div>
     <table class="def-table">
-      <thead><tr><th>HAL Interface</th><th>Repo</th><th>APIs</th></tr></thead>
+      <thead><tr><th>HAL Interface</th><th>Version</th><th>APIs</th></tr></thead>
       <tbody id="hal-table-body">
         <tr><td colspan="3">Loading HAL interfaces…</td></tr>
       </tbody>
