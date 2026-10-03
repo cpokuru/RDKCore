@@ -443,7 +443,7 @@
   .contact-status.err { color: #b91c1c; }
   .contact-mailto { display: block; text-align: center; font-size: 0.76rem; color: var(--muted); margin-top: 10px; }
 </style>
-<title>RDK8 North Bound Low Level APIs — RDK-B Core Broadband</title>
+<title>North Bound Low Level APIs — RDK-B Core Broadband</title>
 
 <style>
   /* ---- IPC matrix table ---- */
@@ -453,10 +453,13 @@
     border: 1px solid var(--border); border-radius: 12px;
     overflow: hidden; box-shadow: var(--shadow-sm);
   }
+  table.ipc-table thead tr {
+    background: #1a2540;
+  }
   table.ipc-table th {
-    font-family: "Space Grotesk", sans-serif; font-size: 0.78rem;
-    text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; color: #fff;
-    background: linear-gradient(90deg, var(--hal), var(--middleware));
+    font-family: "Inter", "Segoe UI", sans-serif; font-size: 0.74rem;
+    text-transform: uppercase; letter-spacing: 0.07em; font-weight: 700; color: #fff;
+    background: transparent;
     padding: 14px 18px; text-align: left; border-bottom: none;
   }
   table.ipc-table th:first-child { border-top-left-radius: 12px; }
@@ -645,9 +648,6 @@
         Formats available: <code>html</code>&nbsp;<code>latex</code>&nbsp;<code>xml</code>
       </p>
     </div>
-
-  </div>
-      </div>
 
   </div>
 
