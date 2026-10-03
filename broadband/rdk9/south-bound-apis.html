@@ -242,28 +242,44 @@
     font-size: 0.92rem; border: 1px solid var(--border); border-radius: 12px;
     overflow: hidden; box-shadow: var(--shadow-sm);
   }
-  table.def-table th, table.def-table td { text-align: left; padding: 14px 18px; vertical-align: top; }
+  table.def-table th, table.def-table td { text-align: left; padding: 13px 18px; vertical-align: middle; }
   table.def-table th {
-    font-family: "Space Grotesk", sans-serif; font-size: 0.78rem; text-transform: uppercase;
-    letter-spacing: 0.06em; font-weight: 700; color: #fff;
-    background: linear-gradient(90deg, var(--hal), var(--middleware));
+    font-family: "Inter", "Segoe UI", sans-serif; font-size: 0.74rem; text-transform: uppercase;
+    letter-spacing: 0.07em; font-weight: 700; color: #fff;
+    background: linear-gradient(90deg, #2563eb 0%, #16305a 100%);
     border-bottom: none;
   }
   table.def-table th:first-child { border-top-left-radius: 12px; }
   table.def-table th:last-child { border-top-right-radius: 12px; }
   table.def-table tbody tr { border-bottom: 1px solid var(--border); }
   table.def-table tbody tr:last-child { border-bottom: none; }
-  table.def-table tbody tr:nth-child(odd) { background: #fbfcff; }
+  table.def-table tbody tr:nth-child(odd) { background: #fafbff; }
   table.def-table tbody tr:nth-child(even) { background: #fff; }
-  table.def-table tbody tr:hover { background: var(--cloud-bg); }
-  table.def-table td { color: var(--muted); line-height: 1.65; border-right: 1px solid var(--border); }
+  table.def-table tbody tr:hover { background: #f0f4ff; }
+  table.def-table td { color: var(--ink); line-height: 1.6; border-right: 1px solid var(--border); }
   table.def-table td:last-child { border-right: none; }
   table.def-table td:first-child {
-    color: var(--ink); font-weight: 700; font-family: "Space Grotesk", sans-serif;
-    font-size: 0.94rem; border-left: 3px solid var(--rdk-blue); background: rgba(41,182,232,0.04);
-    width: 26%; min-width: 200px;
+    color: var(--ink); font-weight: 700; font-family: "Inter", "Segoe UI", sans-serif;
+    font-size: 0.92rem; width: 26%; min-width: 180px;
   }
-  table.def-table td.mono { color: var(--ink); font-weight: 600; }
+  table.def-table td.mono { font-family: "JetBrains Mono", monospace; font-size: 0.84rem; color: var(--muted); font-weight: 400; }
+  /* action button inside table cells */
+  .def-table .tbl-btn {
+    display: inline-block; padding: 6px 16px; border-radius: 999px; font-size: 0.82rem;
+    font-weight: 600; cursor: pointer; border: none; white-space: nowrap;
+    background: #16305a; color: #fff; text-decoration: none;
+  }
+  .def-table .tbl-btn:hover { background: #1e40af; color: #fff; }
+  /* category / status pill inside table cells */
+  .def-table .tbl-pill {
+    display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 0.78rem;
+    font-weight: 500; background: #fff; color: var(--ink); border: 1px solid #d1d9e6;
+  }
+  /* version badge */
+  .def-table .tbl-version {
+    display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 0.78rem;
+    font-weight: 600; background: #dbeafe; color: #1d4ed8;
+  }
 
   /* ---- governance process sections (§7.2 / §7.3 narrative content) ---- */
   .gov-section.level-2 { padding-top: 22px; margin-top: 22px; border-top: 1px solid var(--border); }
@@ -434,10 +450,10 @@
   }
   .search-row #hal-count { font-size: 0.85rem; color: var(--muted); }
   .dml-btn {
-    background: var(--hal); color: #fff; border: none; border-radius: 6px;
-    padding: 6px 14px; font-size: 0.82rem; font-weight: 600; cursor: pointer;
+    display: inline-block; padding: 6px 16px; border-radius: 999px; font-size: 0.82rem;
+    font-weight: 600; cursor: pointer; border: none; background: #16305a; color: #fff;
   }
-  .dml-btn:hover { filter: brightness(1.15); }
+  .dml-btn:hover { background: #1e40af; }
   #hal-panel { margin-top: 20px; }
 
   /* ---- HAL API card rendering (emit_hal_spec_json.py shape) ---- */
