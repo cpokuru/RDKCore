@@ -115,10 +115,10 @@ def build_body(data: dict) -> str:
         # data-* attrs drive JS filtering; layer is always Middleware
         version = esc(c.get("version") or "rdk8")
         rows_html.append(f'''<tr data-name="{esc(c["name"].lower())}" data-category="{esc(c["category"] or "Uncategorized")}" data-layer="Middleware" data-type="{esc(tier["label"])}">
-          <td>{esc(c["name"])}</td>
+          <td style="font-weight:400;">{esc(c["name"])}</td>
           <td><span class="pill" style="background:{cat_style["bg"]};color:{cat_style["fg"]};border-radius:8px;line-height:1.5;">{esc(c["category"] or "Uncategorized")}</span></td>
           <td style="color:var(--muted);font-size:0.88rem;">middleware</td>
-          <td><span class="type-pill" style="border-color:{tier_style["fg"]};color:{tier_style["fg"]};">{esc(tier["label"])}</span></td>
+          <td><span class="type-pill" style="border-color:{tier_style["bg"]};color:{tier_style["fg"]};">{esc(tier["label"])}</span></td>
           <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">{version}</td>
           <td>{url_cell}</td>
         </tr>''')
