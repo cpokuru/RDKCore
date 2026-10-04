@@ -56,14 +56,7 @@ TIER_COLORS = {
     "green": {"bg": "#d1fae5", "fg": "#065f46"},
 }
 CATEGORY_PALETTE = [
-    {"bg": "#d1fae5", "fg": "#065f46"},
-    {"bg": "#fde2e2", "fg": "#991b1b"},
-    {"bg": "#fef3c7", "fg": "#92400e"},
-    {"bg": "#dbeafe", "fg": "#1e40af"},
-    {"bg": "#ede9fe", "fg": "#5b21b6"},
-    {"bg": "#e0f2fe", "fg": "#075985"},
-    {"bg": "#fce7f3", "fg": "#9d174d"},
-    {"bg": "#e5e7eb", "fg": "#374151"},
+    {"bg": "#e8eaf6", "fg": "#1e3a5f"},
 ]
 
 
