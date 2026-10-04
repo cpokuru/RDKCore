@@ -117,9 +117,9 @@ def build_body(data: dict) -> str:
         rows_html.append(f'''<tr data-name="{esc(c["name"].lower())}" data-category="{esc(c["category"] or "Uncategorized")}" data-layer="Middleware" data-type="{esc(tier["label"])}">
           <td>{esc(c["name"])}</td>
           <td><span class="pill" style="background:{cat_style["bg"]};color:{cat_style["fg"]};border-radius:8px;line-height:1.5;">{esc(c["category"] or "Uncategorized")}</span></td>
-          <td><span class="pill" style="background:{LAYER_STYLE["bg"]};color:{LAYER_STYLE["fg"]};border-radius:8px;line-height:1.5;">Middleware</span></td>
-          <td><span class="pill" style="background:{tier_style["bg"]};color:{tier_style["fg"]}">{esc(tier["label"])}</span></td>
-          <td><span class="pill" style="background:#f0f9ff;color:#0369a1;border-radius:8px;line-height:1.5;font-family:monospace;font-size:0.82rem;">{version}</span></td>
+          <td style="color:var(--muted);font-size:0.88rem;">middleware</td>
+          <td><span class="type-pill" style="border-color:{tier_style["fg"]};color:{tier_style["fg"]};">{esc(tier["label"])}</span></td>
+          <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">{version}</td>
           <td>{url_cell}</td>
         </tr>''')
 
@@ -164,6 +164,10 @@ def build_body(data: dict) -> str:
   }
   .comp-filter-bar select:focus { outline: none; border-color: var(--middleware); }
   .comp-count { font-size: 0.84rem; color: var(--muted); white-space: nowrap; margin-left: 4px; }
+  .type-pill {
+    display: inline-block; padding: 3px 11px; border-radius: 999px; font-size: 0.82rem;
+    font-weight: 600; background: transparent; border: 1.5px solid; line-height: 1.5;
+  }
 </style>"""
 
     filter_script = """
