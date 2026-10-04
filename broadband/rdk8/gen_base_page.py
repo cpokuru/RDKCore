@@ -153,7 +153,7 @@ def build_about_page(spec: dict, about: dict) -> str:
     ]
 
     body = f'''
-{render_hero("Core RDK Broadband", "Core RDK Broadband Platform(RDK8)", about["definition"], hero_badges, visual_key="about")}
+{render_hero("Core RDK Broadband", "Core RDK Broadband Platform", about["definition"], hero_badges, visual_key="about")}
 
 <div class="stats">
   <div class="stat"><span class="stat-icon">{ICONS["share"]}</span><div class="num">Operators</div></div>
