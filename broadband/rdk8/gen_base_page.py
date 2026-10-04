@@ -139,7 +139,6 @@ def render_test_suites(rows: list[dict]) -> str:
 
 def build_about_page(spec: dict, about: dict) -> str:
     hero_badges = (
-        '<span class="badge">RDK8</span>'
         '<span class="badge">26 features</span>'
         '<span class="badge">7 device profiles</span>'
         '<span class="badge">Five-tier system</span>'
@@ -154,7 +153,7 @@ def build_about_page(spec: dict, about: dict) -> str:
     ]
 
     body = f'''
-{render_hero("Core RDK Broadband", "Core RDK Broadband Platform", about["definition"], hero_badges, visual_key="about", title_size="clamp(1.8rem,3.5vw,2.75rem)")}
+{render_hero("Core RDK Broadband", "Core RDK Broadband Platform (RDK8)", about["definition"], hero_badges, visual_key="about", title_size="clamp(1.5rem,2.9vw,2.4rem)")}
 
 <div class="stats">
   <div class="stat"><span class="stat-icon">{ICONS["share"]}</span><div class="num">Operators</div></div>
