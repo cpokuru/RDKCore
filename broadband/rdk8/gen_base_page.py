@@ -139,7 +139,7 @@ def render_test_suites(rows: list[dict]) -> str:
 
 def build_about_page(spec: dict, about: dict) -> str:
     body = f'''
-<div class="page-main" style="display:flex; flex-direction:column; height:calc(100vh - 61px); overflow:hidden;">
+<div class="page-main" style="display:flex; flex-direction:column; min-height:calc(100vh - 61px);">
 
 <div class="hero" style="flex:1; display:flex; align-items:center; justify-content:center; padding:64px 40px;">
   <div class="hero-flex" style="justify-content:center;">
