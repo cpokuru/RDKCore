@@ -89,7 +89,7 @@ def build_body(data: dict) -> str:
     categories  = sorted({c["category"] or "Uncategorized" for c in components})
     tier_labels = sorted({tiers.get(c["tier"], {"label": c["tier"]})["label"] for c in components})
     # Layer is always Middleware for all RDK-B components
-    layers = ["Middleware"]
+    layers = ["RDK"]
 
     rows_html = []
     for c in components:
@@ -107,10 +107,10 @@ def build_body(data: dict) -> str:
             url_cell = '<span class="muted">—</span>'
         # data-* attrs drive JS filtering; layer is always Middleware
         version = esc(c.get("version") or "rdk8")
-        rows_html.append(f'''<tr data-name="{esc(c["name"].lower())}" data-category="{esc(c["category"] or "Uncategorized")}" data-layer="Middleware" data-type="{esc(tier["label"])}">
+        rows_html.append(f'''<tr data-name="{esc(c["name"].lower())}" data-category="{esc(c["category"] or "Uncategorized")}" data-layer="RDK" data-type="{esc(tier["label"])}">
           <td style="font-weight:400;">{esc(c["name"])}</td>
           <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">{esc(c["category"] or "Uncategorized")}</span></td>
-          <td style="color:var(--muted);font-size:0.88rem;">middleware</td>
+          <td style="color:var(--muted);font-size:0.88rem;">RDK</td>
           <td><span class="type-pill" style="border-color:{tier_style["bg"]};color:{tier_style["fg"]};">{esc(tier["label"])}</span></td>
           <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">{version}</td>
           <td>{url_cell}</td>
