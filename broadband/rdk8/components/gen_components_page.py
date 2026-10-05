@@ -86,12 +86,18 @@ def build_body(data: dict) -> str:
     tiers = {t["id"]: t for t in data.get("tiers", [])}
     components = sorted(data["components"], key=lambda c: (c["tier"] != "common-core", c["name"].lower()))
 
-    legend_html = "".join(
-        f'<div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;">'
-        f'<span class="pill" style="background:{TIER_COLORS[t["color"]]["bg"]};color:{TIER_COLORS[t["color"]]["fg"]};white-space:nowrap;">{esc(t["label"])}</span>'
-        f'<span style="font-size:0.88rem;color:var(--muted);">{esc(TIER_DESCRIPTIONS.get(t["id"], ""))}</span>'
-        f'</div>'
-        for t in tiers.values()
+    legend_html = (
+        '<div style="display:table;border-spacing:0 6px;">' +
+        "".join(
+            f'<div style="display:table-row;">'
+            f'<span style="display:table-cell;padding-right:12px;vertical-align:middle;white-space:nowrap;">'
+            f'<span class="pill" style="background:{TIER_COLORS[t["color"]]["bg"]};color:{TIER_COLORS[t["color"]]["fg"]};">{esc(t["label"])}</span>'
+            f'</span>'
+            f'<span style="display:table-cell;vertical-align:middle;font-size:0.88rem;color:var(--muted);">{esc(TIER_DESCRIPTIONS.get(t["id"], ""))}</span>'
+            f'</div>'
+            for t in tiers.values()
+        ) +
+        '</div>'
     )
 
     # Unique categories and tier labels for filter dropdowns
