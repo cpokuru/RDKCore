@@ -156,92 +156,6 @@ def build_about_page(spec: dict, about: dict) -> str:
     return render_page("about", "<title>CORE RDK for BROADBAND</title>", body, script=TABS_SCRIPT)
 
 
-# ---------- broadband split-screen home (../index.html) ----------
-# RDK8 is "self" (links relative to rdk8/), RDK9 is "../rdk9/"
-
-def build_broadband_home() -> str:
-    return '''<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CORE RDK for Broadband</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { height: 100%; font-family: "Inter", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; overflow: hidden; }
-  .accent-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 4px; background: linear-gradient(90deg, #29b6e8 0%, #29b6e8 25%, #7ac943 25%, #7ac943 50%, #f5a623 50%, #f5a623 75%, #f0653e 75%, #f0653e 100%); }
-  .split { display: flex; height: 100vh; padding-top: 4px; }
-  .panel { flex: 1 1 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 48px 48px 40px; position: relative; overflow: hidden; transition: flex 0.35s ease; }
-  .panel:hover { flex: 1.06 1 50%; }
-  .panel-rdk8 { background: #080d18; border-right: 1px solid rgba(255,255,255,0.06); }
-  .panel-rdk9 { background: linear-gradient(160deg, #0d1f40 0%, #0f2a5c 40%, #102070 100%); }
-  .panel-rdk8::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 80% 60% at 50% 60%, rgba(41,182,232,0.07) 0%, transparent 70%); }
-  .panel-rdk9::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 80% 60% at 50% 60%, rgba(41,182,232,0.18) 0%, transparent 70%); }
-  .divider { width: 1px; background: rgba(255,255,255,0.08); flex: 0 0 1px; align-self: stretch; position: relative; z-index: 10; }
-  .version-tag { display: inline-block; font-family: "Inter", sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 14px; border-radius: 999px; margin-bottom: 22px; position: relative; z-index: 1; }
-  .panel-rdk8 .version-tag { background: rgba(255,255,255,0.07); color: #8cb4d6; border: 1px solid rgba(255,255,255,0.1); }
-  .panel-rdk9 .version-tag { background: rgba(41,182,232,0.18); color: #5cd3f8; border: 1px solid rgba(41,182,232,0.3); }
-  .panel h1 { font-family: "Space Grotesk", "Inter", sans-serif; font-weight: 800; letter-spacing: -0.025em; font-size: clamp(1.6rem, 2.8vw, 2.6rem); line-height: 1.1; text-align: center; margin-bottom: 14px; position: relative; z-index: 1; }
-  .panel-rdk8 h1 { color: #e8edf6; }
-  .panel-rdk9 h1 { color: #fff; }
-  .panel .sub { font-size: 0.9rem; color: rgba(255,255,255,0.5); text-align: center; margin-bottom: 36px; max-width: 320px; line-height: 1.55; position: relative; z-index: 1; }
-  .links { list-style: none; width: 100%; max-width: 340px; display: flex; flex-direction: column; gap: 10px; position: relative; z-index: 1; }
-  .links li a { display: flex; align-items: center; gap: 12px; padding: 13px 18px; border-radius: 10px; text-decoration: none; font-size: 0.88rem; font-weight: 600; transition: background 0.15s, transform 0.12s; }
-  .links li a:hover { transform: translateX(3px); }
-  .panel-rdk8 .links li a { background: rgba(255,255,255,0.04); color: #c8d8ee; border: 1px solid rgba(255,255,255,0.07); }
-  .panel-rdk8 .links li a:hover { background: rgba(41,182,232,0.12); color: #fff; border-color: rgba(41,182,232,0.25); }
-  .panel-rdk9 .links li a { background: rgba(255,255,255,0.06); color: #d4e8ff; border: 1px solid rgba(255,255,255,0.1); }
-  .panel-rdk9 .links li a:hover { background: rgba(41,182,232,0.2); color: #fff; border-color: rgba(41,182,232,0.4); }
-  .link-icon { flex: 0 0 32px; height: 32px; border-radius: 7px; display: flex; align-items: center; justify-content: center; font-size: 1rem; }
-  .panel-rdk8 .link-icon { background: rgba(41,182,232,0.1); }
-  .panel-rdk9 .link-icon { background: rgba(41,182,232,0.18); }
-  .link-text { flex: 1 1 auto; min-width: 0; }
-  .link-text strong { display: block; font-weight: 600; }
-  .link-text span { display: block; font-size: 0.76rem; font-weight: 400; opacity: 0.55; margin-top: 1px; }
-  .link-arrow { opacity: 0.35; font-size: 0.9rem; transition: opacity 0.12s; }
-  .links li a:hover .link-arrow { opacity: 0.8; }
-  .footer-strip { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(8,13,24,0.95); backdrop-filter: blur(8px); border-top: 1px solid rgba(255,255,255,0.07); padding: 10px 28px; text-align: center; font-size: 0.73rem; color: rgba(255,255,255,0.3); z-index: 50; }
-  @media (max-width: 680px) { html, body { overflow: auto; } .split { flex-direction: column; height: auto; } .panel { padding: 56px 28px 48px; } .panel:hover { flex: 1 1 auto; } .divider { width: 100%; height: 1px; flex: 0 0 1px; align-self: auto; } .footer-strip { position: static; } }
-</style>
-</head>
-<body>
-<div class="accent-bar"></div>
-<div class="split">
-  <!-- RDK8 — dark panel -->
-  <div class="panel panel-rdk8">
-    <div class="version-tag">RDK8</div>
-    <h1>CORE RDK<br>for BROADBAND</h1>
-    <p class="sub">Stable release — EthWAN Router &amp; Gateway profiles</p>
-    <ul class="links">
-      <li><a href="rdk8/"><span class="link-icon">🏠</span><span class="link-text"><strong>Overview</strong><span>Platform architecture &amp; release notes</span></span><span class="link-arrow">›</span></a></li>
-      <li><a href="rdk8/components/"><span class="link-icon">🧩</span><span class="link-text"><strong>Components</strong><span>Required &amp; optional component profiles</span></span><span class="link-arrow">›</span></a></li>
-      <li><a href="rdk8/north-bound-apis.html"><span class="link-icon">⬆️</span><span class="link-text"><strong>North Bound APIs</strong><span>TR-181 &amp; management interfaces</span></span><span class="link-arrow">›</span></a></li>
-      <li><a href="rdk8/south-bound-apis.html"><span class="link-icon">⬇️</span><span class="link-text"><strong>South Bound APIs</strong><span>HAL interfaces &amp; device abstraction</span></span><span class="link-arrow">›</span></a></li>
-    </ul>
-  </div>
-  <div class="divider"></div>
-  <!-- RDK9 — blue panel -->
-  <div class="panel panel-rdk9">
-    <div class="version-tag">RDK9</div>
-    <h1>CORE RDK<br>for BROADBAND</h1>
-    <p class="sub">Latest release — EthWAN Router &amp; next-gen profiles</p>
-    <ul class="links">
-      <li><a href="rdk9/"><span class="link-icon">🏠</span><span class="link-text"><strong>Overview</strong><span>Platform architecture &amp; release notes</span></span><span class="link-arrow">›</span></a></li>
-      <li><a href="rdk9/components/"><span class="link-icon">🧩</span><span class="link-text"><strong>Components</strong><span>Required &amp; optional component profiles</span></span><span class="link-arrow">›</span></a></li>
-      <li><a href="rdk9/north-bound-apis.html"><span class="link-icon">⬆️</span><span class="link-text"><strong>North Bound APIs</strong><span>TR-181 &amp; management interfaces</span></span><span class="link-arrow">›</span></a></li>
-      <li><a href="rdk9/south-bound-apis.html"><span class="link-icon">⬇️</span><span class="link-text"><strong>South Bound APIs</strong><span>HAL interfaces &amp; device abstraction</span></span><span class="link-arrow">›</span></a></li>
-    </ul>
-  </div>
-</div>
-<div class="footer-strip">RDKM · © 2026 RDK Central. All rights reserved.</div>
-</body>
-</html>
-'''
-
-
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("spec_json", help="spec-content.json (drives the Architecture section)")
@@ -256,12 +170,6 @@ def main() -> None:
 
     (out_dir / "index.html").write_text(build_about_page(spec, about), encoding="utf-8")
     print(f"Wrote {out_dir / 'index.html'}")
-
-    # Also write the broadband split-screen home one level up
-    broadband_dir = out_dir.parent
-    broadband_dir.mkdir(parents=True, exist_ok=True)
-    (broadband_dir / "index.html").write_text(build_broadband_home(), encoding="utf-8")
-    print(f"Wrote {broadband_dir / 'index.html'}")
 
 
 if __name__ == "__main__":
