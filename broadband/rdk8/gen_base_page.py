@@ -35,7 +35,7 @@ FOOTER = f"""
   <div class="footer-links">
     <a href="{COMPONENTS_URL}">Components — profiles<span>Required / optional components per device profile</span></a>
     <a href="{COMPONENTS_FULL_URL}">Components — full workbook<span>Interactive component list, all profiles</span></a>
-    <a href="{SPEC_WIKI_URL}">RDK9 Core RDK Broadband Spec<span>TAB-approved specification (wiki)</span></a>
+    <a href="{SPEC_WIKI_URL}">Core RDK Broadband Spec<span>TAB-approved specification (wiki)</span></a>
     <a href="https://github.com/rdkcentral">rdkcentral on GitHub<span>Component source repositories</span></a>
   </div>
   <div class="footer-meta">RDKM · © 2026 RDK Central. All rights reserved.</div>
