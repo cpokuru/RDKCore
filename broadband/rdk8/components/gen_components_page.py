@@ -46,6 +46,12 @@ from layout import render_hero, render_page  # noqa: E402
 
 FULL_DETAILS_URL = "full-list.html"
 
+TIER_DESCRIPTIONS = {
+    "common-core": "Core components common across all RDK-B sub-profiles such as EthWAN Router, Gateway with DOCSIS/PON access profile support, Wifi Extender etc.",
+    "core": "Core components required for the EthWAN Router sub-profile",
+    "optional": "Optional components on the EthWAN Router sub-profile.",
+}
+
 # Same fixed/rotating palettes as gen_simple_html.py, kept in sync so the
 # type/category pill colors look identical to the rest of the components
 # tooling (full-list.html, any other gen_simple_html.py output).
@@ -81,7 +87,10 @@ def build_body(data: dict) -> str:
     components = sorted(data["components"], key=lambda c: (c["tier"] != "common-core", c["name"].lower()))
 
     legend_html = "".join(
-        f'<span class="pill" style="background:{TIER_COLORS[t["color"]]["bg"]};color:{TIER_COLORS[t["color"]]["fg"]}">{esc(t["label"])}</span>'
+        f'<div style="display:flex;align-items:baseline;gap:8px;margin-bottom:6px;">'
+        f'<span class="pill" style="background:{TIER_COLORS[t["color"]]["bg"]};color:{TIER_COLORS[t["color"]]["fg"]};white-space:nowrap;">{esc(t["label"])}</span>'
+        f'<span style="font-size:0.88rem;color:var(--muted);">{esc(TIER_DESCRIPTIONS.get(t["id"], ""))}</span>'
+        f'</div>'
         for t in tiers.values()
     )
 
@@ -200,7 +209,7 @@ def build_body(data: dict) -> str:
 
     lede = subtitle or "Every RDK-B component for this device profile — repo, category, layer, and type."
     return f'''
-{render_hero("Core RDK Components", "EthWAN Router Components", lede, compact=True, visual_key="components")}
+{render_hero("Core RDK", "EthWAN Router", lede, compact=True, visual_key="components")}
 
 {filter_css}
 
@@ -240,7 +249,8 @@ def main() -> None:
                 c["version"] = versions[c["name"]]
 
     body = build_body(data)
-    head_extra = f"<title>{esc(data['title'])} — RDK-B Core Broadband</title>"
+    page_title = data['title'].replace(" Components", "").strip()
+    head_extra = f"<title>{esc(page_title)} — RDK-B Core Broadband</title>"
     html_out = render_page("components", head_extra, body, path_prefix="../")
     Path(args.out).write_text(html_out, encoding="utf-8")
     print(f"Wrote {args.out} ({len(data['components'])} components)")
