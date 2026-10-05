@@ -146,6 +146,12 @@ def build_about_page(spec: dict, about: dict) -> str:
     </div>
   </div>
 </div>
+
+<footer>
+  <div class="footer-meta" style="border-top:none; padding-top:0;">
+    RDKM &middot; &copy; 2026 RDK Central. All rights reserved.
+  </div>
+</footer>
 '''
     return render_page("about", "<title>CORE RDK for BROADBAND</title>", body, script=TABS_SCRIPT)
 
