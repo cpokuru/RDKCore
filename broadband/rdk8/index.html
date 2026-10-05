@@ -494,29 +494,70 @@
 </script>
 <div class="page-main">
 
-<div class="page-main" style="display:flex; flex-direction:column; min-height:calc(100vh - 61px);">
 
-<div class="hero" style="flex:1; display:flex; align-items:center; justify-content:center; padding:64px 40px;">
-  <div class="hero-flex" style="justify-content:center;">
-    <div class="hero-inner" style="text-align:center; max-width:none;">
-      <h1 style="font-size:clamp(2.4rem,5vw,4rem);">CORE RDK for BROADBAND</h1>
+<style>
+  html, body { margin: 0; padding: 0; }
+  #home-main {
+    display: flex;
+    flex-direction: column;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+  }
+  #home-main .hero {
+    flex: 1 1 auto;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 24px 40px !important;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #home-main .hero-flex { justify-content: center; width: 100%; }
+  #home-main .hero-inner { text-align: center; max-width: none; }
+  #home-main h1 { font-size: clamp(2.4rem, 5vw, 4rem); margin: 0; }
+  #home-footer {
+    margin: 0 !important;
+    padding: 28px 40px 22px !important;
+    box-sizing: border-box;
+  }
+  #home-footer .footer-links {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    margin: 0;
+  }
+  #home-footer .footer-links a { min-width: 0; }
+  #home-footer .footer-links span { display: block; margin-top: 6px; }
+  #home-footer .footer-meta { margin-top: 22px; text-align: center; }
+  @media (max-width: 900px) {
+    #home-footer .footer-links { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  }
+  @media (max-width: 520px) {
+    #home-main .hero { padding: 20px !important; }
+    #home-footer { padding: 20px !important; }
+    #home-footer .footer-links { grid-template-columns: 1fr; }
+  }
+</style>
+
+<div id="home-main" class="page-main">
+  <div class="hero">
+    <div class="hero-flex">
+      <div class="hero-inner"><h1>CORE RDK for BROADBAND</h1></div>
     </div>
   </div>
 </div>
 
-</div>
-
-
-<footer>
+<footer id="home-footer">
   <div class="footer-links">
     <a href="components/">Components — profiles<span>Required / optional components per device profile</span></a>
     <a href="components/full-list.html">Components — full workbook<span>Interactive component list, all profiles</span></a>
     <a href="https://wiki.rdkcentral.com/spaces/RDK/pages/498925914/RDK9+Core+RDK+Broadband+Specification+Approved+by+TAB">RDK9 Core RDK Broadband Spec<span>TAB-approved specification (wiki)</span></a>
     <a href="https://github.com/rdkcentral">rdkcentral on GitHub<span>Component source repositories</span></a>
   </div>
-  <div class="footer-meta">
-    RDKM · © 2026 RDK Central. All rights reserved.
-  </div>
+  <div class="footer-meta">RDKM · © 2026 RDK Central. All rights reserved.</div>
 </footer>
 
 
@@ -615,6 +656,32 @@
   if (initial && buttons.some(b => b.dataset.tab === initial)) {
     activate(initial, false);
   }
+})();
+</script>
+
+<script>
+(() => {
+  const main = document.getElementById('home-main');
+  const footer = document.getElementById('home-footer');
+  if (!main || !footer) return;
+  let frame;
+  function fit() {
+    main.style.height = 'auto';
+    const top = main.getBoundingClientRect().top + window.scrollY;
+    const viewport = document.documentElement.clientHeight;
+    const gap = Math.max(0, footer.getBoundingClientRect().top - main.getBoundingClientRect().bottom);
+    const available = Math.max(0, viewport - top - footer.offsetHeight - gap);
+    main.style.height = available + 'px';
+  }
+  function schedule() {
+    cancelAnimationFrame(frame);
+    frame = requestAnimationFrame(fit);
+  }
+  window.addEventListener('resize', schedule);
+  window.addEventListener('load', schedule);
+  if (document.fonts) document.fonts.ready.then(schedule);
+  if ('ResizeObserver' in window) new ResizeObserver(schedule).observe(footer);
+  schedule();
 })();
 </script>
 
