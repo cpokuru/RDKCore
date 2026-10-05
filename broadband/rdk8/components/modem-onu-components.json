@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-10-05T21:14:45Z",
+  "generatedAt": "2026-10-05T23:27:57Z",
   "title": "RDK-B Modem /ONU Components",
   "subtitle": "Components for the Modem /ONU device profile: Common Core, Required, and Optional.",
   "tiers": [
@@ -32,9 +32,10 @@
       "name": "Web PA\n\nincluding:\n- parodus\n- parodus2ccsp\n- start-parodus\n- wdmp-c",
       "category": "Remote Device Management",
       "tier": "optional",
-      "url": "https://github.com/rdkcentral/start-parodus",
+      "url": "https://github.com/xmidt-org/parodus2ccsp",
       "supportingUrls": [
-        "https://github.com/xmidt-org"
+        "https://github.com/xmidt-org/parodus",
+        "https://github.com/rdkcentral/start-parodus"
       ]
     },
     {
@@ -72,13 +73,6 @@
       "category": "Remote Device Management",
       "tier": "optional",
       "url": "https://github.com/rdkcentral/xconf-client",
-      "supportingUrls": []
-    },
-    {
-      "name": "RFC",
-      "category": "Remote Device Management",
-      "tier": "optional",
-      "url": "https://github.com/rdkcentral/rfc",
       "supportingUrls": []
     },
     {
@@ -134,13 +128,6 @@
       "supportingUrls": []
     },
     {
-      "name": "P&M",
-      "category": "Routing, parental control and WAN Management Components",
-      "tier": "required",
-      "url": "https://github.com/rdkcentral/provisioning-and-management",
-      "supportingUrls": []
-    },
-    {
       "name": "Utopia",
       "category": "System Start, Platform Management and misc utilities",
       "tier": "required",
@@ -185,25 +172,16 @@
     {
       "name": "sysint-broadband",
       "category": "System Start, Platform Management and misc utilities",
-      "tier": "common-core",
+      "tier": "required",
       "url": "https://github.com/rdkcentral/sysint-broadband",
       "supportingUrls": []
     },
     {
       "name": "common utilities",
       "category": "System Start, Platform Management and misc utilities",
-      "tier": "common-core",
+      "tier": "required",
       "url": "https://github.com/rdkcentral/common_utilities/",
       "supportingUrls": []
-    },
-    {
-      "name": "MTA Agent",
-      "category": "Voice Related Components",
-      "tier": "optional",
-      "url": "https://github.com/rdkcentral/media-terminal-adapter-agent",
-      "supportingUrls": [
-        "https://github.com/rdkcentral/rdkb-halif-test-mta"
-      ]
     },
     {
       "name": "rdkb-halif-mta",
@@ -232,7 +210,7 @@
     {
       "name": "rdk_logger",
       "category": "Data Collection, Test and Diagnostic Components",
-      "tier": "common-core",
+      "tier": "required",
       "url": "https://github.com/rdkcentral/rdk_logger",
       "supportingUrls": []
     },
@@ -253,9 +231,11 @@
     {
       "name": "remote_debugger",
       "category": "Data Collection, Test and Diagnostic Components",
-      "tier": "common-core",
-      "url": null,
-      "supportingUrls": []
+      "tier": "required",
+      "url": "https://github.com/rdkcentral/remote_debugger",
+      "supportingUrls": [
+        "https://github.com/rdkcentral/rdm-agent"
+      ]
     },
     {
       "name": "T2 Telemetry",
@@ -274,7 +254,7 @@
     {
       "name": "RBUS",
       "category": "InterProcess Communications Components",
-      "tier": "common-core",
+      "tier": "required",
       "url": "https://github.com/rdkcentral/rbus",
       "supportingUrls": []
     },
@@ -288,22 +268,15 @@
     {
       "name": "common-library",
       "category": "InterProcess Communications Components",
-      "tier": "common-core",
+      "tier": "required",
       "url": "https://github.com/rdkcentral/common-library",
       "supportingUrls": []
     },
     {
       "name": "DMCLI",
       "category": "InterProcess Communications Components",
-      "tier": "common-core",
-      "url": "https://github.com/rdkcentral/data-model-cli",
-      "supportingUrls": []
-    },
-    {
-      "name": "PSM",
-      "category": "Non-Vol Storage",
       "tier": "required",
-      "url": "https://github.com/rdkcentral/persistent-storage-manager",
+      "url": "https://github.com/rdkcentral/data-model-cli",
       "supportingUrls": []
     },
     {
@@ -344,7 +317,7 @@
     {
       "name": "libsyscallwrapper",
       "category": "Code Security Components",
-      "tier": "common-core",
+      "tier": "required",
       "url": "https://github.com/rdkcentral/libSyscallWrapper",
       "supportingUrls": []
     },

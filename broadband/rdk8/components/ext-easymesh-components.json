@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-10-05T21:14:47Z",
+  "generatedAt": "2026-10-05T23:27:57Z",
   "title": "RDK-B EXT EasyMesh Components",
   "subtitle": "Components for the EXT EasyMesh device profile: Common Core, Required, and Optional.",
   "tiers": [
@@ -36,25 +36,13 @@
       "supportingUrls": []
     },
     {
-      "name": "RFC",
-      "category": "Remote Device Management",
-      "tier": "optional",
-      "url": "https://github.com/rdkcentral/rfc",
-      "supportingUrls": []
-    },
-    {
       "name": "OneWiFi",
       "category": "LAN Interface Components",
       "tier": "required",
       "url": "https://github.com/rdkcentral/OneWifi",
-      "supportingUrls": []
-    },
-    {
-      "name": "unified-wifi-mesh\n(EasyMesh)",
-      "category": "LAN Interface Components",
-      "tier": "required",
-      "url": "https://github.com/rdkcentral/unified-wifi-mesh",
-      "supportingUrls": []
+      "supportingUrls": [
+        "https://github.com/rdkcentral/broadband-utils/tree/main/rdk-wps-monitor"
+      ]
     },
     {
       "name": "ieee1905-rs",
@@ -122,21 +110,21 @@
     {
       "name": "sysint-broadband",
       "category": "System Start, Platform Management and misc utilities",
-      "tier": "common-core",
+      "tier": "required",
       "url": "https://github.com/rdkcentral/sysint-broadband",
       "supportingUrls": []
     },
     {
       "name": "common utilities",
       "category": "System Start, Platform Management and misc utilities",
-      "tier": "common-core",
+      "tier": "required",
       "url": "https://github.com/rdkcentral/common_utilities/",
       "supportingUrls": []
     },
     {
       "name": "rdk_logger",
       "category": "Data Collection, Test and Diagnostic Components",
-      "tier": "common-core",
+      "tier": "required",
       "url": "https://github.com/rdkcentral/rdk_logger",
       "supportingUrls": []
     },
@@ -157,9 +145,11 @@
     {
       "name": "remote_debugger",
       "category": "Data Collection, Test and Diagnostic Components",
-      "tier": "common-core",
-      "url": null,
-      "supportingUrls": []
+      "tier": "required",
+      "url": "https://github.com/rdkcentral/remote_debugger",
+      "supportingUrls": [
+        "https://github.com/rdkcentral/rdm-agent"
+      ]
     },
     {
       "name": "T2 Telemetry",
@@ -173,7 +163,9 @@
       "category": "Data Collection, Test and Diagnostic Components",
       "tier": "optional",
       "url": "https://github.com/rdkcentral/test-and-diagnostic",
-      "supportingUrls": []
+      "supportingUrls": [
+        "https://github.com/rdkcentral/rdk-speedtest-cli"
+      ]
     },
     {
       "name": "cpuprocanalyzer",
@@ -199,7 +191,7 @@
     {
       "name": "RBUS",
       "category": "InterProcess Communications Components",
-      "tier": "common-core",
+      "tier": "required",
       "url": "https://github.com/rdkcentral/rbus",
       "supportingUrls": []
     },
@@ -213,22 +205,15 @@
     {
       "name": "common-library",
       "category": "InterProcess Communications Components",
-      "tier": "common-core",
+      "tier": "required",
       "url": "https://github.com/rdkcentral/common-library",
       "supportingUrls": []
     },
     {
       "name": "DMCLI",
       "category": "InterProcess Communications Components",
-      "tier": "common-core",
+      "tier": "required",
       "url": "https://github.com/rdkcentral/data-model-cli",
-      "supportingUrls": []
-    },
-    {
-      "name": "PSM",
-      "category": "Non-Vol Storage",
-      "tier": "optional",
-      "url": "https://github.com/rdkcentral/persistent-storage-manager",
       "supportingUrls": []
     },
     {
@@ -262,7 +247,7 @@
     {
       "name": "libsyscallwrapper",
       "category": "Code Security Components",
-      "tier": "common-core",
+      "tier": "required",
       "url": "https://github.com/rdkcentral/libSyscallWrapper",
       "supportingUrls": []
     }

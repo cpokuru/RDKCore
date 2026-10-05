@@ -540,76 +540,20 @@
 
 <section class="tight-top">
   <p style="color:var(--muted); font-size:0.85rem; margin:0 0 14px;">
-    Schema version: 1.0 &nbsp;|&nbsp; Generated: 2026-10-05T20:34:07Z
+    Schema version: 1.0 &nbsp;|&nbsp; Generated: 2026-10-05T22:52:14Z
   </p>
   <div style="margin-bottom:18px;"><div style="display:table;border-spacing:0 6px;"><div style="display:table-row;"><span style="display:table-cell;padding-right:12px;vertical-align:middle;white-space:nowrap;"><span class="pill" style="background:#fef3c7;color:#92400e;">Common Core</span></span><span style="display:table-cell;vertical-align:middle;font-size:0.88rem;color:var(--muted);">Core components common across all RDK-B sub-profiles such as EthWAN Router, Gateway with DOCSIS/PON access profile support, Wifi Extender etc.</span></div><div style="display:table-row;"><span style="display:table-cell;padding-right:12px;vertical-align:middle;white-space:nowrap;"><span class="pill" style="background:#dbeafe;color:#1e40af;">Required</span></span><span style="display:table-cell;vertical-align:middle;font-size:0.88rem;color:var(--muted);">Core components required for the EthWAN Router sub-profile</span></div><div style="display:table-row;"><span style="display:table-cell;padding-right:12px;vertical-align:middle;white-space:nowrap;"><span class="pill" style="background:#f3f4f6;color:#374151;">Optional</span></span><span style="display:table-cell;vertical-align:middle;font-size:0.88rem;color:var(--muted);">Optional components on the EthWAN Router sub-profile.</span></div></div></div>
   
   <div class="comp-filter-bar">
     <input id="comp-search" type="text" placeholder="Search components" autocomplete="off">
-    <select id="comp-cat"><option value="">All categories</option><option value="App Framework Components">App Framework Components</option><option value="Code Security Components">Code Security Components</option><option value="DHCP">DHCP</option><option value="Data Collection, Test and Diagnostic Components">Data Collection, Test and Diagnostic Components</option><option value="InterProcess Communications Components">InterProcess Communications Components</option><option value="LAN Interface Components">LAN Interface Components</option><option value="LAN Management Components">LAN Management Components</option><option value="Local Web UI">Local Web UI</option><option value="Matter / IoT Components">Matter / IoT Components</option><option value="Non-Vol Storage">Non-Vol Storage</option><option value="Remote Device Management">Remote Device Management</option><option value="Routing, parental control and WAN Management Components">Routing, parental control and WAN Management Components</option><option value="System Start, Platform Management and misc utilities">System Start, Platform Management and misc utilities</option><option value="Voice Related Components">Voice Related Components</option><option value="WAN Interface Components">WAN Interface Components</option></select>
+    <select id="comp-cat"><option value="">All categories</option><option value="App Framework Components">App Framework Components</option><option value="Code Security Components">Code Security Components</option><option value="DHCP">DHCP</option><option value="Data Collection, Test and Diagnostic Components">Data Collection, Test and Diagnostic Components</option><option value="InterProcess Communications Components">InterProcess Communications Components</option><option value="LAN Interface Components">LAN Interface Components</option><option value="LAN Management Components">LAN Management Components</option><option value="Local Web UI">Local Web UI</option><option value="Matter / IoT Components">Matter / IoT Components</option><option value="Remote Device Management">Remote Device Management</option><option value="Routing, parental control and WAN Management Components">Routing, parental control and WAN Management Components</option><option value="System Start, Platform Management and misc utilities">System Start, Platform Management and misc utilities</option><option value="Voice Related Components">Voice Related Components</option><option value="WAN Interface Components">WAN Interface Components</option></select>
     <select id="comp-layer"><option value="">All layers</option><option value="RDK">RDK</option></select>
-    <select id="comp-type"><option value="">All types</option><option value="Common Core">Common Core</option><option value="Optional">Optional</option><option value="Required">Required</option></select>
+    <select id="comp-type"><option value="">All types</option><option value="Optional">Optional</option><option value="Required">Required</option></select>
     <span id="comp-count" class="comp-count"></span>
   </div>
   <table class="def-table">
     <thead><tr><th>Name</th><th>Category</th><th>Layer</th><th>Type</th><th>Version</th><th>Repositories</th></tr></thead>
-    <tbody id="comp-tbody"><tr data-name="common utilities" data-category="System Start, Platform Management and misc utilities" data-layer="RDK" data-type="Common Core">
-          <td style="font-weight:400;">common utilities</td>
-          <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">System Start, Platform Management and misc utilities</span></td>
-          <td style="color:var(--muted);font-size:0.88rem;">RDK</td>
-          <td><span class="type-pill" style="border-color:#fef3c7;color:#92400e;">Common Core</span></td>
-          <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
-          <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/common_utilities/" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/common_utilities/</a></div></td>
-        </tr><tr data-name="common-library" data-category="InterProcess Communications Components" data-layer="RDK" data-type="Common Core">
-          <td style="font-weight:400;">common-library</td>
-          <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">InterProcess Communications Components</span></td>
-          <td style="color:var(--muted);font-size:0.88rem;">RDK</td>
-          <td><span class="type-pill" style="border-color:#fef3c7;color:#92400e;">Common Core</span></td>
-          <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
-          <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/common-library" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/common-library</a></div></td>
-        </tr><tr data-name="dmcli" data-category="InterProcess Communications Components" data-layer="RDK" data-type="Common Core">
-          <td style="font-weight:400;">DMCLI</td>
-          <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">InterProcess Communications Components</span></td>
-          <td style="color:var(--muted);font-size:0.88rem;">RDK</td>
-          <td><span class="type-pill" style="border-color:#fef3c7;color:#92400e;">Common Core</span></td>
-          <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
-          <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/data-model-cli" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/data-model-cli</a></div></td>
-        </tr><tr data-name="libsyscallwrapper" data-category="Code Security Components" data-layer="RDK" data-type="Common Core">
-          <td style="font-weight:400;">libsyscallwrapper</td>
-          <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">Code Security Components</span></td>
-          <td style="color:var(--muted);font-size:0.88rem;">RDK</td>
-          <td><span class="type-pill" style="border-color:#fef3c7;color:#92400e;">Common Core</span></td>
-          <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
-          <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/libSyscallWrapper" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/libSyscallWrapper</a></div></td>
-        </tr><tr data-name="rbus" data-category="InterProcess Communications Components" data-layer="RDK" data-type="Common Core">
-          <td style="font-weight:400;">RBUS</td>
-          <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">InterProcess Communications Components</span></td>
-          <td style="color:var(--muted);font-size:0.88rem;">RDK</td>
-          <td><span class="type-pill" style="border-color:#fef3c7;color:#92400e;">Common Core</span></td>
-          <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
-          <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/rbus" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/rbus</a></div></td>
-        </tr><tr data-name="rdk_logger" data-category="Data Collection, Test and Diagnostic Components" data-layer="RDK" data-type="Common Core">
-          <td style="font-weight:400;">rdk_logger</td>
-          <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">Data Collection, Test and Diagnostic Components</span></td>
-          <td style="color:var(--muted);font-size:0.88rem;">RDK</td>
-          <td><span class="type-pill" style="border-color:#fef3c7;color:#92400e;">Common Core</span></td>
-          <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
-          <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/rdk_logger" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/rdk_logger</a></div></td>
-        </tr><tr data-name="remote_debugger" data-category="Data Collection, Test and Diagnostic Components" data-layer="RDK" data-type="Common Core">
-          <td style="font-weight:400;">remote_debugger</td>
-          <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">Data Collection, Test and Diagnostic Components</span></td>
-          <td style="color:var(--muted);font-size:0.88rem;">RDK</td>
-          <td><span class="type-pill" style="border-color:#fef3c7;color:#92400e;">Common Core</span></td>
-          <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
-          <td><span class="muted">—</span></td>
-        </tr><tr data-name="sysint-broadband" data-category="System Start, Platform Management and misc utilities" data-layer="RDK" data-type="Common Core">
-          <td style="font-weight:400;">sysint-broadband</td>
-          <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">System Start, Platform Management and misc utilities</span></td>
-          <td style="color:var(--muted);font-size:0.88rem;">RDK</td>
-          <td><span class="type-pill" style="border-color:#fef3c7;color:#92400e;">Common Core</span></td>
-          <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
-          <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/sysint-broadband" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/sysint-broadband</a></div></td>
-        </tr><tr data-name="advanced-security" data-category="Routing, parental control and WAN Management Components" data-layer="RDK" data-type="Optional">
+    <tbody id="comp-tbody"><tr data-name="advanced-security" data-category="Routing, parental control and WAN Management Components" data-layer="RDK" data-type="Optional">
           <td style="font-weight:400;">advanced-security</td>
           <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">Routing, parental control and WAN Management Components</span></td>
           <td style="color:var(--muted);font-size:0.88rem;">RDK</td>
@@ -630,13 +574,20 @@
           <td><span class="type-pill" style="border-color:#f3f4f6;color:#374151;">Optional</span></td>
           <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
           <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/breakpad_wrapper" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/breakpad_wrapper</a></div></td>
-        </tr><tr data-name="ccsp-xdns" data-category="Routing, parental control and WAN Management Components" data-layer="RDK" data-type="Optional">
-          <td style="font-weight:400;">ccsp-xdns</td>
-          <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">Routing, parental control and WAN Management Components</span></td>
+        </tr><tr data-name="common utilities" data-category="System Start, Platform Management and misc utilities" data-layer="RDK" data-type="Required">
+          <td style="font-weight:400;">common utilities</td>
+          <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">System Start, Platform Management and misc utilities</span></td>
           <td style="color:var(--muted);font-size:0.88rem;">RDK</td>
-          <td><span class="type-pill" style="border-color:#f3f4f6;color:#374151;">Optional</span></td>
+          <td><span class="type-pill" style="border-color:#dbeafe;color:#1e40af;">Required</span></td>
           <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
-          <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/xdns" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/xdns</a></div></td>
+          <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/common_utilities/" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/common_utilities/</a></div></td>
+        </tr><tr data-name="common-library" data-category="InterProcess Communications Components" data-layer="RDK" data-type="Required">
+          <td style="font-weight:400;">common-library</td>
+          <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">InterProcess Communications Components</span></td>
+          <td style="color:var(--muted);font-size:0.88rem;">RDK</td>
+          <td><span class="type-pill" style="border-color:#dbeafe;color:#1e40af;">Required</span></td>
+          <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
+          <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/common-library" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/common-library</a></div></td>
         </tr><tr data-name="component-registry" data-category="System Start, Platform Management and misc utilities" data-layer="RDK" data-type="Required">
           <td style="font-weight:400;">component-registry</td>
           <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">System Start, Platform Management and misc utilities</span></td>
@@ -672,13 +623,6 @@
           <td><span class="type-pill" style="border-color:#f3f4f6;color:#374151;">Optional</span></td>
           <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
           <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/dcm-agent" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/dcm-agent</a></div></td>
-        </tr><tr data-name="dhcp-manager (recipe for dhcp client and server)" data-category="DHCP" data-layer="RDK" data-type="Required">
-          <td style="font-weight:400;">dhcp-manager (recipe for DHCP client and Server)</td>
-          <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">DHCP</span></td>
-          <td style="color:var(--muted);font-size:0.88rem;">RDK</td>
-          <td><span class="type-pill" style="border-color:#dbeafe;color:#1e40af;">Required</span></td>
-          <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
-          <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/dhcp-manager" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/dhcp-manager</a><a href="https://github.com/rdkcentral/rdkb-halif-dhcp" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/rdkb-halif-dhcp</a><a href="https://github.com/rdkcentral/rdkb-halif-dhcp6c" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/rdkb-halif-dhcp6c</a><a href="https://github.com/rdkcentral/rdkb-halif-test-dhcp" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/rdkb-halif-test-dhcp</a><a href="https://github.com/rdkcentral/rdkb-halif-test-dhcp6c" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/rdkb-halif-test-dhcp6c</a></div></td>
         </tr><tr data-name="dhcp-manager (recipe for dhcp client only)" data-category="DHCP" data-layer="RDK" data-type="Required">
           <td style="font-weight:400;">dhcp-manager (recipe for DHCP client only)</td>
           <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">DHCP</span></td>
@@ -686,6 +630,13 @@
           <td><span class="type-pill" style="border-color:#dbeafe;color:#1e40af;">Required</span></td>
           <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
           <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/dhcp-manager" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/dhcp-manager</a></div></td>
+        </tr><tr data-name="dmcli" data-category="InterProcess Communications Components" data-layer="RDK" data-type="Required">
+          <td style="font-weight:400;">DMCLI</td>
+          <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">InterProcess Communications Components</span></td>
+          <td style="color:var(--muted);font-size:0.88rem;">RDK</td>
+          <td><span class="type-pill" style="border-color:#dbeafe;color:#1e40af;">Required</span></td>
+          <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
+          <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/data-model-cli" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/data-model-cli</a></div></td>
         </tr><tr data-name="dobby" data-category="App Framework Components" data-layer="RDK" data-type="Optional">
           <td style="font-weight:400;">Dobby</td>
           <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">App Framework Components</span></td>
@@ -784,6 +735,13 @@
           <td><span class="type-pill" style="border-color:#f3f4f6;color:#374151;">Optional</span></td>
           <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
           <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/led-manager" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/led-manager</a></div></td>
+        </tr><tr data-name="libsyscallwrapper" data-category="Code Security Components" data-layer="RDK" data-type="Required">
+          <td style="font-weight:400;">libsyscallwrapper</td>
+          <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">Code Security Components</span></td>
+          <td style="color:var(--muted);font-size:0.88rem;">RDK</td>
+          <td><span class="type-pill" style="border-color:#dbeafe;color:#1e40af;">Required</span></td>
+          <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
+          <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/libSyscallWrapper" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/libSyscallWrapper</a></div></td>
         </tr><tr data-name="mesh agent
 (integrates with opensync v2.4)" data-category="LAN Interface Components" data-layer="RDK" data-type="Optional">
           <td style="font-weight:400;">Mesh Agent
@@ -813,14 +771,7 @@
           <td style="color:var(--muted);font-size:0.88rem;">RDK</td>
           <td><span class="type-pill" style="border-color:#dbeafe;color:#1e40af;">Required</span></td>
           <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
-          <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/OneWifi" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/OneWifi</a></div></td>
-        </tr><tr data-name="p&amp;m" data-category="Routing, parental control and WAN Management Components" data-layer="RDK" data-type="Required">
-          <td style="font-weight:400;">P&amp;M</td>
-          <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">Routing, parental control and WAN Management Components</span></td>
-          <td style="color:var(--muted);font-size:0.88rem;">RDK</td>
-          <td><span class="type-pill" style="border-color:#dbeafe;color:#1e40af;">Required</span></td>
-          <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
-          <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/provisioning-and-management" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/provisioning-and-management</a></div></td>
+          <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/OneWifi" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/OneWifi</a><a href="https://github.com/rdkcentral/broadband-utils/tree/main/rdk-wps-monitor" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/broadband-utils/tree/main/rdk-wps-monitor</a></div></td>
         </tr><tr data-name="platform-manager" data-category="System Start, Platform Management and misc utilities" data-layer="RDK" data-type="Optional">
           <td style="font-weight:400;">platform-manager</td>
           <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">System Start, Platform Management and misc utilities</span></td>
@@ -835,13 +786,13 @@
           <td><span class="type-pill" style="border-color:#f3f4f6;color:#374151;">Optional</span></td>
           <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
           <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/ppp-manager" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/ppp-manager</a></div></td>
-        </tr><tr data-name="psm" data-category="Non-Vol Storage" data-layer="RDK" data-type="Required">
-          <td style="font-weight:400;">PSM</td>
-          <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">Non-Vol Storage</span></td>
+        </tr><tr data-name="rbus" data-category="InterProcess Communications Components" data-layer="RDK" data-type="Required">
+          <td style="font-weight:400;">RBUS</td>
+          <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">InterProcess Communications Components</span></td>
           <td style="color:var(--muted);font-size:0.88rem;">RDK</td>
           <td><span class="type-pill" style="border-color:#dbeafe;color:#1e40af;">Required</span></td>
           <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
-          <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/persistent-storage-manager" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/persistent-storage-manager</a></div></td>
+          <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/rbus" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/rbus</a></div></td>
         </tr><tr data-name="rdk-cert-config" data-category="Code Security Components" data-layer="RDK" data-type="Optional">
           <td style="font-weight:400;">rdk-cert-config</td>
           <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">Code Security Components</span></td>
@@ -856,6 +807,13 @@
           <td><span class="type-pill" style="border-color:#f3f4f6;color:#374151;">Optional</span></td>
           <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
           <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/rdk-libunpriv" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/rdk-libunpriv</a></div></td>
+        </tr><tr data-name="rdk_logger" data-category="Data Collection, Test and Diagnostic Components" data-layer="RDK" data-type="Required">
+          <td style="font-weight:400;">rdk_logger</td>
+          <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">Data Collection, Test and Diagnostic Components</span></td>
+          <td style="color:var(--muted);font-size:0.88rem;">RDK</td>
+          <td><span class="type-pill" style="border-color:#dbeafe;color:#1e40af;">Required</span></td>
+          <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
+          <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/rdk_logger" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/rdk_logger</a></div></td>
         </tr><tr data-name="rdkb-apparmor-profiles" data-category="Code Security Components" data-layer="RDK" data-type="Optional">
           <td style="font-weight:400;">rdkb-apparmor-profiles</td>
           <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">Code Security Components</span></td>
@@ -877,13 +835,13 @@
           <td><span class="type-pill" style="border-color:#f3f4f6;color:#374151;">Optional</span></td>
           <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
           <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/rdkssa" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/rdkssa</a></div></td>
-        </tr><tr data-name="rfc" data-category="Remote Device Management" data-layer="RDK" data-type="Optional">
-          <td style="font-weight:400;">RFC</td>
-          <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">Remote Device Management</span></td>
+        </tr><tr data-name="remote_debugger" data-category="Data Collection, Test and Diagnostic Components" data-layer="RDK" data-type="Required">
+          <td style="font-weight:400;">remote_debugger</td>
+          <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">Data Collection, Test and Diagnostic Components</span></td>
           <td style="color:var(--muted);font-size:0.88rem;">RDK</td>
-          <td><span class="type-pill" style="border-color:#f3f4f6;color:#374151;">Optional</span></td>
+          <td><span class="type-pill" style="border-color:#dbeafe;color:#1e40af;">Required</span></td>
           <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
-          <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/rfc" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/rfc</a></div></td>
+          <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/remote_debugger" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/remote_debugger</a><a href="https://github.com/rdkcentral/rdm-agent" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/rdm-agent</a></div></td>
         </tr><tr data-name="secure-upnp" data-category="Routing, parental control and WAN Management Components" data-layer="RDK" data-type="Optional">
           <td style="font-weight:400;">secure-upnp</td>
           <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">Routing, parental control and WAN Management Components</span></td>
@@ -905,6 +863,13 @@
           <td><span class="type-pill" style="border-color:#f3f4f6;color:#374151;">Optional</span></td>
           <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
           <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/sys_mon_tools" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/sys_mon_tools</a></div></td>
+        </tr><tr data-name="sysint-broadband" data-category="System Start, Platform Management and misc utilities" data-layer="RDK" data-type="Required">
+          <td style="font-weight:400;">sysint-broadband</td>
+          <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">System Start, Platform Management and misc utilities</span></td>
+          <td style="color:var(--muted);font-size:0.88rem;">RDK</td>
+          <td><span class="type-pill" style="border-color:#dbeafe;color:#1e40af;">Required</span></td>
+          <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
+          <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/sysint-broadband" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/sysint-broadband</a></div></td>
         </tr><tr data-name="syslog_helper" data-category="Data Collection, Test and Diagnostic Components" data-layer="RDK" data-type="Optional">
           <td style="font-weight:400;">syslog_helper</td>
           <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">Data Collection, Test and Diagnostic Components</span></td>
@@ -932,7 +897,7 @@
           <td style="color:var(--muted);font-size:0.88rem;">RDK</td>
           <td><span class="type-pill" style="border-color:#f3f4f6;color:#374151;">Optional</span></td>
           <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
-          <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/test-and-diagnostic" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/test-and-diagnostic</a></div></td>
+          <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/test-and-diagnostic" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/test-and-diagnostic</a><a href="https://github.com/rdkcentral/rdk-speedtest-cli" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/rdk-speedtest-cli</a></div></td>
         </tr><tr data-name="tr069-protocol-agent" data-category="Remote Device Management" data-layer="RDK" data-type="Optional">
           <td style="font-weight:400;">tr069-protocol-agent</td>
           <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">Remote Device Management</span></td>
@@ -940,15 +905,6 @@
           <td><span class="type-pill" style="border-color:#f3f4f6;color:#374151;">Optional</span></td>
           <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
           <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/tr069-protocol-agent" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/tr069-protocol-agent</a></div></td>
-        </tr><tr data-name="unified-wifi-mesh
-(easymesh)" data-category="LAN Interface Components" data-layer="RDK" data-type="Optional">
-          <td style="font-weight:400;">unified-wifi-mesh
-(EasyMesh)</td>
-          <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">LAN Interface Components</span></td>
-          <td style="color:var(--muted);font-size:0.88rem;">RDK</td>
-          <td><span class="type-pill" style="border-color:#f3f4f6;color:#374151;">Optional</span></td>
-          <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
-          <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/unified-wifi-mesh" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/unified-wifi-mesh</a></div></td>
         </tr><tr data-name="usp pa" data-category="Remote Device Management" data-layer="RDK" data-type="Optional">
           <td style="font-weight:400;">USP PA</td>
           <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">Remote Device Management</span></td>
@@ -988,7 +944,7 @@ including:
           <td style="color:var(--muted);font-size:0.88rem;">RDK</td>
           <td><span class="type-pill" style="border-color:#f3f4f6;color:#374151;">Optional</span></td>
           <td style="font-family:monospace;font-size:0.85rem;color:var(--ink);">develop</td>
-          <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/rdkcentral/start-parodus" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/start-parodus</a><a href="https://github.com/xmidt-org" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/xmidt-org</a></div></td>
+          <td><div style="display:flex;flex-direction:column;gap:4px;"><a href="https://github.com/xmidt-org/parodus2ccsp" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/xmidt-org/parodus2ccsp</a><a href="https://github.com/xmidt-org/parodus" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/xmidt-org/parodus</a><a href="https://github.com/rdkcentral/start-parodus" target="_blank" rel="noopener" style="font-size:0.86rem;">https://github.com/rdkcentral/start-parodus</a></div></td>
         </tr><tr data-name="webconfig" data-category="Remote Device Management" data-layer="RDK" data-type="Optional">
           <td style="font-weight:400;">WebConfig</td>
           <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">Remote Device Management</span></td>
