@@ -106,7 +106,7 @@ def build_body(data: dict) -> str:
         else:
             url_cell = '<span class="muted">—</span>'
         # data-* attrs drive JS filtering; layer is always Middleware
-        version = esc(c.get("version") or "rdk9")
+        version = esc(c.get("version") or "develop")
         rows_html.append(f'''<tr data-name="{esc(c["name"].lower())}" data-category="{esc(c["category"] or "Uncategorized")}" data-layer="RDK" data-type="{esc(tier["label"])}">
           <td style="font-weight:400;">{esc(c["name"])}</td>
           <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">{esc(c["category"] or "Uncategorized")}</span></td>
