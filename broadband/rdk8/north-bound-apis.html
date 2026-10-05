@@ -729,9 +729,9 @@ function componentRowHtml(c) {
 
 function renderComponentTable(filterText) {
   const q = (filterText || '').trim().toLowerCase();
-  const rows = allComponents.filter(c => !q || c.name.toLowerCase().includes(q) || (c.category || '').toLowerCase().includes(q));
+  const rows = allComponents.filter(c => repoMap[c.name] && (!q || c.name.toLowerCase().includes(q) || (c.category || '').toLowerCase().includes(q)));
   document.getElementById('component-table-body').innerHTML = rows.map(componentRowHtml).join('');
-  document.getElementById('component-count').textContent = `${rows.length} of ${allComponents.length} components`;
+  document.getElementById('component-count').textContent = `${rows.length} of ${allComponents.filter(c => repoMap[c.name]).length} components`;
   document.querySelectorAll('.dml-btn').forEach(btn => {
     btn.addEventListener('click', () => loadDml(btn.dataset.name));
   });

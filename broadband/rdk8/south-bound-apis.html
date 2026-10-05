@@ -639,9 +639,10 @@ function halRowHtml(name) {
 
 function renderHalTable(filterText) {
   const q = (filterText || '').trim().toLowerCase();
-  const rows = halNames.filter(n => !q || n.toLowerCase().includes(q));
+  const available = halNames.filter(n => repoMap[n] && repoMap[n].repo !== 'TBD');
+  const rows = available.filter(n => !q || n.toLowerCase().includes(q));
   document.getElementById('hal-table-body').innerHTML = rows.map(halRowHtml).join('');
-  document.getElementById('hal-count').textContent = `${rows.length} of ${halNames.length} HAL interfaces`;
+  document.getElementById('hal-count').textContent = `${rows.length} of ${available.length} HAL interfaces`;
   document.querySelectorAll('.dml-btn').forEach(btn => {
     btn.addEventListener('click', () => loadHal(btn.dataset.name));
   });
