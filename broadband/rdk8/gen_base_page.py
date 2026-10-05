@@ -57,7 +57,7 @@ FOOTER = """
     <a href="https://github.com/rdkcentral">rdkcentral on GitHub<span>Component source repositories</span></a>
   </div>
   <div class="footer-meta">
-    RDKM · © 2026 RDK Central. All rights reserved. Generated from {source_pdf}.
+    RDKM · © 2026 RDK Central. All rights reserved.
   </div>
 </footer>
 """.format(components_url=COMPONENTS_URL, components_full_url=COMPONENTS_FULL_URL,
@@ -138,20 +138,20 @@ def render_test_suites(rows: list[dict]) -> str:
 # ---------- page: About Core RDK Broadband ----------
 
 def build_about_page(spec: dict, about: dict) -> str:
-    body = '''
-<div class="hero" style="padding:64px 40px 48px;">
-  <div class="hero-flex">
-    <div class="hero-inner">
-      <h1>CORE RDK for BROADBAND</h1>
+    body = f'''
+<div class="page-main" style="display:flex; flex-direction:column; min-height:calc(100vh - 61px);">
+
+<div class="hero" style="flex:1; display:flex; align-items:center; justify-content:center; padding:64px 40px;">
+  <div class="hero-flex" style="justify-content:center;">
+    <div class="hero-inner" style="text-align:center; max-width:none;">
+      <h1 style="font-size:clamp(2.4rem,5vw,4rem);">CORE RDK for BROADBAND</h1>
     </div>
   </div>
 </div>
 
-<footer>
-  <div class="footer-meta" style="border-top:none; padding-top:0;">
-    RDKM &middot; &copy; 2026 RDK Central. All rights reserved.
-  </div>
-</footer>
+</div>
+
+{FOOTER}
 '''
     return render_page("about", "<title>CORE RDK for BROADBAND</title>", body, script=TABS_SCRIPT)
 
