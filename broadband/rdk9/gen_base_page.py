@@ -138,7 +138,7 @@ def render_test_suites(rows: list[dict]) -> str:
 # ---------- page: About Core RDK Broadband ----------
 
 def build_about_page(spec: dict, about: dict) -> str:
-    body = f'''
+    body = '''
 <div class="hero" style="padding:64px 40px 48px;">
   <div class="hero-flex">
     <div class="hero-inner">
@@ -146,8 +146,6 @@ def build_about_page(spec: dict, about: dict) -> str:
     </div>
   </div>
 </div>
-
-{FOOTER.format(source_pdf=esc(spec["sourcePdf"]))}
 '''
     return render_page("about", "<title>CORE RDK for BROADBAND</title>", body, script=TABS_SCRIPT)
 
