@@ -48,7 +48,7 @@ FULL_DETAILS_URL = "full-list.html"
 
 TIER_DESCRIPTIONS = {
     "common-core": "Core components common across all RDK-B sub-profiles such as EthWAN Router, Gateway with DOCSIS/PON access profile support, Wifi Extender etc.",
-    "core": "Core components required for the EthWAN Router sub-profile",
+    "required": "Core components required for the EthWAN Router sub-profile",
     "optional": "Optional components on the EthWAN Router sub-profile.",
 }
 
