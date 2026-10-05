@@ -215,7 +215,7 @@ def build_body(data: dict) -> str:
 
     lede = subtitle or "Every RDK-B component for this device profile — repo, category, layer, and type."
     return f'''
-{render_hero("Core RDK", "EthWAN Router", lede, compact=True, visual_key="components")}
+{render_hero("Core RDK Components", "EthWAN Router", lede, compact=True, visual_key="components")}
 
 {filter_css}
 
