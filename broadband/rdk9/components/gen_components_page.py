@@ -106,7 +106,7 @@ def build_body(data: dict) -> str:
         else:
             url_cell = '<span class="muted">—</span>'
         # data-* attrs drive JS filtering; layer is always Middleware
-        version = esc(c.get("version") or "rdk8")
+        version = esc(c.get("version") or "rdk9")
         rows_html.append(f'''<tr data-name="{esc(c["name"].lower())}" data-category="{esc(c["category"] or "Uncategorized")}" data-layer="RDK" data-type="{esc(tier["label"])}">
           <td style="font-weight:400;">{esc(c["name"])}</td>
           <td><span class="pill" style="background:#e8eef8;color:#2d4eb5;border:none;border-radius:999px;line-height:1.5;font-weight:700;">{esc(c["category"] or "Uncategorized")}</span></td>
@@ -225,10 +225,20 @@ def build_body(data: dict) -> str:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--json", default="ethwan-router-components.json")
+    ap.add_argument("--versions", default="component-versions.json")
     ap.add_argument("--out", default="index.html")
     args = ap.parse_args()
 
     data = json.loads(Path(args.json).read_text(encoding="utf-8"))
+
+    # Merge version overrides from separate versions file (if it exists)
+    versions_path = Path(args.versions)
+    if versions_path.exists():
+        versions = json.loads(versions_path.read_text(encoding="utf-8"))
+        for c in data["components"]:
+            if c["name"] in versions:
+                c["version"] = versions[c["name"]]
+
     body = build_body(data)
     head_extra = f"<title>{esc(data['title'])} — RDK-B Core Broadband</title>"
     html_out = render_page("components", head_extra, body, path_prefix="../")

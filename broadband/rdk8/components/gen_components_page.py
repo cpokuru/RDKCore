@@ -225,10 +225,20 @@ def build_body(data: dict) -> str:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--json", default="ethwan-router-components.json")
+    ap.add_argument("--versions", default="component-versions.json")
     ap.add_argument("--out", default="index.html")
     args = ap.parse_args()
 
     data = json.loads(Path(args.json).read_text(encoding="utf-8"))
+
+    # Merge version overrides from separate versions file (if it exists)
+    versions_path = Path(args.versions)
+    if versions_path.exists():
+        versions = json.loads(versions_path.read_text(encoding="utf-8"))
+        for c in data["components"]:
+            if c["name"] in versions:
+                c["version"] = versions[c["name"]]
+
     body = build_body(data)
     head_extra = f"<title>{esc(data['title'])} — RDK-B Core Broadband</title>"
     html_out = render_page("components", head_extra, body, path_prefix="../")
