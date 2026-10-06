@@ -275,7 +275,7 @@ def _rows(wb):
             "name": name,
             "url": url,
             "supporting_urls": supporting_urls,
-            "is_core": row[core_idx] == "CORE",
+            "is_core": raw[core_idx] == "CORE",
             "profile_values": profile_values,
         }
 

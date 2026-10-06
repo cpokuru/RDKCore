@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-10-05T23:48:44Z",
+  "generatedAt": "2026-10-06T00:01:29Z",
   "title": "RDK-B EXT OpenSync Components",
   "subtitle": "Components for the EXT OpenSync device profile: Common Core, Required, and Optional.",
   "tiers": [
@@ -157,21 +157,21 @@
     {
       "name": "sysint-broadband",
       "category": "System Start, Platform Management and misc utilities",
-      "tier": "required",
+      "tier": "common-core",
       "url": "https://github.com/rdkcentral/sysint-broadband",
       "supportingUrls": []
     },
     {
       "name": "common utilities",
       "category": "System Start, Platform Management and misc utilities",
-      "tier": "required",
+      "tier": "common-core",
       "url": "https://github.com/rdkcentral/common_utilities/",
       "supportingUrls": []
     },
     {
       "name": "rdk_logger",
       "category": "Data Collection, Test and Diagnostic Components",
-      "tier": "required",
+      "tier": "common-core",
       "url": "https://github.com/rdkcentral/rdk_logger",
       "supportingUrls": []
     },
@@ -192,7 +192,7 @@
     {
       "name": "remote_debugger",
       "category": "Data Collection, Test and Diagnostic Components",
-      "tier": "required",
+      "tier": "common-core",
       "url": "https://github.com/rdkcentral/remote_debugger",
       "supportingUrls": [
         "https://github.com/rdkcentral/rdm-agent"
@@ -238,7 +238,7 @@
     {
       "name": "RBUS",
       "category": "InterProcess Communications Components",
-      "tier": "required",
+      "tier": "common-core",
       "url": "https://github.com/rdkcentral/rbus",
       "supportingUrls": []
     },
@@ -252,14 +252,14 @@
     {
       "name": "common-library",
       "category": "InterProcess Communications Components",
-      "tier": "required",
+      "tier": "common-core",
       "url": "https://github.com/rdkcentral/common-library",
       "supportingUrls": []
     },
     {
       "name": "DMCLI",
       "category": "InterProcess Communications Components",
-      "tier": "required",
+      "tier": "common-core",
       "url": "https://github.com/rdkcentral/data-model-cli",
       "supportingUrls": []
     },
@@ -294,7 +294,7 @@
     {
       "name": "libsyscallwrapper",
       "category": "Code Security Components",
-      "tier": "required",
+      "tier": "common-core",
       "url": "https://github.com/rdkcentral/libSyscallWrapper",
       "supportingUrls": []
     }

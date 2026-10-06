@@ -782,13 +782,13 @@
     },
     {
       "title": "sysint-broadband",
-      "text": "System Start, Platform Management and misc utilities · required tier for the EthWAN WiFi Router profile.",
+      "text": "System Start, Platform Management and misc utilities · common-core tier for the EthWAN WiFi Router profile.",
       "category": "Components",
       "url": "components/"
     },
     {
       "title": "common utilities",
-      "text": "System Start, Platform Management and misc utilities · required tier for the EthWAN WiFi Router profile.",
+      "text": "System Start, Platform Management and misc utilities · common-core tier for the EthWAN WiFi Router profile.",
       "category": "Components",
       "url": "components/"
     },
@@ -806,7 +806,7 @@
     },
     {
       "title": "rdk_logger",
-      "text": "Data Collection, Test and Diagnostic Components · required tier for the EthWAN WiFi Router profile.",
+      "text": "Data Collection, Test and Diagnostic Components · common-core tier for the EthWAN WiFi Router profile.",
       "category": "Components",
       "url": "components/"
     },
@@ -824,7 +824,7 @@
     },
     {
       "title": "remote_debugger",
-      "text": "Data Collection, Test and Diagnostic Components · required tier for the EthWAN WiFi Router profile.",
+      "text": "Data Collection, Test and Diagnostic Components · common-core tier for the EthWAN WiFi Router profile.",
       "category": "Components",
       "url": "components/"
     },
@@ -872,7 +872,7 @@
     },
     {
       "title": "RBUS",
-      "text": "InterProcess Communications Components · required tier for the EthWAN WiFi Router profile.",
+      "text": "InterProcess Communications Components · common-core tier for the EthWAN WiFi Router profile.",
       "category": "Components",
       "url": "components/"
     },
@@ -884,13 +884,13 @@
     },
     {
       "title": "common-library",
-      "text": "InterProcess Communications Components · required tier for the EthWAN WiFi Router profile.",
+      "text": "InterProcess Communications Components · common-core tier for the EthWAN WiFi Router profile.",
       "category": "Components",
       "url": "components/"
     },
     {
       "title": "DMCLI",
-      "text": "InterProcess Communications Components · required tier for the EthWAN WiFi Router profile.",
+      "text": "InterProcess Communications Components · common-core tier for the EthWAN WiFi Router profile.",
       "category": "Components",
       "url": "components/"
     },
@@ -944,7 +944,7 @@
     },
     {
       "title": "libsyscallwrapper",
-      "text": "Code Security Components · required tier for the EthWAN WiFi Router profile.",
+      "text": "Code Security Components · common-core tier for the EthWAN WiFi Router profile.",
       "category": "Components",
       "url": "components/"
     },
