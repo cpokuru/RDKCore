@@ -54,10 +54,13 @@ EXTRA_CSS = """
     border: 1px solid var(--border); border-radius: 12px;
     overflow: hidden; box-shadow: var(--shadow-sm);
   }
+  table.ipc-table thead tr {
+    background: #1a2540;
+  }
   table.ipc-table th {
-    font-family: "Space Grotesk", sans-serif; font-size: 0.78rem;
-    text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; color: #fff;
-    background: linear-gradient(90deg, var(--hal), var(--middleware));
+    font-family: "Inter", "Segoe UI", sans-serif; font-size: 0.74rem;
+    text-transform: uppercase; letter-spacing: 0.07em; font-weight: 700; color: #fff;
+    background: transparent;
     padding: 14px 18px; text-align: left; border-bottom: none;
   }
   table.ipc-table th:first-child { border-top-left-radius: 12px; }
@@ -80,7 +83,7 @@ EXTRA_CSS = """
     display: inline-block; font-size: 0.78rem; font-weight: 600; padding: 4px 11px;
     border-radius: 999px; margin: 2px 3px 2px 0; border: none;
   }
-  .ipc-pill-rbus  { background: #e0e7ff; color: #3730a3; }
+  .ipc-pill-rbus  { background: #d0eef9; color: #0a6fa8; }
   /* ---- reference cards ---- */
   .ref-grid { display: grid; grid-template-columns: 1fr; gap: 20px; max-width: 480px; margin-top: 4px; }
 
@@ -95,7 +98,7 @@ EXTRA_CSS = """
     width: 40px; height: 40px; border-radius: 10px; display: flex;
     align-items: center; justify-content: center; flex: 0 0 auto;
   }
-  .ref-card-icon.rbus { background: linear-gradient(135deg,#e0e7ff,#c7d2fe); }
+  .ref-card-icon.rbus { background: linear-gradient(135deg,#cff0fc,#a0dcf5); }
   .ref-card h3 { font-size: 1rem; margin-bottom: 2px; }
   .ref-card .ref-sub { font-size: 0.78rem; color: var(--muted); margin: 0; }
   .ref-card p  { font-size: 0.9rem; margin-bottom: 14px; }
@@ -104,7 +107,7 @@ EXTRA_CSS = """
     padding: 8px 16px; border-radius: 999px; font-size: 0.82rem; font-weight: 600;
     text-decoration: none; color: #fff;
   }
-  .ref-btn.rbus { background: linear-gradient(90deg, var(--rdk-blue), #7c3aed); }
+  .ref-btn.rbus { background: var(--rdk-blue); }
   .ref-meta {
     font-size: 0.75rem; color: var(--muted); margin-top: 10px; margin-bottom: 0;
     line-height: 1.6;
@@ -178,7 +181,7 @@ def build_page() -> str:
 
     <div class="ref-card rbus">
       <div class="ref-card-header">
-        <div class="ref-card-icon rbus">{_ICON_CODE.format(color="#3730a3")}</div>
+        <div class="ref-card-icon rbus">{_ICON_CODE.format(color="#29b6e8")}</div>
         <div>
           <h3>rbus</h3>
           <p class="ref-sub">RDK Message Bus &mdash; component-to-component IPC</p>
@@ -198,13 +201,10 @@ def build_page() -> str:
     </div>
 
   </div>
-      </div>
-
-  </div>
 
 </section>
 """
-    head_extra = "<title>RDK8 North Bound Low Level APIs \u2014 RDK-B Core Broadband</title>\n" + EXTRA_CSS
+    head_extra = "<title>North Bound Low Level APIs — RDK-B Core Broadband</title>\n" + EXTRA_CSS
     return render_page("nbi-lowlevel", head_extra, body)
 
 

@@ -42,18 +42,17 @@ def build_page(profiles_dir: Path, repo_root: Path | None = None) -> str:
     del profiles_dir, repo_root
 
     body = render_hero(
-        "Reference Hardware",
-        "Hardware specifications",
+        "",
+        "Compatibility Specifications",
         (
-            "Minimum CPU, RAM, flash, and required peripheral hardware per "
-            "RDK-B device profile (Work In Progress)"
+            "Specifications that outline the minimal hardware configurations to run Core RDK."
         ),
         compact=True,
         visual_key="hwcompat",
     )
 
     head_extra = (
-        "<title>Hardware Compatibility Spec — RDK-B Core Broadband</title>"
+        "<title>Compatibility Specifications â€” RDK-B Core Broadband</title>"
     )
     return render_page("hwcompat", head_extra, body)
 
